@@ -1,0 +1,9 @@
+# Local, machine-specific, or secret config — never commit
+.claude/settings.local.json
+.mcp.json
+.env
+.env.*
+
+# OS / editor noise
+.DS_Store
+*.log
