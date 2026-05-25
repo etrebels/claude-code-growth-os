@@ -16,8 +16,7 @@ This repo is the scaffolding: opinionated hooks, daily rituals, a set of go-to-m
 
 ## See it run in 30 seconds
 
-<!-- DEMO GIF: record `/demo-briefing` (asciinema or terminalizer), save to docs/assets/demo.gif,
-     then replace this comment with:  ![Claude Code Growth OS — morning briefing on demo data](docs/assets/demo.gif) -->
+![Claude Code Growth OS — the /demo-briefing morning ritual running on fictional demo data](docs/assets/demo.gif)
 
 Clone, open in Claude Code, and run `/demo-briefing`. It runs the whole morning ritual against the fictional sample data in `demo/`:
 
@@ -127,7 +126,7 @@ The repo is the skeleton; the judgment you put inside it is the product → **[l
 
 ## Who's behind this
 
-I'm Edwin Trebels — I run our company's, and help clients run their, entire go-to-market on a setup like this. This repo is the open skeleton. The full version adds the wider automation layer — n8n handling vendor management, ICP checks, pre-meeting briefings, post-meeting debriefs and follow-ups, and the assistant that keeps the day straight; Blackbird.io for multilingual content — plus the judgment that fills the empty drawers. That part took twenty-two years and doesn't come in a folder.
+I'm Edwin Trebels — I run our company's entire go-to-market on a setup like this, and help clients run theirs. This repo is the open skeleton. The full version adds the wider automation layer — n8n handling vendor management, ICP checks, pre-meeting briefings, post-meeting debriefs and follow-ups, and the assistant that keeps the day straight; Blackbird.io for multilingual content — plus the judgment that fills the empty drawers. That part took twenty-two years and doesn't come in a folder.
 
 Want it built and run for you, or a growth operator who works this way? That's what I do: [langoptima.com](https://langoptima.com). The thinking behind the kit is in [`docs/methodology.md`](docs/methodology.md).
 
