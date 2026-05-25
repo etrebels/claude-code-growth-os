@@ -13,4 +13,4 @@ This one does nothing on purpose. Swap it for your own. A good skill:
 - reads from `ops/` (or `demo/`) instead of asking for context it could find,
 - ends by writing its result somewhere durable — a file, a log.
 
-See `skills/status-update/` and `skills/triage/` for two worked examples.
+See `.claude/skills/status-update/` and `.claude/skills/triage/` for two worked examples.

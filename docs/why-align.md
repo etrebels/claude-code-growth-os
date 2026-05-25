@@ -70,7 +70,7 @@ The mature version is **RevOps** — running marketing, sales, and customer succ
 You don't need a platform to get most of this. A plain-text repo, run from Claude Code, *is* the structure. The mechanics — the six handoffs (H1–H6), the one number, and the three shared definitions — are laid out in [`operating-model.md`](operating-model.md); the short version:
 
 - **One source of truth** → the git repo. Every function reads and writes the same markdown.
-- **Two feedback loops** → the [`marketing-feedback`](../skills/marketing-feedback/SKILL.md) skill (`MARKETING-ACTION`, sales→marketing) and the [`retention-feedback`](../skills/retention-feedback/SKILL.md) skill (`RETENTION-RISK`, post-sale→product). Both write tagged lines to the same log — version-controlled, with a diff and a history.
+- **Two feedback loops** → the [`marketing-feedback`](../.claude/skills/marketing-feedback/SKILL.md) skill (`MARKETING-ACTION`, sales→marketing) and the [`retention-feedback`](../.claude/skills/retention-feedback/SKILL.md) skill (`RETENTION-RISK`, post-sale→product). Both write tagged lines to the same log — version-controlled, with a diff and a history.
 - **One shared definition** → the ICP, the MQL→SQL bar, and the Won→onboarding handoff are each one file every function edits, not four arguments in four tools.
 - **Shared rituals** → the briefing and review commands run the joint motion across all four.
 
