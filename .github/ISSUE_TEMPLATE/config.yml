@@ -1,0 +1,11 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Questions & show-and-tell
+    url: https://github.com/etrebels/claude-code-growth-os/discussions
+    about: Ask how to use the kit, or share how you've made it yours. (Enable Discussions in Settings.)
+  - name: Report a security issue
+    url: https://github.com/etrebels/claude-code-growth-os/security/policy
+    about: Please report vulnerabilities privately — not as a public issue.
+  - name: Want it built & run for you?
+    url: https://langoptima.com/growth
+    about: The populated, done-for-you version and growth-operator service.

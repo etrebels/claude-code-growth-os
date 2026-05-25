@@ -1,0 +1,43 @@
+name: Idea / new skill or ritual
+description: Suggest a new hook, ritual command, skill template, or docs improvement
+title: "[idea]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Ideas that keep the starter **generic and reusable** are the best fit — see [CONTRIBUTING.md](../blob/main/CONTRIBUTING.md). If it only works with your private content, it belongs in your fork.
+  - type: textarea
+    id: idea
+    attributes:
+      label: What's the idea?
+      description: Describe the hook, ritual, skill, or doc — and the recurring job it does.
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Which area?
+      options:
+        - Marketing / Demand
+        - Sales
+        - Product
+        - Retention
+        - Cross-cutting (status, triage)
+        - Hook / guardrail
+        - Ritual command
+        - Docs / example
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does it solve?
+      description: What's painful today, and how does this help?
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: This generalizes beyond one company — no real data required to use it.
+          required: true

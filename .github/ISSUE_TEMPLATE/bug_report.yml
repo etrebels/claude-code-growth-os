@@ -1,0 +1,55 @@
+name: Bug report
+description: Something in the kit doesn't work — a hook, command, skill, or the demo
+title: "[bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. Please keep the report **generic** — no real company names, playbooks, or credentials. Reproduce against the fictional `demo/` data where you can.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What went wrong, and what did you expect instead?
+      placeholder: Running /demo-briefing errored with...
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open the repo in Claude Code
+        2. Run `/...`
+        3. See error
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Which part?
+      options:
+        - Hook (.claude/hooks)
+        - Command / ritual (.claude/commands)
+        - Skill (.claude/skills)
+        - Demo (demo/)
+        - Docs
+        - Other / not sure
+    validations:
+      required: true
+  - type: input
+    id: env
+    attributes:
+      label: Environment
+      description: OS and Claude Code version (run `claude --version`).
+      placeholder: macOS 15.3, Claude Code 1.x
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched existing issues and didn't find a duplicate.
+          required: true
+        - label: This report contains no secrets or real customer/contact data.
+          required: true
