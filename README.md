@@ -128,6 +128,6 @@ The repo is the skeleton; the judgment you put inside it is the product → **[l
 
 I'm Edwin Trebels — I run our company's entire go-to-market on a setup like this, and help clients run theirs. This repo is the open skeleton. The full version adds the wider automation layer — n8n handling vendor management, ICP checks, pre-meeting briefings, post-meeting debriefs and follow-ups, and the assistant that keeps the day straight; Blackbird.io for multilingual content — plus the judgment that fills the empty drawers. That part took twenty-two years and doesn't come in a folder.
 
-Want it built and run for you, or a growth operator who works this way? That's what I do: [langoptima.com](https://langoptima.com). The thinking behind the kit is in [`docs/methodology.md`](docs/methodology.md).
+Want it built and run for you, or a growth operator who works this way? That's what I do: [langoptima.com/features/growth](https://langoptima.com/features/growth). The thinking behind the kit is in [`docs/methodology.md`](docs/methodology.md).
 
 **If it's useful, a ⭐ helps others find it.** PRs welcome — see [CONTRIBUTING.md](CONTRIBUTING.md). MIT licensed.
