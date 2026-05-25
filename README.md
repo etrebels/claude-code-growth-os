@@ -6,9 +6,9 @@
 ![Built for Claude Code](https://img.shields.io/badge/built%20for-Claude%20Code-d97757)
 ![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
 
-Most people ask Claude Code to write code. You can also run your go-to-market in it: let it read your plain-text playbooks, run your daily rituals — the morning briefing, follow-ups, lead qualification, content — and reach your tools, so the whole motion runs from one place. Because everything is markdown in git, your sales & marketing system gets a diff, a history, and a blame view, and it stops living in your head.
+Most people ask Claude Code to write code. You can also run your go-to-market in it: let it read your plain-text playbooks, run your daily rituals (the morning briefing, follow-ups, lead qualification, content) and reach your tools, so the whole motion runs from one place. Because everything is markdown in git, your sales & marketing system gets a diff, a history, and a blame view, and it stops living in your head.
 
-Most sales & marketing skill packs just generate copy. This runs the operating day around it — qualify, prep, follow up, post — and keeps it all in git.
+Most sales & marketing skill packs just generate copy. This runs the operating day around it (qualify, prep, follow up, post) and keeps it all in git.
 
 This repo is the scaffolding: opinionated hooks, daily rituals, a set of go-to-market skill templates spanning all four functions, and a worked example you can run in 30 seconds. **Bring your own playbooks — the structure is here.**
 
@@ -57,7 +57,7 @@ Nothing there is real — delete `demo/` whenever you like.
 | `.claude/skills/` | Skill templates grouped by the four growth functions (see below) — so the balance across marketing, sales, product, and retention is visible, not acquisition-only |
 | `ops/` | Your plain-text playbooks — `priorities.md`, `daily-log.md`, `pipeline.md` (left side), `customers.md` and `roadmap-signals.md` (right side). Start here. |
 | `demo/` | A fictional pipeline *and* customer book so you can see the whole motion work (and present from it safely) |
-| `docs/operating-model.md` | The spine: the bowtie, the four functions, the six handoffs (H1–H6), the one number (NRR), and the three shared definitions |
+| `docs/operating-model.md` | The spine: the bowtie, the four functions, the six handoffs (H1–H6), the one number (net revenue retention), and the three shared definitions |
 | `docs/methodology.md` | The idea in full: Claude Code as an operating environment |
 | `docs/why-align.md` | The one-page argument: why your whole go-to-market (marketing, sales, product, retention) runs as one system (with sources) |
 
@@ -77,7 +77,7 @@ One loop, all plain text in git:
 
 1. **Open a session** → the SessionStart hook surfaces today's priorities.
 2. **`/morning-briefing`** reads your priorities, yesterday's log, and your pipeline → today's top three.
-3. **Through the day**, the skills work on your own data — on both sides of the bowtie. *Left side:* `lead-qualify` a new opportunity, `meeting-prep` before a call, `follow-up` after it, `cold-outreach` to a prospect, `content-repurpose` a win into posts, `marketing-feedback` to turn a recurring objection into a note marketing acts on. *Right side:* `onboarding-handoff` when a deal is won (carry the value hypothesis across the seam), `account-health` to score adoption and start the renewal motion at day 60, `product-signal` to route retention and field signals to the roadmap, and `retention-feedback` to turn an adoption slip into a signal product acts on.
+3. **Through the day**, the skills work on your own data, on both sides of the bowtie. *Left side:* `lead-qualify` a new opportunity, `meeting-prep` before a call, `follow-up` after it, `cold-outreach` to a prospect, `content-repurpose` a win into posts, `marketing-feedback` to turn a recurring objection into a note marketing acts on. *Right side:* `onboarding-handoff` when a deal is won (carry the value hypothesis across the seam), `account-health` to score adoption and start the renewal motion at day 60, `product-signal` to route retention and field signals to the roadmap, and `retention-feedback` to turn an adoption slip into a signal product acts on.
 4. **`/end-of-day`** logs what shipped and sets tomorrow; **`/weekly-review`** finds the patterns across both sides — renewals due, accounts at risk, expansion candidates, and the top roadmap signals.
 5. **The hooks hold it together** — your state survives a long session (`pre-compact`), and nothing secret slips into a commit (`pre-commit-guard`).
 
@@ -116,7 +116,7 @@ No real playbooks, positioning, pricing, or data. That's the point: the structur
 
 ## What's free vs. what's paid
 
-This is **open core**. The chassis is free and MIT-licensed; the part that took twenty-one years isn't in the box.
+This is **open core**. The chassis is free and MIT-licensed; the part that took twenty-two years isn't in the box.
 
 | Free — this repo (MIT) | Paid — built & run for you |
 |---|---|
@@ -126,7 +126,7 @@ The repo is the skeleton; the judgment you put inside it is the product → **[l
 
 ## Who's behind this
 
-I'm Edwin Trebels — I run our company's entire go-to-market on a setup like this, and help clients run theirs. This repo is the open skeleton. The full version adds the wider automation layer — n8n handling vendor management, ICP checks, pre-meeting briefings, post-meeting debriefs and follow-ups, and the assistant that keeps the day straight; Blackbird.io for multilingual content — plus the judgment that fills the empty drawers. That part took twenty-two years and doesn't come in a folder.
+I'm Edwin Trebels — I run our company's entire go-to-market on a setup like this, and help clients run theirs. This repo is the open skeleton. The full version adds the wider automation layer (n8n handling vendor management, ICP checks, pre-meeting briefings, post-meeting debriefs and follow-ups, and the assistant that keeps the day straight; Blackbird.io for multilingual content), plus the judgment that fills the empty drawers. That part took twenty-two years and doesn't come in a folder.
 
 Want it built and run for you, or a growth operator who works this way? That's what I do: [langoptima.com/features/growth](https://langoptima.com/features/growth). The thinking behind the kit is in [`docs/methodology.md`](docs/methodology.md).
 

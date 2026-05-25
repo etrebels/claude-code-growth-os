@@ -29,7 +29,7 @@ A motion is only as strong as its handoffs. Each one has a **trigger**, an **own
 |---|---|---|---|---|
 | **H1** | Marketing → Sales | A lead clears the MQL→SQL bar | Marketing | A qualified lead in `ops/pipeline.md` |
 | **H2** | Sales → Marketing | Sales hears a recurring objection, competitor, missing proof, or win/loss reason | Sales | A `MARKETING-ACTION` line in the feedback log (`marketing-feedback`) |
-| **H3** | Won → Onboarding | A deal is marked won | Sales → CS | The first `ops/customers.md` row, with the value hypothesis carried forward (`onboarding-handoff`) |
+| **H3** | Won → Onboarding | A deal is marked won | Sales → customer success (CS) | The first `ops/customers.md` row, with the value hypothesis carried forward (`onboarding-handoff`) |
 | **H4** | CS → Product | Adoption friction, a churn reason, or a request blocking adoption/expansion | CS | A routed item in `ops/roadmap-signals.md` (`product-signal`) |
 | **H5** | Product → GTM | A capability ships | Product | The one-line "what this means for the buyer" in `ops/roadmap-signals.md`, handed to sales and marketing (`product-signal`) |
 | **H6** | CS → Marketing | A customer reaches a clear outcome | CS | A reference / proof point — the customer's own words for the value they got |
