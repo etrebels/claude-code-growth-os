@@ -25,3 +25,7 @@ This is a starter — a clean, generic scaffold people fork and fill. Contributi
 - Run `/demo-briefing` and confirm it still works.
 - Install and trip the commit guard: `ln -s ../../.claude/hooks/pre-commit-guard.sh .git/hooks/pre-commit`, then try committing a fake key — it should block.
 - Keep the diff focused; one idea per PR.
+
+## Code of conduct
+
+By taking part, you agree to uphold our [Code of Conduct](CODE_OF_CONDUCT.md) — be kind, assume good intent, keep it professional.

@@ -16,6 +16,9 @@ This repo is the scaffolding: opinionated hooks, daily rituals, a set of go-to-m
 
 ## See it run in 30 seconds
 
+<!-- DEMO GIF: record `/demo-briefing` (asciinema or terminalizer), save to docs/assets/demo.gif,
+     then replace this comment with:  ![Claude Code Growth OS — morning briefing on demo data](docs/assets/demo.gif) -->
+
 Clone, open in Claude Code, and run `/demo-briefing`. It runs the whole morning ritual against the fictional sample data in `demo/`:
 
 ```
@@ -111,6 +114,16 @@ The `.claude/skills/` and `.claude/commands/` are plain markdown on the Agent Sk
 ## What's deliberately not here
 
 No real playbooks, positioning, pricing, or data. That's the point: the structure is reproducible; the judgment you put inside it is the part that's yours. Fill one drawer this week.
+
+## What's free vs. what's paid
+
+This is **open core**. The chassis is free and MIT-licensed; the part that took twenty-one years isn't in the box.
+
+| Free — this repo (MIT) | Paid — built & run for you |
+|---|---|
+| The chassis: hooks, daily rituals, and go-to-market skill templates across all four functions, plus a 30-second runnable demo. Bring your own playbooks. | Your *populated* operating system — real playbooks, positioning, pricing, ICP — plus the wider automation layer (n8n: vendor management, ICP checks, pre- and post-meeting briefings and follow-ups) and Blackbird.io multilingual content. Built and run for you, or run by a growth operator who works this way. |
+
+The repo is the skeleton; the judgment you put inside it is the product → **[langoptima.com/growth](https://langoptima.com/growth)**.
 
 ## Who's behind this
 
