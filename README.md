@@ -122,7 +122,7 @@ This is **open core**. The chassis is free and MIT-licensed; the part that took 
 |---|---|
 | The chassis: hooks, daily rituals, and go-to-market skill templates across all four functions, plus a 30-second runnable demo. Bring your own playbooks. | Your *populated* operating system — real playbooks, positioning, pricing, ICP — plus the wider automation layer (n8n: vendor management, ICP checks, pre- and post-meeting briefings and follow-ups) and Blackbird.io multilingual content. Built and run for you, or run by a growth operator who works this way. |
 
-The repo is the skeleton; the judgment you put inside it is the product → **[langoptima.com](https://langoptima.com)**.
+The repo is the skeleton; the judgment you put inside it is the product → **[langoptima.com/features/growth](https://langoptima.com/features/growth)**.
 
 ## Who's behind this
 
