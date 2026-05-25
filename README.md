@@ -52,7 +52,7 @@ Nothing there is real — delete `demo/` whenever you like.
 |---|---|
 | `.claude/hooks/` | Five guardrails: session-start context, **state re-injection across compaction**, a **commit secret-guard**, sensitive-file protection, an end-of-day nudge |
 | `.claude/commands/` | Daily rituals you invoke by name: `/morning-briefing`, `/midday-checkin`, `/end-of-day`, `/weekly-review`, plus `/demo-briefing` |
-| `skills/` | Skill templates grouped by the four growth functions (see below) — so the balance across marketing, sales, product, and retention is visible, not acquisition-only |
+| `.claude/skills/` | Skill templates grouped by the four growth functions (see below) — so the balance across marketing, sales, product, and retention is visible, not acquisition-only |
 | `ops/` | Your plain-text playbooks — `priorities.md`, `daily-log.md`, `pipeline.md` (left side), `customers.md` and `roadmap-signals.md` (right side). Start here. |
 | `demo/` | A fictional pipeline *and* customer book so you can see the whole motion work (and present from it safely) |
 | `docs/operating-model.md` | The spine: the bowtie, the four functions, the six handoffs (H1–H6), the one number (NRR), and the three shared definitions |
@@ -101,12 +101,12 @@ All pure bash (one uses `python3` to read a payload). No API keys, no MCP — it
 
 - **`ops/`** — one file per area. Don't port your whole life on day one; pick the ritual you dread most and make it real.
 - **`.claude/commands/`** — a ritual is just a markdown prompt. Copy one and tweak it.
-- **`skills/`** — a repeatable job, triggered by its `description`. Copy one of the included skills as a pattern.
-- **Connect your tools** — add MCP servers (calendar, notes, issue tracker, CRM) via a local `.mcp.json` and let your commands reach them.
+- **`.claude/skills/`** — a repeatable job, triggered by its `description`. Copy one of the included skills as a pattern.
+- **Connect your tools** — copy `.mcp.json.example` → `.mcp.json` (gitignored) to add MCP servers (calendar, notes, issue tracker, CRM), and put any keys in `.claude/settings.local.json` (copy `.claude/settings.local.example.json`). Your commands and skills can then reach them.
 
 ## Portability
 
-The `skills/` and `commands/` are plain markdown on the Agent Skills spec, so they port to Cursor, Windsurf, and Codex with little change. The `hooks/` and `settings.json` are Claude-Code-specific — they won't carry over, and that's fine; the rituals and skills are the part worth taking elsewhere.
+The `.claude/skills/` and `.claude/commands/` are plain markdown on the Agent Skills spec, so they port to Cursor, Windsurf, and Codex with little change. The `hooks/` and `settings.json` are Claude-Code-specific — they won't carry over, and that's fine; the rituals and skills are the part worth taking elsewhere.
 
 ## What's deliberately not here
 
