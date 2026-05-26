@@ -6,6 +6,8 @@
 ![Built for Claude Code](https://img.shields.io/badge/built%20for-Claude%20Code-d97757)
 ![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
 
+> **In one sentence:** Claude Code Growth OS is an open-source, MIT-licensed scaffold that turns Claude Code into a go-to-market operating environment — plain-text playbooks, daily rituals (morning briefing, follow-ups, end-of-day), guardrail hooks, and skill templates spanning all four growth functions (marketing, sales, product, and retention) — so your whole revenue motion runs from one git-tracked repo instead of living in your head.
+
 Most people ask Claude Code to write code. You can also run your go-to-market in it: let it read your plain-text playbooks, run your daily rituals (the morning briefing, follow-ups, lead qualification, content) and reach your tools, so the whole motion runs from one place. Because everything is markdown in git, your sales & marketing system gets a diff, a history, and a blame view, and it stops living in your head.
 
 Most sales & marketing skill packs just generate copy. This runs the operating day around it (qualify, prep, follow up, post) and keeps it all in git.
