@@ -1,11 +1,23 @@
 # Daily Log
 
-<!-- Newest entry at the top. One block per day. /morning-briefing reads the
-     most recent entry; /end-of-day appends a new one. Log work from both sides
-     of the bowtie here — deals advanced *and* post-sale touches (onboarding,
-     adoption, renewal, expansion, signals routed to product), not just deals. -->
+<!-- Newest entry at the top. One block per day. -->
 
 ## 2026-05-26
-- Shipped: bootstrapped the ops layer — seeded priorities (PR #15, merged), plus starter rows in pipeline, customers, and roadmap-signals, and a starter feedback log, so the rituals have data to read.
-- Slipped: it's all starter/placeholder data so far — no real deals or accounts yet.
-- Learned: the review only reflects reality once the starters are replaced with real entries.
+- Shipped: Brightwater discovery booked for Thursday; flagged the Nordvik export gap to product.
+- Slipped: Solano follow-up — now 8 days quiet, no next step; Aoyama re-engage still not scheduled.
+- Learned: regulated-industry prospects ask for a published reference earlier than mid-market does.
+
+## 2026-05-25
+- Shipped: Vantyr moved to Negotiation; sent Pinnacle the third-department onboarding plan.
+- Slipped: Kessler revised two-unit pricing not out yet.
+- Learned: two-business-unit deals need a cleaner per-unit pricing breakdown.
+
+## 2026-05-22
+- Shipped: Mercia security questionnaire received; introduced Ardent's expansion to sales.
+- Slipped: Nordvik QBR slipped a week after the champion's departure.
+- Learned: a departed champion is a renewal risk even when usage still looks fine.
+
+## 2026-05-20
+- Shipped: reset Solano around role-based access; floated a reference ask with Tilbury.
+- Slipped: nothing major.
+- Learned: missing RBAC is now blocking two enterprise deals — a pattern; routed to product.
