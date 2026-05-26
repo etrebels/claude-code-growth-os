@@ -1,21 +1,11 @@
 # Roadmap Signals
 
-<!-- Product's working surface — the triage queue, not the raw loop.
-
-     The shared feedback log (demo/feedback-log.md, or your own) is the raw
-     cross-function stream: everything sales and CS hear, tagged as it lands.
-     This file is downstream of it: where product *pulls* the signals that
-     should shape what gets built, and routes each one. The product-signal
-     skill moves items here from the log.
-
-     What lands here:
-     - FEATURE-REQUEST that blocks adoption or expansion (not the backlog void)
-     - churn reasons — the real one, the value the customer stopped getting
-     - win/loss reasons that are about the product, not the deal
-
-     Status: New → Routed → Shipped. When something ships, write the one-line
-     "what this means for the buyer" so the feature doesn't land silently. -->
+<!-- Product's triage queue. The product-signal skill moves items here from the
+     feedback log. Status: New → Routed → Shipped. -->
 
 | Date | Source signal | Type | Tied to | Routed to | Status | What it means for the buyer (once shipped) |
 |---|---|---|---|---|---|---|
-| | | | | | | |
+| 2026-05-26 | Export-to-BI asked for by 3 accounts; blocking Nordvik renewal | FEATURE-REQUEST | Nordvik Maritime (renewal) | Roadmap — next cycle | Routed | — |
+| 2026-05-24 | Onboarding stalls at the data-connector setup step | Adoption friction | Halcyon Foods (onboarding) | Product — onboarding flow | New | — |
+| 2026-05-20 | Lost Solano momentum partly on missing role-based access | Win/loss (product) | Solano Aerospace (deal) | Product + sales | New | — |
+| 2026-05-12 | Saved/scheduled views requested across 4 accounts | FEATURE-REQUEST | Multiple (expansion) | Roadmap — shipped | Shipped | Save and schedule your common views — no rebuilding a query each week. |
