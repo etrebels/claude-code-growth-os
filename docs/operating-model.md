@@ -67,3 +67,4 @@ The mature version of this is RevOps — one operating model and one data spine 
 
 - [`why-align.md`](why-align.md) — the one-page argument, with sources, for why the four belong in one system.
 - [`methodology.md`](methodology.md) — Claude Code as the operating environment the model runs in.
+- [`connecting-a-crm.md`](connecting-a-crm.md) — optional: make an existing CRM the system of record and project it into `ops/pipeline.md` (the H1 surface), instead of running two pipelines.
