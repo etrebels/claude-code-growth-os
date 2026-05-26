@@ -60,6 +60,7 @@ Nothing there is real — delete `demo/` whenever you like.
 | `docs/operating-model.md` | The spine: the bowtie, the four functions, the six handoffs (H1–H6), the one number (net revenue retention), and the three shared definitions |
 | `docs/methodology.md` | The idea in full: Claude Code as an operating environment |
 | `docs/why-align.md` | The one-page argument: why your whole go-to-market (marketing, sales, product, retention) runs as one system (with sources) |
+| `docs/connecting-a-crm.md` | Optional: make an existing CRM the source of truth and project it into `ops/pipeline.md` — don't run two pipelines |
 
 **Skills by function** — the motion is balanced across the bowtie, not just acquisition:
 
@@ -104,7 +105,7 @@ All pure bash (one uses `python3` to read a payload). No API keys, no MCP — it
 - **`ops/`** — one file per area. Don't port your whole life on day one; pick the ritual you dread most and make it real.
 - **`.claude/commands/`** — a ritual is just a markdown prompt. Copy one and tweak it — [write your first in 5 minutes](docs/first-ritual.md).
 - **`.claude/skills/`** — a repeatable job, triggered by its `description`. Copy one of the included skills as a pattern.
-- **Connect your tools** — copy `.mcp.json.example` → `.mcp.json` (gitignored) to add MCP servers (calendar, notes, issue tracker, CRM), and put any keys in `.claude/settings.local.json` (copy `.claude/settings.local.example.json`). Your commands and skills can then reach them.
+- **Connect your tools** — copy `.mcp.json.example` → `.mcp.json` (gitignored) to add MCP servers (calendar, notes, issue tracker, CRM), and put any keys in `.claude/settings.local.json` (copy `.claude/settings.local.example.json`). Your commands and skills can then reach them. If a CRM is your system of record, [`docs/connecting-a-crm.md`](docs/connecting-a-crm.md) shows how to project it into `ops/pipeline.md` instead of running two pipelines.
 
 ## Portability
 
