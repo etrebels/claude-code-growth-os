@@ -6,6 +6,6 @@
      adoption, renewal, expansion, signals routed to product), not just deals. -->
 
 ## 2026-05-26
-- Shipped: seeded `ops/priorities.md` with three starter priorities (PR #15, merged); started the daily loop.
-- Slipped: pipeline and customer book still empty — no deals or accounts logged yet.
-- Learned: the weekly review stays empty until the log, pipeline, and customer book carry real entries.
+- Shipped: bootstrapped the ops layer — seeded priorities (PR #15, merged), plus starter rows in pipeline, customers, and roadmap-signals, and a starter feedback log, so the rituals have data to read.
+- Slipped: it's all starter/placeholder data so far — no real deals or accounts yet.
+- Learned: the review only reflects reality once the starters are replaced with real entries.
