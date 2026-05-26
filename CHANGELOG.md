@@ -5,6 +5,21 @@ All notable changes to this project are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Added
+
+- **First-ritual guide** (`docs/first-ritual.md`) — a 5-minute walkthrough that
+  copies `/midday-checkin` into your own ritual, linked from the README. (#10)
+- **Shellcheck CI** (`.github/workflows/shellcheck.yml`) — lints the bash hooks
+  in `.claude/hooks/` on every push and pull request. (#9)
+
+### Changed
+
+- **Commit secret-guard** (`.claude/hooks/pre-commit-guard.sh`) — broadened to
+  catch GitHub fine-grained PATs and OAuth/server tokens, Google API keys, and
+  Stripe live keys, with the covered formats documented inline. (#8)
+
 ## [0.1.0] — 2026-05-25
 
 First public release — the open-core scaffold for running your whole

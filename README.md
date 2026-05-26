@@ -102,7 +102,7 @@ All pure bash (one uses `python3` to read a payload). No API keys, no MCP — it
 ## Make it yours
 
 - **`ops/`** — one file per area. Don't port your whole life on day one; pick the ritual you dread most and make it real.
-- **`.claude/commands/`** — a ritual is just a markdown prompt. Copy one and tweak it.
+- **`.claude/commands/`** — a ritual is just a markdown prompt. Copy one and tweak it — [write your first in 5 minutes](docs/first-ritual.md).
 - **`.claude/skills/`** — a repeatable job, triggered by its `description`. Copy one of the included skills as a pattern.
 - **Connect your tools** — copy `.mcp.json.example` → `.mcp.json` (gitignored) to add MCP servers (calendar, notes, issue tracker, CRM), and put any keys in `.claude/settings.local.json` (copy `.claude/settings.local.example.json`). Your commands and skills can then reach them.
 

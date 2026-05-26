@@ -1,0 +1,26 @@
+name: shellcheck
+
+# The hooks in .claude/hooks/ are the repo's guardrails. Lint them on every
+# change so a shell mistake can't slip in. Scoped to the hook scripts only.
+on:
+  push:
+    paths:
+      - ".claude/hooks/**"
+      - ".github/workflows/shellcheck.yml"
+  pull_request:
+    paths:
+      - ".claude/hooks/**"
+      - ".github/workflows/shellcheck.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  shellcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Lint .claude/hooks/*.sh
+        run: |
+          shellcheck --version
+          shellcheck .claude/hooks/*.sh
