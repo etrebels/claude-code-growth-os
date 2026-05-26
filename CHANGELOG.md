@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- **Connecting-a-CRM guide** (`docs/connecting-a-crm.md`) — an optional pattern
+  for making an existing CRM the system of record and projecting it into
+  `ops/pipeline.md`, so you never run two pipelines. (#12)
 - **First-ritual guide** (`docs/first-ritual.md`) — a 5-minute walkthrough that
   copies `/midday-checkin` into your own ritual, linked from the README. (#10)
 - **Shellcheck CI** (`.github/workflows/shellcheck.yml`) — lints the bash hooks

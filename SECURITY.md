@@ -15,6 +15,7 @@ This is a plain-text starter — no server, no database, no build step, no telem
 
 - The `demo/` data is fictional by design. The safe way to present or share is to run from `demo/`.
 - Don't commit real prospect names, deals, or meeting notes to a repo you intend to publish — that is third-party personal data.
+- **Before you flip a fork to public, run the [pre-launch scrub checklist](docs/launch-scrub-checklist.md)** — copy-paste commands that scan the working tree *and* full git history for secrets and other people's data.
 
 ## Reporting
 

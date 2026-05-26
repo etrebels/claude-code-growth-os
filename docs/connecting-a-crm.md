@@ -14,6 +14,45 @@ CRM (system of record)  ──hydrate──▶  ops/pipeline.md (snapshot)  ─�
 
 If the CRM is unreachable, fall back to the last projection and flag it stale — never block the routine.
 
+## Wiring it up
+
+Give Claude Code reach into the CRM without putting a secret in git. Copy `.mcp.json.example` → `.mcp.json` (gitignored) and register the server alongside `filesystem`.
+
+**If your CRM has an MCP server** (hosted, or a thin local wrapper) — a local/stdio one:
+
+```json
+{
+  "mcpServers": {
+    "filesystem": { "command": "npx", "args": ["-y", "@modelcontextprotocol/server-filesystem", "."] },
+    "crm": {
+      "command": "npx",
+      "args": ["-y", "your-crm-mcp-server"],
+      "env": { "CRM_API_KEY": "${CRM_API_KEY}" }
+    }
+  }
+}
+```
+
+A hosted/remote one instead, with the token on the `Authorization` header:
+
+```json
+"crm": {
+  "type": "http",
+  "url": "https://mcp.your-crm.example/v1",
+  "headers": { "Authorization": "Bearer ${CRM_API_KEY}" }
+}
+```
+
+Keep the real key out of `.mcp.json`. Put it in `.claude/settings.local.json` (also gitignored) and let `${CRM_API_KEY}` expand from there:
+
+```json
+{ "env": { "CRM_API_KEY": "your-key-here" } }
+```
+
+**If it only has a REST API**, the projection logic — find-or-create, paging, the stage-ID mapping below — lives in a **private skill** that calls the API, not in this repo. Keep org-specific endpoints and IDs there.
+
+Either way, a rule or skill then reads the CRM and rewrites `ops/pipeline.md` in the morning, and writes stage moves back at end of day — the loop at the top of this doc.
+
 ## Hard-won rules (these will bite you otherwise)
 
 1. **Never hardcode the API surface.** Discover endpoints, fields, and especially **select-option IDs** (pipeline stages) from the CRM's own schema endpoint each session — they're org-specific and change. Writing a stage *label* where the API wants an option *ID* silently fails.
