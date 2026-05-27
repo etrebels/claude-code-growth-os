@@ -28,7 +28,7 @@ So the seams a buyer feels aren't only between marketing and sales. They're betw
 
 **The bigger, less-told leak is on the right side of the bowtie:**
 
-- **Net revenue retention is the valuation number.** Median NRR sits around **~106%** (higher for enterprise, lower for SMB). Below 100% means every dollar of acquisition spend is filling a leaking bucket — you grow by running faster, not by compounding.
+- **Net revenue retention is the valuation number — and the evidence is hard, not soft.** Median NRR sits around **~102–106%** (higher for enterprise, lower for SMB). The multiple gap is large and measured: public B2B-tech with **NRR ≥120% trades at ~21× EV/revenue versus ~9× below** (McKinsey), and an independent index shows **11.7× versus 4.1×** for sub-100%-NRR companies (Software Equity Group). Growth itself scales with retention — roughly **+5 points of growth per NRR band**, with the highest-NRR firms growing **~83% faster than the median** (SaaS Capital). Below 100% NRR, every dollar of acquisition spend is filling a leaking bucket. The board-grade primary: a **1% retention gain ≈ 5% more customer value, and customer equity ≈ firm value** (Gupta, Lehmann & Stuart, peer-reviewed, 2004) — a sturdier number than any of the alignment percentages above.
 - **Premature scaling is the #1 startup killer.** Studies of high-growth startups attribute roughly **70%+ of failures** to scaling before the motion works — pouring acquisition into a product or post-sale experience that can't hold it.
 - **The feedback that would fix it gets lost.** Sales reps **misdiagnose why deals are won or lost 60–85% of the time**, so the real reason rarely reaches marketing or product. And an often-cited rule of thumb is that **~80% of shipped features go rarely or never used** — product building without the signal from the field and the customer base.
 
@@ -92,6 +92,7 @@ You don't need everything on day one. A shared definition, a Won→onboarding ha
 - **The exact percentages are soft.** Several of the most-quoted figures come from older or vendor-sponsored studies and vary between sources. Use them to make the case, not as guarantees. (One widely repeated "aligned orgs grow 36% faster" line is untraceable to a primary source — the 24% Forrester figure is the defensible one.)
 - **Correlation isn't proof of causation.** Well-run companies tend to do both alignment *and* growth well, so some of the effect is selection. Treat alignment as necessary, not single-handedly sufficient.
 - **It matters most in considered B2B sales with real post-sale relationships** — long journeys, multiple stakeholders, renewals and expansion. For low-consideration or one-off purchases, the right-side payoff is smaller.
+- **Retention is not a maximize-at-all-costs lever.** Peer-reviewed work finds loyalty is not automatically profitable (Reinartz & Kumar found a loyalty-profit correlation below 0.50) and retention spend has an *interior optimum* — past it, more retention destroys value. Segment by customer profitability; don't pour retention budget into unprofitable accounts. The retention/valuation numbers above (McKinsey, SEG, SaaS Capital, Gupta) are the solid ones; the older alignment percentages are directional.
 
 ---
 
@@ -102,7 +103,12 @@ You don't need everything on day one. A shared definition, a Won→onboarding ha
 - IDC — cost of misalignment (10%+ of revenue/yr); revenue lost to silos (20–30%)
 - LinkedIn "Art of Winning" — the ~$1 trillion aggregate figure
 - Winning by Design — the bowtie model (retention and expansion as first-class growth engines)
-- ChartMogul / SaaS benchmarks — net revenue retention medians (~106%)
+- ChartMogul / SaaS Capital / KeyBanc — net revenue retention medians (~102–106%); GRR ~92%
+- McKinsey — "The net revenue retention advantage" (NRR ≥120% → ~21× vs ~9× EV/revenue)
+- Software Equity Group — SaaS Index (NRR → EV/revenue: 11.7× vs 4.1×)
+- SaaS Capital — 2025 retention & growth benchmarks (growth scales ~exponentially with NRR)
+- Gupta, Lehmann & Stuart (2004), *Journal of Marketing Research* — "Valuing Customers" (1% retention ≈ 5% customer value; customer equity ≈ firm value)
+- Reinartz & Kumar — peer-reviewed loyalty-profitability research (loyalty ≠ automatic profit; retention has an interior optimum)
 - Startup Genome — premature scaling as the leading cause of high-growth startup failure
 - Clozd — reps misdiagnose win/loss reasons 60–85% of the time
 - Reforge — why funnels force siloed ownership and loops compound
