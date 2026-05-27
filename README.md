@@ -62,6 +62,7 @@ Nothing there is real — delete `demo/` whenever you like.
 | `docs/operating-model.md` | The spine: the bowtie, the four functions, the six handoffs (H1–H6), the one number (net revenue retention), and the three shared definitions |
 | `docs/methodology.md` | The idea in full: Claude Code as an operating environment |
 | `docs/why-align.md` | The one-page argument: why your whole go-to-market (marketing, sales, product, retention) runs as one system (with sources) |
+| `docs/why-brand.md` | The companion argument: where demand comes from — why ~95% of buyers aren't ready yet, and how brands actually grow (with sources) |
 | `docs/connecting-a-crm.md` | Optional: make an existing CRM the source of truth and project it into `ops/pipeline.md` — don't run two pipelines |
 
 **Skills by function** — the motion is balanced across the bowtie, not just acquisition:

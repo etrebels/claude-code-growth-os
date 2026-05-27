@@ -2,7 +2,7 @@
 
 Most companies run growth as four departments that hand off down a line: marketing generates demand, sales closes it, product builds, customer success keeps the account. The buyer stopped experiencing it that way — they research, buy, adopt, and renew as one continuous relationship, and they don't care about your org chart. That single change is why coordination *across all four* has moved from "nice to have" to a measurable driver of growth.
 
-This kit keeps the whole motion in one repo on purpose. This page is the *why*: why the four belong together, why they drift apart anyway, what "working together closely" actually means, and how to start.
+This kit keeps the whole motion in one repo on purpose. This page is the *why*: why the four belong together, why they drift apart anyway, what "working together closely" actually means, and how to start. Its companion, [`why-brand.md`](why-brand.md), covers where that demand comes from in the first place — why most buyers aren't ready to buy yet.
 
 > The exact percentages below come from a mix of studies and vary by source. The **direction** is well-supported; treat the **magnitudes** as directional, not benchmark-grade.
 
