@@ -9,6 +9,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- **Principles from science** (`docs/principles-from-science.md`) — twenty-one
+  portable operating principles drawn from seven sciences, each with two sourced
+  quotes and a worked go-to-market example; linked from the README docs table. (#26)
+- **Web-session bootstrap hook** (`.claude/hooks/web-bootstrap.sh`) — a
+  SessionStart hook that installs `shellcheck` in remote / Claude-Code-on-the-web
+  containers only, so the hook lint (`.github/workflows/shellcheck.yml`) also runs
+  in-session. Skipped locally, idempotent, and non-blocking. (#23)
+- **Demand-side argument** (`docs/why-brand.md`) — the companion to `why-align`:
+  where demand comes from (the 95-5 reality, mental & physical availability, the
+  brand-vs-activation split), with sources. (#21)
+- **Fictional starter data in `ops/`** — the operating books now ship seeded with
+  a coherent set of fictional accounts (pipeline, customers, daily log, feedback
+  log, roadmap signals) so the rituals run against realistic data out of the box.
+  (#15, #16)
 - **Connecting-a-CRM guide** (`docs/connecting-a-crm.md`) — an optional pattern
   for making an existing CRM the system of record and projecting it into
   `ops/pipeline.md`, so you never run two pipelines. (#12)
@@ -19,6 +33,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- **`meeting-prep` skill** (`.claude/skills/meeting-prep/SKILL.md`) — question
+  guidance upgraded with Chris Voss labeling and calibrated What/How questions
+  (label-then-ask, the two closes, a replace-on-sight list for why/yes-no). (#25)
+- **Explicit effort level** (`.claude/settings.json`) — pins `effortLevel: "high"`
+  so behavior is stable across model versions (Opus 4.8 default; degrades
+  gracefully on Sonnet). (#24)
+- **Tightened stat sourcing** in `docs/why-align.md` and `docs/operating-model.md`
+  — a primary-source audit reframed unverifiable vendor figures as directional,
+  led with peer-reviewed evidence, corrected the win-loss and feature-usage
+  attributions, and rebuilt the Sources list into tiers. (#17, #18, #19, #20, #22)
 - **Commit secret-guard** (`.claude/hooks/pre-commit-guard.sh`) — broadened to
   catch GitHub fine-grained PATs and OAuth/server tokens, Google API keys, and
   Stripe live keys, with the covered formats documented inline. (#8)

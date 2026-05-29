@@ -58,7 +58,7 @@ Goodwill can't out-run a broken incentive system. If you want different behavior
 
 Not constant meetings or a merged org chart — a small set of shared structures. The same handful that aligns sales and marketing extends to all four:
 
-1. **Shared definitions, written once.** One ICP. One MQL→SQL bar both sales and marketing own. One **Won→onboarding handoff** so a signed deal doesn't drop silently into a CS void. (Firms with documented SLAs are ~34% more likely to report higher YoY ROI — HubSpot *State of Inbound* 2015, self-reported.)
+1. **Shared definitions, written once.** One ideal customer profile (ICP). One MQL→SQL bar — marketing-qualified to sales-qualified lead — that both sales and marketing own. One **Won→onboarding handoff** so a signed deal doesn't drop silently into a CS void. (Firms with documented SLAs are ~34% more likely to report higher YoY ROI — HubSpot *State of Inbound* 2015, self-reported.)
 2. **Two-way commitments (SLAs).** Marketing commits to lead volume *and quality*; sales commits to follow-up speed *and honest feedback*; sales commits to a complete handoff at won; CS commits to flag risk early (the renewal motion starts day 60, not day 85).
 3. **Shared goals — one revenue number.** A North Star that captures customer value, with **NRR** as the financial number the whole bowtie rolls up to. Not four separate local targets that pull apart.
 4. **One source of truth.** A shared system with closed-loop reporting, so all four reason from the same numbers.
