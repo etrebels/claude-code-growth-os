@@ -113,7 +113,7 @@ The strongest evidence here is peer-reviewed. We lead with the academic work and
 **Retention & loyalty economics**
 
 - Reichheld & Sasser (1990), "Zero Defections: Quality Comes to Services," *HBR* 68(5):105–111 — the origin of the retention-profit idea (firm-specific Bain cases). https://hbr.org/1990/09/zero-defections-quality-comes-to-services
-- Gupta, Lehmann & Stuart (2004), "Valuing Customers," *Journal of Marketing Research* 41(1):7–18 — a 1% improvement in retention ≈ 5% improvement in firm value; retention dominates acquisition. https://doi.org/10.1509/jmkr.41.1.7.25084
+- Gupta, Lehmann & Stuart (2004), "Valuing Customers," *Journal of Marketing Research* 41(1):7–18 — retention dominates acquisition as a value lever. Abstract: *"a 1% improvement in retention, margin, or acquisition cost improves firm value by 5%, 1%, and .1%, respectively."* https://doi.org/10.1509/jmkr.41.1.7.25084
 - Reinartz & Kumar (2002), "The Mismanagement of Customer Loyalty," *HBR* 80(7):86–94 — the counter-weight: across ~16,000 customers, loyalty ≠ profitability. https://hbr.org/2002/07/the-mismanagement-of-customer-loyalty
 
 **Sales ↔ production / operations (S&OP)**
