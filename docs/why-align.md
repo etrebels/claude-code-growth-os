@@ -22,17 +22,19 @@ So the seams a buyer feels aren't only between marketing and sales. They're betw
 
 **Aligning sales and marketing already pays — that's the part most people have heard:**
 
-- SiriusDecisions (now Forrester) benchmarked roughly 400 B2B organizations: tightly aligned sales and marketing achieved **~24% faster three-year revenue growth and ~27% faster profit growth** (vendor benchmark, self-reported) — the most credible single figure in the vendor literature.
-- IDC estimates the inability to align costs **10%+ of revenue per year**; broader estimates of revenue lost to siloed data and functions run **20–30%**. LinkedIn's "Art of Winning" puts the US aggregate near **$1 trillion a year** — an estimated figure, directional only.
-- A concrete waste line: **60–70% of the content marketing produces is never used by sales.**
+- The defensible evidence is peer-reviewed: the quality of the sales–marketing interface is empirically linked to firm performance (Homburg, Jensen & Krohmer, *Journal of Marketing*, 2008, n=337; Le Meunier-FitzHugh & Piercy, *Industrial Marketing Management*, 2007), and the effect is *contingent*, not automatic (Troy et al., *JM*, 2008).
+- The widely-quoted SiriusDecisions/Forrester **"~24% faster revenue / ~27% faster profit"** figure is **untraceable to a primary document** — every live citation is a secondary page. Use it as a directional vendor estimate, not as the headline proof.
+- The cost-of-misalignment numbers are the same kind of estimate: IDC's **10%+ of revenue per year**, the **20–30%** lost-to-silos range, LinkedIn's **~$1 trillion** US aggregate, and the **60–70% of content never used by sales** line all circulate through vendor/secondary pages only. Directional — frame the stakes with them, don't present them as measured facts.
 
 **The bigger, less-told leak is on the right side of the bowtie:**
 
 - **Net revenue retention is the valuation number.** Median NRR sits around **~106%** (ChartMogul 2024 — higher for enterprise, lower for SMB). Below 100% means every dollar of acquisition spend is filling a leaking bucket — you grow by running faster, not by compounding.
 - **Premature scaling is the #1 startup killer.** The Startup Genome Report (2012) attributes **~74% of high-growth startup failures** to scaling before the motion works — pouring acquisition into a product or post-sale experience that can't hold it. (Self-reported; thresholds unpublished.)
-- **The feedback that would fix it gets lost.** Win/loss vendor Clozd reports that reps are **wrong about why deals are won or lost more than 60% of the time**, and that CRM win/loss data matched buyer interviews only **~15% of the time** across ~1,000 closed-lost deals — i.e., ~85% inaccurate. (Vendor data, method not fully published; the direction is what matters — run the loop on logged evidence, not memory.) So the real reason rarely reaches marketing or product. And feature usage skews low: Pendo (2019) found **~80% of features rarely or never used** across 615 of its own accounts — product building without the signal from the field and the customer base.
+- **The feedback that would fix it gets lost.** Win/loss vendor Clozd reports that reps are **wrong about why deals are won or lost more than 60% of the time**, and that CRM win/loss data matched buyer interviews only **~15% of the time** across ~1,000 closed-lost deals — i.e., ~85% inaccurate. (Vendor data, method not fully published; the direction is what matters — run the loop on logged evidence, not memory.) So the real reason rarely reaches marketing or product. And feature usage skews low: Pendo (2019) found **~80% of features rarely or never used** across 615 of its own accounts; an older Standish reading put it at 45% never / 64% rarely-or-never from four internal apps — treat as illustrative, not a law. Product building without the signal from the field and the customer base.
 
 Put together: the cost of misalignment isn't only the deals marketing and sales fumble between them. It's the renewals product never hears about and the expansions customer success never triggers.
+
+**A market signal, not a study.** In 2026, Aligned — a deal-workspace vendor — announced it had become the only platform G2 ranked #1 in *both* the Digital Sales Room *and* Client Portal categories, across 1,166 verified reviews. Treat it as one vendor's milestone, not independent proof. But the direction matches the studies above: a product that deliberately refused the sales-vs-CS lane — one rep workspace from the first meeting to the renewal — and won both categories at once is what the bowtie predicts. Their own framing was blunter: the lane, not the tool, was the problem.
 
 ## 3. Why it persists: the perception gap and the post-sale blind spot
 
@@ -89,7 +91,7 @@ You don't need everything on day one. A shared definition, a Won→onboarding ha
 
 ## 7. Honest caveats
 
-- **The exact percentages are soft.** Several of the most-quoted figures come from older or vendor-sponsored studies and vary between sources. Use them to make the case, not as guarantees. (A widely repeated "aligned orgs grow 36% faster" line is a garble of Forrester's actual "36% *more* revenue growth" — and the ~24% SiriusDecisions/Forrester figure is the cleaner one to lean on.)
+- **The exact percentages are soft.** Most of the most-quoted figures come from older or vendor-sponsored studies and vary between sources — use them to make the case, not as guarantees. Both the "36% faster" *and* the "24% faster" alignment-lift lines are untraceable to a primary document (the "36% faster" is itself a garble of Forrester's "36% *more* revenue growth"); the genuinely defensible evidence is the peer-reviewed interface literature (Homburg 2008; Le Meunier-FitzHugh & Piercy 2007) and retention economics (Gupta, Lehmann & Stuart 2004), not any single vendor percentage.
 - **The "80% before sales" claim is a conflation — we don't make it.** The number you'll see everywhere fuses Gartner's "80% of B2B sales *interactions* will be in *digital channels* by 2025" (a different claim) with CEB/Google's real 2012 "57%." We anchor to the 57% and the rising trend, not to "80% before sales."
 - **The win/loss and feature-usage figures are vendor data.** The Clozd win/loss numbers and the Pendo feature-usage figure come from firms that sell into those problems, with methods not fully published. Treat them as directional support for running the loop on logged evidence, not as benchmark-grade magnitudes.
 - **Correlation isn't proof of causation.** Well-run companies tend to do both alignment *and* growth well, so some of the effect is selection. Treat alignment as necessary, not single-handedly sufficient.
@@ -108,6 +110,7 @@ The strongest evidence here is peer-reviewed. We lead with the academic work and
 - Kotler, Rackham & Krishnaswamy (2006), "Ending the War Between Sales and Marketing," *HBR* 84(7–8) — the canonical Undefined → Defined → Aligned → Integrated framework. https://hbr.org/2006/07/ending-the-war-between-sales-and-marketing
 - Homburg, Jensen & Krohmer (2008), "Configurations of Marketing and Sales: A Taxonomy," *Journal of Marketing* 72(2):133–154 — survey of 337 firms; best performers pair structural linkage with market knowledge. https://doi.org/10.1509/jmkg.72.2.133
 - Le Meunier-FitzHugh & Piercy (2007), "Does Collaboration Between Sales and Marketing Affect Business Performance?" *J. Personal Selling & Sales Management* 27(3):207–220 — direct collaboration → performance link. https://doi.org/10.2753/PSS0885-3134270301
+- Troy, Hirunyawipada & Paswan (2008), *Journal of Marketing* — cross-functional integration's effect on performance is *contingent*, not automatic. (The honest caveat on the interface literature.)
 - Kirca, Jayachandran & Bearden (2005), "Market Orientation: A Meta-Analytic Review," *Journal of Marketing* 69(2):24–41 — market orientation → performance, mediated by innovativeness. https://people.duke.edu/~moorman/Marketing-Strategy-Seminar-2015/Session%202/Kirca,%20Jayachandran,%20and%20Bearden.pdf
 
 **Retention & loyalty economics**
@@ -115,6 +118,7 @@ The strongest evidence here is peer-reviewed. We lead with the academic work and
 - Reichheld & Sasser (1990), "Zero Defections: Quality Comes to Services," *HBR* 68(5):105–111 — the origin of the retention-profit idea (firm-specific Bain cases). https://hbr.org/1990/09/zero-defections-quality-comes-to-services
 - Gupta, Lehmann & Stuart (2004), "Valuing Customers," *Journal of Marketing Research* 41(1):7–18 — retention dominates acquisition as a value lever. Abstract: *"a 1% improvement in retention, margin, or acquisition cost improves firm value by 5%, 1%, and .1%, respectively."* https://doi.org/10.1509/jmkr.41.1.7.25084
 - Reinartz & Kumar (2002), "The Mismanagement of Customer Loyalty," *HBR* 80(7):86–94 — the counter-weight: across ~16,000 customers, loyalty ≠ profitability. https://hbr.org/2002/07/the-mismanagement-of-customer-loyalty
+- Keiningham et al. (2007), *Journal of Marketing* — a longitudinal rebuttal to NPS-as-growth-predictor; pairs with Reinartz & Kumar as a check on loyalty-metric overreach.
 
 **Sales ↔ production / operations (S&OP)**
 
@@ -138,7 +142,8 @@ The strongest evidence here is peer-reviewed. We lead with the academic work and
 - ChartMogul *SaaS Retention Report* (2024) — net revenue retention median ~106%. https://chartmogul.com/reports/saas-retention-report/
 - Startup Genome Report (2012) — ~74% of high-growth startups fail from premature scaling (self-reported; thresholds unpublished). https://s3.amazonaws.com/startupcompass-public/StartupGenomeReport2_Why_Startups_Fail_v2.pdf
 - Clozd — reps wrong about win/loss reasons >60% of the time; CRM data matched buyer interviews ~15% of the time (vendor data; method not fully published). https://www.clozd.com/blog/5-lies-your-crm-is-telling-you-about-your-buyers
-- Pendo, *2019 Feature Adoption Report* — ~80% of features rarely or never used (615 of Pendo's own accounts; vendor-skewed). https://www.pendo.io/resources/the-2019-feature-adoption-report/
+- Pendo, *2019 Feature Adoption Report* — ~80% of features rarely or never used (615 of Pendo's own accounts; vendor-skewed); cf. Standish/CHAOS 45% never / 64% rarely-or-never (four internal apps). https://www.pendo.io/resources/the-2019-feature-adoption-report/
+- Aligned (2026) — vendor announcement: the only platform G2-ranked #1 in both Digital Sales Room and Client Portal (1,166 reviews). A market signal, not an independent study.
 - Winning by Design — the bowtie model (retention and expansion as first-class growth engines).
 - Reforge — why funnels force siloed ownership and loops compound.
 - HBR — "When Sales and Marketing Aren't Aligned, Both Suffer" (2018).
