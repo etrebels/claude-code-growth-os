@@ -22,7 +22,7 @@ So the seams a buyer feels aren't only between marketing and sales. They're betw
 
 **Aligning sales and marketing already pays — that's the part most people have heard:**
 
-- The defensible evidence is peer-reviewed: the quality of the sales–marketing interface is empirically linked to firm performance (Homburg, Jensen & Krohmer, *Journal of Marketing*, 2008, n=337; Le Meunier-FitzHugh & Piercy, *Industrial Marketing Management*, 2007), and the effect is *contingent*, not automatic (Troy et al., *JM*, 2008).
+- The defensible evidence is peer-reviewed: the quality of the sales–marketing interface is empirically linked to firm performance (Homburg, Jensen & Krohmer, *Journal of Marketing*, 2008, n=337; Le Meunier-FitzHugh & Piercy, *Industrial Marketing Management*, 2007), and the effect is *contingent*, not automatic (Troy et al., *JM*, 2008). The most *traceable* benchmark number is Aberdeen's 2010 study of 453 organizations — the aligned "Best-in-Class" averaged **~20% revenue growth versus a ~4% decline** for laggards (correlation among top performers, not proof).
 - The widely-quoted SiriusDecisions/Forrester **"~24% faster revenue / ~27% faster profit"** figure is **untraceable to a primary document** — every live citation is a secondary page. Use it as a directional vendor estimate, not as the headline proof.
 - The cost-of-misalignment numbers are the same kind of estimate: IDC's **10%+ of revenue per year**, the **20–30%** lost-to-silos range, LinkedIn's **~$1 trillion** US aggregate, and the **60–70% of content never used by sales** line all circulate through vendor/secondary pages only. Directional — frame the stakes with them, don't present them as measured facts.
 
@@ -30,7 +30,7 @@ So the seams a buyer feels aren't only between marketing and sales. They're betw
 
 - **Net revenue retention is the valuation number — and the evidence is hard, not soft.** Median NRR sits around **~102–106%** (higher for enterprise, lower for SMB). The multiple gap is large and measured: public B2B-tech with **NRR ≥120% trades at ~21× EV/revenue versus ~9× below** (McKinsey), and an independent index shows **11.7× versus 4.1×** for sub-100%-NRR companies (Software Equity Group). Growth itself scales with retention — roughly **+5 points of growth per NRR band**, with the highest-NRR firms growing **~83% faster than the median** (SaaS Capital). Below 100% NRR, every dollar of acquisition spend is filling a leaking bucket. The board-grade primary: a **1% retention gain ≈ 5% more customer value, and customer equity ≈ firm value** (Gupta, Lehmann & Stuart, peer-reviewed, 2004) — a sturdier number than any of the alignment percentages above.
 - **Premature scaling is the #1 startup killer.** Studies of high-growth startups attribute roughly **70%+ of failures** to scaling before the motion works — pouring acquisition into a product or post-sale experience that can't hold it.
-- **The feedback that would fix it gets lost.** Sales reps **misdiagnose why deals are won or lost 60–85% of the time**, so the real reason rarely reaches marketing or product. And an often-cited rule of thumb — **~80% of shipped features go rarely or never used** — captures the risk of building without field and customer signal, though it rests on a single vendor study (Pendo, 2019) plus a 2002 conference talk about four internal applications, so treat it as illustrative, not a law.
+- **The feedback that would fix it gets lost.** Win-loss vendors find that reps and CRM fields capture the real win/loss reason only a minority of the time (Clozd compared 1,000 deals' CRM "closed-lost" reasons to buyer interviews and found they matched ~15% of the time), so the real reason rarely reaches marketing or product. And an often-cited rule of thumb — **~80% of shipped features go rarely or never used** — captures the risk of building without field and customer signal, though it rests on a single vendor study (Pendo, 2019) plus a 2002 conference talk about four internal applications, so treat it as illustrative, not a law.
 
 Put together: the cost of misalignment isn't only the deals marketing and sales fumble between them. It's the renewals product never hears about and the expansions customer success never triggers.
 
@@ -105,7 +105,8 @@ You don't need everything on day one. A shared definition, a Won→onboarding ha
 **Industry / practitioner (directional — see §7):**
 
 - Gartner — 67% prefer a rep-free experience; ~80% of the journey before sales; RevOps guidance
-- Forrester / SiriusDecisions — the ~24% alignment economics; the 82%/65% perception gap; ~8% strongly aligned
+- Forrester / SiriusDecisions — the ~24% alignment economics (no published method); the 82%/65% perception gap; ~8% strongly aligned
+- Aberdeen Group (2010) — aligned "Best-in-Class" ~20% growth vs ~4% decline (n=453) — the most traceable alignment benchmark
 - IDC — cost of misalignment (10%+ of revenue/yr); revenue lost to silos (20–30%)
 - LinkedIn "Art of Winning" — the ~$1 trillion aggregate figure
 - Winning by Design — the bowtie model (retention and expansion as first-class growth engines)
@@ -116,7 +117,7 @@ You don't need everything on day one. A shared definition, a Won→onboarding ha
 - Gupta, Lehmann & Stuart (2004), *Journal of Marketing Research* — "Valuing Customers" (1% retention ≈ 5% customer value; customer equity ≈ firm value)
 - Reinartz & Kumar — peer-reviewed loyalty-profitability research (loyalty ≠ automatic profit; retention has an interior optimum)
 - Startup Genome — premature scaling as the leading cause of high-growth startup failure
-- Clozd — reps misdiagnose win/loss reasons 60–85% of the time
+- Clozd / Anova — reps and CRM capture the real win/loss reason a minority of the time (Clozd: CRM matched buyer interviews in ~15% of 1,000 deals)
 - Reforge — why funnels force siloed ownership and loops compound
 - HBR — "When Sales and Marketing Aren't Aligned, Both Suffer" (2018)
 - Aligned (2026) — vendor announcement: the only platform G2-ranked #1 in both Digital Sales Room and Client Portal (1,166 reviews). A market signal, not an independent study.
