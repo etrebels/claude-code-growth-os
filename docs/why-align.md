@@ -34,6 +34,8 @@ So the seams a buyer feels aren't only between marketing and sales. They're betw
 
 Put together: the cost of misalignment isn't only the deals marketing and sales fumble between them. It's the renewals product never hears about and the expansions customer success never triggers.
 
+**A market signal, not a study.** In 2026, Aligned — a deal-workspace vendor — announced it had become the only platform G2 ranked #1 in *both* the Digital Sales Room *and* Client Portal categories, across 1,166 verified reviews. Treat it as one vendor's milestone, not independent proof. But the direction matches the studies above: a product that deliberately refused the sales-vs-CS lane — one rep workspace from the first meeting to the renewal — and won both categories at once is what the bowtie predicts. Their own framing was blunter: the lane, not the tool, was the problem.
+
 ## 3. Why it persists: the perception gap and the post-sale blind spot
 
 If the case is this clear, why is it still rare? Two reasons.
@@ -107,3 +109,4 @@ You don't need everything on day one. A shared definition, a Won→onboarding ha
 - Clozd — reps misdiagnose win/loss reasons 60–85% of the time
 - Reforge — why funnels force siloed ownership and loops compound
 - HBR — "When Sales and Marketing Aren't Aligned, Both Suffer" (2018)
+- Aligned (2026) — vendor announcement: the only platform G2-ranked #1 in both Digital Sales Room and Client Portal (1,166 reviews). A market signal, not an independent study.
