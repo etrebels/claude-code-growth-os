@@ -2,7 +2,7 @@
 
 Most companies run growth as four departments that hand off down a line: marketing generates demand, sales closes it, product builds, customer success keeps the account. The buyer stopped experiencing it that way — they research, buy, adopt, and renew as one continuous relationship, and they don't care about your org chart. That single change is why coordination *across all four* has moved from "nice to have" to a measurable driver of growth.
 
-This kit keeps the whole motion in one repo on purpose. This page is the *why*: why the four belong together, why they drift apart anyway, what "working together closely" actually means, and how to start.
+This kit keeps the whole motion in one repo on purpose. This page is the *why*: why the four belong together, why they drift apart anyway, what "working together closely" actually means, and how to start. Its companion, [`why-brand.md`](why-brand.md), covers where that demand comes from in the first place — why most buyers aren't ready to buy yet.
 
 > The exact percentages below come from a mix of studies and vary by source. The **direction** is well-supported; treat the **magnitudes** as directional, not benchmark-grade.
 
@@ -22,17 +22,19 @@ So the seams a buyer feels aren't only between marketing and sales. They're betw
 
 **Aligning sales and marketing already pays — that's the part most people have heard:**
 
-- The solid part is peer-reviewed: across studies, the *quality* of the sales–marketing interface is positively associated with business performance (Homburg, Jensen & Krohmer, *Journal of Marketing*, 2008; Le Meunier-FitzHugh & Piercy, 2007) — though the effect is conditional, not automatic (Troy et al., 2008). The most *traceable* benchmark number is Aberdeen's 2010 study of 453 organizations, where the aligned "Best-in-Class" averaged **~20% annual revenue growth versus a ~4% decline** for laggards — read it as correlation among top performers, not proof. A widely repeated SiriusDecisions figure (**~24% faster revenue / ~27% faster profit growth**) circulates without a published methodology, so treat it as illustration rather than evidence.
-- A cost-of-misalignment figure of **~10% of revenue per year** is widely attributed to IDC, with broader "revenue lost to silos" estimates around **20–30%** — both are directional. (The original IDC report is hard to locate, and a circulating "$1 trillion a year" aggregate traces only to recent vendor PR, so don't lean on either precise number.)
-- A concrete waste line: **60–70% of the content marketing produces is never used by sales.**
+- The defensible evidence is peer-reviewed: the quality of the sales–marketing interface is empirically linked to firm performance (Homburg, Jensen & Krohmer, *Journal of Marketing*, 2008, n=337; Le Meunier-FitzHugh & Piercy, *Industrial Marketing Management*, 2007), and the effect is *contingent*, not automatic (Troy et al., *JM*, 2008). The most *traceable* benchmark number is Aberdeen's 2010 study of 453 organizations — the aligned "Best-in-Class" averaged **~20% revenue growth versus a ~4% decline** for laggards (correlation among top performers, not proof).
+- The widely-quoted SiriusDecisions/Forrester **"~24% faster revenue / ~27% faster profit"** figure is **untraceable to a primary document** — every live citation is a secondary page. Use it as a directional vendor estimate, not as the headline proof.
+- The cost-of-misalignment numbers are the same kind of estimate: IDC's **10%+ of revenue per year**, the **20–30%** lost-to-silos range, LinkedIn's **~$1 trillion** US aggregate, and the **60–70% of content never used by sales** line all circulate through vendor/secondary pages only. Directional — frame the stakes with them, don't present them as measured facts.
 
 **The bigger, less-told leak is on the right side of the bowtie:**
 
-- **Net revenue retention is the valuation number.** Median NRR sits around **~106%** (higher for enterprise, lower for SMB). Below 100% means every dollar of acquisition spend is filling a leaking bucket — you grow by running faster, not by compounding.
+- **Net revenue retention is the valuation number — and the evidence is hard, not soft.** Median NRR sits around **~102–106%** (higher for enterprise, lower for SMB). The multiple gap is large and measured: public B2B-tech with **NRR ≥120% trades at ~21× EV/revenue versus ~9× below** (McKinsey), and an independent index shows **11.7× versus 4.1×** for sub-100%-NRR companies (Software Equity Group). Growth itself scales with retention — roughly **+5 points of growth per NRR band**, with the highest-NRR firms growing **~83% faster than the median** (SaaS Capital). Below 100% NRR, every dollar of acquisition spend is filling a leaking bucket. The board-grade primary: a **1% retention gain ≈ 5% more customer value, and customer equity ≈ firm value** (Gupta, Lehmann & Stuart, peer-reviewed, 2004) — a sturdier number than any of the alignment percentages above.
 - **Premature scaling is the #1 startup killer.** Studies of high-growth startups attribute roughly **70%+ of failures** to scaling before the motion works — pouring acquisition into a product or post-sale experience that can't hold it.
-- **The feedback that would fix it gets lost.** Win-loss vendors find that reps and CRM fields capture the real win/loss reason only a minority of the time (Clozd compared 1,000 deals' CRM "closed-lost" reasons to buyer interviews and found they matched ~15% of the time), so the real reason rarely reaches marketing or product. And a vendor rule of thumb (Pendo, across ~615 products) is that **~80% of features are rarely or never used** — treat the exact figure as directional.
+- **The feedback that would fix it gets lost.** Win-loss vendors find that reps and CRM fields capture the real win/loss reason only a minority of the time (Clozd compared 1,000 deals' CRM "closed-lost" reasons to buyer interviews and found they matched ~15% of the time), so the real reason rarely reaches marketing or product. And an often-cited rule of thumb — **~80% of shipped features go rarely or never used** — captures the risk of building without field and customer signal, though it rests on a single vendor study (Pendo, 2019) plus a 2002 conference talk about four internal applications, so treat it as illustrative, not a law.
 
 Put together: the cost of misalignment isn't only the deals marketing and sales fumble between them. It's the renewals product never hears about and the expansions customer success never triggers.
+
+**A market signal, not a study.** In 2026, Aligned — a deal-workspace vendor — announced it had become the only platform G2 ranked #1 in *both* the Digital Sales Room *and* Client Portal categories, across 1,166 verified reviews. Treat it as one vendor's milestone, not independent proof. But the direction matches the studies above: a product that deliberately refused the sales-vs-CS lane — one rep workspace from the first meeting to the renewal — and won both categories at once is what the bowtie predicts. Their own framing was blunter: the lane, not the tool, was the problem.
 
 ## 3. Why it persists: the perception gap and the post-sale blind spot
 
@@ -89,33 +91,33 @@ You don't need everything on day one. A shared definition, a Won→onboarding ha
 
 ## 7. Honest caveats
 
-- **The exact percentages are soft.** Several of the most-quoted figures come from older or vendor-sponsored studies and vary between sources. Use them to make the case, not as guarantees. (The widely repeated "aligned orgs grow 36% faster" line is untraceable to a primary source; even the SiriusDecisions "24%" circulates without a published method. The defensible evidence is the peer-reviewed interface and retention work cited below, plus Aberdeen's traceable n=453 benchmark.)
+- **The exact percentages are soft.** Most of the most-quoted figures come from older or vendor-sponsored studies and vary between sources — use them to make the case, not as guarantees. Both the "36% faster" *and* the "24% faster" alignment-lift lines are untraceable to a primary document; the genuinely defensible evidence is the peer-reviewed interface literature (Homburg 2008; Le Meunier-FitzHugh & Piercy 2007) and retention economics (Gupta, Lehmann & Stuart 2004), not any single vendor percentage.
 - **Correlation isn't proof of causation.** Well-run companies tend to do both alignment *and* growth well, so some of the effect is selection. Treat alignment as necessary, not single-handedly sufficient.
 - **It matters most in considered B2B sales with real post-sale relationships** — long journeys, multiple stakeholders, renewals and expansion. For low-consideration or one-off purchases, the right-side payoff is smaller.
+- **Retention is not a maximize-at-all-costs lever.** Peer-reviewed work finds loyalty is not automatically profitable (Reinartz & Kumar found a loyalty-profit correlation below 0.50) and retention spend has an *interior optimum* — past it, more retention destroys value. Segment by customer profitability; don't pour retention budget into unprofitable accounts. The retention/valuation numbers above (McKinsey, SEG, SaaS Capital, Gupta) are the solid ones; the older alignment percentages are directional.
 
 ---
 
-**Peer-reviewed (the solid foundation):**
+## Sources
 
-- Homburg, Jensen & Krohmer (2008), "Configurations of Marketing and Sales: A Taxonomy," *Journal of Marketing* 72(2) — https://journals.sagepub.com/doi/10.1509/jmkg.72.2.133
-- Le Meunier-FitzHugh & Piercy (2007), "Does Collaboration Between Sales and Marketing Affect Business Performance?" *JPSSM* 27(3) — https://ueaeprints.uea.ac.uk/id/eprint/21246/
-- Troy, Hirunyawipada & Paswan (2008), cross-functional integration is *conditional*, *Journal of Marketing* 72(6)
-- Gupta, Lehmann & Stuart (2004), "Valuing Customers" (retention ≈ 5× the next value lever), *JMR* 41(1) — https://business.columbia.edu/sites/default/files-efs/pubfiles/534/Valuing_Customers--JMR_2003.pdf
-- Reichheld & Sasser (1990), "Zero Defections," *HBR* — https://www.bain.com/insights/zero-defections-quality-comes-to-services-harvard-business-review-hbr/
-- Keiningham et al. (2007), peer-reviewed NPS critique, *Journal of Marketing* 71(3) — https://journals.sagepub.com/doi/10.1509/jmkg.71.3.039
+**Peer-reviewed (the checkable evidence):** Homburg, Jensen & Krohmer, "Configurations of Marketing and Sales," *Journal of Marketing* (2008); Le Meunier-FitzHugh & Piercy, *Industrial Marketing Management* (2007); Troy, Hirunyawipada & Paswan, *Journal of Marketing* (2008 — integration is contingent); Gupta, Lehmann & Stuart, "Valuing Customers," *Journal of Marketing Research* (2004); Keiningham et al., *Journal of Marketing* (2007 — the NPS-vs-growth rebuttal).
 
-**Industry benchmarks & analyst (directional — methodologies vary, some proprietary):**
+**Industry / practitioner (directional — see §7):**
 
-- Aberdeen Group (2010) — aligned "Best-in-Class" ~20% growth vs ~4% decline (n=453)
-- Gartner — 67% prefer a rep-free experience; ~80% of the journey before sales; "75% of high-growth firms will run RevOps by 2025" (a prediction)
-- Forrester / SiriusDecisions — the ~24% alignment figure (no published method); the 82%/65% perception gap; ~8% strongly aligned
-- IDC — cost of misalignment (~10% of revenue/yr; original report hard to locate)
-- ChartMogul / SaaS Capital — net revenue retention medians (~102–106%, scales with deal size)
-- Pendo (2019) — ~80% of features rarely/never used (~615 products); cf. Standish (2002), critiqued by Mike Cohn
-- Clozd / Anova — reps and CRM capture the real win/loss reason a minority of the time
-- Startup Genome — premature scaling as a leading cause of high-growth startup failure
-- Winning by Design — the bowtie model; Reforge — funnels vs. compounding loops
-
-**Practitioner / press:**
-
+- Gartner — 67% prefer a rep-free experience; ~80% of the journey before sales; RevOps guidance
+- Forrester / SiriusDecisions — the ~24% alignment economics (no published method); the 82%/65% perception gap; ~8% strongly aligned
+- Aberdeen Group (2010) — aligned "Best-in-Class" ~20% growth vs ~4% decline (n=453) — the most traceable alignment benchmark
+- IDC — cost of misalignment (10%+ of revenue/yr); revenue lost to silos (20–30%)
+- LinkedIn "Art of Winning" — the ~$1 trillion aggregate figure
+- Winning by Design — the bowtie model (retention and expansion as first-class growth engines)
+- ChartMogul / SaaS Capital / KeyBanc — net revenue retention medians (~102–106%); GRR ~92%
+- McKinsey — "The net revenue retention advantage" (NRR ≥120% → ~21× vs ~9× EV/revenue)
+- Software Equity Group — SaaS Index (NRR → EV/revenue: 11.7× vs 4.1×)
+- SaaS Capital — 2025 retention & growth benchmarks (growth scales ~exponentially with NRR)
+- Gupta, Lehmann & Stuart (2004), *Journal of Marketing Research* — "Valuing Customers" (1% retention ≈ 5% customer value; customer equity ≈ firm value)
+- Reinartz & Kumar — peer-reviewed loyalty-profitability research (loyalty ≠ automatic profit; retention has an interior optimum)
+- Startup Genome — premature scaling as the leading cause of high-growth startup failure
+- Clozd / Anova — reps and CRM capture the real win/loss reason a minority of the time (Clozd: CRM matched buyer interviews in ~15% of 1,000 deals)
+- Reforge — why funnels force siloed ownership and loops compound
 - HBR — "When Sales and Marketing Aren't Aligned, Both Suffer" (2018)
+- Aligned (2026) — vendor announcement: the only platform G2-ranked #1 in both Digital Sales Room and Client Portal (1,166 reviews). A market signal, not an independent study.
