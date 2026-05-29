@@ -4,7 +4,7 @@ Most of the sciences, stripped to their load-bearing ideas, turn out to be opera
 
 This page collects twenty-one such principles from seven sciences. Each has a plain-language explanation and **two verbatim, attributed quotes**. They're here as a thinking aid for anyone running a go-to-market motion in this kit — not brand-specific, not prescriptive.
 
-> **On sourcing.** Famous science quotes are a minefield of misattribution. "It is not the strongest of the species that survives... but the most adaptable" is *not* Darwin (it's Leon Megginson, 1963). "Compound interest is the eighth wonder of the world" is *not* Einstein (apocryphal, excluded). Every quote below was checked against a real source; ancient or layered attributions are flagged inline.
+> **On sourcing.** Famous science quotes are a minefield of misattribution. "Compound interest is the eighth wonder of the world" is *not* Einstein (apocryphal, excluded); "culture eats strategy for breakfast" is *not* reliably Drucker. Every quote below was checked against a real source; ancient or layered attributions are flagged inline.
 
 ---
 
@@ -42,17 +42,17 @@ This page collects twenty-one such principles from seven sciences. Each has a pl
 
 ## Biology
 
-**Variation + selection — run many small experiments, keep what works.** Evolution preserves the rare useful variation. Messaging and channels work the same way.
-> "This preservation of favourable variations and the rejection of injurious variations, I call Natural Selection." — **Charles Darwin**, *On the Origin of Species* (1859).
+**Variation within a species — run many small experiments, keep what works.** Within a species there's natural variation, and the variants that fit current conditions persist. Messaging and channels work the same way.
 > "To invent you have to experiment, and if you know in advance that it's going to work, it's not an experiment." — **Jeff Bezos**, Amazon 2015 Letter to Shareholders.
+> "The only way to win is to learn faster than anyone else." — **Eric Ries**, *The Lean Startup* (2011).
 
-**Adaptation — adapt or die.** Survival favours the one that adjusts to the changing environment, not the strongest at one moment.
-> "...it is not the strongest that survives; but the species that survives is the one that is able best to adapt and adjust to the changing environment in which it finds itself." — **Leon C. Megginson** (1963) *(commonly misattributed to Darwin)*.
-> "Any variation in the least degree injurious would be rigidly destroyed." — **Charles Darwin**, *On the Origin of Species* (1859).
+**Adaptation — adapt or fall behind.** The individuals that adjust to changing conditions keep up; those that can't fall behind.
+> "It is not necessary to change. Survival is not mandatory." — **W. Edwards Deming**.
+> "Change before you have to." — **Jack Welch**.
 
-**Symbiosis — win through interdependence, not just combat.** Life advanced by networking. So do partner and integration ecosystems.
-> "Life did not take over the globe by combat, but by networking." — **Lynn Margulis & Dorion Sagan**, *Microcosmos* (1986).
-> "...dependent on each other in so complex a manner, have all been produced by laws acting around us." — **Charles Darwin**, *On the Origin of Species* (1859).
+**Symbiosis — win through interdependence, not just combat.** Many species live by cooperation — pollinators and flowers, animals and their gut bacteria. So do partner and integration networks.
+> "Alone we can do so little; together we can do so much." — **Helen Keller**.
+> "If you want to go fast, go alone. If you want to go far, go together." — **African proverb**.
 
 ---
 
