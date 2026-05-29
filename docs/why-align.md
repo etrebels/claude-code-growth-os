@@ -28,7 +28,7 @@ So the seams a buyer feels aren't only between marketing and sales. They're betw
 
 **The bigger, less-told leak is on the right side of the bowtie:**
 
-- **Net revenue retention is the valuation number.** Median NRR sits around **~106%** (ChartMogul 2024 — higher for enterprise, lower for SMB). Below 100% means every dollar of acquisition spend is filling a leaking bucket — you grow by running faster, not by compounding.
+- **Net revenue retention is the valuation number — and the evidence is hard, not soft.** Median NRR sits around **~102–106%** (higher for enterprise, lower for SMB). The multiple gap is large and measured: public B2B-tech with **NRR ≥120% trades at ~21× EV/revenue versus ~9× below** (McKinsey), and an independent index shows **11.7× versus 4.1×** for sub-100%-NRR companies (Software Equity Group). Growth itself scales with retention — roughly **+5 points of growth per NRR band**, with the highest-NRR firms growing **~83% faster than the median** (SaaS Capital). Below 100% NRR, every dollar of acquisition spend is filling a leaking bucket. The board-grade primary: a **1% retention gain ≈ 5% more customer value, and customer equity ≈ firm value** (Gupta, Lehmann & Stuart, peer-reviewed, 2004) — a sturdier number than any of the alignment percentages above.
 - **Premature scaling is the #1 startup killer.** The Startup Genome Report (2012) attributes **~74% of high-growth startup failures** to scaling before the motion works — pouring acquisition into a product or post-sale experience that can't hold it. (Self-reported; thresholds unpublished.)
 - **The feedback that would fix it gets lost.** Win/loss vendor Clozd reports that reps are **wrong about why deals are won or lost more than 60% of the time**, and that CRM win/loss data matched buyer interviews only **~15% of the time** across ~1,000 closed-lost deals — i.e., ~85% inaccurate. (Vendor data, method not fully published; the direction is what matters — run the loop on logged evidence, not memory.) So the real reason rarely reaches marketing or product. And feature usage skews low: Pendo (2019) found **~80% of features rarely or never used** across 615 of its own accounts; an older Standish reading put it at 45% never / 64% rarely-or-never from four internal apps — treat as illustrative, not a law. Product building without the signal from the field and the customer base.
 
@@ -96,6 +96,7 @@ You don't need everything on day one. A shared definition, a Won→onboarding ha
 - **The win/loss and feature-usage figures are vendor data.** The Clozd win/loss numbers and the Pendo feature-usage figure come from firms that sell into those problems, with methods not fully published. Treat them as directional support for running the loop on logged evidence, not as benchmark-grade magnitudes.
 - **Correlation isn't proof of causation.** Well-run companies tend to do both alignment *and* growth well, so some of the effect is selection. Treat alignment as necessary, not single-handedly sufficient.
 - **It matters most in considered B2B sales with real post-sale relationships** — long journeys, multiple stakeholders, renewals and expansion. For low-consideration or one-off purchases, the right-side payoff is smaller.
+- **Retention is not a maximize-at-all-costs lever.** Peer-reviewed work finds loyalty is not automatically profitable (Reinartz & Kumar found a loyalty-profit correlation below 0.50) and retention spend has an *interior optimum* — past it, more retention destroys value. Segment by customer profitability; don't pour retention budget into unprofitable accounts. The retention/valuation numbers above (McKinsey, SEG, SaaS Capital, Gupta) are the solid ones; the older alignment percentages are directional.
 
 ---
 
@@ -139,7 +140,10 @@ The strongest evidence here is peer-reviewed. We lead with the academic work and
 - Forrester — "36% *more* revenue growth" for customer-obsessed firms. https://www.forrester.com/press-newsroom/customer-obsessed-growth-engine-alignment/
 - IDC — cost of misalignment (10%+ of revenue/yr); revenue lost to silos (20–30%). (Appears second-hand via *Aligned to Achieve*, Wiley 2016.)
 - LinkedIn "Art of Winning" — the ~$1 trillion aggregate (an estimated figure).
-- ChartMogul *SaaS Retention Report* (2024) — net revenue retention median ~106%. https://chartmogul.com/reports/saas-retention-report/
+- ChartMogul / SaaS Capital / KeyBanc — net revenue retention medians ~102–106%; GRR ~92%. https://chartmogul.com/reports/saas-retention-report/
+- McKinsey — "The net revenue retention advantage" (NRR ≥120% → ~21× vs ~9× EV/revenue).
+- Software Equity Group — SaaS Index (NRR → EV/revenue: 11.7× vs 4.1×). https://softwareequity.com/blog/net-retention-public-saas-companies/
+- SaaS Capital — 2025 retention & growth benchmarks (growth scales ~exponentially with NRR).
 - Startup Genome Report (2012) — ~74% of high-growth startups fail from premature scaling (self-reported; thresholds unpublished). https://s3.amazonaws.com/startupcompass-public/StartupGenomeReport2_Why_Startups_Fail_v2.pdf
 - Clozd — reps wrong about win/loss reasons >60% of the time; CRM data matched buyer interviews ~15% of the time (vendor data; method not fully published). https://www.clozd.com/blog/5-lies-your-crm-is-telling-you-about-your-buyers
 - Pendo, *2019 Feature Adoption Report* — ~80% of features rarely or never used (615 of Pendo's own accounts; vendor-skewed); cf. Standish/CHAOS 45% never / 64% rarely-or-never (four internal apps). https://www.pendo.io/resources/the-2019-feature-adoption-report/
