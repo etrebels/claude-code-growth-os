@@ -35,7 +35,7 @@ A motion is only as strong as its handoffs. Each one has a **trigger**, an **own
 | **H6** | CS → Marketing | A customer reaches a clear outcome | CS | A reference / proof point — the customer's own words for the value they got |
 | **L** | Loop close | Weekly review | All four | `MARKETING-ACTION` cleared, `RETENTION-RISK` routed, references captured — read in `/weekly-review` |
 
-H1 and H2 are the loop most teams can see. H3–H6 are the right side of the bowtie — the half usually left with no owner. **H3 is the seam most teams never define**: a signed deal that drops into a CS void with no shared definition of *ready*. **H5 is the antidote to "build it and they will come"** — an often-cited rule of thumb is that ~80% of shipped features go rarely or never used, largely because they ship with no enablement and no buyer-facing reason to adopt them.
+H1 and H2 are the loop most teams can see. H3–H6 are the right side of the bowtie — the half usually left with no owner. **H3 is the seam most teams never define**: a signed deal that drops into a CS void with no shared definition of *ready*. **H5 is the antidote to "build it and they will come"** — Pendo (2019) found ~80% of features rarely or never used across its own accounts (vendor data), often because they ship with no enablement and no buyer-facing reason to adopt them.
 
 ## The one number, and a North Star
 
@@ -49,7 +49,7 @@ One shared number beats four local metrics — lead volume, bookings, ship count
 Written once, owned jointly, living as one file each — not four arguments in four tools.
 
 1. **One ICP.** Who you're for, agreed by sales and marketing in the same room. (`ops/icp.md` if you keep one — `lead-qualify` reads it.)
-2. **One MQL→SQL bar.** The single definition of a qualified lead both sides own — the H1 trigger. (Only ~8% of B2B firms even share this definition; documented SLAs correlate with ~34% higher odds of higher YoY ROI.)
+2. **One MQL→SQL bar.** The single definition of a qualified lead both sides own — the H1 trigger. (Documented SLAs correlate with ~34% higher odds of higher YoY ROI — HubSpot *State of Inbound* 2015, self-reported.)
 3. **One Won→onboarding definition.** What "ready to hand off" means — the H3 trigger and checklist, so a closed deal doesn't drop silently. (`onboarding-handoff` runs it.)
 
 ## How this kit maps to the model
