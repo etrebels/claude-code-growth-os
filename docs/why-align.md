@@ -137,6 +137,7 @@ The strongest evidence here is peer-reviewed. We lead with the academic work and
 - CEB Marketing Leadership Council + Google, *The Digital Evolution in B2B Marketing* (2012) — the citable origin of "~57% of the journey before sales." https://www.thinkwithgoogle.com/marketing-resources/b2b-digital-evolution/
 - Gartner — 67% of B2B buyers prefer a rep-free experience (2026, up from 33% in 2019); RevOps guidance. https://www.gartner.com/en/newsroom/press-releases/2026-03-09-gartner-sales-survey-finds-67-percent-of-b2b-buyers-prefer-a-rep-free-experience
 - Forrester / SiriusDecisions — the ~24%/27% alignment economics (vendor benchmark, self-reported); the 82% exec / practitioner perception gap (two separate 2024 surveys). https://www.forrester.com/blogs/the-truth-about-b2b-sales-and-marketing-alignment/
+- Aberdeen Group (2010) — aligned "Best-in-Class" ~20% growth vs ~4% decline (n=453) — the most traceable alignment benchmark.
 - Forrester — "36% *more* revenue growth" for customer-obsessed firms. https://www.forrester.com/press-newsroom/customer-obsessed-growth-engine-alignment/
 - IDC — cost of misalignment (10%+ of revenue/yr); revenue lost to silos (20–30%). (Appears second-hand via *Aligned to Achieve*, Wiley 2016.)
 - LinkedIn "Art of Winning" — the ~$1 trillion aggregate (an estimated figure).
@@ -145,7 +146,7 @@ The strongest evidence here is peer-reviewed. We lead with the academic work and
 - Software Equity Group — SaaS Index (NRR → EV/revenue: 11.7× vs 4.1×). https://softwareequity.com/blog/net-retention-public-saas-companies/
 - SaaS Capital — 2025 retention & growth benchmarks (growth scales ~exponentially with NRR).
 - Startup Genome Report (2012) — ~74% of high-growth startups fail from premature scaling (self-reported; thresholds unpublished). https://s3.amazonaws.com/startupcompass-public/StartupGenomeReport2_Why_Startups_Fail_v2.pdf
-- Clozd — reps wrong about win/loss reasons >60% of the time; CRM data matched buyer interviews ~15% of the time (vendor data; method not fully published). https://www.clozd.com/blog/5-lies-your-crm-is-telling-you-about-your-buyers
+- Clozd / Anova — reps wrong about win/loss reasons >60% of the time; CRM data matched buyer interviews ~15% of the time (vendor data; method not fully published). https://www.clozd.com/blog/5-lies-your-crm-is-telling-you-about-your-buyers
 - Pendo, *2019 Feature Adoption Report* — ~80% of features rarely or never used (615 of Pendo's own accounts; vendor-skewed); cf. Standish/CHAOS 45% never / 64% rarely-or-never (four internal apps). https://www.pendo.io/resources/the-2019-feature-adoption-report/
 - Aligned (2026) — vendor announcement: the only platform G2-ranked #1 in both Digital Sales Room and Client Portal (1,166 reviews). A market signal, not an independent study.
 - Winning by Design — the bowtie model (retention and expansion as first-class growth engines).
