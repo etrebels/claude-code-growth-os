@@ -5,7 +5,7 @@ description: Route post-sale and field signals into product's roadmap queue, and
 
 # Product Signal
 
-The product function's place in the loop. Marketing has `marketing-feedback`; CS has `account-health`; this is product's. It pulls the signals that should shape what gets built out of the shared log into product's own triage queue, and — for anything shipped — writes the one-line "what this means for the buyer" so a feature doesn't land silently. This closes handoffs **H4** (CS→product) and **H5** (product→GTM) in [`docs/operating-model.md`](../../docs/operating-model.md).
+The product function's place in the loop. Marketing has `marketing-feedback`; CS has `account-health`; this is product's. It pulls the signals that should shape what gets built out of the shared log into product's own triage queue, and — for anything shipped — writes the one-line "what this means for the buyer" so a feature doesn't land silently. This closes handoffs **H4** (CS→product) and **H5** (product→GTM) in [`docs/operating-model.md`](../../../docs/operating-model.md).
 
 From the shared feedback log (`demo/feedback-log.md`, or your own) and `ops/customers.md`:
 

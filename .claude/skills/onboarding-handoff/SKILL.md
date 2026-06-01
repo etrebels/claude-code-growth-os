@@ -5,7 +5,7 @@ description: Run the Won→onboarding handoff — the seam most teams drop. Trig
 
 # Onboarding Handoff (Won → onboarding)
 
-The handoff most teams never define: a signed deal drops silently into a customer-success void, the value the buyer was sold gets lost, and the renewal clock starts late. This is handoff **H3** in [`docs/operating-model.md`](../../docs/operating-model.md) — made concrete as a 48-hour checklist that turns a won deal into the first row of the account book.
+The handoff most teams never define: a signed deal drops silently into a customer-success void, the value the buyer was sold gets lost, and the renewal clock starts late. This is handoff **H3** in [`docs/operating-model.md`](../../../docs/operating-model.md) — made concrete as a 48-hour checklist that turns a won deal into the first row of the account book.
 
 From the won deal (point me at the row in `ops/pipeline.md`, or paste the deal context):
 

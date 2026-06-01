@@ -5,7 +5,7 @@ description: Turn what customer success hears after the sale into product and re
 
 # Retention Feedback
 
-The loop that keeps the *post-sale* half of the motion connected to product — the half the funnel forgets. Sales→marketing is the loop everyone can see; this is its mirror on the right side of the bowtie. Field intelligence from onboarding, adoption, and renewal flows back to product and CS on a cadence, instead of dying in a QBR. This is the four-function version of the alignment thesis in [`docs/why-align.md`](../../docs/why-align.md) — made concrete as a tagged line in the same shared log the `marketing-feedback` skill writes to.
+The loop that keeps the *post-sale* half of the motion connected to product — the half the funnel forgets. Sales→marketing is the loop everyone can see; this is its mirror on the right side of the bowtie. Field intelligence from onboarding, adoption, and renewal flows back to product and CS on a cadence, instead of dying in a QBR. This is the four-function version of the alignment thesis in [`docs/why-align.md`](../../../docs/why-align.md) — made concrete as a tagged line in the same shared log the `marketing-feedback` skill writes to.
 
 From a source — an onboarding note, a usage review, a support thread, a renewal call, a deal update:
 

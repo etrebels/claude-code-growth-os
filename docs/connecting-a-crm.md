@@ -76,5 +76,6 @@ A full-pipeline list call can be large. Page deliberately (most list APIs cap pa
 
 ## See also
 
+- [`../.claude/rules/crm-usage.md`](../.claude/rules/crm-usage.md) — the companion *rule*: the docs-first MCP access protocol and the write-authority guardrails for reaching the CRM safely, especially under autonomous [cloud routines](../.claude/scheduling/cloud-routines.md).
 - [`operating-model.md`](operating-model.md) — the spine: where `ops/pipeline.md` sits in the four-function motion (handoff H1).
 - [`../ops/pipeline.md`](../ops/pipeline.md) — the board this projects into.
