@@ -57,6 +57,8 @@ Nothing there is real — delete `demo/` whenever you like.
 | `.claude/hooks/` | Five guardrails: session-start context, **state re-injection across compaction**, a **commit secret-guard**, sensitive-file protection, an end-of-day nudge — plus a **web-session bootstrap** that installs the hook linter (`shellcheck`) on remote / Claude-Code-on-the-web containers |
 | `.claude/commands/` | Daily rituals you invoke by name: `/morning-briefing`, `/midday-checkin`, `/end-of-day`, `/weekly-review`, plus `/demo-briefing` |
 | `.claude/skills/` | Skill templates grouped by the four growth functions (see below) — so the balance across marketing, sales, product, and retention is visible, not acquisition-only |
+| `.claude/rules/` | Standing constraints every session honors — how to reach a CRM over MCP (`crm-usage.md`) and how the to-do list renders one canonical way (`todo-single-source.md`); obeyed by interactive rituals and autonomous routines alike |
+| `.claude/scheduling/` | Run the rituals on a clock — locally (cron/launchd), as **cloud Routines** (no machine awake), or as a CI backstop (the deterministic checks in `.claude/scripts/checks/`, run by a GitHub Actions `schedule:`). Full runbook in `cloud-routines.md` |
 | `ops/` | Your plain-text playbooks — `priorities.md`, `daily-log.md`, `pipeline.md` (left side), `customers.md` and `roadmap-signals.md` (right side), and `feedback-log.md` (the shared cross-function loop). Start here. |
 | `demo/` | A fictional pipeline *and* customer book so you can see the whole motion work (and present from it safely) |
 | `docs/operating-model.md` | The spine: the bowtie, the four functions, the six handoffs (H1–H6), the one number (net revenue retention), and the three shared definitions |
@@ -101,7 +103,7 @@ The left side lives in `ops/pipeline.md`; the right side in `ops/customers.md` (
 - **`pre-compact.sh`** re-injects your priorities and latest log when a long session compacts — your state lives in files, so the context window can't lose the thread.
 - **`pre-commit-guard.sh`** blocks a commit if staged changes look like they contain a secret (API keys, private keys, tokens).
 - **`protect-files.sh`** stops the agent writing to `.env`, keys, and credentials.
-- **`session-start.sh`** and **`stop-reminder.sh`** open and close the day.
+- **`session-start.sh`** opens the day with your priorities *and* the freshest cross-function loop signals (so the feedback log can't go stale silently); **`stop-reminder.sh`** closes it.
 - **`web-bootstrap.sh`** runs only in remote / Claude-Code-on-the-web sessions (`CLAUDE_CODE_REMOTE=true`) and installs the one tool a fresh web container lacks — `shellcheck` — so you can lint the hooks in-session, matching CI. Skipped on your own machine, idempotent, and never blocks: a setup failure just logs a warning.
 
 All pure bash (one uses `python3` to read a payload). No API keys, no MCP — it runs anywhere out of the box.

@@ -1,0 +1,34 @@
+name: scheduled-reviews
+
+# The CI backstop layer (see .claude/scheduling/README.md). The full rituals need
+# the model and your OAuth integrations, which a headless Actions runner can't
+# reach — so this never runs a real ritual. It runs the deterministic, no-model
+# checks in .claude/scripts/checks/growth-os-checks.sh (structure, broken local
+# links, freshness) so a structural problem surfaces even in a quiet week.
+#
+# Note: a `schedule:` trigger only fires from the DEFAULT branch. A failing
+# scheduled run emails the repo owner — that email is the signal. The PR and
+# manual triggers below let you exercise the checks without waiting for the cron.
+on:
+  schedule:
+    - cron: "0 8 * * 1"   # Mondays 08:00 UTC
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - "ops/**"
+      - "docs/**"
+      - ".claude/**"
+      - "**/*.md"
+      - ".claude/scripts/checks/growth-os-checks.sh"
+      - ".github/workflows/scheduled-reviews.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run deterministic operating-file checks
+        run: bash .claude/scripts/checks/growth-os-checks.sh

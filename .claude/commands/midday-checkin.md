@@ -10,7 +10,7 @@ A quick reset. In order:
 2. Mark what's done. Flag anything at risk of not happening today.
 3. Name the one thing that must happen this afternoon — and protect time for it. (It can be a deal or a post-sale move — whichever is most at risk of slipping.)
 
-Keep it to a few lines. No recap of things already finished.
+Keep it to a few lines. No recap of things already finished. If a deal moved this morning, persist the stage/score change per [`.claude/rules/crm-usage.md`](../rules/crm-usage.md) — safe writes only.
 
 ## Depth
 - quick: the one thing that must happen this afternoon.

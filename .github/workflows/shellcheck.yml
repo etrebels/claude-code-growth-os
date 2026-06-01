@@ -1,15 +1,18 @@
 name: shellcheck
 
-# The hooks in .claude/hooks/ are the repo's guardrails. Lint them on every
-# change so a shell mistake can't slip in. Scoped to the hook scripts only.
+# The bash in .claude/hooks/ (guardrails) and .claude/scripts/ (the CI-backstop
+# checks) is repo infrastructure. Lint it on every change so a shell mistake
+# can't slip in.
 on:
   push:
     paths:
       - ".claude/hooks/**"
+      - ".claude/scripts/**"
       - ".github/workflows/shellcheck.yml"
   pull_request:
     paths:
       - ".claude/hooks/**"
+      - ".claude/scripts/**"
       - ".github/workflows/shellcheck.yml"
 
 permissions:
@@ -20,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Lint .claude/hooks/*.sh
+      - name: Lint hook and script bash
         run: |
           shellcheck --version
-          shellcheck .claude/hooks/*.sh
+          find .claude/hooks .claude/scripts -name '*.sh' -print -exec shellcheck {} +

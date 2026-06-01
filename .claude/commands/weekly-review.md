@@ -25,7 +25,7 @@ Run an honest weekly review across the whole motion — both sides of the bowtie
 9. Pick next week's single most important priority and write it to the top of `ops/priorities.md`.
 10. Name one thing to stop doing.
 
-Lead with the summary. Don't pad it. If `ops/customers.md` or `ops/roadmap-signals.md` is empty, say so and skip that section.
+Lead with the summary. Don't pad it. If `ops/customers.md` or `ops/roadmap-signals.md` is empty, say so and skip that section. Reconcile the pipeline mirror against the CRM per [`.claude/rules/crm-usage.md`](../rules/crm-usage.md) — read-only beyond what the daily rituals already persisted.
 
 ## Depth
 - quick: the week's three-line summary, renewals/risks inside 60 days, and next week's one priority.

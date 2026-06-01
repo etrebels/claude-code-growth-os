@@ -5,7 +5,7 @@ description: Turn what sales hears in the field into marketing actions. Trigger 
 
 # Marketing Feedback
 
-The loop that keeps sales and marketing as one system: field intelligence flows from sales back to marketing on a cadence, instead of dying inside a meeting note. This is mechanism #5 from [`docs/why-align.md`](../../docs/why-align.md) — made concrete as a tagged line in a shared log.
+The loop that keeps sales and marketing as one system: field intelligence flows from sales back to marketing on a cadence, instead of dying inside a meeting note. This is mechanism #5 from [`docs/why-align.md`](../../../docs/why-align.md) — made concrete as a tagged line in a shared log.
 
 From a source — a note in `ops/daily-log.md`, a file in `demo/meetings/`, a call recap, a deal update:
 
