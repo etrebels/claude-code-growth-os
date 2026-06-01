@@ -12,20 +12,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Cloud Routines scheduling** (`.claude/scheduling/`) — a runbook for running the
   rituals on Anthropic-managed infrastructure without your machine awake
   (`cloud-routines.md`), plus a three-layer scheduling overview (OS scheduler vs
-  cloud Routines vs CI backstop) in `.claude/scheduling/README.md`. (#PR)
+  cloud Routines vs CI backstop) in `.claude/scheduling/README.md`. (#31)
 - **Operating rules** (`.claude/rules/`) — standing constraints every session *and*
   autonomous routine honors: `crm-usage.md` (the docs-first MCP access protocol, the
   three-lane tasks≠deals convention, and write-authority guardrails for unattended
   runs) and `todo-single-source.md` (one canonical to-do render spec every entry path
-  defers to). Wired into the rituals and `CLAUDE.md`. (#PR)
+  defers to). Wired into the rituals and `CLAUDE.md`. (#31)
 - **Scheduled-reviews CI backstop** (`.github/workflows/scheduled-reviews.yml` +
   `.claude/scripts/checks/growth-os-checks.sh`) — deterministic, no-model checks
   (structure, freshness, broken local links; HARD→exit 1, SOFT→exit 0) run weekly
   from the default branch, so a structural problem surfaces even in a quiet week.
-  `shellcheck` CI now lints `.claude/scripts/` alongside `.claude/hooks/`. (#PR)
+  `shellcheck` CI now lints `.claude/scripts/` alongside `.claude/hooks/`. (#31)
 - **Loop signals at session start** (`.claude/hooks/session-start.sh`) — the hook now
   also surfaces the freshest `ops/feedback-log.md` signals, so the cross-function
-  loop can't go stale silently. (#PR)
+  loop can't go stale silently. (#31)
 - **Principles from science** (`docs/principles-from-science.md`) — twenty-one
   portable operating principles drawn from seven sciences, each with two sourced
   quotes and a worked go-to-market example; linked from the README docs table. (#26)
@@ -69,7 +69,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Broken doc links in four skill templates** (`marketing-feedback`,
   `onboarding-handoff`, `product-signal`, `retention-feedback`) — they pointed at
   `../../docs/…` (which resolves to a non-existent `.claude/docs/`) instead of
-  `../../../docs/…`. Surfaced by the new checks script on its first run. (#PR)
+  `../../../docs/…`. Surfaced by the new checks script on its first run. (#31)
 
 ## [0.1.0] — 2026-05-25
 
