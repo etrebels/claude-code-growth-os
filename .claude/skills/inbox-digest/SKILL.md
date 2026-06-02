@@ -5,15 +5,15 @@ description: Scan the last 48 hours of unread newsletters, news emails, and blog
 
 # Inbox Digest
 
-Surface the signal from newsletter noise — read unread emails from the last 48 hours and summarize what's relevant.
+Surface the signal from newsletter noise — read **unread** emails from the last 48 hours and summarize what's relevant.
 
 ## Process
 
-1. **Fetch unread emails from the last 48 hours (Gmail MCP).** Filter for newsletter and publication senders — Substack, Beehiiv, Mailchimp, Medium, and similar. Exclude personal correspondence, team emails, and transactional notifications.
+1. **Fetch unread emails from the last 48 hours (Gmail MCP).** Unread only — already-opened emails are skipped. Filter for newsletter and publication senders: Substack, Beehiiv, Mailchimp, Medium, and similar. Exclude personal correspondence, team emails, and transactional notifications.
 
-2. **Assess relevance.** For each email, decide if it's relevant to your work context (industry news, competitors, fundraising, product trends, etc.). Skip anything unrelated.
+2. **Assess relevance.** For each unread email, decide if it's relevant to your work context (industry news, competitors, fundraising, product trends, etc.). Skip anything unrelated.
 
-3. **Summarize what matters.** For each relevant email:
+3. **Summarize what matters.** For each relevant unread email:
    - Source and subject line
    - 2–3 sentence summary — what it covers and why it might matter
 
@@ -22,22 +22,22 @@ Surface the signal from newsletter noise — read unread emails from the last 48
 ## Output format
 
 ```
-📬 Inbox Digest — last 48 hours
+📬 Inbox Digest — last 48 hours (unread only)
 
 1. [Source] — [Subject]
    [2-3 sentence summary]
 
 2. ...
 
-If nothing stands out: "No notable newsletters in the last 48 hours."
+If nothing stands out: "No unread newsletters worth flagging in the last 48 hours."
 ```
 
 ## Notes
+- **Unread only** — opened emails are skipped entirely
 - Runs as part of `/morning-briefing` by default
-- Can be run standalone at any time
 - Relevance filtering is based on your CLAUDE.md context — the more it knows about your work, the better the filtering
 
 ## Depth
 - quick: headlines only, no summaries.
-- standard: summaries for relevant items (default).
+- standard: summaries for relevant unread items (default).
 - deep: summaries + one suggested action per item (share, save, respond).

@@ -5,29 +5,32 @@ description: Surface unfinished follow-ups from last week's external meetings. T
 
 # Calendar Follow-up
 
-Close the loop on last week's external meetings — find what hasn't been followed up and offer to draft the message.
+Find external meetings from the last 7 days where no follow-up has happened — and surface them before they go cold.
 
 ## Process
 
 1. **Fetch last 7 days from Google Calendar (via MCP).** Pull all events. Filter out internal team meetings — only external contacts matter here.
 
-2. **Match to pipeline and customers.** Cross-reference attendee names and company names against `ops/pipeline.md` and `ops/customers.md`. If a match is found, pull the current stage and last noted next step.
+2. **Flag meetings older than 3 days with no follow-up.** For each external meeting, calculate days since it happened. 3+ days → follow-up candidate.
 
-3. **Check if follow-up was logged.** Scan `ops/daily-log.md` — has this meeting already been debriefed or followed up? If yes, skip it.
+3. **Cross-check Gmail (via MCP).** For each candidate, search sent mail for any email to that contact sent after the meeting date. Email found → follow-up done, skip it. No email found → follow-up missing.
 
-4. **List what's open.** For each external meeting without a logged follow-up:
-   - Meeting name / contact
-   - Pipeline stage (if matched)
+4. **Match to pipeline and customers.** Cross-reference against `ops/pipeline.md` and `ops/customers.md`. If matched, pull current stage and last noted next step.
+
+5. **Present what's open.** For each meeting with no follow-up email:
+   - Contact name and meeting title
    - Days since the meeting
+   - Pipeline stage (if matched)
 
-5. **Ask which one to act on.** "Which of these would you like to follow up on?" Then run the `follow-up` skill for the chosen meeting.
+6. **Ask which one to act on.** "Which of these would you like to follow up on?" Then run the `follow-up` skill for the chosen meeting.
 
 ## Notes
-- If a meeting doesn't match pipeline or customers, flag it: "This contact isn't in your pipeline — add them?"
-- Internal meetings (same domain as sender) are excluded automatically
-- Runs as step 5 in `/morning-briefing` by default
+- 3-day threshold is the default — adjust in your CLAUDE.md if needed
+- Internal meetings (same email domain as sender) are excluded automatically
+- If a contact isn't in pipeline or customers: "This person isn't in your pipeline — want to add them?"
+- Runs as part of `/morning-briefing` by default
 
 ## Depth
-- quick: list of unfinished follow-ups only.
-- standard: list + offer to draft one follow-up message.
-- deep: list + draft all follow-ups, prioritized by deal stage.
+- quick: list of overdue follow-ups only.
+- standard: list + Gmail check + offer to draft one message.
+- deep: draft all missing follow-ups, prioritized by deal stage and days overdue.

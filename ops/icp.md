@@ -6,8 +6,8 @@
 
 ## Target Customer
 
-**Company / org type:** [e.g. private school / SaaS startup / e-commerce brand]
-**Size:** [headcount / revenue range / student count / other relevant metric]
+**Company / org type:** [e.g. enterprise SaaS / agency / retailer / logistics company]
+**Size:** [headcount / revenue range / number of locations / other relevant metric]
 **Industry / sector:** [...]
 **Geography:** [...]
 
@@ -16,10 +16,10 @@
 ## Decision Maker
 
 Who actually signs the contract?
-- [e.g. CTO / Head Teacher / IT Director / VP of Sales]
+- [e.g. CTO / CEO / Head of Operations / Procurement Lead]
 
 Who is NOT worth spending time on alone?
-- [e.g. individual teachers with no budget / interns / junior staff]
+- [e.g. individual end users with no budget / junior staff / interns]
 
 ---
 
@@ -27,8 +27,8 @@ Who is NOT worth spending time on alone?
 
 Stop the conversation immediately if:
 - [e.g. public / government institution]
-- [e.g. fewer than X employees]
-- [e.g. no budget until next fiscal year]
+- [e.g. no dedicated budget]
+- [e.g. looking for a free tool]
 
 ---
 
