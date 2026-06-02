@@ -26,7 +26,7 @@ Find external meetings from the last 7 days where no follow-up has happened — 
 
 ## Notes
 - 3-day threshold is the default — adjust in your CLAUDE.md if needed
-- Internal meetings (same email domain as sender) are excluded automatically
+- Internal meetings are excluded automatically — an attendee is "internal" if their email domain matches your own (set your domain in CLAUDE.md)
 - If a contact isn't in pipeline or customers: "This person isn't in your pipeline — want to add them?"
 - Add this as a step in `/morning-briefing` to run it as part of your daily ritual
 
