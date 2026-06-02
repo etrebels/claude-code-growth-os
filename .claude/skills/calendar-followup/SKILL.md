@@ -33,4 +33,4 @@ Find external meetings from the last 7 days where no follow-up has happened — 
 ## Depth
 - quick: list of overdue follow-ups only.
 - standard: list + mail check + offer to draft one message.
-- deep: draft all missing follow-ups, prioritized by deal stage and days overdue.
+- deep: draft all missing follow-ups, prioritized by deal stage and days overdue. Drafts only — never send without explicit confirmation.
