@@ -77,7 +77,7 @@ Nothing there is real — delete `demo/` whenever you like.
 | **Sales** | `lead-qualify`, `meeting-prep`, `follow-up`, `cold-outreach` |
 | **Product** | `product-signal` (routes field + retention signals to the roadmap; writes the buyer-facing line for anything shipped) |
 | **Retention** | `onboarding-handoff` (Won→onboarding), `account-health` (adoption, renewal motion, churn/expansion), `retention-feedback` (post-sale→product loop) |
-| **Cross-cutting** | `status-update`, `triage` |
+| **Cross-cutting** | `status-update`, `triage`, `calendar-followup` (unfinished follow-ups from last week's meetings), `inbox-digest` (unread newsletter digest) |
 
 ## How it fits together
 
