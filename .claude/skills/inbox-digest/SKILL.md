@@ -40,4 +40,4 @@ If nothing stands out: "No unread newsletters worth flagging in the last 48 hour
 ## Depth
 - quick: headlines only, no summaries.
 - standard: summaries for relevant unread items (default).
-- deep: summaries + one suggested action per item (share, save, respond).
+- deep: summaries + one suggested action per item (share, save, or draft a reply — drafts only, never auto-send).
