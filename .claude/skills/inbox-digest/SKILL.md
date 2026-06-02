@@ -13,7 +13,7 @@ Surface the signal from newsletter noise — read **unread** emails from the las
 
 2. **Assess relevance.** For each unread email, decide if it's relevant to your work context (industry news, competitors, fundraising, product trends, etc.). Skip anything unrelated.
 
-3. **Summarize what matters.** For each relevant unread email:
+3. **Summarize what matters** — stick to what the email actually says; don't infer or embellish. For each relevant unread email:
    - Source and subject line
    - 2–3 sentence summary — what it covers and why it might matter
 
