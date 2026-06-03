@@ -1,6 +1,6 @@
 # Connecting a CRM (optional)
 
-This kit works fine with [`ops/pipeline.md`](../ops/pipeline.md) as your hand-maintained board. But if you already have a CRM (HubSpot, Salesforce, Attio, …), **don't run two pipelines.** Make your CRM the source of truth and treat `ops/pipeline.md` as a *projection* of it. A hand-typed board that drifts from the CRM is worse than no board.
+This kit works fine with [`ops/pipeline.md`](../ops/pipeline.md) as your hand-maintained board. But if you already have a CRM, **don't run two pipelines.** Make your CRM the source of truth and treat `ops/pipeline.md` as a *projection* of it. A hand-typed board that drifts from the CRM is worse than no board.
 
 ## The pattern: project, don't duplicate
 

@@ -117,7 +117,7 @@ All pure bash (one uses `python3` to read a payload). No API keys, no MCP — it
 
 ## Portability
 
-The `.claude/skills/` and `.claude/commands/` are plain markdown on the Agent Skills spec, so they port to Cursor, Windsurf, and Codex with little change. The `hooks/` and `settings.json` are Claude-Code-specific — they won't carry over, and that's fine; the rituals and skills are the part worth taking elsewhere.
+The `.claude/skills/` and `.claude/commands/` are plain markdown on the Agent Skills spec, so they port to other agents that support it with little change. The `hooks/` and `settings.json` are Claude-Code-specific — they won't carry over, and that's fine; the rituals and skills are the part worth taking elsewhere.
 
 ## What's deliberately not here
 
@@ -129,13 +129,13 @@ This is **open core**. The chassis is free and MIT-licensed; the part that took 
 
 | Free — this repo (MIT) | Paid — built & run for you |
 |---|---|
-| The chassis: hooks, daily rituals, and go-to-market skill templates across all four functions, plus a 30-second runnable demo. Bring your own playbooks. | Your customized, *populated* operating system, with your best tools integrated, alongside real playbooks, positioning, pricing, ICP — plus the wider automation layer (n8n: vendor management, ICP checks, pre- and post-meeting briefings and follow-ups) as well as Blackbird.io for multilingual content processes. Built and run for you, or run by a growth operator who works this way. |
+| The chassis: hooks, daily rituals, and go-to-market skill templates across all four functions, plus a 30-second runnable demo. Bring your own playbooks. | Your customized, *populated* operating system, with your best tools integrated, alongside real playbooks, positioning, pricing, ICP — plus the wider automation layer (a workflow-automation platform: vendor management, ICP checks, pre- and post-meeting briefings and follow-ups) as well as a localization-automation platform for multilingual content processes. Built and run for you, or run by a growth operator who works this way. |
 
 The repo is the skeleton; the judgment you put inside it is the product → **[langoptima.com/features/growth](https://langoptima.com/features/growth)**.
 
 ## Who's behind this
 
-I'm Edwin Trebels — I run our company's entire go-to-market on a setup like this, and help clients run theirs. This repo is the open skeleton. The full version adds the wider automation layer (n8n handling vendor management, ICP checks, pre-meeting briefings, post-meeting debriefs and follow-ups, and the assistant that keeps the day straight; Blackbird.io for multilingual content), plus the judgment that fills the empty drawers. That part took twenty-two years and doesn't come in a folder.
+I'm Edwin Trebels — I run our company's entire go-to-market on a setup like this, and help clients run theirs. This repo is the open skeleton. The full version adds the wider automation layer (a workflow-automation platform handling vendor management, ICP checks, pre-meeting briefings, post-meeting debriefs and follow-ups, and the assistant that keeps the day straight; a localization-automation platform for multilingual content), plus the judgment that fills the empty drawers. That part took twenty-two years and doesn't come in a folder.
 
 Want it built and run for you, or a growth operator who works this way? That's what I do: [langoptima.com/features/growth](https://langoptima.com/features/growth). The thinking behind the kit is in [`docs/methodology.md`](docs/methodology.md).
 

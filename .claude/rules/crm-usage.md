@@ -18,7 +18,7 @@ routine from, say, turning a deal note into a duplicate task.
 
 | Lane | Owns | Example tool |
 |---|---|---|
-| **Task tool** | *What to do* — the to-do list | your task manager (e.g. Notion, Linear) |
+| **Task tool** | *What to do* — the to-do list | your task manager |
 | **Meeting-notes tool → wiki** | *What was said* — transcripts, summaries | your notetaker |
 | **CRM (via MCP)** | *What changed about the deal* — stage, qualification scores, opportunity fields, deal notes | your CRM |
 
