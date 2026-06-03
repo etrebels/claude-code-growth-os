@@ -35,9 +35,8 @@ your **claude.ai account** as **connectors** (<https://claude.ai/customize/conne
 **not** MCP servers you added locally with `claude mcp add` or in a gitignored
 `.mcp.json`.
 
-- If a routine needs your task tool / calendar / meeting-notes tool / CRM / chat
-  (e.g. Notion, Google Calendar, Slack), each must appear in the routine's
-  **Connectors** tab.
+- If a routine needs your task tool / calendar / meeting-notes tool / CRM / chat,
+  each must appear in the routine's **Connectors** tab.
 - Local-only MCP servers won't appear unless you add them as a connector **or**
   declare them in a committed `.mcp.json` (which travels with the cloned repo).
   This kit keeps `.mcp.json` gitignored by default — see
@@ -116,9 +115,9 @@ interactive session does.
 
 ## Email / external delivery
 
-If your routine delivers output via an external API (e.g. Resend for email), that
-API is **not** a connector: set its key (e.g. `RESEND_API_KEY`) in the routine's
-**environment** variables and add its domain (e.g. `api.resend.com`) to that
+If your routine delivers output via an external API (e.g. an email-sending API), that
+API is **not** a connector: set its key (e.g. `EMAIL_API_KEY`) in the routine's
+**environment** variables and add its domain (e.g. `api.youremailprovider.com`) to that
 environment's **Allowed domains**. (Connectors skip the allowlist; plain APIs don't.)
 
 ## Limits & notes
