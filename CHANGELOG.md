@@ -9,6 +9,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- **`/capture` ritual + `inbox/`** (`.claude/commands/capture.md`) — a capture-now,
+  triage-later inbox so a passing thought doesn't cost a context switch; triage routes
+  each note to the lane that owns it (task list, notes/wiki, CRM, customer book,
+  feedback log) and never lets the inbox become a second to-do list. Adapts the
+  `/capture` pattern from [claude-context-os](https://github.com/conorbronsdon/claude-context-os)
+  (Conor Bronsdon, MIT).
+- **`/reconcile` ritual** (`.claude/commands/reconcile.md`) — catches drift when more
+  than one session (you, plus a scheduled cloud routine) writes the same files:
+  mirror-vs-CRM, tasks-vs-priorities, log-vs-reality, and stale open loops. Adapts the
+  `/reconcile` pattern from claude-context-os. Both new rituals defer to
+  `todo-single-source.md`; both are credited in `THIRD-PARTY-NOTICES.md`.
 - **Cloud Routines scheduling** (`.claude/scheduling/`) — a runbook for running the
   rituals on Anthropic-managed infrastructure without your machine awake
   (`cloud-routines.md`), plus a three-layer scheduling overview (OS scheduler vs
