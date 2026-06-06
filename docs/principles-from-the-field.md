@@ -4,7 +4,7 @@ The [science](principles-from-science.md) companion borrows operating principles
 
 There are no quotes here. A field principle earns its place by the worked example, not by a citation — so each has a plain-language explanation and a short go-to-market example, and nothing else. They're a thinking aid for anyone running a motion in this kit — **not prescriptive, not brand-specific. Copy the format; keep the ones that match your motion, drop the rest.**
 
-Where a principle maps onto a specific part of this kit, that's noted at the end in [Where these land in the kit](#where-these-land-in-the-kit) — read it as candidate updates to your own rituals, not as instructions.
+Where a principle maps onto a specific part of this kit, that's noted at the end in [Where these land in the kit](#where-these-land-in-the-kit) — several are now wired into the rituals; treat the rest as candidate updates for your own motion.
 
 ---
 
@@ -55,12 +55,12 @@ Where a principle maps onto a specific part of this kit, that's noted at the end
 
 ## Where these land in the kit
 
-Candidate updates, not instructions — adopt what fits your motion:
+Several are now wired into the kit's rituals (below); treat the rest as candidate updates — adopt what fits your motion:
 
-- **The forward question** → [`/morning-briefing`](../.claude/commands/morning-briefing.md) already asks for one priority that *moves something forward, not just maintains it* (step 7). Make the question explicit at the top of the ritual: *what's the single highest forward-moving action today?* — then let the top three follow.
-- **The ownership gap** → in [`/weekly-review`](../.claude/commands/weekly-review.md), read whether each live area has an owner who treats the number as theirs, not only what moved. In `ops/`, naming an owner per area is the cheapest way to make a part legibly load-bearing.
-- **The imaginary lion + apply fully** → in [`/end-of-day`](../.claude/commands/end-of-day.md), flag any task that keeps rolling forward behind a citable obstacle — and treat accepted coaching as applied by the next rep, not "eventually." (Most deals die of slow no's, not bad ones.)
-- **One durable relationship = the return** → in [`/weekly-review`](../.claude/commands/weekly-review.md), read a channel's return by the quality of relationships it surfaced, not only headline volume — the long-horizon companion to [`why-brand.md`](why-brand.md).
+- **The forward question** → [`/morning-briefing`](../.claude/commands/morning-briefing.md) now opens its top-three step with the forward question — *what's the single highest forward-moving action today?* — so at least one priority is a forward move, not maintenance. Adapt the wording to your motion.
+- **The ownership gap** → [`/weekly-review`](../.claude/commands/weekly-review.md) now runs an ownership read — does each live area have an owner who treats the number as theirs, not just what moved? In `ops/`, naming an owner per area is the cheapest way to make a part legibly load-bearing.
+- **The imaginary lion + apply fully** → [`/end-of-day`](../.claude/commands/end-of-day.md) now runs a *lion check* — flag any task that keeps rolling forward behind a citable obstacle, and decide whether to do it or drop it. (Most deals die of slow no's, not bad ones; accepted coaching is applied by the next rep, not "eventually.")
+- **One durable relationship = the return** → [`/weekly-review`](../.claude/commands/weekly-review.md) now reads a channel's return by the quality of relationships it surfaced, not only headline volume — the long-horizon companion to [`why-brand.md`](why-brand.md).
 - **Judgment & integrity by choice** → the kit is deliberately empty of playbooks because *the judgment you put inside it is the product* (see [`methodology.md`](methodology.md)); judgment is built by reps under stakes, and the disclosure standard holds whether or not anyone is watching.
 - **Guard inputs / hold the vision** → the [`pre-compact`](../.claude/hooks/pre-compact.sh) hook already re-injects priorities and the latest log so a long session doesn't lose the thread — the same instinct, applied to your own attention: curate the inputs, and re-state the longer-term thesis on a cadence.
 
