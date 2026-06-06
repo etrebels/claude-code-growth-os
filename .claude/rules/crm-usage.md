@@ -73,6 +73,26 @@ all six:
 6. **Treat AI-generated / computed fields as read-only.** Scores or summaries the
    CRM writes itself are outputs, not inputs you overwrite.
 
+## Draft, send, delete — classify outbound actions by reversibility
+
+Newer CRM APIs reach past field writes — they can **draft** a message, **send**
+it, and **delete** records. Before letting any run touch one, sort it by
+reversibility, the same Human/AI boundary the rest of this kit runs on:
+
+| Action | Reversible? | An autonomous run may | Owner |
+|---|---|---|---|
+| **Draft** a message (email / chat) into a review folder | yes — nothing leaves until a human sends | yes, at *read + safe writes* | agent |
+| **Send** a message or email | no — external the moment it leaves | **never** | you |
+| **Delete** a record | no — it destroys the system of record | **never**, even at *full read-write* | you |
+
+Drafting is the safe half of outbound: a run prepares the message, it lands in
+your drafts folder, you review and send. Sending and deleting are the
+irreversible halves — prepare, then stop for sign-off. A CRM gaining a delete
+endpoint widens what an unattended run *could* do without widening what it
+*should*; this fence is what keeps the new reach from becoming new risk. (If the
+MCP server only exposes write as HTTP POST, it can't issue a DELETE at all — keep
+it that way rather than relying on the routine to abstain.)
+
 ## Choose your write authority
 
 Pick the level you're comfortable handing an autonomous run, and set the MCP
@@ -96,7 +116,8 @@ Each ritual touches the CRM in one specific way — and only that way:
   change (safe writes only); otherwise read-only.
 - **`/end-of-day`** — *persist* the day's stage/score/note changes, then **reconcile
   the mirror**: rewrite [`ops/pipeline.md`](../../ops/pipeline.md) from the CRM so
-  tomorrow opens consistent.
+  tomorrow opens consistent. May also *draft* (never send) outbound follow-ups into
+  your connected drafts folder for review — see the reversibility tiers above.
 - **`/weekly-review`** — read for the week's movement; reconcile the mirror; write
   nothing the daily rituals didn't already persist.
 
