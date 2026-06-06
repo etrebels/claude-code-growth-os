@@ -26,6 +26,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Loop signals at session start** (`.claude/hooks/session-start.sh`) — the hook now
   also surfaces the freshest `ops/feedback-log.md` signals, so the cross-function
   loop can't go stale silently. (#31)
+- **Principles from the field** (`docs/principles-from-the-field.md`) — a third
+  thinking-aid companion to the science and history pages: operating principles
+  drawn from running the motion itself (ownership, daily focus, decisions, reading
+  the return, judgment, attention), each with a worked go-to-market example and a
+  map of where it lands in the kit; linked from the README docs table.
 - **Principles from science** (`docs/principles-from-science.md`) — twenty-one
   portable operating principles drawn from seven sciences, each with two sourced
   quotes and a worked go-to-market example; linked from the README docs table. (#26)
