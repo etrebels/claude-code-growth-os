@@ -9,6 +9,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- **`event-to-pipeline` skill** (`.claude/skills/event-to-pipeline/SKILL.md`) — turn a
+  conference, meetup, or event you attend or host into booked calls: book the next
+  step rather than hold it on the floor, a QR to your booking link, a call-earning
+  offer, fit-sorting on the spot, and a 48–72h follow-up. Includes the Voss
+  calibrated question for "let me think about it".
 - **Retention act-skills — the right side gets more than a detector**
   (`.claude/skills/`): `churn-save` (recover a red/amber account — the real risk,
   the re-engagement draft, the renewal-clock timing), `expansion-play` (work a
