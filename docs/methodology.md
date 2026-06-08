@@ -8,7 +8,7 @@ Most people reach for Claude Code as something to *ask* — a faster way to writ
 
 This kit is set up for the whole go-to-market — all four functions across both sides of the bowtie: marketing and sales on the left (the demo pipeline, the qualification / prep / follow-up / outreach / content skills), product and retention on the right (the customer book, the onboarding handoff, account health, the roadmap-signals queue). But the pattern isn't go-to-market-specific: the same shape runs a research practice, a support queue, a founder's week. If you have recurring work and scattered tools, it applies. The mechanics of the four-function motion — the handoffs, the one number, the shared definitions — live in [`operating-model.md`](operating-model.md); this page is about the *environment* they run in.
 
-## Four ideas that make it work
+## Five ideas that make it work
 
 **1. State lives in plain text, in git.** Your playbooks, priorities, and log are markdown files, not rows in someone's database. That sounds modest until you notice the consequences: your operating system has a diff, a history, and a blame view. You can read it, fork it, and fix it in a text editor. And when a long session's context window compacts, nothing important is lost — it's still on disk, and a hook re-injects it.
 
@@ -18,9 +18,11 @@ This kit is set up for the whole go-to-market — all four functions across both
 
 **4. One ritual at a time.** The failure mode is porting your whole working life on day one, then abandoning it. Pick the task you dread most. Make it a command. Run it daily for a week. Then add the next. Compounding comes from small reps, not a heroic weekend.
 
+**5. Close the loop: verify the work.** A ritual that acts but never checks is one you have to babysit. The loop a capable agent runs is *gather context → act → verify → repeat*: read what you need, take a step, check the result against something real — a test that passes, a file that should now exist, a count that should match — and only then move on. Build the check into the ritual, not your memory. Like a guardrail, it can live in a hook (`verify-after-change.sh`) so it runs every time instead of only when you remember. The cheapest verification you'll ever skip is the one that would have caught the silent failure. Why the *loop* — not the prompt — is the thing you design is the argument in [`designing-loops.md`](designing-loops.md).
+
 ## Why this is one system, not four
 
-The kit runs all four go-to-market functions — marketing, sales, product, retention — in one repo on purpose. The buyer already merged them: they research, buy, adopt, and renew as one relationship, and most of a B2B decision now happens before sales is in the room. Drawn honestly the journey isn't a funnel that ends at the sale; it's a bowtie, with the post-sale half (onboarding, adoption, renewal, expansion) usually left with no owner. Running the four as separate systems is what creates the seams the buyer feels. The fix is structural, not cultural, and the four ideas above happen to be it:
+The kit runs all four go-to-market functions — marketing, sales, product, retention — in one repo on purpose. The buyer already merged them: they research, buy, adopt, and renew as one relationship, and most of a B2B decision now happens before sales is in the room. Drawn honestly the journey isn't a funnel that ends at the sale; it's a bowtie, with the post-sale half (onboarding, adoption, renewal, expansion) usually left with no owner. Running the four as separate systems is what creates the seams the buyer feels. The fix is structural, not cultural, and the ideas above happen to be it:
 
 - **One source of truth** → the git repo. Every function reads and writes the same markdown — not four tools with four versions of the truth.
 - **Two feedback loops** → the `marketing-feedback` skill plus a `MARKETING-ACTION` line (sales→marketing), and the `retention-feedback` skill plus a `RETENTION-RISK` line (post-sale→product). What the field and the customer base surface becomes an action in the same system, the same day — version-controlled.

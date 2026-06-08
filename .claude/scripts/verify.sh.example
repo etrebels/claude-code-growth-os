@@ -1,0 +1,37 @@
+#!/bin/bash
+# .claude/scripts/verify.sh — your project's "did it work?" check.
+#
+# Copy this to verify.sh and make it executable to wire the loop's verify step:
+#
+#   cp .claude/scripts/verify.sh.example .claude/scripts/verify.sh
+#   chmod +x .claude/scripts/verify.sh
+#
+# verify-after-change.sh runs it after every Edit/Write (advisory, time-boxed to
+# 60s, never blocks), and you can run it by hand any time. Exit non-zero to surface
+# a problem — the hook shows the output; it doesn't stop you.
+#
+# $1 is the file that just changed (may be empty on a manual run). Use it to scope
+# the check to what moved, or ignore it and check the whole repo.
+set -euo pipefail
+CHANGED="${1:-}"
+
+# Wire the checks that fit your project. Uncomment what applies, delete the rest.
+
+# Run the deterministic checks this kit ships (the same ones CI runs):
+#   for c in .claude/scripts/checks/*.sh; do [ -x "$c" ] && "$c"; done
+
+# A Makefile target:
+#   make check
+
+# A JS/TS project:
+#   npm test --silent && npm run lint --silent
+
+# A Python project:
+#   pytest -q && ruff check .
+
+# A markdown-only ops repo: the hook already link-checks the changed file, so you
+# might verify structure instead — e.g. that today's log entry exists, or that
+# ops/pipeline.md still parses.
+
+echo "verify.sh: no checks wired yet — edit .claude/scripts/verify.sh (changed: ${CHANGED:-none})"
+exit 0

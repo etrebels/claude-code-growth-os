@@ -55,7 +55,7 @@ Two things bite every time, so make them habits:
 
 These exist because a [cloud routine](../scheduling/cloud-routines.md) runs
 **autonomously** — there's no one to catch a bad write mid-run. Every write obeys
-all six:
+all seven:
 
 1. **Read before write.** Fetch the current value first; decide the change against
    what's actually there, not what you assume is there.
@@ -72,6 +72,12 @@ all six:
    failed field abort the ritual.
 6. **Treat AI-generated / computed fields as read-only.** Scores or summaries the
    CRM writes itself are outputs, not inputs you overwrite.
+7. **Verify the write landed.** After a write, read the value back and reconcile —
+   the field should now hold the new value, and a batch you pushed should match the
+   count you intended. A write you didn't confirm is one you're trusting blind. On a
+   divergence, surface it loudly in the run's output (don't wait for the weekly
+   reconcile) and flag the mirror stale. This is the loop's *verify* step: guardrails
+   1–6 govern the write going in; this one confirms it actually took.
 
 ## Choose your write authority
 

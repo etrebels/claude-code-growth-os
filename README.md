@@ -55,7 +55,7 @@ Nothing there is real — delete `demo/` whenever you like.
 | Piece | What it is |
 |---|---|
 | `.claude/hooks/` | Five guardrails: session-start context, **state re-injection across compaction**, a **commit secret-guard**, sensitive-file protection, an end-of-day nudge — plus a **web-session bootstrap** that installs the hook linter (`shellcheck`) on remote / Claude-Code-on-the-web containers |
-| `.claude/commands/` | Daily rituals you invoke by name: `/morning-briefing`, `/midday-checkin`, `/end-of-day`, `/weekly-review`, plus `/capture` (drop a thought now, triage it later), `/reconcile` (catch drift when more than one session writes the same files), and `/demo-briefing` |
+| `.claude/commands/` | Daily rituals you invoke by name: `/morning-briefing`, `/midday-checkin`, `/end-of-day`, `/weekly-review`, the monthly `/retention-report`, plus `/capture` (drop a thought now, triage it later), `/reconcile` (catch drift when more than one session writes the same files), and `/demo-briefing` |
 | `.claude/skills/` | Skill templates grouped by the four growth functions (see below) — so the balance across marketing, sales, product, and retention is visible, not acquisition-only |
 | `.claude/rules/` | Standing constraints every session honors — how to reach a CRM over MCP (`crm-usage.md`) and how the to-do list renders one canonical way (`todo-single-source.md`); obeyed by interactive rituals and autonomous routines alike |
 | `.claude/scheduling/` | Run the rituals on a clock — locally (cron/launchd), as **cloud Routines** (no machine awake), or as a CI backstop (the deterministic checks in `.claude/scripts/checks/`, run by a GitHub Actions `schedule:`). Full runbook in `cloud-routines.md` |
@@ -75,8 +75,8 @@ Nothing there is real — delete `demo/` whenever you like.
 |---|---|
 | **Marketing / Demand** | `content-repurpose`, `marketing-feedback` (sales→marketing loop) |
 | **Sales** | `lead-qualify`, `meeting-prep`, `follow-up`, `cold-outreach` |
-| **Product** | `product-signal` (routes field + retention signals to the roadmap; writes the buyer-facing line for anything shipped) |
-| **Retention** | `onboarding-handoff` (Won→onboarding), `account-health` (adoption, renewal motion, churn/expansion), `retention-feedback` (post-sale→product loop) |
+| **Product** | `support-signal` (clusters support tickets into ranked themes), `product-signal` (routes those + field/retention signals to the roadmap; writes the buyer-facing line for anything shipped) |
+| **Retention** | `onboarding-handoff` (Won→onboarding), `account-health` (scores adoption, renewal motion, churn/expansion), `churn-save` (recover an at-risk account), `expansion-play` (work a ready-to-grow account), `qbr-prep` (the value-realization review), `retention-feedback` (post-sale→product loop) |
 | **Cross-cutting** | `status-update`, `triage`, `calendar-followup` (unfinished follow-ups from last week's meetings), `inbox-digest` (unread newsletter digest) |
 
 ## How it fits together
@@ -85,8 +85,8 @@ One loop, all plain text in git:
 
 1. **Open a session** → the SessionStart hook surfaces today's priorities.
 2. **`/morning-briefing`** reads your priorities, yesterday's log, and your pipeline → today's top three.
-3. **Through the day**, the skills work on your own data, on both sides of the bowtie. *Left side:* `lead-qualify` a new opportunity, `meeting-prep` before a call, `follow-up` after it, `cold-outreach` to a prospect, `content-repurpose` a win into posts, `marketing-feedback` to turn a recurring objection into a note marketing acts on. *Right side:* `onboarding-handoff` when a deal is won (carry the value hypothesis across the seam), `account-health` to score adoption and start the renewal motion at day 60, `product-signal` to route retention and field signals to the roadmap, and `retention-feedback` to turn an adoption slip into a signal product acts on.
-4. **`/end-of-day`** logs what shipped and sets tomorrow; **`/weekly-review`** finds the patterns across both sides — renewals due, accounts at risk, expansion candidates, and the top roadmap signals.
+3. **Through the day**, the skills work on your own data, on both sides of the bowtie. *Left side:* `lead-qualify` a new opportunity, `meeting-prep` before a call, `follow-up` after it, `cold-outreach` to a prospect, `content-repurpose` a win into posts, `marketing-feedback` to turn a recurring objection into a note marketing acts on. *Right side:* `onboarding-handoff` when a deal is won (carry the value hypothesis across the seam), `account-health` to score adoption and start the renewal motion at day 60 — then `churn-save` to recover a slipping account, `expansion-play` to work one that's ready to grow, and `qbr-prep` to run the value-realization review; `support-signal` to cluster support tickets into themes, `product-signal` to route those and the field signals to the roadmap, and `retention-feedback` to turn an adoption slip into a signal product acts on.
+4. **`/end-of-day`** logs what shipped and sets tomorrow; **`/weekly-review`** finds the patterns across both sides — renewals due, accounts at risk, expansion candidates, and the top roadmap signals; **`/retention-report`** rolls the customer book up to NRR/GRR once a month.
 5. **The hooks hold it together** — your state survives a long session (`pre-compact`), and nothing secret slips into a commit (`pre-commit-guard`).
 
 The left side lives in `ops/pipeline.md`; the right side in `ops/customers.md` (the post-sale account book) and `ops/roadmap-signals.md` (product's triage queue). Priorities and notes round it out — all yours, with a fictional copy in `demo/`. Edit the markdown, commit, and your whole go-to-market has a history. The handoffs that connect the four functions are mapped in [`docs/operating-model.md`](docs/operating-model.md).
