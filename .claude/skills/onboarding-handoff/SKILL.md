@@ -10,10 +10,10 @@ The handoff most teams never define: a signed deal drops silently into a custome
 From the won deal (point me at the row in `ops/pipeline.md`, or paste the deal context):
 
 1. **Carry the value hypothesis forward.** Write down, in one line, what the customer bought this to do — in their words, from discovery. This becomes the value hypothesis in `ops/customers.md`, and the thing every adoption check is measured against. Lose it here and onboarding optimizes for activity, not value.
-2. **Set the date markers.** Record the renewal date and note the **day-60** renewal-motion trigger (not day-85). Set a first-expansion check date too — the moment to look for a second team or use case.
+2. **Set the date markers.** Record the renewal date, the contract value (ARR — the number the book rolls up to NRR), and note the **day-60** renewal-motion trigger (not day-85). Set a first-expansion check date too — the moment to look for a second team or use case.
 3. **Identify the power user / champion.** Name who will actually use it and who sponsors it internally. A single-threaded account is a churn risk before it's even live — if there's only one name, that's the first gap to close.
 4. **Write the first adoption milestone.** One concrete, dated outcome that proves value is landing (the first workflow live, the first cross-system answer, the first report shipped). Vague onboarding has no finish line.
-5. **Open the row.** Create the account in `ops/customers.md` at stage **Onboarding**, with the value hypothesis, the first adoption signal to watch, the renewal date, an owner, and the next step. Offer to log the handoff in `ops/daily-log.md`.
+5. **Open the row.** Create the account in `ops/customers.md` at stage **Onboarding**, with the value hypothesis, the ARR, the first adoption signal to watch, the renewal date, an owner, and the next step. Offer to log the handoff in `ops/daily-log.md`.
 
 Don't invent commitments the deal didn't contain. Bring your own onboarding playbook; this carries the deal's context across the seam so nothing drops.
 

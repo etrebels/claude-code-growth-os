@@ -9,6 +9,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- **Retention act-skills — the right side gets more than a detector**
+  (`.claude/skills/`): `churn-save` (recover a red/amber account — the real risk,
+  the re-engagement draft, the renewal-clock timing), `expansion-play` (work a
+  ready-to-grow account into an angle and a clean hand to sales), `qbr-prep`
+  (assemble a value-realization QBR brief from the book, recent notes, and roadmap
+  status), and `support-signal` (cluster a batch of support tickets into ranked
+  product themes, then hand them to `product-signal`). `account-health` now hands
+  off to `churn-save` / `expansion-play`; together they close the customer-success
+  playbook on the right side of the bowtie.
+- **`/retention-report` command** (`.claude/commands/retention-report.md`) — a
+  monthly readout that rolls the customer book up to NRR and GRR (formulae named,
+  computed from the `ARR` column over git history), churn by reason, and expansion,
+  then writes next month's two bets to `ops/priorities.md`. Scheduled monthly in
+  `.claude/scheduling/cloud-routines.md`.
+- **`ARR` column in the customer book** (`ops/customers.md`, `demo/customers.md`) —
+  the recurring revenue that rolls up to NRR, captured at the `onboarding-handoff`
+  seam so `/retention-report` can compute it. Seeded in the demo data, alongside a
+  `demo/support-tickets.md` batch and a `demo/meetings/` value-review note so the
+  new skills run against realistic data out of the box.
 - **Cloud Routines scheduling** (`.claude/scheduling/`) — a runbook for running the
   rituals on Anthropic-managed infrastructure without your machine awake
   (`cloud-routines.md`), plus a three-layer scheduling overview (OS scheduler vs
