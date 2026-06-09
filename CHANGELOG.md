@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- **Model-choice guidance for scheduled rituals** (`.claude/scheduling/README.md`)
+  — which tier to run a ritual on: a cheap/default model for the daily loop, the
+  frontier tier for the few judgment-heavy runs (weekly review, retention report).
+  Written tier-generic so it survives model releases.
 - **Retention act-skills — the right side gets more than a detector**
   (`.claude/skills/`): `churn-save` (recover a red/amber account — the real risk,
   the re-engagement draft, the renewal-clock timing), `expansion-play` (work a
