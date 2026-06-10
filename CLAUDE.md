@@ -28,6 +28,7 @@ Standing constraints every session honors — interactive or an autonomous [clou
 
 - **CRM over MCP** ([`crm-usage.md`](.claude/rules/crm-usage.md)) — the three-lane convention (tasks ≠ deals), the docs-first access protocol, and the write-authority guardrails an unattended run must respect.
 - **One to-do list** ([`todo-single-source.md`](.claude/rules/todo-single-source.md)) — the canonical way the to-do list is queried and rendered, so every entry path shows the same list. Pull the whole open set; derive urgency at render; never re-group it per ritual.
+- **The open-core boundary** ([`open-core-boundary.md`](.claude/rules/open-core-boundary.md)) — before adding anything to this repo, run the free-vs-Pro check: merging here is a one-way door (MIT, public forever). Patterns, generic templates, and chassis improvements land here; filled playbooks, named-tool wiring, and team rollout layers land in [LangOptima Growth OS Pro](https://langoptima.com/growth-os-pro). Unsure → Pro first.
 
 ## Scheduling
 

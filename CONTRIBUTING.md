@@ -13,6 +13,8 @@ This is a starter — a clean, generic scaffold people fork and fill. Contributi
 
 **Keep it generic. No real data, ever.** No real company names, playbooks, pricing, credentials, or personal data — in code, commits, or examples. The `demo/` folder is fictional and must stay that way. If a contribution only makes sense with your private content in it, it belongs in your fork, not here.
 
+A note on scope: this repo is the free chassis of an [open-core ladder](README.md#whats-free-vs-whats-paid). Patterns, generic templates, and chassis improvements belong here; filled playbooks and named-tool integration packs are what the paid tier sells, so maintainer additions of that shape land there instead (the boundary is written down in [`.claude/rules/open-core-boundary.md`](.claude/rules/open-core-boundary.md)). Community contributions that fit the "good contributions" list above always land here, under MIT, with credit — never behind the paywall.
+
 ## Conventions
 
 - Markdown for commands, skills, ops, and docs.
