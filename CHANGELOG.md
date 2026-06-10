@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+_Nothing yet — next changes land here._
+
+## [0.2.0] — 2026-06-10
+
+Hardening release: the hooks now behave as documented, the kit installs with no
+external plugin dependency, and the accumulated retention, CRM, and scheduling
+features below are rolled up from the previous `[Unreleased]`.
+
 ### Added
 
 - **Post-change verify hook** (`.claude/hooks/verify-after-change.sh` +
@@ -96,6 +104,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   `onboarding-handoff`, `product-signal`, `retention-feedback`) — they pointed at
   `../../docs/…` (which resolves to a non-existent `.claude/docs/`) instead of
   `../../../docs/…`. Surfaced by the new checks script on its first run. (#31)
+- **Stop-hook nudge now reaches you.** `stop-reminder.sh` emitted its
+  "run /end-of-day" reminder to stderr on exit 0 — which a Stop hook surfaces only
+  as a terse `hook error` notice in the transcript, not as a readable nudge. It now
+  emits a JSON `systemMessage`, the supported way to show a Stop-hook message in the
+  default UI without forcing the turn to continue.
+- **`security-guidance` plugin reference removed** from `.claude/settings.json` —
+  it was undocumented and pointed at a marketplace a fresh clone can't resolve,
+  breaking the "no setup, runs anywhere out of the box" promise. Add your own
+  plugins locally if you use them.
+- **PreCompact claim corrected** (README + CLAUDE.md). A `PreCompact` hook's stdout
+  is not guaranteed to be re-injected into context (it's best-effort and
+  version-dependent). The durable guarantee is that state lives in files and
+  `session-start.sh` reloads it every session — so the docs now credit SessionStart
+  as the reliable re-load, not PreCompact.
+- **Pre-commit secret guard scans only added lines**, so a commit that *removes* a
+  leaked secret is no longer blocked; **`autoMemoryEnabled` set to `false`** so a
+  public kit carrying prospect detail doesn't persist it outside the repo; the
+  paid-offer CTA URL made consistent across README and the issue template.
 
 ## [0.1.0] — 2026-05-25
 
@@ -125,4 +151,5 @@ inside it is yours to add.
 - **Project hygiene** — README with a demo animation, MIT license, contributing
   guide, security policy, code of conduct, and issue + pull-request templates.
 
+[0.2.0]: https://github.com/etrebels/claude-code-growth-os/releases/tag/v0.2.0
 [0.1.0]: https://github.com/etrebels/claude-code-growth-os/releases/tag/v0.1.0

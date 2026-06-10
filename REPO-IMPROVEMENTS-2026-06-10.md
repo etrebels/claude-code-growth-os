@@ -144,3 +144,13 @@ Both fixes below were initially blocked (the Edit tool is denied on `.claude/` p
 ### Out of scope this pass (P2 polish, not requested)
 
 P2.2–P2.6, P2.8–P2.10 (protect-files pattern gaps, link-checker divergence, stale required-files list, README accuracy nits, skill `## Depth` gaps, scheduled-CI seed-date noise, issue-template housekeeping, adoptability ideas) were not part of the P0/P1 fix scope and remain open in the sections above.
+
+---
+
+## Resolution log — decisions applied (2026-06-10, batch 2)
+
+- **CTA URL · ✅ Confirmed `…/features/growth`.** Edwin's call: keep the 2:1 in-repo majority; no change. The three references already agree.
+- **P1.7 Stop-hook nudge · ✅ Fixed (semantics verified against the live docs first).** Confirmed against `https://code.claude.com/docs/en/hooks`: a Stop hook's stderr on exit 0 surfaces only as a terse `hook error` notice in the transcript — never as a clean nudge. Rewrote `stop-reminder.sh` to emit a JSON `{"systemMessage": …}` (the supported way to show a Stop-hook message in the default UI without forcing the turn to continue). `bash -n` + `shellcheck` clean.
+- **PreCompact claim · ✅ Corrected (same doc verification).** The docs confirm `PreCompact` stdout is **not** guaranteed to be re-injected into context (best-effort, version-dependent). The README and CLAUDE.md no longer promise PreCompact "re-injects … so the context window can't lose the thread"; they now credit **SessionStart** (`session-start.sh`) as the reliable per-session re-load, with PreCompact noted as best-effort. The hook is retained (harmless; may help on versions that echo it).
+- **P1.8 `security-guidance` plugin · ✅ Removed.** It was documented nowhere and pointed at a marketplace a fresh clone can't resolve — contradicting the kit's "no setup, runs anywhere out of the box" promise. Removed the `"plugins"` key from `.claude/settings.json` (valid JSON confirmed) and noted in the changelog that users add their own plugins locally. (Chosen over "document it" because this is a public giveaway template; a dangling external dependency would break a cloner's first run.)
+- **P2.7 Cut 0.2.0 · ✅ CHANGELOG prepared.** Rolled the accumulated `[Unreleased]` features (retention act-skills, `/retention-report`, ARR column, cloud routines, the verify hook, …) plus this pass's fixes under a new **`## [0.2.0] — 2026-06-10`** heading; `[Unreleased]` is now empty; added the `[0.2.0]` release link-ref. **The git tag `v0.2.0` is intentionally not created on this branch** — cut it at merge (`git tag v0.2.0 && git push origin v0.2.0`), per Edwin's "once these PR fixes merge."

@@ -100,7 +100,7 @@ The left side lives in `ops/pipeline.md`; the right side in `ops/customers.md` (
 
 ## The hooks earn their place
 
-- **`pre-compact.sh`** re-injects your priorities and latest log when a long session compacts — your state lives in files, so the context window can't lose the thread.
+- **`pre-compact.sh`** fires around a long-session compaction. The durable guarantee is that your state lives in *files*: **`session-start.sh`** reloads your priorities and latest log every session, so the thread is always recoverable. (PreCompact stdout re-injection is best-effort and version-dependent — SessionStart is the reliable re-load.)
 - **`pre-commit-guard.sh`** blocks a commit if staged changes look like they contain a secret (API keys, private keys, tokens).
 - **`protect-files.sh`** stops the agent writing to `.env`, keys, and credentials *before* a write lands; **`verify-after-change.sh`** checks the work *after* it lands — broken relative links in a changed markdown file, plus your own `.claude/scripts/verify.sh` if you supply one (copy `verify.sh.example`). Advisory only: it warns, never blocks.
 - **`session-start.sh`** opens the day with your priorities *and* the freshest cross-function loop signals (so the feedback log can't go stale silently); **`stop-reminder.sh`** closes it.
