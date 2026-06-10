@@ -1,5 +1,9 @@
 # Pipeline
 
+<!-- FICTIONAL STARTER DATA — every account below is made up, so the rituals run
+     on day one. None of this is a real pipeline. Replace these rows with your own
+     (or clear them); see demo/ for the presentation-safe copy. -->
+
 <!-- One row per active deal. The rituals and skills read this. -->
 
 | Account | Region | Stage | Last activity | Next step | Health |

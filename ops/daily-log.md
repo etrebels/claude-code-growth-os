@@ -1,5 +1,8 @@
 # Daily Log
 
+<!-- FICTIONAL STARTER DATA — the entries below reference made-up accounts, so the
+     rituals run on day one. Replace them with your own (or clear them). -->
+
 <!-- Newest entry at the top. One block per day. -->
 
 ## 2026-05-26
