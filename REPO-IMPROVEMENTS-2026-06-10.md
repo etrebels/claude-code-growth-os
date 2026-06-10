@@ -116,3 +116,34 @@
 3. **Document the verify hook** and correct "five guardrails / one uses python3" in README + CLAUDE.md + CHANGELOG (P1.2).
 4. **Make `pre-commit-guard.sh` scan added lines only** (`grep -E '^\+'` before the pattern grep) so removing a secret isn't blocked (P1.3).
 5. **Standardize tagged loop lines on `ops/feedback-log.md`** across the two feedback skills and the morning briefing (P1.4).
+
+---
+
+## Held for Edwin's decision
+
+Items deliberately not changed in the 2026-06-10 fix pass — they need Edwin's call, a real mechanism decision, or are blocked by the environment.
+
+### Needs Edwin's input / decision
+
+- **CTA URL — confirm the canonical value (P1.1).** The fix made all three in-repo references (`README.md:134`, `README.md:140`, `.github/ISSUE_TEMPLATE/config.yml:10`) consistent on **`https://langoptima.com/features/growth`** — the 2:1 majority inside this public repo. **But this is an assumption.** Other LangOptima collateral (the launch checklist, the CEO video script with printed QR codes, the publish notes) points at the shorter **`langoptima.com/growth`**, which may be the actually-live destination. Confirm which URL resolves and, if it's `/growth`, flip both README links and config.yml to that.
+
+- **Stop-hook nudge likely invisible (P1.7).** `.claude/hooks/stop-reminder.sh:14` prints to stderr and exits 0; for a Stop hook, stderr on exit 0 is generally only surfaced in transcript/verbose mode, so the "run /end-of-day" nudge promised at `README.md:106` likely never reaches the user in the default UI. **Recommendation:** before changing the hook, verify the current Claude Code Stop-hook semantics against the live hooks docs (they've shifted across versions), then either (a) emit structured JSON — `{"decision": "block", "reason": "No log entry for $TODAY — run /end-of-day"}` — so the nudge fires once per day, or (b) soften the README/CLAUDE.md claim to "advisory, visible in verbose mode." The same verification applies to `pre-compact.sh` — confirm PreCompact stdout is actually re-injected on the current version, since the whole hook depends on it. Not changed here to avoid guessing at hook semantics.
+
+- **`security-guidance` plugin (P1.8).** `.claude/settings.json:5` declares `"plugins": ["security-guidance"]`, documented nowhere in the repo. The fix could not determine what this plugin is, where it comes from, or what a fresh clone without it experiences (the marketplace isn't inspectable from here, and editing `settings.json` is blocked in this environment — see below). **Recommendation:** either remove the line (if the kit's "no setup, runs anywhere" promise should hold literally) or add a one-line note in README/CLAUDE.md naming the plugin, its source, and the graceful-degradation behaviour when it's absent. Flagged rather than guessed.
+
+- **Cut a 0.2.0 release (P2.7).** `[Unreleased]` now holds ~10+ features since 0.1.0 (2026-05-25), including the newly-documented verify hook. Tagging 0.2.0 is Edwin's call.
+
+### Blocked by environment file-protection (could not apply; need Edwin or a non-agent edit)
+
+These two fixes were attempted but the harness denied edits to the files (they match its protected-file patterns — a secret-guard hook and a settings file). No workaround was attempted, by design.
+
+- **P1.3 — `pre-commit-guard.sh:36` still scans removed lines.** The intended one-line fix is to filter to *added* lines before the pattern grep, so the commit that *deletes* a leaked secret isn't blocked:
+  - change `git diff --cached -U0 | grep -nEi "$patterns"`
+  - to `git diff --cached -U0 | grep -E '^\+' | grep -v '^+++' | grep -Ei "$patterns"`
+  - and relabel the block message to "(added lines)" and drop the misleading `-n` offsets. Verified shellcheck-clean in design; re-run `shellcheck .claude/hooks/pre-commit-guard.sh` after applying. **Edwin (or a non-agent edit) must apply this** — the agent's Edit tool is denied on this file.
+
+- **P1.8 — `settings.json:4` `autoMemoryEnabled` is still `true`.** Should be `false` for a public kit whose sessions carry prospect/customer detail (auto-memory persists that *outside* the git-tracked, scrub-checklist-covered repo). The agent's Edit tool is denied on `.claude/settings.json`; **apply by hand:** set `"autoMemoryEnabled": false`. (Consider noting the trade-off in SECURITY.md while there.)
+
+### Out of scope this pass (P2 polish, not requested)
+
+P2.2–P2.6, P2.8–P2.10 (protect-files pattern gaps, link-checker divergence, stale required-files list, README accuracy nits, skill `## Depth` gaps, scheduled-CI seed-date noise, issue-template housekeeping, adoptability ideas) were not part of the P0/P1 fix scope and remain open in the sections above.
