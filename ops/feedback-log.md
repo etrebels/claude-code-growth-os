@@ -1,5 +1,8 @@
 # GTM Feedback Log
 
+<!-- FICTIONAL STARTER DATA — the tagged lines below reference made-up accounts, so
+     the rituals run on day one. Replace them with your own (or clear them). -->
+
 <!-- The raw cross-function loop. The product-signal skill pulls the product-shaped
      lines into roadmap-signals.md.
      - MARKETING-ACTION — what sales hears, handed to marketing.

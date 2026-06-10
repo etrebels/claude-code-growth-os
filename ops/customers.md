@@ -1,5 +1,10 @@
 # Customers
 
+<!-- FICTIONAL STARTER DATA — every account, ARR figure, and renewal date below is
+     made up, so the rituals run on day one. This is not a real customer book.
+     Replace these rows with your own (or clear them); see demo/ for the
+     presentation-safe copy. -->
+
 <!-- The post-sale account book — one row per signed customer.
      Stage: Onboarding → Adopting → Live → At-Risk → Expanding.
      ARR is the recurring revenue that rolls up to NRR — what /retention-report reads.
