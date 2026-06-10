@@ -16,6 +16,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- **Open-core boundary rule** (`.claude/rules/open-core-boundary.md`) — the check
+  every addition passes before merging: does it belong in this free chassis or in
+  LangOptima Growth OS Pro? Merging here is a one-way door (MIT, public forever);
+  four tests decide the default, and unsure means Pro first. Wired into `CLAUDE.md`,
+  the rules index, and `CONTRIBUTING.md` (community PRs always land here, never
+  behind the paywall).
 - **Model-choice guidance for scheduled rituals** (`.claude/scheduling/README.md`)
   — which tier to run a ritual on: a cheap/default model for the daily loop, the
   frontier tier for the few judgment-heavy runs (weekly review, retention report).
