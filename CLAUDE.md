@@ -15,12 +15,13 @@ This project uses Claude Code as a go-to-market operating environment — market
 Guardrails run on events, not memory (`.claude/hooks/`):
 
 - **SessionStart** surfaces `ops/priorities.md` and the freshest `ops/feedback-log.md` signals (so the cross-function loop can't go stale silently). On remote / Claude-Code-on-the-web sessions only, a bootstrap step (`web-bootstrap.sh`) also installs the hook linter (`shellcheck`) so you can lint the hooks in-session, matching CI; it's skipped locally and never blocks.
-- **PreCompact** re-injects priorities + the latest log entry so long sessions don't lose the thread.
+- **PreCompact** fires around a long-session compaction. Because your state lives in files, **SessionStart** reliably reloads priorities + the latest log entry next session — so the thread is always recoverable. (PreCompact stdout re-injection is best-effort and version-dependent; SessionStart is the guaranteed re-load.)
 - **PreToolUse(Edit|Write)** blocks writes to secrets, keys, and `.env`.
+- **PostToolUse(Edit|Write)** link-checks the changed file and runs your `.claude/scripts/verify.sh` if present — advisory, never blocks.
 - **Stop** nudges you to `/end-of-day` until today is logged.
 - A **git pre-commit guard** (`pre-commit-guard.sh`, install once) blocks commits containing likely secrets.
 
-All pure bash (one uses `python3` to read a payload). No API keys, no MCP required. The full thinking is in `docs/methodology.md`.
+All pure bash (two use `python3` to read a hook payload). No API keys, no MCP required. The full thinking is in `docs/methodology.md`.
 
 ## Rules
 
