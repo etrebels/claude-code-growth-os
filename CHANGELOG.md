@@ -9,6 +9,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- **Post-change verify hook** (`.claude/hooks/verify-after-change.sh` +
+  `PostToolUse(Edit|Write)` wiring in `.claude/settings.json`) — the loop's
+  "verify" step as a hook: after a write lands it checks broken relative links in
+  the changed markdown file and runs your own `.claude/scripts/verify.sh` if you
+  supply one (copy `.claude/scripts/verify.sh.example` to wire `make check`,
+  `npm test`, `pytest`, the `checks/` dir, etc.). Advisory only — it warns, never
+  blocks.
 - **Retention act-skills — the right side gets more than a detector**
   (`.claude/skills/`): `churn-save` (recover a red/amber account — the real risk,
   the re-engagement draft, the renewal-clock timing), `expansion-play` (work a
@@ -72,9 +79,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **`meeting-prep` skill** (`.claude/skills/meeting-prep/SKILL.md`) — question
   guidance upgraded with Chris Voss labeling and calibrated What/How questions
   (label-then-ask, the two closes, a replace-on-sight list for why/yes-no). (#25)
-- **Explicit effort level** (`.claude/settings.json`) — pins `effortLevel: "high"`
-  so behavior is stable across model versions (Opus 4.8 default; degrades
-  gracefully on Sonnet). (#24)
+- **Explicit effort level** (`.claude/settings.json`) — pins `effortLevel: "xhigh"`
+  so the rituals get full reasoning for long-horizon, multi-step work regardless of
+  the model's default (degrades gracefully on Sonnet). (#24)
 - **Tightened stat sourcing** in `docs/why-align.md` and `docs/operating-model.md`
   — a primary-source audit reframed unverifiable vendor figures as directional,
   led with peer-reviewed evidence, corrected the win-loss and feature-usage
