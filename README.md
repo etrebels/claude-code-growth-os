@@ -125,18 +125,20 @@ No real playbooks, positioning, pricing, or data. That's the point: the structur
 
 ## What's free vs. what's paid
 
-This is **open core**. The chassis is free and MIT-licensed; the part that took twenty-two years isn't in the box.
+This is **open core** — three rungs, one system. What changes up the ladder is how much arrives filled in, and who operates it.
 
-| Free — this repo (MIT) | Paid — built & run for you |
+| Tier | What you get |
 |---|---|
-| The chassis: hooks, daily rituals, and go-to-market skill templates across all four functions, plus a 30-second runnable demo. Bring your own playbooks. | Your customized, *populated* operating system, with your best tools integrated, alongside real playbooks, positioning, pricing, ICP — plus the wider automation layer (a workflow-automation platform: vendor management, ICP checks, pre- and post-meeting briefings and follow-ups) as well as a localization-automation platform for multilingual content processes. Built and run for you, or run by a growth operator who works this way. |
+| **Free — this repo (MIT)** | The chassis: hooks, daily rituals, and go-to-market skill templates across all four functions, plus a 30-second runnable demo. Bring your own playbooks. This repo stays free and maintained — nothing moves out of it. |
+| **[LangOptima Growth OS Pro](https://langoptima.com/growth-os-pro)** — $799 one-time company license · founding price **$499** for the first 20 companies | The filled version: operating playbooks (pipeline & qualification, discovery, customer success → renewal), pro-depth skills, a `/setup` wizard, HubSpot wiring, and a 30-day rollout program — delivered as a private GitHub repo with 12 months of updates ($349/yr after; every version you receive is yours to keep). |
+| **Built & run for you** | Your customized, *populated* operating system — positioning, pricing, ICP filled in and operated from inside your team — plus the wider automation layer (a workflow-automation platform: vendor management, ICP checks, pre- and post-meeting briefings and follow-ups) and a localization-automation platform for multilingual content. → **[langoptima.com/features/growth](https://langoptima.com/features/growth)** |
 
-The repo is the skeleton; the judgment you put inside it is the product → **[langoptima.com/features/growth](https://langoptima.com/features/growth)**.
+The repo is the skeleton; Pro puts the playbooks in the box; the judgment applied to *your* company is the engagement.
 
 ## Who's behind this
 
 I'm Edwin Trebels — I run our company's entire go-to-market on a setup like this, and help clients run theirs. This repo is the open skeleton. The full version adds the wider automation layer (a workflow-automation platform handling vendor management, ICP checks, pre-meeting briefings, post-meeting debriefs and follow-ups, and the assistant that keeps the day straight; a localization-automation platform for multilingual content), plus the judgment that fills the empty drawers. That part took twenty-two years and doesn't come in a folder.
 
-Want it built and run for you, or a growth operator who works this way? That's what I do: [langoptima.com/features/growth](https://langoptima.com/features/growth). The thinking behind the kit is in [`docs/methodology.md`](docs/methodology.md).
+Want the playbooks in the box without the engagement? That's [LangOptima Growth OS Pro](https://langoptima.com/growth-os-pro). Want it built and run for you, or a growth operator who works this way? That's what I do: [langoptima.com/features/growth](https://langoptima.com/features/growth). The thinking behind the kit is in [`docs/methodology.md`](docs/methodology.md).
 
 **If it's useful, a ⭐ helps others find it.** PRs welcome — see [CONTRIBUTING.md](CONTRIBUTING.md). MIT licensed.

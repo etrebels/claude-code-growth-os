@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- **README "What's free vs. what's paid" is now a three-tier ladder** — free chassis
+  (this repo, unchanged) → [LangOptima Growth OS Pro](https://langoptima.com/growth-os-pro)
+  (the filled version: operating playbooks, pro-depth skills, `/setup` wizard, HubSpot
+  wiring, 12 months of updates) → built & run for you. Nothing moves out of the free repo.
+
 ### Added
 
 - **Model-choice guidance for scheduled rituals** (`.claude/scheduling/README.md`)
