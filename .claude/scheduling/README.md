@@ -23,6 +23,22 @@ structure, freshness, broken local links — so a problem with the operating fil
 surfaces even in a week when nothing else ran. A failing scheduled run emails the
 repo owner; that email *is* the signal.
 
+## Choosing a model for a ritual
+
+A schedule also picks the model the ritual runs on (the `--model` flag on a
+local `claude -p` line; the model field on a cloud routine). Two rules of
+thumb keep cost and quality where they belong:
+
+- **Daily rituals** (briefing, check-in, end-of-day) are read-mostly markdown
+  work — your plan's default model is more than enough, and a mid-tier model
+  (Sonnet-class) is fine if you pay per token.
+- **Judgment-heavy runs** (a weekly review on a loaded pipeline, a monthly
+  retention report you act on) earn the strongest model you have access to —
+  schedule those few runs up a tier instead of running everything there.
+
+Model names and tiers change; the split — a cheap default for the daily loop,
+the frontier tier for the few decisions that compound — doesn't.
+
 ## Start here
 
 - **Run it in the cloud:** [`cloud-routines.md`](cloud-routines.md) — the full
