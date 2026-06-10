@@ -14,7 +14,7 @@ From a source — an onboarding note, a usage review, a support thread, a renewa
    - **Churn risk** — the real leading indicator: usage trending down, a champion gone quiet, a single-threaded account after a reorg.
    - **Expansion blocker / signal** — a missing feature that's holding back a renewal or a second department; or, the opposite, a customer asking for more unprompted.
    - **Renewal-loss reason** — the real one, logged, not remembered (people misdiagnose why accounts leave as often as why deals are lost).
-2. **Log each as a tagged line** in the same daily log / feedback log marketing uses, so product and CS can act without a meeting:
+2. **Log each as a tagged line** in `ops/feedback-log.md` — the same single home marketing's tags use — so product and CS can act without a meeting:
    - `RETENTION-RISK: [account] — [the adoption/churn/blocker signal] → [product or CS action]`
    - `EXPANSION-SIGNAL:` when a healthy account is ready to grow (hand to sales with the CS context attached).
 3. **Route, don't dump.** A feature request that blocks adoption goes to the *roadmap*, not the backlog void. A churn signal triggers the renewal motion early — day 60, not day 85. Don't tag every quiet week as a risk; tag it when usage, the champion, or the value story is actually slipping.
