@@ -1,5 +1,8 @@
 # Roadmap Signals
 
+<!-- FICTIONAL STARTER DATA — the rows below reference made-up accounts, so the
+     rituals run on day one. Replace them with your own (or clear them). -->
+
 <!-- Product's triage queue. The product-signal skill moves items here from the
      feedback log. Status: New → Routed → Shipped. -->
 

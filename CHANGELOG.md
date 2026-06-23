@@ -7,8 +7,46 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+_Nothing yet — next changes land here._
+
+## [0.2.0] — 2026-06-10
+
+Hardening release: the hooks now behave as documented, the kit installs with no
+external plugin dependency, and the accumulated retention, CRM, and scheduling
+features below are rolled up from the previous `[Unreleased]`.
+
 ### Added
 
+- **Post-change verify hook** (`.claude/hooks/verify-after-change.sh` +
+  `PostToolUse(Edit|Write)` wiring in `.claude/settings.json`) — the loop's
+  "verify" step as a hook: after a write lands it checks broken relative links in
+  the changed markdown file and runs your own `.claude/scripts/verify.sh` if you
+  supply one (copy `.claude/scripts/verify.sh.example` to wire `make check`,
+  `npm test`, `pytest`, the `checks/` dir, etc.). Advisory only — it warns, never
+  blocks.
+- **Model-choice guidance for scheduled rituals** (`.claude/scheduling/README.md`)
+  — which tier to run a ritual on: a cheap/default model for the daily loop, the
+  frontier tier for the few judgment-heavy runs (weekly review, retention report).
+  Written tier-generic so it survives model releases.
+- **Retention act-skills — the right side gets more than a detector**
+  (`.claude/skills/`): `churn-save` (recover a red/amber account — the real risk,
+  the re-engagement draft, the renewal-clock timing), `expansion-play` (work a
+  ready-to-grow account into an angle and a clean hand to sales), `qbr-prep`
+  (assemble a value-realization QBR brief from the book, recent notes, and roadmap
+  status), and `support-signal` (cluster a batch of support tickets into ranked
+  product themes, then hand them to `product-signal`). `account-health` now hands
+  off to `churn-save` / `expansion-play`; together they close the customer-success
+  playbook on the right side of the bowtie. (#39)
+- **`/retention-report` command** (`.claude/commands/retention-report.md`) — a
+  monthly readout that rolls the customer book up to NRR and GRR (formulae named,
+  computed from the `ARR` column over git history), churn by reason, and expansion,
+  then writes next month's two bets to `ops/priorities.md`. Scheduled monthly in
+  `.claude/scheduling/cloud-routines.md`. (#39)
+- **`ARR` column in the customer book** (`ops/customers.md`, `demo/customers.md`) —
+  the recurring revenue that rolls up to NRR, captured at the `onboarding-handoff`
+  seam so `/retention-report` can compute it. Seeded in the demo data, alongside a
+  `demo/support-tickets.md` batch and a `demo/meetings/` value-review note so the
+  new skills run against realistic data out of the box. (#39)
 - **Cloud Routines scheduling** (`.claude/scheduling/`) — a runbook for running the
   rituals on Anthropic-managed infrastructure without your machine awake
   (`cloud-routines.md`), plus a three-layer scheduling overview (OS scheduler vs
@@ -62,9 +100,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **`meeting-prep` skill** (`.claude/skills/meeting-prep/SKILL.md`) — question
   guidance upgraded with Chris Voss labeling and calibrated What/How questions
   (label-then-ask, the two closes, a replace-on-sight list for why/yes-no). (#25)
-- **Explicit effort level** (`.claude/settings.json`) — pins `effortLevel: "high"`
-  so behavior is stable across model versions (Opus 4.8 default; degrades
-  gracefully on Sonnet). (#24)
+- **Explicit effort level** (`.claude/settings.json`) — pins `effortLevel: "xhigh"`
+  so the rituals get full reasoning for long-horizon, multi-step work regardless of
+  the model's default (degrades gracefully on Sonnet). (#24)
 - **Tightened stat sourcing** in `docs/why-align.md` and `docs/operating-model.md`
   — a primary-source audit reframed unverifiable vendor figures as directional,
   led with peer-reviewed evidence, corrected the win-loss and feature-usage
@@ -79,6 +117,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   `onboarding-handoff`, `product-signal`, `retention-feedback`) — they pointed at
   `../../docs/…` (which resolves to a non-existent `.claude/docs/`) instead of
   `../../../docs/…`. Surfaced by the new checks script on its first run. (#31)
+- **Stop-hook nudge now reaches you.** `stop-reminder.sh` emitted its
+  "run /end-of-day" reminder to stderr on exit 0 — which a Stop hook surfaces only
+  as a terse `hook error` notice in the transcript, not as a readable nudge. It now
+  emits a JSON `systemMessage`, the supported way to show a Stop-hook message in the
+  default UI without forcing the turn to continue.
+- **`security-guidance` plugin reference removed** from `.claude/settings.json` —
+  it was undocumented and pointed at a marketplace a fresh clone can't resolve,
+  breaking the "no setup, runs anywhere out of the box" promise. Add your own
+  plugins locally if you use them.
+- **PreCompact claim corrected** (README + CLAUDE.md). A `PreCompact` hook's stdout
+  is not guaranteed to be re-injected into context (it's best-effort and
+  version-dependent). The durable guarantee is that state lives in files and
+  `session-start.sh` reloads it every session — so the docs now credit SessionStart
+  as the reliable re-load, not PreCompact.
+- **Pre-commit secret guard scans only added lines**, so a commit that *removes* a
+  leaked secret is no longer blocked; **`autoMemoryEnabled` set to `false`** so a
+  public kit carrying prospect detail doesn't persist it outside the repo; the
+  paid-offer CTA URL made consistent across README and the issue template.
 
 ## [0.1.0] — 2026-05-25
 
@@ -108,4 +164,5 @@ inside it is yours to add.
 - **Project hygiene** — README with a demo animation, MIT license, contributing
   guide, security policy, code of conduct, and issue + pull-request templates.
 
+[0.2.0]: https://github.com/etrebels/claude-code-growth-os/releases/tag/v0.2.0
 [0.1.0]: https://github.com/etrebels/claude-code-growth-os/releases/tag/v0.1.0

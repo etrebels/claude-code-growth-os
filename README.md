@@ -54,12 +54,12 @@ Nothing there is real — delete `demo/` whenever you like.
 
 | Piece | What it is |
 |---|---|
-| `.claude/hooks/` | Five guardrails: session-start context, **state re-injection across compaction**, a **commit secret-guard**, sensitive-file protection, an end-of-day nudge — plus a **web-session bootstrap** that installs the hook linter (`shellcheck`) on remote / Claude-Code-on-the-web containers |
-| `.claude/commands/` | Daily rituals you invoke by name: `/morning-briefing`, `/midday-checkin`, `/end-of-day`, `/weekly-review`, plus `/demo-briefing` |
+| `.claude/hooks/` | Six guardrails: session-start context, **state re-injection across compaction**, a **commit secret-guard**, sensitive-file protection, a **post-change verify pass** (broken-link + optional project check, advisory), an end-of-day nudge — plus a **web-session bootstrap** that installs the hook linter (`shellcheck`) on remote / Claude-Code-on-the-web containers |
+| `.claude/commands/` | Daily rituals you invoke by name: `/morning-briefing`, `/midday-checkin`, `/end-of-day`, `/weekly-review`, the monthly `/retention-report`, plus `/demo-briefing` |
 | `.claude/skills/` | Skill templates grouped by the four growth functions (see below) — so the balance across marketing, sales, product, and retention is visible, not acquisition-only |
 | `.claude/rules/` | Standing constraints every session honors — how to reach a CRM over MCP (`crm-usage.md`) and how the to-do list renders one canonical way (`todo-single-source.md`); obeyed by interactive rituals and autonomous routines alike |
 | `.claude/scheduling/` | Run the rituals on a clock — locally (cron/launchd), as **cloud Routines** (no machine awake), or as a CI backstop (the deterministic checks in `.claude/scripts/checks/`, run by a GitHub Actions `schedule:`). Full runbook in `cloud-routines.md` |
-| `ops/` | Your plain-text playbooks — `priorities.md`, `daily-log.md`, `pipeline.md` (left side), `customers.md` and `roadmap-signals.md` (right side), and `feedback-log.md` (the shared cross-function loop). Start here. |
+| `ops/` | Your plain-text playbooks — `priorities.md`, `daily-log.md`, `pipeline.md` (left side), `customers.md` and `roadmap-signals.md` (right side), `feedback-log.md` (the shared cross-function loop), and `icp.md`. Ships pre-seeded with **fictional** accounts (clearly labelled in each file) so the rituals run day one — replace them with your own. Start here. |
 | `demo/` | A fictional pipeline *and* customer book so you can see the whole motion work (and present from it safely) |
 | `docs/operating-model.md` | The spine: the bowtie, the four functions, the six handoffs (H1–H6), the one number (net revenue retention), and the three shared definitions |
 | `docs/methodology.md` | The idea in full: Claude Code as an operating environment |
@@ -76,8 +76,8 @@ Nothing there is real — delete `demo/` whenever you like.
 |---|---|
 | **Marketing / Demand** | `content-repurpose`, `marketing-feedback` (sales→marketing loop) |
 | **Sales** | `lead-qualify`, `meeting-prep`, `follow-up`, `cold-outreach` |
-| **Product** | `product-signal` (routes field + retention signals to the roadmap; writes the buyer-facing line for anything shipped) |
-| **Retention** | `onboarding-handoff` (Won→onboarding), `account-health` (adoption, renewal motion, churn/expansion), `retention-feedback` (post-sale→product loop) |
+| **Product** | `support-signal` (clusters support tickets into ranked themes), `product-signal` (routes those + field/retention signals to the roadmap; writes the buyer-facing line for anything shipped) |
+| **Retention** | `onboarding-handoff` (Won→onboarding), `account-health` (scores adoption, renewal motion, churn/expansion), `churn-save` (recover an at-risk account), `expansion-play` (work a ready-to-grow account), `qbr-prep` (the value-realization review), `retention-feedback` (post-sale→product loop) |
 | **Cross-cutting** | `status-update`, `triage`, `calendar-followup` (unfinished follow-ups from last week's meetings), `inbox-digest` (unread newsletter digest) |
 
 ## How it fits together
@@ -86,8 +86,8 @@ One loop, all plain text in git:
 
 1. **Open a session** → the SessionStart hook surfaces today's priorities.
 2. **`/morning-briefing`** reads your priorities, yesterday's log, and your pipeline → today's top three.
-3. **Through the day**, the skills work on your own data, on both sides of the bowtie. *Left side:* `lead-qualify` a new opportunity, `meeting-prep` before a call, `follow-up` after it, `cold-outreach` to a prospect, `content-repurpose` a win into posts, `marketing-feedback` to turn a recurring objection into a note marketing acts on. *Right side:* `onboarding-handoff` when a deal is won (carry the value hypothesis across the seam), `account-health` to score adoption and start the renewal motion at day 60, `product-signal` to route retention and field signals to the roadmap, and `retention-feedback` to turn an adoption slip into a signal product acts on.
-4. **`/end-of-day`** logs what shipped and sets tomorrow; **`/weekly-review`** finds the patterns across both sides — renewals due, accounts at risk, expansion candidates, and the top roadmap signals.
+3. **Through the day**, the skills work on your own data, on both sides of the bowtie. *Left side:* `lead-qualify` a new opportunity, `meeting-prep` before a call, `follow-up` after it, `cold-outreach` to a prospect, `content-repurpose` a win into posts, `marketing-feedback` to turn a recurring objection into a note marketing acts on. *Right side:* `onboarding-handoff` when a deal is won (carry the value hypothesis across the seam), `account-health` to score adoption and start the renewal motion at day 60 — then `churn-save` to recover a slipping account, `expansion-play` to work one that's ready to grow, and `qbr-prep` to run the value-realization review; `support-signal` to cluster support tickets into themes, `product-signal` to route those and the field signals to the roadmap, and `retention-feedback` to turn an adoption slip into a signal product acts on.
+4. **`/end-of-day`** logs what shipped and sets tomorrow; **`/weekly-review`** finds the patterns across both sides — renewals due, accounts at risk, expansion candidates, and the top roadmap signals; **`/retention-report`** rolls the customer book up to NRR/GRR once a month.
 5. **The hooks hold it together** — your state survives a long session (`pre-compact`), and nothing secret slips into a commit (`pre-commit-guard`).
 
 The left side lives in `ops/pipeline.md`; the right side in `ops/customers.md` (the post-sale account book) and `ops/roadmap-signals.md` (product's triage queue). Priorities and notes round it out — all yours, with a fictional copy in `demo/`. Edit the markdown, commit, and your whole go-to-market has a history. The handoffs that connect the four functions are mapped in [`docs/operating-model.md`](docs/operating-model.md).
@@ -101,13 +101,13 @@ The left side lives in `ops/pipeline.md`; the right side in `ops/customers.md` (
 
 ## The hooks earn their place
 
-- **`pre-compact.sh`** re-injects your priorities and latest log when a long session compacts — your state lives in files, so the context window can't lose the thread.
+- **`pre-compact.sh`** fires around a long-session compaction. The durable guarantee is that your state lives in *files*: **`session-start.sh`** reloads your priorities and latest log every session, so the thread is always recoverable. (PreCompact stdout re-injection is best-effort and version-dependent — SessionStart is the reliable re-load.)
 - **`pre-commit-guard.sh`** blocks a commit if staged changes look like they contain a secret (API keys, private keys, tokens).
-- **`protect-files.sh`** stops the agent writing to `.env`, keys, and credentials.
+- **`protect-files.sh`** stops the agent writing to `.env`, keys, and credentials *before* a write lands; **`verify-after-change.sh`** checks the work *after* it lands — broken relative links in a changed markdown file, plus your own `.claude/scripts/verify.sh` if you supply one (copy `verify.sh.example`). Advisory only: it warns, never blocks.
 - **`session-start.sh`** opens the day with your priorities *and* the freshest cross-function loop signals (so the feedback log can't go stale silently); **`stop-reminder.sh`** closes it.
 - **`web-bootstrap.sh`** runs only in remote / Claude-Code-on-the-web sessions (`CLAUDE_CODE_REMOTE=true`) and installs the one tool a fresh web container lacks — `shellcheck` — so you can lint the hooks in-session, matching CI. Skipped on your own machine, idempotent, and never blocks: a setup failure just logs a warning.
 
-All pure bash (one uses `python3` to read a payload). No API keys, no MCP — it runs anywhere out of the box.
+All pure bash (two use `python3` to read a hook payload). No API keys, no MCP — it runs anywhere out of the box.
 
 ## Make it yours
 

@@ -58,8 +58,8 @@ You don't need a platform — a plain-text repo run from Claude Code *is* the op
 
 - **One source of truth** → the git repo. Every function reads and writes the same markdown.
 - **The handoffs** → `ops/pipeline.md` (H1), the feedback log (H2, H6), `ops/customers.md` (H3), `ops/roadmap-signals.md` (H4, H5).
-- **The skills** → `marketing-feedback` (H2), `onboarding-handoff` (H3), `account-health` (the right-side operating loop), `product-signal` (H4/H5), `retention-feedback` (the post-sale→product loop).
-- **The rituals** → `/demo-briefing` and `/weekly-review` run the joint motion and close the loop (L) across all four.
+- **The skills** → `marketing-feedback` (H2), `onboarding-handoff` (H3), `account-health` (the right-side detector) handing to `churn-save`, `expansion-play`, and `qbr-prep` (the act-skills), `support-signal` → `product-signal` (H4/H5), `retention-feedback` (the post-sale→product loop).
+- **The rituals** → `/demo-briefing` and `/weekly-review` run the joint motion and close the loop (L) across all four; `/retention-report` rolls the book up to NRR/GRR monthly.
 
 The mature version of this is RevOps — one operating model and one data spine for the whole motion. At a founder-led stage the fix is to *close the loop*, not to hire a RevOps team: keep all four functions learning in one place and document the motion before you delegate it.
 

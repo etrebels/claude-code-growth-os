@@ -10,9 +10,10 @@ participants: [You, Oliver Hartley (Underwriting Director, Thornbury Insurance)]
 > Fictional sample meeting note.
 
 ## Summary
-Walked through the pilot scope. Oliver wants the proposal revised to cover two
-business contexts instead of one, plus a reference from an insurance customer
-before he takes it to his board.
+Expansion conversation — Thornbury is already a customer (onboarding the first
+business context). Walked through widening scope: Oliver wants the proposal
+revised to cover two business contexts instead of one, plus a reference from an
+insurance customer before he takes it to his board.
 
 ## Commitments (you)
 - Send a revised proposal covering two contexts by Friday.

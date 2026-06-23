@@ -1,8 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-settings.json",
   "effortLevel": "xhigh",
-  "autoMemoryEnabled": true,
-  "plugins": ["security-guidance"],
+  "autoMemoryEnabled": false,
   "env": {
     "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1",
     "ENABLE_PROMPT_CACHING_1H": "1"
@@ -33,15 +32,24 @@
     "SessionStart": [
       {
         "hooks": [
-          { "type": "command", "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/web-bootstrap.sh" },
-          { "type": "command", "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/session-start.sh" }
+          {
+            "type": "command",
+            "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/web-bootstrap.sh"
+          },
+          {
+            "type": "command",
+            "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/session-start.sh"
+          }
         ]
       }
     ],
     "PreCompact": [
       {
         "hooks": [
-          { "type": "command", "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/pre-compact.sh" }
+          {
+            "type": "command",
+            "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/pre-compact.sh"
+          }
         ]
       }
     ],
@@ -49,14 +57,31 @@
       {
         "matcher": "Edit|Write",
         "hooks": [
-          { "type": "command", "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/protect-files.sh" }
+          {
+            "type": "command",
+            "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/protect-files.sh"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/verify-after-change.sh"
+          }
         ]
       }
     ],
     "Stop": [
       {
         "hooks": [
-          { "type": "command", "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/stop-reminder.sh" }
+          {
+            "type": "command",
+            "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/stop-reminder.sh"
+          }
         ]
       }
     ]
