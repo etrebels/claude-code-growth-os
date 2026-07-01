@@ -10,7 +10,7 @@ Run an honest weekly review across the whole motion — both sides of the bowtie
 
 1. Read the last seven entries in `ops/daily-log.md`.
 2. Summarize the week: what shipped, what stalled, any pattern worth naming.
-3. Clear the loop: surface any open `MARKETING-ACTION` lines in the feedback log that haven't been acted on.
+3. Clear the loop: surface any open `MARKETING-ACTION` lines in `ops/feedback-log.md` that haven't been acted on.
 
 **Right side (post-sale — read `ops/customers.md`):**
 

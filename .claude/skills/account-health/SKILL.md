@@ -17,7 +17,7 @@ From `ops/customers.md` (or a single account the user names) and any recent post
 3. **Watch the renewal clock.** The renewal motion starts at **day 60**, not day 85. If the renewal date is inside 60 days, say so and start the motion now — don't wait for the contract to surface it.
 4. **Flag churn early-warnings.** Name the leading indicators, not the lagging one: usage trending down, the champion gone quiet, a single-threaded account after a reorg. These precede a lost renewal; the cancellation is just when it becomes visible. When one fires, hand the recovery to `churn-save`.
 5. **Spot expansion-readiness.** A healthy account using the core well, or a second team asking unprompted, is an expansion signal — not a renewal risk. Work it with `expansion-play`.
-6. **Write the signal to the loop and update the book.** Log a tagged line in the same feedback log marketing and product read:
+6. **Write the signal to the loop and update the book.** Log a tagged line in `ops/feedback-log.md` — the same single home marketing and product read:
    - `RETENTION-RISK: [account] — [the adoption/churn signal] → [CS or product action]`
    - `EXPANSION-SIGNAL: [account] — [the readiness signal] → hand to sales with CS context`
 
