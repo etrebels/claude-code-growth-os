@@ -33,7 +33,10 @@ patterns+='|-----BEGIN [A-Z ]*PRIVATE KEY-----'                                 
 patterns+='|(password|api[_-]?key|secret|token)[[:space:]]*[:=][[:space:]]*[^[:space:]]+' # generic assignment
 patterns+=')'
 
-hits="$(git diff --cached -U0 | grep -nEi "$patterns" || true)"
+# Scan only ADDED lines (^+, excluding the +++ file header) so that *removing*
+# a secret is never itself blocked.
+added="$(git diff --cached -U0 | grep -E '^\+' | grep -vE '^\+\+\+' || true)"
+hits="$(printf '%s\n' "$added" | grep -nEi "$patterns" || true)"
 if [ -n "$hits" ]; then
   echo "Commit blocked — possible secret in staged changes:" >&2
   echo "$hits" | head -5 >&2

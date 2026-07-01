@@ -10,9 +10,10 @@ participants: [You, Dana Whitfield (VP Data, Cascadia BioSciences)]
 > Fictional sample meeting note.
 
 ## Summary
-Short intro call before Wednesday's discovery. Dana flagged that their research
-data sits across three systems and nobody can answer cross-system questions
-quickly.
+Short intro call before Wednesday's discovery on a new use case — Cascadia is
+already a customer (first workflow live). Dana flagged that a second slice of
+their research data sits across three systems and nobody can answer cross-system
+questions quickly there yet.
 
 ## Commitments (you)
 - Send the ROI one-pager ahead of Wednesday.
