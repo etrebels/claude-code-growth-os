@@ -4,6 +4,8 @@ description: Run the full morning ritual against the fictional demo/ data — a 
 
 # Demo Briefing
 
+> Generic chassis variant. If a private operating repo (e.g. your own growth-os) defines a command with this name, that version is canonical for that repo's data.
+
 Run the morning ritual against the **fictional** sample data in `demo/`. Nothing here is real — these are made-up companies.
 
 In order:

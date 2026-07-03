@@ -4,6 +4,8 @@ description: Recap yesterday, surface priorities, set today's top three.
 
 # Morning Briefing
 
+> Generic chassis variant. If a private operating repo (e.g. your own growth-os) defines a command with this name, that version is canonical for that repo's data.
+
 Run my morning ritual, in order:
 
 1. **Priorities.** Read `ops/priorities.md` and list what's still open.

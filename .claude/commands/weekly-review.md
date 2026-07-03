@@ -4,6 +4,8 @@ description: Weekly review — read the week's logs, surface patterns, set next 
 
 # Weekly Review
 
+> Generic chassis variant. If a private operating repo (e.g. your own growth-os) defines a command with this name, that version is canonical for that repo's data.
+
 Run an honest weekly review across the whole motion — both sides of the bowtie.
 
 **Left side (demand → close):**

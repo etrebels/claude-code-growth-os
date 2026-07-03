@@ -4,6 +4,8 @@ description: Close the day — log what happened, tee up tomorrow.
 
 # End of Day
 
+> Generic chassis variant. If a private operating repo (e.g. your own growth-os) defines a command with this name, that version is canonical for that repo's data.
+
 Close out the day:
 
 1. Ask me what got done today (or infer it from `git log` since this morning) — across both sides of the bowtie: deals worked *and* post-sale touches (onboarding steps, adoption nudges, renewal/expansion moves, signals routed to product).

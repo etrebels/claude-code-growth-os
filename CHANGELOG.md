@@ -30,12 +30,12 @@ features below are rolled up from the previous `[Unreleased]`.
   Written tier-generic so it survives model releases.
 - **Retention act-skills — the right side gets more than a detector**
   (`.claude/skills/`): `churn-save` (recover a red/amber account — the real risk,
-  the re-engagement draft, the renewal-clock timing), `expansion-play` (work a
+  the re-engagement draft, the renewal-clock timing), `expansion-signal` (work a
   ready-to-grow account into an angle and a clean hand to sales), `qbr-prep`
   (assemble a value-realization QBR brief from the book, recent notes, and roadmap
   status), and `support-signal` (cluster a batch of support tickets into ranked
   product themes, then hand them to `product-signal`). `account-health` now hands
-  off to `churn-save` / `expansion-play`; together they close the customer-success
+  off to `churn-save` / `expansion-signal`; together they close the customer-success
   playbook on the right side of the bowtie. (#39)
 - **`/retention-report` command** (`.claude/commands/retention-report.md`) — a
   monthly readout that rolls the customer book up to NRR and GRR (formulae named,
