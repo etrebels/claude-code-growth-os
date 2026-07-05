@@ -139,4 +139,6 @@ I'm Edwin Trebels — I run our company's entire go-to-market on a setup like th
 
 Want it built and run for you, or a growth operator who works this way? That's what I do: [langoptima.com/features/growth](https://langoptima.com/features/growth). The thinking behind the kit is in [`docs/methodology.md`](docs/methodology.md).
 
+**Sibling kit:** the same operating pattern — plain text in git, rituals as commands, guardrails as hooks, one loop — runs the other half of the day in [Claude Code Health OS](https://github.com/etrebels/claude-code-health-os): training, sleep, food, and body signals as one system.
+
 **If it's useful, a ⭐ helps others find it.** PRs welcome — see [CONTRIBUTING.md](CONTRIBUTING.md). MIT licensed.
