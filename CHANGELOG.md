@@ -14,6 +14,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   step rather than hold it on the floor, a QR to your booking link, a call-earning
   offer, fit-sorting on the spot, and a 48–72h follow-up. Includes the Voss
   calibrated question for "let me think about it".
+- **`/capture` ritual + `inbox/`** (`.claude/commands/capture.md`) — a capture-now,
+  triage-later inbox so a passing thought doesn't cost a context switch; triage routes
+  each note to the lane that owns it (task list, notes/wiki, CRM, customer book,
+  feedback log) and never lets the inbox become a second to-do list. Adapts the
+  `/capture` pattern from [claude-context-os](https://github.com/conorbronsdon/claude-context-os)
+  (Conor Bronsdon, MIT).
+- **`/reconcile` ritual** (`.claude/commands/reconcile.md`) — catches drift when more
+  than one session (you, plus a scheduled cloud routine) writes the same files:
+  mirror-vs-CRM, tasks-vs-priorities, log-vs-reality, and stale open loops. Adapts the
+  `/reconcile` pattern from claude-context-os. Both new rituals defer to
+  `todo-single-source.md`; both are credited in `THIRD-PARTY-NOTICES.md`.
 
 ## [0.2.0] — 2026-06-10
 
@@ -36,12 +47,12 @@ features below are rolled up from the previous `[Unreleased]`.
   Written tier-generic so it survives model releases.
 - **Retention act-skills — the right side gets more than a detector**
   (`.claude/skills/`): `churn-save` (recover a red/amber account — the real risk,
-  the re-engagement draft, the renewal-clock timing), `expansion-play` (work a
+  the re-engagement draft, the renewal-clock timing), `expansion-signal` (work a
   ready-to-grow account into an angle and a clean hand to sales), `qbr-prep`
   (assemble a value-realization QBR brief from the book, recent notes, and roadmap
   status), and `support-signal` (cluster a batch of support tickets into ranked
   product themes, then hand them to `product-signal`). `account-health` now hands
-  off to `churn-save` / `expansion-play`; together they close the customer-success
+  off to `churn-save` / `expansion-signal`; together they close the customer-success
   playbook on the right side of the bowtie. (#39)
 - **`/retention-report` command** (`.claude/commands/retention-report.md`) — a
   monthly readout that rolls the customer book up to NRR and GRR (formulae named,
@@ -70,6 +81,15 @@ features below are rolled up from the previous `[Unreleased]`.
 - **Loop signals at session start** (`.claude/hooks/session-start.sh`) — the hook now
   also surfaces the freshest `ops/feedback-log.md` signals, so the cross-function
   loop can't go stale silently. (#31)
+- **Principles from the field** (`docs/principles-from-the-field.md`) — a third
+  thinking-aid companion to the science and history pages: operating principles
+  drawn from running the motion itself (ownership, daily focus, decisions, reading
+  the return, judgment, attention), each with a worked go-to-market example and a
+  map of where it lands in the kit; linked from the README docs table. Its
+  ritual-facing updates are applied to the daily commands: an explicit
+  forward-motion question in `/morning-briefing`, an ownership read and a
+  relationship-quality read in `/weekly-review`, and a "lion check" for
+  repeatedly-deferred tasks in `/end-of-day`.
 - **Principles from science** (`docs/principles-from-science.md`) — twenty-one
   portable operating principles drawn from seven sciences, each with two sourced
   quotes and a worked go-to-market example; linked from the README docs table. (#26)
