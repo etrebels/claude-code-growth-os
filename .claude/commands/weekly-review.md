@@ -4,12 +4,14 @@ description: Weekly review — read the week's logs, surface patterns, set next 
 
 # Weekly Review
 
+> Generic chassis variant. If a private operating repo (e.g. your own growth-os) defines a command with this name, that version is canonical for that repo's data.
+
 Run an honest weekly review across the whole motion — both sides of the bowtie.
 
 **Left side (demand → close):**
 
 1. Read the last seven entries in `ops/daily-log.md`.
-2. Summarize the week: what shipped, what stalled, any pattern worth naming.
+2. Summarize the week: what shipped, what stalled, any pattern worth naming. Read each channel or effort by the *quality* of relationships it surfaced, not only headline volume — one deep, high-fit relationship can be the whole return on an effort that looks thin by the numbers.
 3. Clear the loop: surface any open `MARKETING-ACTION` lines in `ops/feedback-log.md` that haven't been acted on.
 
 **Right side (post-sale — read `ops/customers.md`):**
@@ -22,8 +24,9 @@ Run an honest weekly review across the whole motion — both sides of the bowtie
 
 **Then:**
 
-9. Pick next week's single most important priority and write it to the top of `ops/priorities.md`.
-10. Name one thing to stop doing.
+9. **Ownership read.** For each live area on both sides, check it has an owner who treats the number as theirs — not just what moved this week. An area no one owns is the pattern to fix first.
+10. Pick next week's single most important priority and write it to the top of `ops/priorities.md`.
+11. Name one thing to stop doing.
 
 Lead with the summary. Don't pad it. If `ops/customers.md` or `ops/roadmap-signals.md` is empty, say so and skip that section. Reconcile the pipeline mirror against the CRM per [`.claude/rules/crm-usage.md`](../rules/crm-usage.md) — read-only beyond what the daily rituals already persisted.
 

@@ -55,7 +55,7 @@ Nothing there is real — delete `demo/` whenever you like.
 | Piece | What it is |
 |---|---|
 | `.claude/hooks/` | Six guardrails: session-start context, **state re-injection across compaction**, a **commit secret-guard**, sensitive-file protection, a **post-change verify pass** (broken-link + optional project check, advisory), an end-of-day nudge — plus a **web-session bootstrap** that installs the hook linter (`shellcheck`) on remote / Claude-Code-on-the-web containers |
-| `.claude/commands/` | Daily rituals you invoke by name: `/morning-briefing`, `/midday-checkin`, `/end-of-day`, `/weekly-review`, the monthly `/retention-report`, plus `/demo-briefing` |
+| `.claude/commands/` | Daily rituals you invoke by name: `/morning-briefing`, `/midday-checkin`, `/end-of-day`, `/weekly-review`, the monthly `/retention-report`, plus `/capture` (drop a thought now, triage it later), `/reconcile` (catch drift when more than one session writes the same files), and `/demo-briefing` |
 | `.claude/skills/` | Skill templates grouped by the four growth functions (see below) — so the balance across marketing, sales, product, and retention is visible, not acquisition-only |
 | `.claude/rules/` | Standing constraints every session honors — how to reach a CRM over MCP (`crm-usage.md`), how the to-do list renders one canonical way (`todo-single-source.md`), and what lands in this free repo vs. [Growth OS Pro](https://langoptima.com/growth-os-pro) (`open-core-boundary.md`); obeyed by interactive rituals and autonomous routines alike |
 | `.claude/scheduling/` | Run the rituals on a clock — locally (cron/launchd), as **cloud Routines** (no machine awake), or as a CI backstop (the deterministic checks in `.claude/scripts/checks/`, run by a GitHub Actions `schedule:`). Full runbook in `cloud-routines.md` |
@@ -67,6 +67,7 @@ Nothing there is real — delete `demo/` whenever you like.
 | `docs/why-brand.md` | The companion argument: where demand comes from — why ~95% of buyers aren't ready yet, and how brands actually grow (with sources) |
 | `docs/principles-from-science.md` | A thinking aid: twenty-one operating principles drawn from seven sciences (leverage, momentum, entropy…) — each with two sourced quotes and a worked go-to-market example |
 | `docs/principles-from-history.md` | A companion thinking aid: operating principles drawn from history and biography (Churchill, via Manchester's *The Last Lion*) — each with a verified, sourced quote, a worked go-to-market example, and an apocrypha-screening note |
+| `docs/principles-from-the-field.md` | A third thinking aid: operating principles drawn from running the motion itself (ownership, daily focus, decisions, reading the return, judgment, attention) — each with a worked go-to-market example, plus a map of where they land in the kit |
 | `docs/connecting-a-crm.md` | Optional: make an existing CRM the source of truth and project it into `ops/pipeline.md` — don't run two pipelines |
 
 **Skills by function** — the motion is balanced across the bowtie, not just acquisition:
@@ -74,9 +75,9 @@ Nothing there is real — delete `demo/` whenever you like.
 | Function | Skills |
 |---|---|
 | **Marketing / Demand** | `content-repurpose`, `marketing-feedback` (sales→marketing loop) |
-| **Sales** | `lead-qualify`, `meeting-prep`, `follow-up`, `cold-outreach` |
+| **Sales** | `lead-qualify`, `meeting-prep`, `follow-up`, `cold-outreach`, `event-to-pipeline` (work a conference or event into booked calls) |
 | **Product** | `support-signal` (clusters support tickets into ranked themes), `product-signal` (routes those + field/retention signals to the roadmap; writes the buyer-facing line for anything shipped) |
-| **Retention** | `onboarding-handoff` (Won→onboarding), `account-health` (scores adoption, renewal motion, churn/expansion), `churn-save` (recover an at-risk account), `expansion-play` (work a ready-to-grow account), `qbr-prep` (the value-realization review), `retention-feedback` (post-sale→product loop) |
+| **Retention** | `onboarding-handoff` (Won→onboarding), `account-health` (scores adoption, renewal motion, churn/expansion), `churn-save` (recover an at-risk account), `expansion-signal` (work a ready-to-grow account), `qbr-prep` (the value-realization review), `retention-feedback` (post-sale→product loop) |
 | **Cross-cutting** | `status-update`, `triage`, `calendar-followup` (unfinished follow-ups from last week's meetings), `inbox-digest` (unread newsletter digest) |
 
 ## How it fits together
@@ -85,7 +86,7 @@ One loop, all plain text in git:
 
 1. **Open a session** → the SessionStart hook surfaces today's priorities.
 2. **`/morning-briefing`** reads your priorities, yesterday's log, and your pipeline → today's top three.
-3. **Through the day**, the skills work on your own data, on both sides of the bowtie. *Left side:* `lead-qualify` a new opportunity, `meeting-prep` before a call, `follow-up` after it, `cold-outreach` to a prospect, `content-repurpose` a win into posts, `marketing-feedback` to turn a recurring objection into a note marketing acts on. *Right side:* `onboarding-handoff` when a deal is won (carry the value hypothesis across the seam), `account-health` to score adoption and start the renewal motion at day 60 — then `churn-save` to recover a slipping account, `expansion-play` to work one that's ready to grow, and `qbr-prep` to run the value-realization review; `support-signal` to cluster support tickets into themes, `product-signal` to route those and the field signals to the roadmap, and `retention-feedback` to turn an adoption slip into a signal product acts on.
+3. **Through the day**, the skills work on your own data, on both sides of the bowtie. *Left side:* `lead-qualify` a new opportunity, `meeting-prep` before a call, `follow-up` after it, `cold-outreach` to a prospect, `content-repurpose` a win into posts, `marketing-feedback` to turn a recurring objection into a note marketing acts on. *Right side:* `onboarding-handoff` when a deal is won (carry the value hypothesis across the seam), `account-health` to score adoption and start the renewal motion at day 60 — then `churn-save` to recover a slipping account, `expansion-signal` to work one that's ready to grow, and `qbr-prep` to run the value-realization review; `support-signal` to cluster support tickets into themes, `product-signal` to route those and the field signals to the roadmap, and `retention-feedback` to turn an adoption slip into a signal product acts on.
 4. **`/end-of-day`** logs what shipped and sets tomorrow; **`/weekly-review`** finds the patterns across both sides — renewals due, accounts at risk, expansion candidates, and the top roadmap signals; **`/retention-report`** rolls the customer book up to NRR/GRR once a month.
 5. **The hooks hold it together** — your state survives a long session (`pre-compact`), and nothing secret slips into a commit (`pre-commit-guard`).
 
@@ -140,5 +141,9 @@ The repo is the skeleton; Pro puts the playbooks in the box; the judgment applie
 I'm Edwin Trebels — I run our company's entire go-to-market on a setup like this, and help clients run theirs. This repo is the open skeleton. The full version adds the wider automation layer (a workflow-automation platform handling vendor management, ICP checks, pre-meeting briefings, post-meeting debriefs and follow-ups, and the assistant that keeps the day straight; a localization-automation platform for multilingual content), plus the judgment that fills the empty drawers. That part took twenty-two years and doesn't come in a folder.
 
 Want the playbooks in the box without the engagement? That's [LangOptima Growth OS Pro](https://langoptima.com/growth-os-pro). Want it built and run for you, or a growth operator who works this way? That's what I do: [langoptima.com/features/growth](https://langoptima.com/features/growth). The thinking behind the kit is in [`docs/methodology.md`](docs/methodology.md).
+
+## Credits
+
+- The `/capture` and `/reconcile` rituals adapt two patterns from [**claude-context-os**](https://github.com/conorbronsdon/claude-context-os) by Conor Bronsdon (MIT) — a sibling "Claude Code as an operating environment" project. Reimplemented for this kit's go-to-market motion (a capture-then-triage inbox; drift detection across parallel sessions). Details in [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md).
 
 **If it's useful, a ⭐ helps others find it.** PRs welcome — see [CONTRIBUTING.md](CONTRIBUTING.md). MIT licensed.

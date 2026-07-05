@@ -12,7 +12,7 @@ From the account in `ops/customers.md`, its recent meeting notes (in `ops/` or `
 1. **Outcome recap — lead here.** State the value hypothesis the deal was bought on, then the evidence it's landing: the adoption signal, what's live, who's using it. Their metric, their words. This is the spine of the brief; everything else hangs off it.
 2. **Risks, named first.** What isn't landing yet — a stalled workflow, a quiet stretch, a single-threaded relationship — said before the customer raises it. Naming the gap yourself is what makes the recap credible.
 3. **What shipped for them.** Pull anything in `ops/roadmap-signals.md` tied to this account that's now Shipped, with its buyer-facing line. "You asked, we shipped" closes the loop the customer started (handoff H5 in [`docs/operating-model.md`](../../../docs/operating-model.md)) and earns the next ask.
-4. **The next desired outcome.** Frame the expansion thesis as *their* next goal — the adjacent team or use case — not a quota. If it's real, this is the seed `expansion-play` works after the QBR.
+4. **The next desired outcome.** Frame the expansion thesis as *their* next goal — the adjacent team or use case — not a quota. If it's real, this is the seed `expansion-signal` works after the QBR.
 5. **One ask, one offer.** A single ask (a reference, a case study, an intro) and a single offer (an expansion, a new team, a deeper rollout). More than one of each dilutes both.
 
 Output a brief you can walk in with. Don't invent outcomes the notes don't support — a QBR that claims value the customer didn't feel is the fastest way to lose the renewal.
@@ -20,4 +20,4 @@ Output a brief you can walk in with. Don't invent outcomes the notes don't suppo
 ## Depth
 - quick: the one-page brief — outcome recap, top risk, the one ask.
 - standard: the full brief above, ready to present from.
-- deep: + a slide-ready outline to hand to a deck tool, and the expansion thesis written up for `expansion-play`.
+- deep: + a slide-ready outline to hand to a deck tool, and the expansion thesis written up for `expansion-signal`.
