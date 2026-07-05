@@ -15,7 +15,7 @@ Run my morning ritual, in order:
 5. **Post-sale read.** Scan `ops/customers.md` for anything that needs attention today: renewals inside 60 days, accounts at 🔴/🟡 (usage down, champion quiet, single-threaded), and adoption stalls (a workflow never turned on). Then surface the top one or two open items in `ops/roadmap-signals.md`. Skip a line if the file is empty.
 6. **Inbox + calendar.** If a mail MCP and calendar MCP are connected, run `inbox-digest` and `calendar-followup` — unread newsletter digest and any meetings older than 3 days with no follow-up. Skip either step if the MCP isn't wired.
 
-7. **Today's top three.** Propose exactly three priorities for today, each with a one-line reason. At least one should move something forward, not just maintain it; lean toward covering both sides of the bowtie when both have live work.
+7. **Today's top three.** First ask the forward question — *what is the single highest forward-moving action today?* — then propose exactly three priorities, each with a one-line reason. At least one must be that forward-moving action, not just maintenance; lean toward covering both sides of the bowtie when both have live work.
 8. **Offer.** Ask if I want to append today's plan to `ops/daily-log.md`.
 
 Keep it short. Lead with the top three. No preamble. Render the to-do list the one canonical way — see [`.claude/rules/todo-single-source.md`](../rules/todo-single-source.md) — and compose the briefing around it; don't re-group it here.
