@@ -34,6 +34,10 @@ Standing constraints every session honors — interactive or an autonomous [clou
 
 Run the rituals on a clock — locally (cron/launchd), in the cloud, or as a CI backstop. The three layers and setup are in [`.claude/scheduling/`](.claude/scheduling/README.md): cloud Routines run the full rituals without your machine awake; a GitHub Actions `schedule:` runs only the deterministic checks in `.claude/scripts/checks/`.
 
+## Open-PR hygiene
+
+This repo has accumulated open, unmerged PRs from prior sessions (7 open as of 2026-07-05, some dating to early June) — including last month's own `insights-loop` deliverable (#38, the AGENTS.md addition, still unmerged four weeks after it shipped). Before opening a new PR: check `repo:etrebels/claude-code-growth-os is:pr is:open` for existing work on the same topic and continue or merge it rather than adding a near-duplicate. If a recurring skill's own prior PR is still open, that's a signal worth surfacing in its output, not a fresh PR to pile on top.
+
 ## Extending with tools
 
 Add MCP servers (calendar, notes, issue tracker, CRM) by copying `.mcp.json.example` → `.mcp.json` (gitignored), then let your commands and skills reach them. Keep machine-local config and secrets in `.claude/settings.local.json` — copy the committed `.claude/settings.local.example.json` to start. Both real files are gitignored; never commit them.
