@@ -75,7 +75,7 @@ Nothing there is real — delete `demo/` whenever you like.
 | Function | Skills |
 |---|---|
 | **Marketing / Demand** | `content-repurpose`, `marketing-feedback` (sales→marketing loop) |
-| **Sales** | `lead-qualify`, `meeting-prep`, `follow-up`, `cold-outreach` |
+| **Sales** | `lead-qualify`, `meeting-prep`, `follow-up`, `cold-outreach`, `event-to-pipeline` (work a conference or event into booked calls) |
 | **Product** | `support-signal` (clusters support tickets into ranked themes), `product-signal` (routes those + field/retention signals to the roadmap; writes the buyer-facing line for anything shipped) |
 | **Retention** | `onboarding-handoff` (Won→onboarding), `account-health` (scores adoption, renewal motion, churn/expansion), `churn-save` (recover an at-risk account), `expansion-signal` (work a ready-to-grow account), `qbr-prep` (the value-realization review), `retention-feedback` (post-sale→product loop) |
 | **Cross-cutting** | `status-update`, `triage`, `calendar-followup` (unfinished follow-ups from last week's meetings), `inbox-digest` (unread newsletter digest) |
