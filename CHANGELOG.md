@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- **`docs/principles-from-the-field.md`** — added three field principles with worked
+  go-to-market examples: *a truce is not a resolution* (a quieted symptom is not a
+  fixed root), *hear both sides before you assign fault* (both accounts on the record
+  before attributing a miss), and *removing the blocker doesn't remove the habit*
+  (pair a structural change with re-education; behaviour, not the switch, is the done
+  signal). Refreshed the "Where these land in the kit" map with the three as candidate
+  updates.
+
 ### Added
 
 - **`event-to-pipeline` skill** (`.claude/skills/event-to-pipeline/SKILL.md`) — turn a

@@ -53,6 +53,23 @@ Where a principle maps onto a specific part of this kit, that's noted at the end
 
 ---
 
+## Conflict & resolution
+
+**A truce is not a resolution — "done" is *whole*, not *quiet*.** There is a difference between a fight stopping and a conflict being resolved: the first is a ceasefire, the gap between battles; the second is the underlying thing made whole again. The common false-finish in a motion is to log the ceasefire as the resolution. An objection that "went quiet" gets marked handled — but the buyer just stopped raising it, and it resurfaces at procurement. A stalled deal nudged one stage looks unstuck — but the reason it stalled is untouched, so it stalls again. A churn risk gets a discount or a check-in and the account goes green — while the reason the customer stopped getting value sits exactly where it was. In each case the symptom quieted and the root stood. Define "done" as the root addressed, not the symptom silenced: before closing anything, write the *root line* — what actually changed — and if you can't, it's a truce, not a resolution.
+**Example:** A rep marks an objection handled because the buyer moved on in the call. The disciplined close writes *why* it's resolved — what changed in the buyer's world. When nothing changed, the item stays open instead of resurfacing, unexplained, at the contract stage.
+
+**Hear both sides before you assign fault.** The reliable way to make a conflict worse is to assign victim and aggressor on the first account you hear. The first telling is one side, delivered by whoever was motivated to reach you first — and the more *obvious* it sounds, the more the second account is the one you're missing. A court hears both before a verdict; a motion should too, whether the conflict is a team dispute, a deal-miss blame landing on a downstream function, or a customer escalation where the account team's version and the customer's version rarely match. The resolution almost always lives in the gap between the two accounts, and a verdict formed on one side hardens the wrong answer and inflames the party who wasn't heard.
+**Example:** A deal slips and the first post-mortem voice blames handoff from another team. The manager who forms a view there sets the wrong fix. The one who hears the other function first usually finds the miss was shared — and fixes the actual seam instead of the scapegoat.
+
+---
+
+## Change
+
+**Removing the blocker doesn't remove the habit — budget the re-education.** When you change a *structure* — swap a tool, rewrite a process, redraw a line, tighten a rule — the habit that grew under the old structure does not leave with it. The structural change is necessary and almost never sufficient: people revert to what the old system trained into them unless the change is followed by deliberate re-education, on a cadence, with an owner. Assuming the reorg or the new tool "did the work" is how a change reverts three weeks later while the org chart still shows it succeeded. Reps keep the shadow spreadsheet; the pipeline keeps its old under-qualified shape. Treat the observed *behaviour* as the completion signal, not the switch being flipped — and when a past change "didn't stick," diagnose it as skipped re-education before replacing the structure again.
+**Example:** A team ships a new qualification bar in the playbook, then counts it done. Pipeline keeps filling with the old shape because nobody retired the old habit. The version that sticks pairs the rule change with a few weeks of live coaching on real deals — behaviour is the signal, not the edited doc.
+
+---
+
 ## Where these land in the kit
 
 Several are now wired into the kit's rituals (below); treat the rest as candidate updates — adopt what fits your motion:
@@ -63,6 +80,9 @@ Several are now wired into the kit's rituals (below); treat the rest as candidat
 - **One durable relationship = the return** → [`/weekly-review`](../.claude/commands/weekly-review.md) now reads a channel's return by the quality of relationships it surfaced, not only headline volume — the long-horizon companion to [`why-brand.md`](why-brand.md).
 - **Judgment & integrity by choice** → the kit is deliberately empty of playbooks because *the judgment you put inside it is the product* (see [`methodology.md`](methodology.md)); judgment is built by reps under stakes, and the disclosure standard holds whether or not anyone is watching.
 - **Guard inputs / hold the vision** → the [`pre-compact`](../.claude/hooks/pre-compact.sh) hook already re-injects priorities and the latest log so a long session doesn't lose the thread — the same instinct, applied to your own attention: curate the inputs, and re-state the longer-term thesis on a cadence.
+- **A truce is not a resolution** → *candidate* for your close-out ritual ([`/end-of-day`](../.claude/commands/end-of-day.md)) and [`/reconcile`](../.claude/commands/reconcile.md): before anything is marked resolved or green, require a one-line *root* — what actually changed — so a quieted symptom isn't logged as a fixed one. Pairs with the deal-and-account status fields in `ops/`.
+- **Hear both sides before you assign fault** → *candidate* for whatever review reads win/loss and escalations ([`/weekly-review`](../.claude/commands/weekly-review.md)): put both accounts on the record — the direction/standard side and the execution side, or the account team's and the customer's — before attributing a miss.
+- **Removing the blocker doesn't remove the habit** → *candidate* for any process, tool, or rule change you roll out: name the old habit it replaces and a re-education plan (cadence + owner), and set an observed *behaviour* — not the switch — as the done signal. Relevant to adoption tracking in `ops/customers.md`.
 
 ---
 
