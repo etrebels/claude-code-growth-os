@@ -9,6 +9,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- **`docs/principles-from-the-field.md`** — added four more field principles with worked
+  go-to-market examples: *teams align to a shared anchor, not to each other* (re-anchor
+  both sides to one number instead of refereeing the interface), *cover the whole book,
+  and track the gaps* (a last-touch list turns silent drift into a closable gap before
+  it becomes churn), *take friction straight to the person, in private, first* (a
+  direct-and-private-first escalation ladder; don't triangulate, don't presume bad
+  intent), and *select for what survives pressure, then trust the long shaping* (pick
+  for pressure-tolerance over polish; don't judge or cut a mid-shaping bet by the
+  snapshot). Refreshed the "Where these land in the kit" map with the four as candidate
+  updates.
 - **`docs/principles-from-the-field.md`** — added three field principles with worked
   go-to-market examples: *a problem going quiet is not the same as a problem being
   fixed* (a quieted symptom is not a fixed root), *hear both sides before you assign

@@ -67,7 +67,7 @@ Nothing there is real — delete `demo/` whenever you like.
 | `docs/why-brand.md` | The companion argument: where demand comes from — why ~95% of buyers aren't ready yet, and how brands actually grow (with sources) |
 | `docs/principles-from-science.md` | A thinking aid: twenty-one operating principles drawn from seven sciences (leverage, momentum, entropy…) — each with two sourced quotes and a worked go-to-market example |
 | `docs/principles-from-history.md` | A companion thinking aid: operating principles drawn from history and biography (Churchill, via Manchester's *The Last Lion*) — each with a verified, sourced quote, a worked go-to-market example, and an apocrypha-screening note |
-| `docs/principles-from-the-field.md` | A third thinking aid: operating principles drawn from running the motion itself (ownership, daily focus, decisions, reading the return, judgment, attention, conflict & resolution, change) — each with a worked go-to-market example, plus a map of where they land in the kit |
+| `docs/principles-from-the-field.md` | A third thinking aid: operating principles drawn from running the motion itself (ownership, alignment, daily focus, decisions, reading the return, judgment, coverage & attention, conflict & resolution, change) — each with a worked go-to-market example, plus a map of where they land in the kit |
 | `docs/connecting-a-crm.md` | Optional: make an existing CRM the source of truth and project it into `ops/pipeline.md` — don't run two pipelines |
 
 **Skills by function** — the motion is balanced across the bowtie, not just acquisition:
