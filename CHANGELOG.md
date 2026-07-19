@@ -7,7 +7,31 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- **`/babysit-prs` command** (`.claude/commands/babysit-prs.md`) — codifies an
+  open-PR health check (CI status, unresolved review comments, merge conflicts,
+  external launch dependencies) that had been running against this repo's PRs for
+  weeks with no checked-in definition. Adds a **stale-signal escalation** rule:
+  after three consecutive runs report the same unchanged external-dependency signal
+  (e.g. the same HTTP status on a launch-page check), escalate once as a decision
+  needed rather than repeating the identical check indefinitely — the pattern
+  observed on PR #44, where the same inconclusive signal was re-reported unchanged
+  across four weekly runs.
+
 ### Changed
+
+- **`CLAUDE.md`** — refreshed the *Open-PR hygiene* note (7 open PRs as of
+  2026-07-05 → 4 as of 2026-07-19; #38 has since merged) and wired in
+  `/babysit-prs` and its stale-signal rule. Added a new *Session-analysis routines*
+  section naming that a cloud/web session has no persisted session-transcript
+  history across runs (`~/.claude/projects/` doesn't survive a fresh clone), so a
+  routine like `insights-loop` should fall back to git/PR/CI history as its
+  evidence base and say so, rather than implying it read transcripts that don't
+  exist in this environment.
+- **`AGENTS.md`** — repository map and commands table were missing `/capture`,
+  `/reconcile`, and `/retention-report` (all shipped in earlier releases); added
+  alongside the new `/babysit-prs` entry.
 
 - **`docs/principles-from-the-field.md`** — added three field principles with worked
   go-to-market examples: *a problem going quiet is not the same as a problem being

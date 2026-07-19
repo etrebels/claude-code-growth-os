@@ -37,7 +37,13 @@ Run the rituals on a clock — locally (cron/launchd), in the cloud, or as a CI 
 
 ## Open-PR hygiene
 
-This repo has accumulated open, unmerged PRs from prior sessions (7 open as of 2026-07-05, some dating to early June) — including last month's own `insights-loop` deliverable (#38, the AGENTS.md addition, still unmerged four weeks after it shipped). Before opening a new PR: check `repo:etrebels/claude-code-growth-os is:pr is:open` for existing work on the same topic and continue or merge it rather than adding a near-duplicate. If a recurring skill's own prior PR is still open, that's a signal worth surfacing in its output, not a fresh PR to pile on top.
+This repo has accumulated open, unmerged PRs from prior sessions (7 open as of 2026-07-05; down to 4 as of 2026-07-19 — #38 from that count has since merged). Before opening a new PR: check `repo:etrebels/claude-code-growth-os is:pr is:open` for existing work on the same topic and continue or merge it rather than adding a near-duplicate. If a recurring skill's own prior PR is still open, that's a signal worth surfacing in its output, not a fresh PR to pile on top.
+
+Run [`/babysit-prs`](.claude/commands/babysit-prs.md) to check the open backlog — CI, review comments, merge conflicts, and any external launch dependency a draft PR is waiting on. **Don't re-verify the same unchanged external signal forever**: after three consecutive identical reports (e.g. the same HTTP status on a launch-page check, the same "still DRAFT" on a linked PR), escalate once as a stale signal needing a human call, rather than repeating the same paragraph indefinitely — see the command for the full rule.
+
+## Session-analysis routines (e.g. `insights-loop`)
+
+A remote/cloud session starts from a fresh clone each run; nothing under `~/.claude/projects/` persists across sessions, so "analyze the last N days of Claude Code session transcripts" has no literal data to read beyond the current run. Any routine making that claim should fall back to the evidence that *does* persist — `git log --since`, merged/open PR history, PR review comments, and CI backstop output — and say plainly that it's using that fallback rather than implying it read transcripts it doesn't have.
 
 ## Extending with tools
 
