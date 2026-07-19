@@ -53,7 +53,11 @@ claude-code-growth-os/
 │   │   ├── midday-checkin.md        # 14:00 — action-item sweep + CRM persist
 │   │   ├── end-of-day.md            # 17:30 — daily-log draft + tomorrow's Top 3
 │   │   ├── weekly-review.md         # Friday — pipeline reconcile + feedback loops
-│   │   └── demo-briefing.md         # Pre-meeting briefing for a named prospect/deal
+│   │   ├── demo-briefing.md         # Pre-meeting briefing for a named prospect/deal
+│   │   ├── capture.md               # Ad-hoc — capture-now, triage-later inbox
+│   │   ├── reconcile.md             # Ad-hoc — catch drift across mirrored files
+│   │   ├── retention-report.md      # Monthly — NRR/GRR roll-up, next month's bets
+│   │   └── babysit-prs.md           # Ad-hoc/scheduled — open-PR health + stale-signal escalation
 │   ├── hooks/                       # Guardrails that fire on events
 │   │   ├── session-start.sh         # Surfaces ops/priorities.md + feedback-log signals
 │   │   ├── pre-compact.sh           # Re-injects priorities + latest log before compaction
@@ -130,7 +134,11 @@ Every entry point (session start, each ritual, each cloud routine) uses the spec
 | `/midday-checkin` | 14:00 | Action-item sweep, CRM persist (skips if in a meeting) |
 | `/end-of-day` | 17:30 | Daily-log draft, tomorrow's Top 3, feedback-loop tags |
 | `/weekly-review` | Friday | Pipeline reconcile, feedback-loop close, next week's priority |
+| `/retention-report` | Monthly | NRR/GRR roll-up, churn by reason, next month's bets |
 | `/demo-briefing` | Ad-hoc | Pre-meeting brief for a named prospect or deal |
+| `/capture` | Ad-hoc | Capture-now, triage-later inbox |
+| `/reconcile` | Ad-hoc | Catch drift across mirrored files (mirror-vs-CRM, log-vs-reality) |
+| `/babysit-prs` | Ad-hoc/scheduled | Open-PR health check — CI, review comments, merge conflicts, stale-signal escalation |
 
 ## Hooks
 
