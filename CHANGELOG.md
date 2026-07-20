@@ -9,6 +9,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- **`docs/principles-from-the-field.md`** — added four more field principles with worked
+  go-to-market examples: *two teams stop fighting when both are measured on the same
+  number* (put both on one shared scoreboard instead of refereeing the handoff), *keep a
+  last-contact date on every account, oldest first* (the oldest-silent accounts churn
+  first, and surface before the metric does), *take a problem with someone straight to
+  them, in private, first* (a direct-and-private-first escalation ladder; don't vent
+  sideways, don't assume bad intent), and *hire for who holds up under pressure, then
+  give them time* (pick for pressure-tolerance over polish; don't judge a half-finished
+  pick by the snapshot). Refreshed the "Where these land in the kit" map with the four
+  as candidate updates.
 - **`docs/principles-from-the-field.md`** — added three field principles with worked
   go-to-market examples: *a problem going quiet is not the same as a problem being
   fixed* (a quieted symptom is not a fixed root), *hear both sides before you assign
