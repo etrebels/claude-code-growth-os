@@ -30,6 +30,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- **Open-core boundary rule** (`.claude/rules/open-core-boundary.md`) — the check
+  every addition passes before merging: does it belong in this free chassis or in
+  LangOptima Growth OS Pro? Merging here is a one-way door (MIT, public forever);
+  four tests decide the default, and unsure means Pro first. Wired into `CLAUDE.md`,
+  the rules index, and `CONTRIBUTING.md` (community PRs always land here, never
+  behind the paywall).
 - **`event-to-pipeline` skill** (`.claude/skills/event-to-pipeline/SKILL.md`) — turn a
   conference, meetup, or event you attend or host into booked calls: book the next
   step rather than hold it on the floor, a QR to your booking link, a call-earning
@@ -46,6 +52,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   mirror-vs-CRM, tasks-vs-priorities, log-vs-reality, and stale open loops. Adapts the
   `/reconcile` pattern from claude-context-os. Both new rituals defer to
   `todo-single-source.md`; both are credited in `THIRD-PARTY-NOTICES.md`.
+
+### Changed
+
+- **README "What's free vs. what's paid" is now a three-tier ladder** — free chassis
+  (this repo, unchanged) → [LangOptima Growth OS Pro](https://langoptima.com/growth-os-pro)
+  (the filled version: operating playbooks, pro-depth skills, `/setup` wizard, HubSpot
+  wiring, 12 months of updates) → built & run for you. Nothing moves out of the free repo.
 
 ## [0.2.0] — 2026-06-10
 
