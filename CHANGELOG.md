@@ -7,7 +7,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- **`ops/chokepoints.md`** — a new standing list for the few narrow dependencies most
+  of the revenue actually flows through (dependency · who controls it · what breaks
+  without it · what would de-risk it · owner · carried-since), pre-seeded with
+  fictional rows like the rest of `ops/`. Deliberately short — five-ish passages, not
+  a long risk register. Carries a re-rating rule: a row unresolved for 3+ reviews is
+  re-rated, not dropped.
+
 ### Changed
+
+- **`/weekly-review`** — wired in three of the four new field principles. A new
+  **chokepoint read** (step 10) walks `ops/chokepoints.md` for concentration changes
+  and unowned rows, and doubles as a news filter. The **stop-doing step** (step 12)
+  now requires the prune sentence — *cut so that X improves, measured by Y, checked
+  on `<date>`* — before anything is removed; no sentence, no cut. And a new **quarterly
+  addendum** covers the advantages you didn't earn (named maintainer + going-away
+  signal per input, cross-checked against the chokepoint list) and a check that the
+  origin record still exists and is being read before playbook training.
 
 - **`docs/principles-from-the-field.md`** — added four more field principles with worked
   go-to-market examples, in two new sections. **Dependencies:** *name the few chokepoints
