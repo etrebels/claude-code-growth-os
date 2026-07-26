@@ -7,8 +7,39 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- **`ops/chokepoints.md`** — a new standing list for the few narrow dependencies most
+  of the revenue actually flows through (dependency · who controls it · what breaks
+  without it · what would de-risk it · owner · carried-since), pre-seeded with
+  fictional rows like the rest of `ops/`. Deliberately short — five-ish passages, not
+  a long risk register. Carries a re-rating rule: a row unresolved for 3+ reviews is
+  re-rated, not dropped.
+
 ### Changed
 
+- **`/weekly-review`** — wired in three of the four new field principles. A new
+  **chokepoint read** (step 10) walks `ops/chokepoints.md` for concentration changes
+  and unowned rows, and doubles as a news filter. The **stop-doing step** (step 12)
+  now requires the prune sentence — *cut so that X improves, measured by Y, checked
+  on `<date>`* — before anything is removed; no sentence, no cut. And a new **quarterly
+  addendum** covers the advantages you didn't earn (named maintainer + going-away
+  signal per input, cross-checked against the chokepoint list) and a check that the
+  origin record still exists and is being read before playbook training.
+
+- **`docs/principles-from-the-field.md`** — added four more field principles with worked
+  go-to-market examples, in two new sections. **Dependencies:** *name the few chokepoints
+  your revenue flows through, and who controls each one* (a short list of narrow
+  dependencies beats a long risk register — and it doubles as the filter that makes
+  market news readable), and *track the advantages you didn't earn* (unearned inputs are
+  the ones you stop noticing and therefore stop protecting; overlap with the chokepoint
+  list is the quarter's top risk). **Institutional memory:** *write down how you won your
+  first ten customers, and put it in onboarding* (the current process is an abstraction
+  of the origin motion and sheds load-bearing parts; annotate each gate with the deal
+  that produced it). Under **Decisions:** *before cutting a program, name what gets
+  stronger because of the cut* (pruning names what improves and when it's checked;
+  dismantling doesn't — an unverified cut is recorded as a dismantling). Refreshed the
+  "Where these land in the kit" map with the four as candidate updates.
 - **`docs/principles-from-the-field.md`** — added four more field principles with worked
   go-to-market examples: *two teams stop fighting when both are measured on the same
   number* (put both on one shared scoreboard instead of refereeing the handoff), *keep a
