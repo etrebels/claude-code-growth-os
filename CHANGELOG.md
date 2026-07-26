@@ -10,6 +10,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - **`docs/principles-from-the-field.md`** — added four more field principles with worked
+  go-to-market examples, in two new sections. **Dependencies:** *name the few chokepoints
+  your revenue flows through, and who controls each one* (a short list of narrow
+  dependencies beats a long risk register — and it doubles as the filter that makes
+  market news readable), and *track the advantages you didn't earn* (unearned inputs are
+  the ones you stop noticing and therefore stop protecting; overlap with the chokepoint
+  list is the quarter's top risk). **Institutional memory:** *write down how you won your
+  first ten customers, and put it in onboarding* (the current process is an abstraction
+  of the origin motion and sheds load-bearing parts; annotate each gate with the deal
+  that produced it). Under **Decisions:** *before cutting a program, name what gets
+  stronger because of the cut* (pruning names what improves and when it's checked;
+  dismantling doesn't — an unverified cut is recorded as a dismantling). Refreshed the
+  "Where these land in the kit" map with the four as candidate updates.
+- **`docs/principles-from-the-field.md`** — added four more field principles with worked
   go-to-market examples: *two teams stop fighting when both are measured on the same
   number* (put both on one shared scoreboard instead of refereeing the handoff), *keep a
   last-contact date on every account, oldest first* (the oldest-silent accounts churn
