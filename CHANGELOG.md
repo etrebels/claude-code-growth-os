@@ -27,6 +27,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   signal per input, cross-checked against the chokepoint list) and a check that the
   origin record still exists and is being read before playbook training.
 
+- **`docs/principles-from-the-field.md`** — added three more field principles with worked
+  go-to-market examples. Under **Ownership:** *when a team underperforms, check who owns
+  what before you check who's good* (most of what reads as a talent problem is ownership
+  geometry — a capable person whose boundary is two millimetres wrong destabilizes the
+  people around them, and the assembly, not any part, is the unit of strength). Under
+  **Daily discipline:** *a rule you keep having to remind people about will get dropped —
+  put it in the workflow instead* (distance from the workflow, not size, is what makes a
+  standard heavy; ask who pays the cost each time it's applied, and use the post-change
+  reminder count to check the artifact isn't decorative). Under **Character & judgment:**
+  *score who changed after feedback, not who agreed with it* (names the selective hearer
+  and the compliant non-changer, and why interviews reward the second). Refreshed the
+  "Where these land in the kit" map with all three as candidate updates.
 - **`docs/principles-from-the-field.md`** — added four more field principles with worked
   go-to-market examples, in two new sections. **Dependencies:** *name the few chokepoints
   your revenue flows through, and who controls each one* (a short list of narrow
