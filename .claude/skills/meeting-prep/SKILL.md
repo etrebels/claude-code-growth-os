@@ -38,6 +38,27 @@ Load **3–5** calibrated questions for the meeting. A reusable set:
 
 **Replace on sight:** "Why are you still using X?" → *"What's kept X in place?"* · "Do you have a process for X?" → *"How do you handle X today?"* · "Is that a problem?" → *"What does that cost you?"* · "Would you agree that…?" → delete it.
 
+## Call conduct — write down what the room used to enforce
+
+In a physical room, attention is enforced by cues nobody has to state: everyone can
+see who is looking at their phone, who left, who stopped listening. Remove the room
+and every one of those cues disappears — so attention degrades silently while the
+call grid looks exactly the same. A remote meeting with no stated protocol is not a
+neutral meeting; its norms default to whatever the least-engaged participant does.
+
+The fix is not exhortation ("please engage") — it is writing down the specific
+behaviors the room used to enforce for free, so the norm is explicit and correctable.
+
+For any call with **4+ participants or a decision on the agenda**, put one line at the
+top of the agenda itself:
+
+> *Cameras on · one speaker at a time · side questions to the thread, not the chat ·
+> decision owner: `<name>`.*
+
+If a call is repeatedly held without it, the meeting owner cuts the invite list rather
+than adding more reminders — an unengaged attendee is a scoping problem, not a
+discipline problem.
+
 ## Depth
 - quick: the goal + one label + three calibrated questions.
 - standard: the full brief above, with the label + 3–5 calibrated questions and a summary-to-confirm.
