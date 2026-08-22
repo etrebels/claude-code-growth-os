@@ -26,6 +26,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- **`docs/principles-from-the-field.md`** — five more field principles with worked
+  GTM examples: the wait-state your-side checklist (a deal "waiting on them" still
+  has work on your side), the closing-terms pass (concession pressure peaks at
+  signing), the partner-risk ledger (repay risk taken for you from strength),
+  converting a hostile counterpart at their moment of need, and the postdating
+  ratio that puts the origin-record retelling on a calendar trigger. Each mapped
+  to its candidate landing spot in *Where these land in the kit*.
+
 - **`ops/chokepoints.md`** — a new standing list for the few narrow dependencies most
   of the revenue actually flows through (dependency · who controls it · what breaks
   without it · what would de-risk it · owner · carried-since), pre-seeded with

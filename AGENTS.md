@@ -20,8 +20,9 @@ claude-code-growth-os/
 ├── SECURITY.md                      # Security policy
 ├── CODE_OF_CONDUCT.md               # Community standards
 ├── LICENSE                          # MIT license
-├── settings.json                    # Claude Code settings (hooks, permissions)
-├── settings.local.example.json      # Template for local secrets config (gitignored when copied)
+├── THIRD-PARTY-NOTICES.md           # Credits for adapted third-party patterns
+├── inbox/
+│   └── notes.md                     # /capture staging buffer — raw notes, triaged later
 ├── ops/                             # LIVE STATE LAYER — mutable, routines read/write
 │   ├── pipeline.md                  # Live deal board (one line per open deal)
 │   ├── customers.md                 # Post-sale account health
@@ -29,16 +30,22 @@ claude-code-growth-os/
 │   ├── daily-log.md                 # Append-only field-capture log
 │   ├── feedback-log.md              # Cross-function feedback loops (sales→marketing, post-sale→product)
 │   ├── roadmap-signals.md           # Field/retention signals → product
+│   ├── chokepoints.md               # The few narrow dependencies most revenue flows through
+│   ├── direction-register.md        # Live standing direction — outranks a conflicting rule
 │   └── icp.md                       # Ideal customer profile definition
 ├── demo/                            # Fictional-data sandbox for testing rituals
 │   ├── pipeline.md
 │   ├── customers.md
+│   ├── priorities.md
 │   ├── daily-log.md
 │   ├── feedback-log.md
+│   ├── roadmap-signals.md
+│   ├── support-tickets.md
 │   └── meetings/                    # Sample meeting notes
 ├── docs/                            # Reference documentation
 │   ├── operating-model.md           # Bowtie, six handoffs, the one number (NRR)
 │   ├── methodology.md               # Why this system is built the way it is
+│   ├── designing-loops.md           # Why the loop, not the prompt, is the thing you design
 │   ├── connecting-a-crm.md          # CRM projection loop and find-or-create mechanics
 │   ├── first-ritual.md              # Getting-started guide
 │   ├── launch-scrub-checklist.md    # Pre-launch safety checklist
@@ -46,21 +53,27 @@ claude-code-growth-os/
 │   ├── why-brand.md                 # Why brand investment matters
 │   ├── principles-from-history.md   # Operating principles sourced from history
 │   ├── principles-from-science.md   # Operating principles sourced from science
+│   ├── principles-from-the-field.md # Operating principles from running the motion itself
 │   └── assets/                      # Diagrams, images
+├── .github/
+│   └── workflows/                   # CI: scheduled deterministic checks + shellcheck on hooks
 ├── .claude/
+│   ├── settings.json                # Claude Code settings (hooks, permissions)
+│   ├── settings.local.example.json  # Template for local secrets config (gitignored when copied)
 │   ├── commands/                    # Slash commands — the daily rituals
-│   │   ├── morning-briefing.md      # 07:30 — calendar + pipeline + priorities
-│   │   ├── midday-checkin.md        # 14:00 — action-item sweep + CRM persist
-│   │   ├── end-of-day.md            # 17:30 — daily-log draft + tomorrow's Top 3
-│   │   ├── weekly-review.md         # Friday — pipeline reconcile + feedback loops
-│   │   ├── demo-briefing.md         # Pre-meeting briefing for a named prospect/deal
-│   │   ├── capture.md               # Ad-hoc — capture-now, triage-later inbox
-│   │   ├── reconcile.md             # Ad-hoc — catch drift across mirrored files
-│   │   └── retention-report.md      # Monthly — NRR/GRR roll-up, next month's bets
+│   │   ├── morning-briefing.md      # Recap yesterday, surface priorities, set today's top three
+│   │   ├── midday-checkin.md        # Mid-day reset — done, slipping, what to protect
+│   │   ├── end-of-day.md            # Daily-log entry + tomorrow's Top 3
+│   │   ├── weekly-review.md         # Weekly patterns + next week's one priority
+│   │   ├── retention-report.md      # Monthly NRR/GRR readout from the customer book
+│   │   ├── capture.md               # Drop a raw note now, triage it later
+│   │   ├── reconcile.md             # Catch drift when multiple sessions write the same files
+│   │   └── demo-briefing.md         # The morning ritual run on the fictional demo/ data
 │   ├── hooks/                       # Guardrails that fire on events
 │   │   ├── session-start.sh         # Surfaces ops/priorities.md + feedback-log signals
 │   │   ├── pre-compact.sh           # Re-injects priorities + latest log before compaction
 │   │   ├── protect-files.sh         # Blocks writes to secrets and .env files
+│   │   ├── verify-after-change.sh   # Post-change link check + optional project verifier (advisory)
 │   │   ├── stop-reminder.sh         # Nudges /end-of-day until today is logged
 │   │   ├── pre-commit-guard.sh      # Git pre-commit hook — blocks likely secrets
 │   │   └── web-bootstrap.sh         # Installs shellcheck on cloud/web sessions only
@@ -72,23 +85,29 @@ claude-code-growth-os/
 │   │   ├── README.md                # Three-layer scheduling overview (local / cloud / CI)
 │   │   └── cloud-routines.md        # Cloud Routines runbook (Anthropic-hosted)
 │   ├── scripts/
+│   │   ├── verify.sh.example        # Template for your own post-change verifier
 │   │   └── checks/
 │   │       └── growth-os-checks.sh  # Deterministic checks run by CI / scheduled jobs
 │   └── skills/                      # Reusable growth skills (one directory per skill)
 │       ├── account-health/          # Post-sale health review for a named account
 │       ├── calendar-followup/       # Draft follow-up based on today's calendar events
+│       ├── churn-save/              # Recovery play for a red/amber account
 │       ├── cold-outreach/           # Generate a targeted cold outreach sequence
 │       ├── content-repurpose/       # Repurpose a piece of content across channels
+│       ├── event-to-pipeline/       # Work a conference or event into booked calls
 │       ├── example-skill/           # Template / reference skill
+│       ├── expansion-signal/        # Work a ready-to-grow account and hand it to sales
 │       ├── follow-up/               # Draft a follow-up for a named deal or contact
 │       ├── inbox-digest/            # Summarize and triage inbound messages
-│       ├── lead-qualify/            # Run MEDDPICC qualification on a named lead
+│       ├── lead-qualify/            # Score a lead against the ICP fit check
 │       ├── marketing-feedback/      # Surface MARKETING-ACTION tags from ops/
 │       ├── meeting-prep/            # Prep brief for a named meeting or prospect
 │       ├── onboarding-handoff/      # CS handoff document for a new customer
 │       ├── product-signal/          # Surface FEATURE-REQUEST / RETENTION-RISK tags
+│       ├── qbr-prep/                # Value-realization review brief for a customer
 │       ├── retention-feedback/      # Surface RETENTION-RISK tags for review
 │       ├── status-update/           # Draft a status update for a named deal or account
+│       ├── support-signal/          # Cluster support tickets into ranked product themes
 │       └── triage/                  # Triage open items across ops/ files
 └── .mcp.json.example                # Template for MCP server config (copy → .mcp.json, gitignored)
 ```
@@ -127,16 +146,16 @@ Every entry point (session start, each ritual, each cloud routine) uses the spec
 
 ## Available Commands
 
-| Command | Time | Role |
+| Command | Cadence | Role |
 |---|---|---|
-| `/morning-briefing` | 07:30 | Calendar + pipeline + Notion sync, pre-stages meeting prep |
-| `/midday-checkin` | 14:00 | Action-item sweep, CRM persist (skips if in a meeting) |
-| `/end-of-day` | 17:30 | Daily-log draft, tomorrow's Top 3, feedback-loop tags |
-| `/weekly-review` | Friday | Pipeline reconcile, feedback-loop close, next week's priority |
-| `/retention-report` | Monthly | NRR/GRR roll-up, churn by reason, next month's bets |
-| `/demo-briefing` | Ad-hoc | Pre-meeting brief for a named prospect or deal |
-| `/capture` | Ad-hoc | Capture-now, triage-later inbox |
-| `/reconcile` | Ad-hoc | Catch drift across mirrored files (mirror-vs-CRM, log-vs-reality) |
+| `/morning-briefing` | Daily (morning) | Recap yesterday, surface priorities, set today's top three |
+| `/midday-checkin` | Daily (mid-day) | Mark what's done, flag what's slipping, protect the afternoon |
+| `/end-of-day` | Daily (close) | Daily-log entry, tomorrow's Top 3, CRM persist + audit log |
+| `/weekly-review` | Weekly | Patterns across both sides of the bowtie, next week's one priority |
+| `/retention-report` | Monthly | Roll the customer book up to NRR/GRR, churn by reason, expansion |
+| `/capture` | Ad-hoc | Drop a raw note into `inbox/notes.md` now; triage it later |
+| `/reconcile` | Ad-hoc | Catch drift when more than one session writes the same files |
+| `/demo-briefing` | Ad-hoc | The morning ritual run safely on the fictional `demo/` data |
 
 ## Hooks
 
@@ -145,8 +164,9 @@ Every entry point (session start, each ritual, each cloud routine) uses the spec
 | `session-start.sh` | **SessionStart** | Surface `ops/priorities.md` + latest `ops/feedback-log.md` signals |
 | `pre-compact.sh` | **PreCompact** | Re-inject priorities + latest log entry before compaction |
 | `protect-files.sh` | **PreToolUse (Edit\|Write)** | Block writes to `.env*`, `*.key`, `*.secret`, `*.token`, `credentials.*` |
+| `verify-after-change.sh` | **PostToolUse (Edit\|Write)** | Link-check the changed file + run `.claude/scripts/verify.sh` if present — advisory, never blocks |
 | `stop-reminder.sh` | **Stop** | Nudge `/end-of-day` if today is not yet logged |
-| `pre-commit-guard.sh` | git pre-commit | Block commits that contain likely secrets (install once: `bash .claude/hooks/pre-commit-guard.sh install`) |
+| `pre-commit-guard.sh` | git pre-commit | Block commits that contain likely secrets (install once: `ln -s ../../.claude/hooks/pre-commit-guard.sh .git/hooks/pre-commit`) |
 | `web-bootstrap.sh` | **SessionStart** (cloud only) | Install `shellcheck` on cloud/web sessions; no-op locally |
 
 ## Scheduling
