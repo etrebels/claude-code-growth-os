@@ -9,6 +9,27 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- **`CLAUDE.md`** — refreshed the *Open-PR hygiene* note again (5 open PRs as of
+  2026-08-23; #53 closed as superseded, #58/#60 merged) and reframed it around a
+  **blocked-on-external vs. needs-review split** instead of a single PR-number
+  narrative, since the prior version's mention of #53 was already stale one week
+  after being written. Added a new subsection, *PR-health checks should resolve
+  mechanical conflicts, not just re-report them*: `babysit-prs` had been holding
+  purely additive `CHANGELOG.md` `## [Unreleased]` conflicts (two branches, two
+  non-contradicting entries) to the same "editorial call, out of scope" standard as
+  genuinely contradicting conflicts — PR #44's conflict was reported unchanged
+  across at least seven consecutive check-ins (07-27 → 08-22) as a result, and #55
+  hit the same failure mode. States the fix: merge both entries when neither side
+  altered the other's lines.
+- **`AGENTS.md`** — documented `babysit-prs` as a known gap in the *Scheduling*
+  section: it has been posting dated PR-health comments since 2026-06-13 (visible
+  in this repo's own PR history) but has no `.claude/commands/babysit-prs.md` and
+  isn't listed in `.claude/scheduling/cloud-routines.md` or the commands table — a
+  prior attempt to formalize it (#53) was closed as superseded before the command
+  file landed. Also added a *Keep this map in sync* convention under *Key
+  Conventions*, naming that this file's tables have drifted from the actual repo
+  three times in two months (#38, #58, #60) with no check tying a new
+  command/hook/skill/file to a required update here.
 - **`CLAUDE.md`** — refreshed the *Open-PR hygiene* note (7 open PRs as of 2026-07-05,
   #38 since merged, but the count has drifted back up to 6 as of 2026-08-09) and named
   the pattern plainly: `insights-loop`'s own prior deliverable (#53, opened
