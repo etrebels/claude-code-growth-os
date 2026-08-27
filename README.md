@@ -16,6 +16,19 @@ This repo is the scaffolding: opinionated hooks, daily rituals, a set of go-to-m
 
 **Why one repo for the whole motion?** The buyer merged it — they research, buy, adopt, and renew as one relationship, and most of a B2B decision happens before sales is even in the room. Running marketing, sales, product, and retention as four separate systems is what creates the seams the buyer feels — and leaves the most valuable half, what happens *after* the sale, with no owner. This kit keeps all four in one place: one source of truth (the repo), two feedback loops (a `MARKETING-ACTION` line for sales→marketing, a `RETENTION-RISK` line for post-sale→product), shared definitions. The one-page argument, with sources, is in [`docs/why-align.md`](docs/why-align.md).
 
+## Install just the skills (no clone)
+
+Want the go-to-market skills without adopting the whole repo? This repo is also a plugin marketplace:
+
+```
+/plugin marketplace add etrebels/claude-code-growth-os
+/plugin install growth-os@growth-os
+```
+
+That gives you the nineteen skills — lead qualification, meeting prep, follow-ups, outreach, account health, churn saves, expansion signals, the two feedback loops — usable in any project.
+
+**The plugin ships skills only, deliberately.** The daily rituals (`/morning-briefing`, `/end-of-day`, `/weekly-review`) read and write the `ops/` state files, so they only make sense inside the repo. Clone it for those; install the plugin if you just want the skills.
+
 ## See it run in 30 seconds
 
 ![Claude Code Growth OS — the /demo-briefing morning ritual running on fictional demo data](docs/assets/demo.gif)
