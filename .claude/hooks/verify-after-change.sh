@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 set -euo pipefail
 
 # PostToolUse(Edit|Write): the loop's "verify" step, as a hook.

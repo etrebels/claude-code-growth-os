@@ -7,7 +7,32 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- **`CLAUDE.md`** — refreshed the *Open-PR hygiene* note (7 open PRs as of 2026-07-05,
+  #38 since merged, but the count has drifted back up to 6 as of 2026-08-09) and named
+  the pattern plainly: `insights-loop`'s own prior deliverable (#53, opened
+  2026-07-19) sat as a draft for three weeks and drifted into a merge conflict —
+  proof that opening a fresh dated branch every week without checking back on last
+  week's is *how* the backlog grows, not just a number to log. Added a new
+  *Session-analysis routines* section naming that a cloud/web session has no
+  persisted session-transcript history across runs (`~/.claude/projects/` doesn't
+  survive a fresh clone), so a routine like `insights-loop` should fall back to
+  git/PR/CI history as its evidence base and say so, rather than implying it read
+  transcripts that don't exist in this environment.
+- **`AGENTS.md`** — repository map and commands table were missing `/capture`,
+  `/reconcile`, and `/retention-report` (all shipped in earlier releases); backfilled
+  alongside their existing descriptions in `docs/first-ritual.md` / `.claude/rules/`.
+
 ### Added
+
+- **`docs/principles-from-the-field.md`** — five more field principles with worked
+  GTM examples: the wait-state your-side checklist (a deal "waiting on them" still
+  has work on your side), the closing-terms pass (concession pressure peaks at
+  signing), the partner-risk ledger (repay risk taken for you from strength),
+  converting a hostile counterpart at their moment of need, and the postdating
+  ratio that puts the origin-record retelling on a calendar trigger. Each mapped
+  to its candidate landing spot in *Where these land in the kit*.
 
 - **`ops/chokepoints.md`** — a new standing list for the few narrow dependencies most
   of the revenue actually flows through (dependency · who controls it · what breaks
