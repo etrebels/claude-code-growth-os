@@ -9,6 +9,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- **`CLAUDE.md`** — extended #62 in place rather than opening a seventh weekly-insights
+  branch (`claude/weekly-insights-2026-08-30`), because #62 is itself one of the six
+  open PRs this note now counts: it sat CI-green and unreviewed for a full week,
+  proving the hygiene note's own point a third time — naming the pileup doesn't fix
+  it, only merging does. Refreshed the *Open-PR hygiene* note's count (6 open as of
+  2026-08-30: #44/#48/#49 blocked-external, #55/#57/#62 needs-review) and added two
+  findings: (1) the additive-conflict fix documented below generalizes past
+  `CHANGELOG.md` — #55's `docs/principles-from-the-field.md` addition hit the
+  identical collision and sat `dirty` for 12 days/5 check-ins before a run applied
+  the same "keep both" move on 08-28; (2) a PR re-confirmed "ready" with no actionable
+  blocker for 3+ consecutive check-ins (#57: five checks, 19 days) should say so
+  plainly instead of restating an unchanged table each time.
 - **`CLAUDE.md`** — refreshed the *Open-PR hygiene* note again (5 open PRs as of
   2026-08-23; #53 closed as superseded, #58/#60 merged) and reframed it around a
   **blocked-on-external vs. needs-review split** instead of a single PR-number
