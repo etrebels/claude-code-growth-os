@@ -144,6 +144,9 @@ Deals → CRM (via MCP). Tasks → task tool. Priorities → `ops/priorities.md`
 ### To-do list has one canonical render spec
 Every entry point (session start, each ritual, each cloud routine) uses the spec in `.claude/rules/todo-single-source.md`. Don't re-derive the grouping or filtering inside a command.
 
+### Keep this map in sync
+This file's repository map, commands table, and hooks table have drifted from the actual repo three separate times in about two months (#38, #58, #60 each caught a different gap — a missing command, a wrong file path, a description carried over from a different repo). Any PR that adds, removes, renames, or moves a command, hook, skill, or top-level file updates the matching table here in the same diff — don't leave it for the next audit to notice.
+
 ## Available Commands
 
 | Command | Cadence | Role |
@@ -176,6 +179,8 @@ Three layers — run the rituals without your machine awake:
 1. **Local** — cron (Linux) or launchd (macOS). Setup in `.claude/scheduling/README.md`.
 2. **Cloud Routines** — Anthropic-hosted Claude Code sessions triggered on a schedule. Runbook in `.claude/scheduling/cloud-routines.md`.
 3. **GitHub Actions CI backstop** — deterministic checks only (`.claude/scripts/checks/growth-os-checks.sh`).
+
+**Known gap: `babysit-prs`.** A recurring PR-health check (CI status, review threads, merge conflicts, external launch dependencies) has been posting dated status comments on this repo's own open PRs since 2026-06-13 — visible directly in the PR history — but it has no `.claude/commands/babysit-prs.md`, isn't listed in `.claude/scheduling/cloud-routines.md`'s routine table, and isn't in the *Available Commands* table below. A prior attempt to formalize it (#53) was closed as superseded before the command file itself landed. Treat this as an open item, not a shipped feature — if you're adapting this kit and want the same check, write your own `.claude/commands/babysit-prs.md` rather than assuming one exists.
 
 ## Source-of-Truth Hierarchy
 
