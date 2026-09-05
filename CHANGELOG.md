@@ -26,6 +26,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- **`docs/principles-from-the-field.md`** — four more field principles with worked
+  GTM examples: describing the finished state concretely (a plan nobody can picture
+  doesn't move anyone, and the fix is unit conversion rather than eloquence), one
+  name a day said specifically (with the obstacle-removing form that beats praise),
+  conduct as the proof against content as the claim (including who is in the room
+  being a decision rather than a rota), and the ten-minute entry rung in front of a
+  deep asset. Four matching rows added to *Where these land in the kit*.
 - **`docs/principles-from-the-field.md`** — five more field principles with worked
   GTM examples: the wait-state your-side checklist (a deal "waiting on them" still
   has work on your side), the closing-terms pass (concession pressure peaks at
