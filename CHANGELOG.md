@@ -26,6 +26,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- **`docs/principles-from-the-field.md`** — five further field principles with worked
+  GTM examples: run a discipline **fully for a fixed window** before you kill it (a
+  half-run practice tests the penalty, not the value, so below full compliance no
+  verdict is admissible); the **prose write-up test** (if it can't be written as
+  continuous prose under a thousand words it isn't understood yet — bullets hide gaps,
+  paragraphs can't); **ask before you improvise**, plus a sanction line on every new
+  initiative (an initiative that was never approved doesn't become approved by
+  working); **buy the helping culture with slack**, because people walk past each
+  other when they're late, not when they don't care; and **containment assumptions
+  written as conditions** — the barriers you rely on *not* to fail, each with the
+  condition that would break it, as the second half of the chokepoint register. Each
+  mapped to its candidate landing spot in *Where these land in the kit*.
+
 - **`docs/principles-from-the-field.md`** — five more field principles with worked
   GTM examples: the wait-state your-side checklist (a deal "waiting on them" still
   has work on your side), the closing-terms pass (concession pressure peaks at
