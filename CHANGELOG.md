@@ -9,6 +9,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- **`CLAUDE.md`** — refreshed the *Open-PR hygiene* note again (9 open PRs as of
+  2026-09-06, up from 6 on 2026-08-09) and sharpened the duplicate-PR check from
+  "same topic" to "same file": four separate open PRs (#55, #65, #66, #67) target
+  `docs/principles-from-the-field.md`, three of them opened on the same day. Also
+  named that a background PR-health routine (`babysit-prs`) has reported #55
+  "ready for review" eleven times over five weeks with zero merges — accurate
+  status reporting is not the same as a decision getting made — and that
+  `insights-loop` has now proposed documenting `babysit-prs` three times (#53, #58,
+  #62) without the fix ever landing on `main`, which this run fixes directly by
+  documenting it in `AGENTS.md` instead of in another PR.
+- **`AGENTS.md`** — documented `babysit-prs` as a real, undocumented-but-active
+  routine (no command file exists) directly, rather than proposing the same
+  documentation fix a fourth time in an unmerged PR; added a *Keep this map in
+  sync* convention naming that this file's own tables have drifted from the repo
+  three times in two months (#38, #58, #60).
 - **`CLAUDE.md`** — refreshed the *Open-PR hygiene* note (7 open PRs as of 2026-07-05,
   #38 since merged, but the count has drifted back up to 6 as of 2026-08-09) and named
   the pattern plainly: `insights-loop`'s own prior deliverable (#53, opened
