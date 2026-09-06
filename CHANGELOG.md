@@ -33,8 +33,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   continuous prose under a thousand words it isn't understood yet — bullets hide gaps,
   paragraphs can't); **ask before you improvise**, plus a sanction line on every new
   initiative (an initiative that was never approved doesn't become approved by
-  working); **buy the helping culture with slack**, because people walk past each
-  other when they're late, not when they don't care; and **containment assumptions
+  working); **some things outrank what's on your calendar**, so name the short
+  list that beats a scheduled commitment before you're in the moment (slack lowers the
+  cost of acting on it, but it is not the principle — "I had no room" is the most
+  respectable excuse there is); and **containment assumptions
   written as conditions** — the barriers you rely on *not* to fail, each with the
   condition that would break it, as the second half of the chokepoint register. Each
   mapped to its candidate landing spot in *Where these land in the kit*.
