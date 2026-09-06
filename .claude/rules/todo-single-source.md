@@ -33,8 +33,10 @@ point it back at this rule rather than letting it grow its own grouping:
 - [`/morning-briefing`](../commands/morning-briefing.md),
   [`/midday-checkin`](../commands/midday-checkin.md),
   [`/end-of-day`](../commands/end-of-day.md),
-  [`/weekly-review`](../commands/weekly-review.md), and
-  [`/demo-briefing`](../commands/demo-briefing.md).
+  [`/weekly-review`](../commands/weekly-review.md),
+  [`/demo-briefing`](../commands/demo-briefing.md),
+  [`/capture`](../commands/capture.md) (triage routes items into the one list, never a second one), and
+  [`/reconcile`](../commands/reconcile.md) (checks the list against `priorities.md`).
 - **Cloud routines** — the unattended runs of the rituals above
   ([`../scheduling/cloud-routines.md`](../scheduling/cloud-routines.md)). A routine
   is the most important entry to keep on this list: it can't notice that its list

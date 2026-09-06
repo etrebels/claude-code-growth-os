@@ -11,6 +11,102 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - README cross-link to the sibling kit, [Claude Code Startup OS](https://github.com/etrebels/claude-code-startup-os) — the founder's stage before a repeatable motion (searching), where this kit runs the motion itself (scaling).
 
+### Changed
+
+- **`CLAUDE.md`** — refreshed the *Open-PR hygiene* note (7 open PRs as of 2026-07-05,
+  #38 since merged, but the count has drifted back up to 6 as of 2026-08-09) and named
+  the pattern plainly: `insights-loop`'s own prior deliverable (#53, opened
+  2026-07-19) sat as a draft for three weeks and drifted into a merge conflict —
+  proof that opening a fresh dated branch every week without checking back on last
+  week's is *how* the backlog grows, not just a number to log. Added a new
+  *Session-analysis routines* section naming that a cloud/web session has no
+  persisted session-transcript history across runs (`~/.claude/projects/` doesn't
+  survive a fresh clone), so a routine like `insights-loop` should fall back to
+  git/PR/CI history as its evidence base and say so, rather than implying it read
+  transcripts that don't exist in this environment.
+- **`AGENTS.md`** — repository map and commands table were missing `/capture`,
+  `/reconcile`, and `/retention-report` (all shipped in earlier releases); backfilled
+  alongside their existing descriptions in `docs/first-ritual.md` / `.claude/rules/`.
+
+### Added
+
+- **`docs/principles-from-the-field.md`** — five more field principles with worked
+  GTM examples: the wait-state your-side checklist (a deal "waiting on them" still
+  has work on your side), the closing-terms pass (concession pressure peaks at
+  signing), the partner-risk ledger (repay risk taken for you from strength),
+  converting a hostile counterpart at their moment of need, and the postdating
+  ratio that puts the origin-record retelling on a calendar trigger. Each mapped
+  to its candidate landing spot in *Where these land in the kit*.
+
+- **`ops/chokepoints.md`** — a new standing list for the few narrow dependencies most
+  of the revenue actually flows through (dependency · who controls it · what breaks
+  without it · what would de-risk it · owner · carried-since), pre-seeded with
+  fictional rows like the rest of `ops/`. Deliberately short — five-ish passages, not
+  a long risk register. Carries a re-rating rule: a row unresolved for 3+ reviews is
+  re-rated, not dropped.
+
+### Changed
+
+- **`/weekly-review`** — wired in three of the four new field principles. A new
+  **chokepoint read** (step 10) walks `ops/chokepoints.md` for concentration changes
+  and unowned rows, and doubles as a news filter. The **stop-doing step** (step 12)
+  now requires the prune sentence — *cut so that X improves, measured by Y, checked
+  on `<date>`* — before anything is removed; no sentence, no cut. And a new **quarterly
+  addendum** covers the advantages you didn't earn (named maintainer + going-away
+  signal per input, cross-checked against the chokepoint list) and a check that the
+  origin record still exists and is being read before playbook training.
+
+- **`docs/principles-from-the-field.md`** — added four more field principles with worked
+  go-to-market examples, in two new sections. **Dependencies:** *name the few chokepoints
+  your revenue flows through, and who controls each one* (a short list of narrow
+  dependencies beats a long risk register — and it doubles as the filter that makes
+  market news readable), and *track the advantages you didn't earn* (unearned inputs are
+  the ones you stop noticing and therefore stop protecting; overlap with the chokepoint
+  list is the quarter's top risk). **Institutional memory:** *write down how you won your
+  first ten customers, and put it in onboarding* (the current process is an abstraction
+  of the origin motion and sheds load-bearing parts; annotate each gate with the deal
+  that produced it). Under **Decisions:** *before cutting a program, name what gets
+  stronger because of the cut* (pruning names what improves and when it's checked;
+  dismantling doesn't — an unverified cut is recorded as a dismantling). Refreshed the
+  "Where these land in the kit" map with the four as candidate updates.
+- **`docs/principles-from-the-field.md`** — added four more field principles with worked
+  go-to-market examples: *two teams stop fighting when both are measured on the same
+  number* (put both on one shared scoreboard instead of refereeing the handoff), *keep a
+  last-contact date on every account, oldest first* (the oldest-silent accounts churn
+  first, and surface before the metric does), *take a problem with someone straight to
+  them, in private, first* (a direct-and-private-first escalation ladder; don't vent
+  sideways, don't assume bad intent), and *hire for who holds up under pressure, then
+  give them time* (pick for pressure-tolerance over polish; don't judge a half-finished
+  pick by the snapshot). Refreshed the "Where these land in the kit" map with the four
+  as candidate updates.
+- **`docs/principles-from-the-field.md`** — added three field principles with worked
+  go-to-market examples: *a problem going quiet is not the same as a problem being
+  fixed* (a quieted symptom is not a fixed root), *hear both sides before you assign
+  fault* (both accounts on the record
+  before attributing a miss), and *removing the blocker doesn't remove the habit*
+  (pair a structural change with re-education; behaviour, not the switch, is the done
+  signal). Refreshed the "Where these land in the kit" map with the three as candidate
+  updates.
+
+### Added
+
+- **`event-to-pipeline` skill** (`.claude/skills/event-to-pipeline/SKILL.md`) — turn a
+  conference, meetup, or event you attend or host into booked calls: book the next
+  step rather than hold it on the floor, a QR to your booking link, a call-earning
+  offer, fit-sorting on the spot, and a 48–72h follow-up. Includes the Voss
+  calibrated question for "let me think about it".
+- **`/capture` ritual + `inbox/`** (`.claude/commands/capture.md`) — a capture-now,
+  triage-later inbox so a passing thought doesn't cost a context switch; triage routes
+  each note to the lane that owns it (task list, notes/wiki, CRM, customer book,
+  feedback log) and never lets the inbox become a second to-do list. Adapts the
+  `/capture` pattern from [claude-context-os](https://github.com/conorbronsdon/claude-context-os)
+  (Conor Bronsdon, MIT).
+- **`/reconcile` ritual** (`.claude/commands/reconcile.md`) — catches drift when more
+  than one session (you, plus a scheduled cloud routine) writes the same files:
+  mirror-vs-CRM, tasks-vs-priorities, log-vs-reality, and stale open loops. Adapts the
+  `/reconcile` pattern from claude-context-os. Both new rituals defer to
+  `todo-single-source.md`; both are credited in `THIRD-PARTY-NOTICES.md`.
+
 ## [0.2.0] — 2026-06-10
 
 Hardening release: the hooks now behave as documented, the kit installs with no
@@ -32,12 +128,12 @@ features below are rolled up from the previous `[Unreleased]`.
   Written tier-generic so it survives model releases.
 - **Retention act-skills — the right side gets more than a detector**
   (`.claude/skills/`): `churn-save` (recover a red/amber account — the real risk,
-  the re-engagement draft, the renewal-clock timing), `expansion-play` (work a
+  the re-engagement draft, the renewal-clock timing), `expansion-signal` (work a
   ready-to-grow account into an angle and a clean hand to sales), `qbr-prep`
   (assemble a value-realization QBR brief from the book, recent notes, and roadmap
   status), and `support-signal` (cluster a batch of support tickets into ranked
   product themes, then hand them to `product-signal`). `account-health` now hands
-  off to `churn-save` / `expansion-play`; together they close the customer-success
+  off to `churn-save` / `expansion-signal`; together they close the customer-success
   playbook on the right side of the bowtie. (#39)
 - **`/retention-report` command** (`.claude/commands/retention-report.md`) — a
   monthly readout that rolls the customer book up to NRR and GRR (formulae named,
@@ -66,6 +162,15 @@ features below are rolled up from the previous `[Unreleased]`.
 - **Loop signals at session start** (`.claude/hooks/session-start.sh`) — the hook now
   also surfaces the freshest `ops/feedback-log.md` signals, so the cross-function
   loop can't go stale silently. (#31)
+- **Principles from the field** (`docs/principles-from-the-field.md`) — a third
+  thinking-aid companion to the science and history pages: operating principles
+  drawn from running the motion itself (ownership, daily focus, decisions, reading
+  the return, judgment, attention), each with a worked go-to-market example and a
+  map of where it lands in the kit; linked from the README docs table. Its
+  ritual-facing updates are applied to the daily commands: an explicit
+  forward-motion question in `/morning-briefing`, an ownership read and a
+  relationship-quality read in `/weekly-review`, and a "lion check" for
+  repeatedly-deferred tasks in `/end-of-day`.
 - **Principles from science** (`docs/principles-from-science.md`) — twenty-one
   portable operating principles drawn from seven sciences, each with two sourced
   quotes and a worked go-to-market example; linked from the README docs table. (#26)

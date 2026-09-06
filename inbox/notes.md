@@ -1,0 +1,1 @@
+<!-- Capture inbox. `/capture` drops raw notes here, one dated line each; `/capture` triage routes them to the right lane and empties this file. A staging buffer, never a second to-do list. In your own fork you may want to gitignore this file. -->

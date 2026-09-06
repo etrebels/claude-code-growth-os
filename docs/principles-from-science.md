@@ -2,7 +2,7 @@
 
 Most of the sciences, stripped to their load-bearing ideas, turn out to be operating principles wearing lab coats. A lever is leverage. A flywheel is momentum. Entropy is why an ops system rots if you stop feeding it. A catalyst is the asset that makes everything else cheaper without being used up.
 
-This page collects twenty-one such principles from seven sciences. Each has a plain-language explanation, **two verbatim, attributed quotes**, and a short worked example. They're here as a thinking aid for anyone running a go-to-market motion in this kit — not brand-specific, not prescriptive.
+This page collects twenty-two such principles from seven sciences. Each has a plain-language explanation, **two verbatim, attributed quotes**, and a short worked example. They're here as a thinking aid for anyone running a go-to-market motion in this kit — not brand-specific, not prescriptive.
 
 > **On sourcing.** Famous science quotes are a minefield of misattribution. "Compound interest is the eighth wonder of the world" is *not* Einstein (apocryphal, excluded); "culture eats strategy for breakfast" is *not* reliably Drucker. Every quote below was checked against a real source; ancient or layered attributions are flagged inline. Examples are illustrative real-world cases (figures are widely reported approximations), not exhaustive proof.
 
@@ -62,6 +62,11 @@ This page collects twenty-one such principles from seven sciences. Each has a pl
 > "Alone we can do so little; together we can do so much." — **Helen Keller**.
 > "If you want to go fast, go alone. If you want to go far, go together." — **African proverb**.
 **Example:** Apple's App Store — Apple supplies the platform and customers, developers supply the apps; each makes the other more valuable than either alone.
+
+**Hormesis — the right dose of stress strengthens; too much harms.** A stressor at the right dose triggers adaptation and growth; the same stressor at too high a dose causes damage. Muscles, immune systems, and teams all grow by *stimulus followed by recovery* — not by relentless maximum load. Push a growth motion, a budget, or a team to adapt; don't push it to failure. Leave something in reserve, and protect the slow-to-recover parts (retention, brand, trust, the people) that don't bounce back like a quarter's revenue does.
+> "All things are poison, and nothing is without poison; the dosage alone makes it so a thing is not a poison." — **Paracelsus** (c. 1538).
+> "Stress is the nonspecific response of the body to any demand made upon it." — **Hans Selye**, *The Stress of Life* (1956).
+**Example:** Basecamp (37signals) deliberately ran ~40-hour weeks and refused growth-at-all-costs, staying profitable and independent for 20+ years — pacing the load to compound rather than burning the team to chase a number (Jason Fried & DHH, *It Doesn't Have to Be Crazy at Work*, 2018).
 
 ---
 

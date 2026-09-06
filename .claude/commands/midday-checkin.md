@@ -4,6 +4,8 @@ description: Mid-day reset — what's done, what's slipping, what to protect thi
 
 # Midday Check-in
 
+> Generic chassis variant. If a private operating repo (e.g. your own growth-os) defines a command with this name, that version is canonical for that repo's data.
+
 A quick reset. In order:
 
 1. Read `ops/priorities.md` and today's top three (from this morning's `/morning-briefing`, or the latest `ops/daily-log.md` entry).

@@ -4,6 +4,8 @@ description: Monthly retention readout — NRR, GRR, churn by reason, and expans
 
 # Retention Report
 
+> Generic chassis variant. If a private operating repo (e.g. your own growth-os) defines a command with this name, that version is canonical for that repo's data.
+
 The monthly readout for the right side of the bowtie. `/weekly-review` reads the direction; this puts a number on it: are you keeping and growing the revenue you've already won, or filling a leaking bucket? It rolls the account book up to the one number the whole motion answers to — net revenue retention.
 
 From `ops/customers.md` (the account book, with its `ARR` column) and its git history over the period:
@@ -14,7 +16,7 @@ From `ops/customers.md` (the account book, with its `ARR` column) and its git hi
    - **NRR** (net revenue retention) = (starting ARR + expansion − downgrades − churn) ÷ starting ARR. Above 100% means the base grew without a single new logo.
    - If the book doesn't carry `ARR` yet, say so and report the **count-based** picture instead (logos retained / at-risk / churned / expanded) — and add the column so next month computes.
 3. **Churn by reason.** Group the accounts lost or downgraded this period by the *real* reason — value miss, champion exit, budget, product gap, fit. Use the same reasons `churn-save` logs. The reason column is the roadmap for retention; counts without reasons can't be acted on.
-4. **Expansion.** Which accounts grew, by how much, and off what trigger — the `EXPANSION-SIGNAL`s `expansion-play` worked. Net expansion is what carries NRR above 100%.
+4. **Expansion.** Which accounts grew, by how much, and off what trigger — the `EXPANSION-SIGNAL`s `expansion-signal` worked. Net expansion is what carries NRR above 100%.
 5. **The one read.** State it plainly: is the base net-expanding or net-leaking? Below 100% NRR means acquisition spend is filling a leaking bucket ([`docs/operating-model.md`](../../docs/operating-model.md) — the one number). One line.
 6. **Next month's two bets.** The single biggest retention risk to clear and the single biggest expansion to chase. Write them to the top of `ops/priorities.md`.
 

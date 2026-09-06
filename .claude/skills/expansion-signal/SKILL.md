@@ -1,9 +1,9 @@
 ---
-name: expansion-play
+name: expansion-signal
 description: Work an expansion-ready account into an angle and a clean hand to sales — the second growth motion the funnel forgets. Trigger when account-health flags an EXPANSION-SIGNAL, when a healthy account asks for more unprompted, a second team wants access, or the user says "this account is ready to grow", "expansion play", "upsell", or "land and expand".
 ---
 
-# Expansion Play
+# Expansion Signal
 
 The other act-skill on the right side. Two of the three ways a company grows happen after the first sale ([`docs/operating-model.md`](../../../docs/operating-model.md)), and this is one of them: `account-health` flags the `EXPANSION-SIGNAL`; this turns it into an angle and hands it to sales with the customer context attached — so it isn't a cold internal restart.
 
