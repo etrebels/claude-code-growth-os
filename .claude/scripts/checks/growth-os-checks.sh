@@ -179,6 +179,7 @@ echo "Self-description"
 desc_bad=0
 for doc in CLAUDE.md README.md; do
   [ -f "$doc" ] || continue
+  # shellcheck disable=SC2016  # a literal regex, not an expansion
   while IFS= read -r ref; do
     case "$ref" in *'<'*|*'*'*|*'{'*|http*) continue ;; esac
     [ -e "$ref" ] && continue

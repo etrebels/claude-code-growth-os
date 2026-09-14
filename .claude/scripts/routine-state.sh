@@ -82,6 +82,7 @@ case "$cmd" in
       printf -- '- when: %s\n' "$(date -u +%Y-%m-%dT%H:%M:%SZ)"
       printf -- '- commit: %s\n' "$(git rev-parse --short HEAD 2>/dev/null || echo '-')"
       printf -- '- reason: %s\n\n' "$reason"
+      # shellcheck disable=SC2016  # literal backticks — this writes markdown, not a command
       printf 'This file is removed by the next successful run of `%s`.\n' "$routine"
       printf 'While it exists, every session start says so.\n'
     } > "$RUNS_DIR/FAILED-$routine.md"

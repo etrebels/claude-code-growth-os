@@ -155,8 +155,10 @@ report() {
   printf 'These already have an owner. A second script computing them its own way would\n'
   printf 'produce two numbers that disagree, which is worse than one in the right place:\n\n'
   printf -- '- open feedback-log loops, competitive-intel staleness, proof-point freshness,\n'
+  # shellcheck disable=SC2016  # literal backticks — this writes markdown, not a command
   printf -- '  wiki frontmatter, internal links: `.claude/scripts/checks/growth-os-checks.sh`\n'
   printf -- '- asserted-edge wiki queries (dangling, asymmetric, orphan, god-node):\n'
+  # shellcheck disable=SC2016  # literal backticks — this writes markdown, not a command
   printf -- '  `.claude/scripts/vault-ld/query-wiki-graph.py --refresh`\n'
 
   head2 "Not counted here"
