@@ -7,3 +7,4 @@
 # OS / editor noise
 .DS_Store
 *.log
+__pycache__/

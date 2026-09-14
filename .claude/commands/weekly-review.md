@@ -40,3 +40,21 @@ Lead with the summary. Don't pad it. If `ops/customers.md` or `ops/roadmap-signa
 
 - **The advantages you didn't earn.** Name the three inputs that drove results this quarter which nobody here created or controls — a market tailwind, a partner referring for no contractual reason, an open regulatory window, an inherited pricing position. Give each a named maintainer and a signal that it's going away. Unearned inputs are the ones you stop noticing, and what you stop noticing you stop protecting. Cross-check against `ops/chokepoints.md`: anything on **both** lists is load-bearing *and* unowned — the quarter's top risk.
 - **Check the origin record still exists and is being read.** The playbook is an abstraction of the motion that won the first customers, and it sheds load-bearing parts unless the reasons stay attached. Confirm the first-ten-customers account (who they were, the pitch actually used, the objections, what each bad deal changed) is written down and lands in onboarding *before* playbook training. The tell that it's decaying: someone can run a qualification rule fluently but can't say which deal produced it.
+
+## Closing step — record the run (never skip)
+
+A run that died and a run with nothing to say must not look alike. Finish by writing the outcome to disk, from the repo root:
+
+```bash
+bash .claude/scripts/routine-state.sh ok weekly-review "<what landed — one short line>"
+```
+
+That writes `ops/runs/weekly-review.last`, clears any `FAILED-` marker, and returns an `OK` line. Print that line last, so the run output ends with proof it finished.
+
+If the ritual could not complete — a source unreachable, a write that would not land, a step that needs you — record that instead, and say what blocked it:
+
+```bash
+bash .claude/scripts/routine-state.sh fail weekly-review "<what blocked it>"
+```
+
+The `FAILED-` marker stays on disk until the next good run of this ritual, and every session start reads it. **Recording a failure is this ritual finishing correctly; leaving nothing behind is the failure.**

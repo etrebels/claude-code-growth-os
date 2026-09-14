@@ -1,0 +1,15 @@
+# Routine schedule table — the data behind `routine-state.sh`.
+#
+# One row per scheduled ritual. The script reads this to decide what is overdue;
+# it holds no schedule of its own, so adding a ritual is a row here rather than
+# an edit to the logic. Delete the rows you do not run.
+#
+# cadence: weekday | weekly | monthly | adhoc   (adhoc is tracked, never overdue)
+# grace:   extra days allowed before the ritual counts as overdue
+#
+# routine	cadence	grace	what a run is expected to leave behind
+morning-briefing	weekday	1	ops/priorities.md — today's Top 3
+midday-checkin	weekday	1	stage/score moves; nothing if the day was quiet
+end-of-day	weekday	1	ops/daily-log.md entry
+weekly-review	weekly	2	next week's priority in ops/priorities.md
+retention-report	monthly	5	NRR/GRR roll-up from ops/customers.md

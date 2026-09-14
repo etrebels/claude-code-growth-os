@@ -19,3 +19,21 @@ Close out the day:
 - quick: log one line (shipped / slipped) and tomorrow's top item.
 - standard: the full close above.
 - deep: add what to stop doing and a 7-day pattern note.
+
+## Closing step — record the run (never skip)
+
+A run that died and a run with nothing to say must not look alike. Finish by writing the outcome to disk, from the repo root:
+
+```bash
+bash .claude/scripts/routine-state.sh ok end-of-day "<what landed — one short line>"
+```
+
+That writes `ops/runs/end-of-day.last`, clears any `FAILED-` marker, and returns an `OK` line. Print that line last, so the run output ends with proof it finished.
+
+If the ritual could not complete — a source unreachable, a write that would not land, a step that needs you — record that instead, and say what blocked it:
+
+```bash
+bash .claude/scripts/routine-state.sh fail end-of-day "<what blocked it>"
+```
+
+The `FAILED-` marker stays on disk until the next good run of this ritual, and every session start reads it. **Recording a failure is this ritual finishing correctly; leaving nothing behind is the failure.**
