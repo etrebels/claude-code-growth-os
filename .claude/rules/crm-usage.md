@@ -91,6 +91,17 @@ reversibility, the same Human/AI boundary the rest of this kit runs on:
 | **Send** a message or email | no — external the moment it leaves | **never** | you |
 | **Delete** a record | no — it destroys the system of record | **never**, even at *full read-write* | you |
 
+**This table is now enforced, not just stated.** A `PreToolUse` hook
+(`.claude/hooks/irreversible-fence.sh`) blocks a send, delete, publish, cancel
+or invite before it happens, and leaves drafting alone. A rule an unattended run
+is asked to honour holds exactly as long as its reasoning does; a hook holds
+regardless. What counts as irreversible is two editable lists at the top of
+`.claude/scripts/fence-check.py` — add the tools your own stack exposes rather
+than relying on the name-matching fallback, because the fence only covers what
+it names. `LO_FENCE_OVERRIDE=1` opens it for one session when a person has
+decided; it is never set in committed settings, and an unattended run never
+sets it.
+
 Drafting is the safe half of outbound: a run prepares the message, it lands in
 your drafts folder, you review and send. Sending and deleting are the
 irreversible halves — prepare, then stop for sign-off. A CRM gaining a delete

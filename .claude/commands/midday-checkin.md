@@ -18,3 +18,21 @@ Keep it to a few lines. No recap of things already finished. If a deal moved thi
 - quick: the one thing that must happen this afternoon.
 - standard: the full reset above.
 - deep: re-rank the afternoon against the week's priorities, not just today's.
+
+## Closing step — record the run (never skip)
+
+A run that died and a run with nothing to say must not look alike. Finish by writing the outcome to disk, from the repo root:
+
+```bash
+bash .claude/scripts/routine-state.sh ok midday-checkin "<what landed — one short line>"
+```
+
+That writes `ops/runs/midday-checkin.last`, clears any `FAILED-` marker, and returns an `OK` line. Print that line last, so the run output ends with proof it finished.
+
+If the ritual could not complete — a source unreachable, a write that would not land, a step that needs you — record that instead, and say what blocked it:
+
+```bash
+bash .claude/scripts/routine-state.sh fail midday-checkin "<what blocked it>"
+```
+
+The `FAILED-` marker stays on disk until the next good run of this ritual, and every session start reads it. **Recording a failure is this ritual finishing correctly; leaving nothing behind is the failure.**
