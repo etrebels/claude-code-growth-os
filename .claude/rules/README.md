@@ -13,6 +13,7 @@ and the rules in `.claude/rules/`." These files are what that line points at.
 |---|---|
 | [`crm-usage.md`](crm-usage.md) | Reaching a CRM over MCP — the docs-first access protocol, the three-lane convention, and the write-authority guardrails an unattended run must respect. |
 | [`todo-single-source.md`](todo-single-source.md) | One canonical way the to-do list is queried and rendered, so every entry path (session start, each ritual, each routine) shows the same list. |
+| [`open-core-boundary.md`](open-core-boundary.md) | Whether a new addition lands in this public repo or in [LangOptima Growth OS Pro](https://langoptima.com/growth-os-pro). Merging here is a one-way door (MIT, public forever) — the check runs before every addition; unsure → Pro first. |
 
 ## Conventions
 
