@@ -97,6 +97,16 @@
           }
         ]
       }
+    ],
+    "InstructionsLoaded": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/instructions-loaded-log.sh"
+          }
+        ]
+      }
     ]
   }
 }

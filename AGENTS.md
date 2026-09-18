@@ -1,6 +1,9 @@
 # AGENTS.md — Claude Code Growth OS
 
-Instructions for AI coding agents working on this repository. For project overview, conventions, and session protocol, see [CLAUDE.md](./CLAUDE.md).
+The instruction file for every AI coding agent working in this repository —
+Claude Code, Codex, Copilot, Cursor, Gemini CLI. It is the one place the working
+conventions live. Claude Code reads it through an `@AGENTS.md` import in
+[`CLAUDE.md`](./CLAUDE.md), which adds the few Claude-only notes on top.
 
 ## Purpose
 
@@ -8,109 +11,10 @@ This is a **public, generic growth-OS kit** built on Claude Code — a markdown 
 
 No code. No build system. Markdown playbooks in `ops/`, rituals as slash commands in `.claude/commands/`, skills in `.claude/skills/`.
 
-## Repository Map
+## Repository map
 
-```
-claude-code-growth-os/
-├── CLAUDE.md                        # Project config, conventions, session protocol
-├── AGENTS.md                        # This file
-├── README.md                        # Public-facing overview and quick-start
-├── CHANGELOG.md                     # Version history
-├── CONTRIBUTING.md                  # Contribution guidelines
-├── SECURITY.md                      # Security policy
-├── CODE_OF_CONDUCT.md               # Community standards
-├── LICENSE                          # MIT license
-├── THIRD-PARTY-NOTICES.md           # Credits for adapted third-party patterns
-├── inbox/
-│   └── notes.md                     # /capture staging buffer — raw notes, triaged later
-├── ops/                             # LIVE STATE LAYER — mutable, routines read/write
-│   ├── pipeline.md                  # Live deal board (one line per open deal)
-│   ├── customers.md                 # Post-sale account health
-│   ├── priorities.md                # This week's priority + today's Top 3
-│   ├── daily-log.md                 # Append-only field-capture log
-│   ├── feedback-log.md              # Cross-function feedback loops (sales→marketing, post-sale→product)
-│   ├── roadmap-signals.md           # Field/retention signals → product
-│   ├── chokepoints.md               # The few narrow dependencies most revenue flows through
-│   ├── direction-register.md        # Live standing direction — outranks a conflicting rule
-│   └── icp.md                       # Ideal customer profile definition
-├── demo/                            # Fictional-data sandbox for testing rituals
-│   ├── pipeline.md
-│   ├── customers.md
-│   ├── priorities.md
-│   ├── daily-log.md
-│   ├── feedback-log.md
-│   ├── roadmap-signals.md
-│   ├── support-tickets.md
-│   └── meetings/                    # Sample meeting notes
-├── docs/                            # Reference documentation
-│   ├── operating-model.md           # Bowtie, six handoffs, the one number (NRR)
-│   ├── methodology.md               # Why this system is built the way it is
-│   ├── designing-loops.md           # Why the loop, not the prompt, is the thing you design
-│   ├── connecting-a-crm.md          # CRM projection loop and find-or-create mechanics
-│   ├── first-ritual.md              # Getting-started guide
-│   ├── launch-scrub-checklist.md    # Pre-launch safety checklist
-│   ├── why-align.md                 # Why sales + marketing alignment matters
-│   ├── why-brand.md                 # Why brand investment matters
-│   ├── principles-from-history.md   # Operating principles sourced from history
-│   ├── principles-from-science.md   # Operating principles sourced from science
-│   ├── principles-from-the-field.md # Operating principles from running the motion itself
-│   └── assets/                      # Diagrams, images
-├── .github/
-│   └── workflows/                   # CI: scheduled deterministic checks + shellcheck on hooks
-├── .claude/
-│   ├── settings.json                # Claude Code settings (hooks, permissions)
-│   ├── settings.local.example.json  # Template for local secrets config (gitignored when copied)
-│   ├── commands/                    # Slash commands — the daily rituals
-│   │   ├── morning-briefing.md      # Recap yesterday, surface priorities, set today's top three
-│   │   ├── midday-checkin.md        # Mid-day reset — done, slipping, what to protect
-│   │   ├── end-of-day.md            # Daily-log entry + tomorrow's Top 3
-│   │   ├── weekly-review.md         # Weekly patterns + next week's one priority
-│   │   ├── retention-report.md      # Monthly NRR/GRR readout from the customer book
-│   │   ├── capture.md               # Drop a raw note now, triage it later
-│   │   ├── reconcile.md             # Catch drift when multiple sessions write the same files
-│   │   └── demo-briefing.md         # The morning ritual run on the fictional demo/ data
-│   ├── hooks/                       # Guardrails that fire on events
-│   │   ├── session-start.sh         # Surfaces ops/priorities.md + feedback-log signals
-│   │   ├── pre-compact.sh           # Re-injects priorities + latest log before compaction
-│   │   ├── protect-files.sh         # Blocks writes to secrets and .env files
-│   │   ├── verify-after-change.sh   # Post-change link check + optional project verifier (advisory)
-│   │   ├── stop-reminder.sh         # Nudges /end-of-day until today is logged
-│   │   ├── pre-commit-guard.sh      # Git pre-commit hook — blocks likely secrets
-│   │   └── web-bootstrap.sh         # Installs shellcheck on cloud/web sessions only
-│   ├── rules/                       # Standing constraints every session honors
-│   │   ├── README.md                # Rules overview and conventions
-│   │   ├── crm-usage.md             # CRM-over-MCP: docs-first protocol, write-authority guardrails
-│   │   └── todo-single-source.md    # One to-do list, rendered one way (the canonical spec)
-│   ├── scheduling/                  # Running rituals on a clock
-│   │   ├── README.md                # Three-layer scheduling overview (local / cloud / CI)
-│   │   └── cloud-routines.md        # Cloud Routines runbook (Anthropic-hosted)
-│   ├── scripts/
-│   │   ├── verify.sh.example        # Template for your own post-change verifier
-│   │   └── checks/
-│   │       └── growth-os-checks.sh  # Deterministic checks run by CI / scheduled jobs
-│   └── skills/                      # Reusable growth skills (one directory per skill)
-│       ├── account-health/          # Post-sale health review for a named account
-│       ├── calendar-followup/       # Draft follow-up based on today's calendar events
-│       ├── churn-save/              # Recovery play for a red/amber account
-│       ├── cold-outreach/           # Generate a targeted cold outreach sequence
-│       ├── content-repurpose/       # Repurpose a piece of content across channels
-│       ├── event-to-pipeline/       # Work a conference or event into booked calls
-│       ├── example-skill/           # Template / reference skill
-│       ├── expansion-signal/        # Work a ready-to-grow account and hand it to sales
-│       ├── follow-up/               # Draft a follow-up for a named deal or contact
-│       ├── inbox-digest/            # Summarize and triage inbound messages
-│       ├── lead-qualify/            # Score a lead against the ICP fit check
-│       ├── marketing-feedback/      # Surface MARKETING-ACTION tags from ops/
-│       ├── meeting-prep/            # Prep brief for a named meeting or prospect
-│       ├── onboarding-handoff/      # CS handoff document for a new customer
-│       ├── product-signal/          # Surface FEATURE-REQUEST / RETENTION-RISK tags
-│       ├── qbr-prep/                # Value-realization review brief for a customer
-│       ├── retention-feedback/      # Surface RETENTION-RISK tags for review
-│       ├── status-update/           # Draft a status update for a named deal or account
-│       ├── support-signal/          # Cluster support tickets into ranked product themes
-│       └── triage/                  # Triage open items across ops/ files
-└── .mcp.json.example                # Template for MCP server config (copy → .mcp.json, gitignored)
-```
+The full directory layout is in [`docs/repo-map.md`](docs/repo-map.md). Read it
+when you need to find something; it is a listing, not a rule.
 
 ## Content Layers
 
@@ -124,7 +28,20 @@ claude-code-growth-os/
 
 **Never mix layers.** Live values stay in `ops/`; templates and playbooks stay in `docs/`; reusable task logic stays in `.claude/commands/` or `.claude/skills/`.
 
-## Key Conventions
+## Key conventions
+
+- **Markdown is the source of truth.** Operating playbooks live in `ops/` as plain markdown. Edit them like docs; commit them like code.
+- **Both sides of the bowtie have a surface.** The left side is `ops/pipeline.md` (deals); the right side is `ops/customers.md` (the post-sale account book) and `ops/roadmap-signals.md` (product's triage queue). The renewal motion starts at day 60, not day 85.
+- **Rituals are commands.** A recurring task — a morning briefing, an end-of-day wrap-up — is a slash command in `.claude/commands/`. Invoke it by name.
+- **One ritual at a time.** Don't port your whole working life on day one. Pick the task you dread most, make it a command, run it daily for a week, then add the next.
+- **Commit often.** Your ops get a history. `git log ops/` is your audit trail.
+- **A ritual that died must not look like a quiet day.** Every scheduled ritual ends by recording its own outcome — `routine-state.sh ok <ritual>` on a clean finish, `routine-state.sh fail <ritual> "<what blocked it>"` otherwise. The failure marker stays in [`ops/runs/`](ops/runs/README.md) until a good run clears it, and session start reads it. Recording a failure is the ritual finishing correctly; leaving nothing behind is the failure. The cadence each ritual is judged against is a row in `.claude/scripts/routines.tsv` — delete the rows you do not run.
+- **Count it, don't assert it.** `bash .claude/scripts/status.sh` counts what the repo actually contains — ops freshness, ritual state, the size of your own rulebook — and says plainly what it cannot count without the network instead of guessing. `--html` renders it as a page. A number written into a document is a number that was true once.
+- **Two machines, two merge rules.** If you run this locally *and* in the cloud, both append to the same logs on the same day. [`.gitattributes`](.gitattributes) sets `merge=union` on the append-only logs so two entries stack instead of conflicting; snapshot files (`ops/priorities.md`, `ops/pipeline.md`) are left on the default merge and have one writer at a time, because a snapshot merged from two machines describes neither.
+- **Straight answers.** When a session evaluates your work — a plan, a draft, a pipeline read — the assistant's first duty is an accurate assessment, not an agreeable one. Verdict first, then reasons; plain disagreement before you decide; alignment once you have decided. Hedges express real uncertainty, never politeness.
+- **Plain language first.** The plain statement carries the meaning; the specialist term is a label attached after it, never the sentence itself. This applies to internal output too — headings in your playbooks, PR titles, commit messages, the summary a ritual hands back — not just customer-facing copy. Avoid the audience exemption ("they're technical, they'll know it"): that is what you grant yourself at the moment you most want the jargon. The test is mechanical — delete the specialist word and see whether the sentence still stands. If it collapses, the word was doing the sentence's job. A position nobody can restate from memory is not governing anything.
+
+And the conventions specific to this kit's shape:
 
 ### Generic by design
 This kit ships with `<placeholder>` values for anything installation-specific (CRM endpoints, calendar IDs, field names). Wire the real values into `.claude/settings.local.json` (gitignored) or a private skill — never commit them here.
@@ -163,11 +80,22 @@ Every entry point (session start, each ritual, each cloud routine) uses the spec
 |---|---|---|
 | `session-start.sh` | **SessionStart** | Surface `ops/priorities.md` + latest `ops/feedback-log.md` signals |
 | `pre-compact.sh` | **PreCompact** | Re-inject priorities + latest log entry before compaction |
+| `irreversible-fence.sh` | **PreToolUse (`mcp__*`)** | Block a connector call that sends, deletes, publishes, cancels, or commits you to someone; drafting passes through. What counts as irreversible is two editable lists at the top of `.claude/scripts/fence-check.py` — name the tools your own stack exposes. `LO_FENCE_OVERRIDE=1` opens it for one session |
 | `protect-files.sh` | **PreToolUse (Edit\|Write)** | Block writes to `.env*`, `*.key`, `*.secret`, `*.token`, `credentials.*` |
 | `verify-after-change.sh` | **PostToolUse (Edit\|Write)** | Link-check the changed file + run `.claude/scripts/verify.sh` if present — advisory, never blocks |
+| `run-state-surface.sh` | **SessionStart** | Read `ops/runs/` and name any ritual that is failing or overdue — counted off disk each time, silent when everything is current |
+| `instructions-loaded-log.sh` | **InstructionsLoaded** | Append every session's loaded instruction files and their size to `.claude/logs/` — so "the size of your own rulebook" is a number you read, not one you remember |
 | `stop-reminder.sh` | **Stop** | Nudge `/end-of-day` if today is not yet logged |
 | `pre-commit-guard.sh` | git pre-commit | Block commits that contain likely secrets (install once: `ln -s ../../.claude/hooks/pre-commit-guard.sh .git/hooks/pre-commit`) |
 | `web-bootstrap.sh` | **SessionStart** (cloud only) | Install `shellcheck` on cloud/web sessions; no-op locally |
+
+Because your state lives in files, **SessionStart** reliably reloads priorities and
+the latest log entry next session, so the thread is always recoverable. PreCompact
+re-injection is best-effort and version-dependent; SessionStart is the guaranteed
+reload.
+
+All pure bash (two use `python3` to read a hook payload). No API keys, no MCP
+required. The full thinking is in [`docs/methodology.md`](docs/methodology.md).
 
 ## Scheduling
 
@@ -183,4 +111,4 @@ Three layers — run the rituals without your machine awake:
 2. **`.claude/rules/todo-single-source.md`** — canonical for to-do list query and render spec
 3. **`docs/operating-model.md`** — canonical for the bowtie model and six handoffs
 4. **`docs/connecting-a-crm.md`** — canonical for CRM projection loop mechanics
-5. **`CLAUDE.md`** — canonical for project conventions and session protocol
+5. **`AGENTS.md`** (this file) — canonical for project conventions and session protocol
