@@ -27,6 +27,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - **`docs/principles-from-the-field.md`** — five more field principles with worked
+  GTM examples: after a bad outing, name the mitigation and keep going, or stop in
+  writing (going quiet is neither, and it's how capabilities die without anyone
+  deciding); the longer a decision stays open the more dangerous the option looks,
+  with no new evidence behind the change; the thing you haven't cleaned up is why
+  you hedge in the room where directness pays; everyone traveling with you is the
+  company, including at dinner; and a rep is enabled when they can answer cold, not
+  when the material shipped. The *Where these land in the kit* map gains five
+  candidate rows — mitigation-or-written-stop on the stop-doing step, the
+  day-one-versus-today risk estimate, checking what's outstanding before coaching a
+  technique, briefing the whole traveling group, and the cold-answer test built from
+  the last ten calls.
+
+- **`docs/principles-from-the-field.md`** — five more field principles with worked
   GTM examples: the wait-state your-side checklist (a deal "waiting on them" still
   has work on your side), the closing-terms pass (concession pressure peaks at
   signing), the partner-risk ledger (repay risk taken for you from strength),
