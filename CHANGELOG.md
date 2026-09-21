@@ -26,6 +26,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- **`docs/principles-from-the-field.md`** — six more field principles with worked
+  GTM examples: bring a decision for review as the facts plus the case against, not
+  the case for what you already decided (a review that can't return a no is a
+  signature, not a check); being able to do something is not a reason to do it, the
+  sibling of *approval is not justification*; filing a finding is not delivering it,
+  so whoever learned it owns landing it with a named recipient; after a cut, report
+  the number you were afraid it would damage, not just the money saved, and say
+  where the freed capacity went; paying for a failure, fixing what broke and
+  removing what caused it are three different jobs that teams reliably collapse into
+  one; and the standard everyone agrees with is the one nobody audits. The *Where
+  these land in the kit* map gains six candidate rows, covering the two-line
+  pre-decision note, outcome-before-capability triage, named delivery on the
+  cross-function loop, the threatened-metric-before-the-cut rule, the
+  paid/repaired/removed close-out, and turning the periodic re-read into a check
+  against real work.
+
 - **`docs/principles-from-the-field.md`** — five more field principles with worked
   GTM examples: after a bad outing, name the mitigation and keep going, or stop in
   writing (going quiet is neither, and it's how capabilities die without anyone
