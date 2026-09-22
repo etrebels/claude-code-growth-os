@@ -80,7 +80,7 @@ Every entry point (session start, each ritual, each cloud routine) uses the spec
 |---|---|---|
 | `session-start.sh` | **SessionStart** | Surface `ops/priorities.md` + latest `ops/feedback-log.md` signals |
 | `pre-compact.sh` | **PreCompact** | Re-inject priorities + latest log entry before compaction |
-| `irreversible-fence.sh` | **PreToolUse (`mcp__*`)** | Block a connector call that sends, deletes, publishes, cancels, or commits you to someone; drafting passes through. What counts as irreversible is two editable lists at the top of `.claude/scripts/fence-check.py` — name the tools your own stack exposes. `LO_FENCE_OVERRIDE=1` opens it for one session |
+| `irreversible-fence.sh` | **PreToolUse (`mcp__*`)** | Block a connector call that sends, shares, deletes, publishes, cancels, or commits you to someone; drafting passes through. What counts as irreversible is two editable lists at the top of `.claude/scripts/fence-check.py` — name the tools your own stack exposes. `LO_FENCE_OVERRIDE=1` opens it for one session |
 | `protect-files.sh` | **PreToolUse (Edit\|Write)** | Block writes to `.env*`, `*.key`, `*.secret`, `*.token`, `credentials.*` |
 | `verify-after-change.sh` | **PostToolUse (Edit\|Write)** | Link-check the changed file + run `.claude/scripts/verify.sh` if present — advisory, never blocks |
 | `run-state-surface.sh` | **SessionStart** | Read `ops/runs/` and name any ritual that is failing or overdue — counted off disk each time, silent when everything is current |
