@@ -82,13 +82,15 @@ all seven:
 ## Draft, send, delete — classify outbound actions by reversibility
 
 Newer CRM APIs reach past field writes — they can **draft** a message, **send**
-it, and **delete** records. Before letting any run touch one, sort it by
+it, **share** a meeting recording or transcript outside the workspace, and
+**delete** records. Before letting any run touch one, sort it by
 reversibility, the same Human/AI boundary the rest of this kit runs on:
 
 | Action | Reversible? | An autonomous run may | Owner |
 |---|---|---|---|
 | **Draft** a message (email / chat) into a review folder | yes — nothing leaves until a human sends | yes, at *read + safe writes* | agent |
 | **Send** a message or email | no — external the moment it leaves | **never** | you |
+| **Share** a recording or transcript outside the workspace | no — a link that has been opened cannot be un-opened, and the words are someone else's | **never** | you |
 | **Delete** a record | no — it destroys the system of record | **never**, even at *full read-write* | you |
 
 **This table is now enforced, not just stated.** A `PreToolUse` hook
@@ -101,6 +103,13 @@ than relying on the name-matching fallback, because the fence only covers what
 it names. `LO_FENCE_OVERRIDE=1` opens it for one session when a person has
 decided; it is never set in committed settings, and an unattended run never
 sets it.
+
+**A share is a send whose contents are not yours.** Handing a meeting recording
+or transcript to an outside email address is outbound and irreversible the
+moment it lands, and it is worse than an email send in one respect: the words
+being distributed were spoken by other people, in a room they were in. Verifying
+the recipient limits who opens it; it does nothing about the fact that it went.
+Sort it with send, not with draft.
 
 Drafting is the safe half of outbound: a run prepares the message, it lands in
 your drafts folder, you review and send. Sending and deleting are the

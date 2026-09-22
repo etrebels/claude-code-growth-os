@@ -9,6 +9,8 @@ that calls it owns the blocking.
 
     draft  -> allowed (nothing leaves until a person sends it)
     send   -> blocked
+    share  -> blocked (a link that has been opened cannot be un-opened, and a
+                       shared recording hands out words that are not yours)
     delete -> blocked
 
 Until now that was prose an unattended run was asked to honour. This is the
@@ -31,6 +33,9 @@ import sys
 # Tools that match a blocked pattern but are genuinely safe. Exact tool names.
 ALWAYS_ALLOW = {
     # e.g. "mcp__yourcrm__create_draft",
+    # A benign share belongs here too — a single-use scheduling link is
+    # reversible and is yours to hand out, unlike a meeting recording.
+    # e.g. "mcp__yourscheduler__shares-create_share",
 }
 
 # Tools to block outright, whatever their name suggests. Exact tool names.
@@ -42,6 +47,7 @@ NEVER_UNATTENDED = {
 # `draft` is checked first, because "send_draft" is a draft, not a send.
 IRREVERSIBLE_FRAGMENTS = (
     ("send", "sends a message — external the moment it leaves"),
+    ("share", "shares a recording, transcript or record outside the workspace"),
     ("delete", "deletes a record — it destroys the system of record"),
     ("remove", "removes a record"),
     ("archive", "archives a record out of the working set"),
