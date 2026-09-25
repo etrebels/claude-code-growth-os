@@ -2,16 +2,15 @@
 # PreToolUse — the irreversible fence, enforced rather than requested.
 #
 # The rules already say what an unattended run may never do: send, post outside
-# the agreed briefing channel, delete a record, or commit Edwin to anyone
-# (.claude/rules/lightfield-crm-usage.md; LangOptima-General
-# .claude/rules/multi-agent/autonomy-lane.md). Until now that was prose a run
-# was asked to honour. This is the same fence at the tool layer, so it holds
-# when the reasoning does not.
+# the agreed briefing channel, delete a record, or commit you to anyone
+# (.claude/rules/crm-usage.md, "Draft, send, delete"). On its own that is prose
+# a run is asked to honour. This is the same fence at the tool layer, so it
+# holds when the reasoning does not.
 #
 # The decision lives in .claude/scripts/fence-check.py — one place, readable,
 # testable on its own. This script only turns a reason into a block.
 #
-# Deliberate override for an interactive session where Edwin has decided:
+# Deliberate override for an interactive session where you have decided:
 #   LO_FENCE_OVERRIDE=1        (per session; never committed to settings)
 #
 # Blocks by printing a deny decision *and* exiting 2, so the block holds

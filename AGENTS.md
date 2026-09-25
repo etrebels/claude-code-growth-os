@@ -94,7 +94,7 @@ the latest log entry next session, so the thread is always recoverable. PreCompa
 re-injection is best-effort and version-dependent; SessionStart is the guaranteed
 reload.
 
-All pure bash (two use `python3` to read a hook payload). No API keys, no MCP
+All bash, with `python3` used only to read a hook payload. No API keys, no MCP
 required. The full thinking is in [`docs/methodology.md`](docs/methodology.md).
 
 ## Scheduling
