@@ -170,9 +170,22 @@ Where a principle maps onto a specific part of this kit, that's noted at the end
 
 ---
 
+## Morale
+
+**Set aside a fixed amount for celebrating wins before the year starts, and spend all of it.** Money left to discretion for marking a close or a go-live gets reallocated to something that looks more productive — one more contractor week, one more tool — every single time, and each reallocation is defensible on its own. The sum is a team that is winning and never hears it, because the only thing that follows a close is the next target. So fix the amount in advance (a share per closed deal, a share per go-live), set a window to spend it in, and exempt it from budget cuts. Spend it on the people who made the win, not only the one who signed: the delivery engineer and the customer's champion belong at the table.
+**Example:** A team cuts its plan to 70% for a hard quarter and the dinner-after-a-close line is the first thing gone. Three deals close; nobody marks any of them. By the end of the quarter the team that hit its number describes the quarter as a grind. The version that works kept the line, spent it inside thirty days each time, and invited the customer's project lead.
+
+**The team reads your state before it reads your plan — prepare it like an agenda, most of all in a bad week.** The leader's visible mood sets the effort level of everyone who can see it, so it is an input to decide, not a private weather report. The trap is making morale conditional: *we'll celebrate when the deal closes, I'll ease up when cash is sorted.* Conditions are never ideal, and a team that keeps its energy through a genuinely hard stretch does so because someone chose to carry it, not because the stretch was easy. This doesn't mean hiding problems — bad news still gets named plainly and early. It governs the posture the bad news is carried in. Add one line to the prep for any meeting that matters: *what do I want the room to see from me?*
+**Example:** A founder walks into Monday's pipeline review still carrying Friday's lost deal, and the review goes flat and defensive. The same founder, having written the loss up over the weekend and decided how to open the room, names it in the first minute and moves the team to the two live deals — same facts, a different week.
+
+---
+
 ## Where these land in the kit
 
 Several are now wired into the kit's rituals (below); treat the rest as candidate updates — adopt what fits your motion:
+
+- **Fund the celebration of wins in advance** → *candidate* for [`/weekly-review`](../.claude/commands/weekly-review.md): list each close and go-live from the week with a *marked: yes / no* field, and flag any win left unmarked past thirty days
+- **Prepare your visible state like an agenda** → *candidate* for [`meeting-prep`](../.claude/skills/meeting-prep/): add one prep line, *what do I want the room to see from me?*
 
 - **The forward question** → [`/morning-briefing`](../.claude/commands/morning-briefing.md) now opens its top-three step with the forward question — *what's the single highest forward-moving action today?* — so at least one priority is a forward move, not maintenance. Adapt the wording to your motion.
 - **The ownership gap** → [`/weekly-review`](../.claude/commands/weekly-review.md) now runs an ownership read — does each live area have an owner who treats the number as theirs, not just what moved? In `ops/`, naming an owner per area is the cheapest way to make a part legibly load-bearing.
