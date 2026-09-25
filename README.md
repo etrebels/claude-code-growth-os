@@ -45,7 +45,7 @@ Flagged for marketing (loop 1: sales → marketing)
 Flagged for product (loop 2: post-sale → product)
 ⚑ Northwind Robotics — usage down 2 weeks, only 1 of 3 workflows adopted → retention risk
 
-Pipeline: 6 deals · 1 slipping · 2 with no next step · 1 onboarding account at risk
+Pipeline: 6 deals · 1 slipping · 1 with no next step · 1 onboarding account at risk
 ```
 
 Nothing there is real — delete `demo/` whenever you like.
@@ -54,7 +54,7 @@ Nothing there is real — delete `demo/` whenever you like.
 
 | Piece | What it is |
 |---|---|
-| `.claude/hooks/` | Six guardrails: session-start context, **state re-injection across compaction**, a **commit secret-guard**, sensitive-file protection, a **post-change verify pass** (broken-link + optional project check, advisory), an end-of-day nudge — plus a **web-session bootstrap** that installs the hook linter (`shellcheck`) on remote / Claude-Code-on-the-web containers |
+| `.claude/hooks/` | Guardrails: an **irreversible fence** that blocks sends, deletes and posts before they happen, session-start context, **state re-injection across compaction**, a **commit secret-guard**, sensitive-file protection, a **post-change verify pass** (broken-link + optional project check, advisory), an end-of-day nudge — plus a **web-session bootstrap** that installs the hook linter (`shellcheck`) on remote / Claude-Code-on-the-web containers |
 | `.claude/commands/` | Daily rituals you invoke by name: `/morning-briefing`, `/midday-checkin`, `/end-of-day`, `/weekly-review`, the monthly `/retention-report`, plus `/capture` (drop a thought now, triage it later), `/reconcile` (catch drift when more than one session writes the same files), and `/demo-briefing` |
 | `.claude/skills/` | Skill templates grouped by the four growth functions (see below) — so the balance across marketing, sales, product, and retention is visible, not acquisition-only |
 | `.claude/rules/` | Standing constraints every session honors — how to reach a CRM over MCP (`crm-usage.md`) and how the to-do list renders one canonical way (`todo-single-source.md`); obeyed by interactive rituals and autonomous routines alike |
@@ -105,9 +105,11 @@ The left side lives in `ops/pipeline.md`; the right side in `ops/customers.md` (
 - **`pre-commit-guard.sh`** blocks a commit if staged changes look like they contain a secret (API keys, private keys, tokens).
 - **`protect-files.sh`** stops the agent writing to `.env`, keys, and credentials *before* a write lands; **`verify-after-change.sh`** checks the work *after* it lands — broken relative links in a changed markdown file, plus your own `.claude/scripts/verify.sh` if you supply one (copy `verify.sh.example`). Advisory only: it warns, never blocks.
 - **`session-start.sh`** opens the day with your priorities *and* the freshest cross-function loop signals (so the feedback log can't go stale silently); **`stop-reminder.sh`** closes it.
+- **`irreversible-fence.sh`** blocks a connector call that sends, shares, deletes, publishes, or commits you to someone, and lets drafts through. What counts as irreversible is two editable lists at the top of `.claude/scripts/fence-check.py`; `LO_FENCE_OVERRIDE=1` opens it for one session when you have decided.
+- **`run-state-surface.sh`** reads `ops/runs/` at session start and names any ritual that failed or is overdue, so a ritual that died does not look like a quiet day; **`instructions-loaded-log.sh`** records which instruction files loaded and their size, so you can count your rulebook rather than guess at it.
 - **`web-bootstrap.sh`** runs only in remote / Claude-Code-on-the-web sessions (`CLAUDE_CODE_REMOTE=true`) and installs the one tool a fresh web container lacks — `shellcheck` — so you can lint the hooks in-session, matching CI. Skipped on your own machine, idempotent, and never blocks: a setup failure just logs a warning.
 
-All pure bash (two use `python3` to read a hook payload). No API keys, no MCP — it runs anywhere out of the box.
+All bash, with `python3` used only to read a hook payload. No API keys, no MCP — it runs anywhere out of the box.
 
 ## Make it yours
 

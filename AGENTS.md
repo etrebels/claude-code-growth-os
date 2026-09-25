@@ -7,7 +7,7 @@ conventions live. Claude Code reads it through an `@AGENTS.md` import in
 
 ## Purpose
 
-This is a **public, generic growth-OS kit** built on Claude Code — a markdown + bash system for running marketing, sales, product, and retention as one motion. It ships as a reusable template. For Edwin's personal live-state (pipeline, customers, priorities), see `etrebels/langoptima-growth-os`.
+This is a **public, generic growth-OS kit** built on Claude Code — a markdown + bash system for running marketing, sales, product, and retention as one motion. It ships as a reusable template. Your own live state lives in your private copy of this kit; this repo carries only the fictional `demo/` data.
 
 No code. No build system. Markdown playbooks in `ops/`, rituals as slash commands in `.claude/commands/`, skills in `.claude/skills/`.
 
@@ -94,7 +94,7 @@ the latest log entry next session, so the thread is always recoverable. PreCompa
 re-injection is best-effort and version-dependent; SessionStart is the guaranteed
 reload.
 
-All pure bash (two use `python3` to read a hook payload). No API keys, no MCP
+All bash, with `python3` used only to read a hook payload. No API keys, no MCP
 required. The full thinking is in [`docs/methodology.md`](docs/methodology.md).
 
 ## Scheduling
