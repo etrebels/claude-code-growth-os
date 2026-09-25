@@ -26,6 +26,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- **`docs/principles-from-the-field.md`** — new *Morale* section: fund the celebration
+  of wins in advance and spend it in full, and prepare the state you show a room the way
+  you prepare its agenda. Two candidate ritual updates added to the landing map.
+
 - **`docs/principles-from-the-field.md`** — six more field principles with worked
   GTM examples: bring a decision for review as the facts plus the case against, not
   the case for what you already decided (a review that can't return a no is a
