@@ -26,6 +26,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- **`docs/principles-from-the-field.md`** — new *Live moments* section (the omissions
+  pass before doors open — what is missing, forgotten, could go wrong, answered by
+  someone outside the planning; the opener owns the handoffs and confirms the next
+  speaker before their slot; a problem that looks minor to you is not minor to the
+  person raising it), plus one principle each in *Direction & authority* (three lines
+  for everyone acting for you: decide alone, bring up, and who to) and *Morale* (say
+  out loud that a role can be too much — nobody carrying one volunteers it). Five
+  candidate skill and ritual updates added to the landing map; README docs-table row
+  refreshed to list every section.
+
 - **`docs/principles-from-the-field.md`** — new *Morale* section: fund the celebration
   of wins in advance and spend it in full, and prepare the state you show a room the way
   you prepare its agenda. Two candidate ritual updates added to the landing map.
