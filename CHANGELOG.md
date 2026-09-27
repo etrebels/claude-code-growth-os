@@ -26,6 +26,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- **`docs/principles-from-the-field.md`** — new *Standards* section (enforce a written
+  rule promptly or delete it), plus two more field principles: watch for a tactic you
+  need more of each quarter for the same result, and grade a workshop or kickoff by what
+  people do differently on day 30. Three candidate ritual updates added to the landing map.
+
 - **`docs/principles-from-the-field.md`** — new *Morale* section: fund the celebration
   of wins in advance and spend it in full, and prepare the state you show a room the way
   you prepare its agenda. Two candidate ritual updates added to the landing map.
