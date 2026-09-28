@@ -26,6 +26,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- **`docs/principles-from-the-field.md`** — three more field principles: review any
+  conference, workshop or offsite within 24 hours (reread and mark up the notes, list the
+  action items, talk it through with one person), count the people who paid attention
+  rather than the people who showed up, and run a new motion in full while it is small,
+  judging the early cycles on whether it ran in full rather than on volume. Three
+  candidate skill and ritual updates added to the landing map.
+
 - **`docs/principles-from-the-field.md`** — new *Live moments* section (the omissions
   pass before doors open — what is missing, forgotten, could go wrong, answered by
   someone outside the planning; the opener owns the handoffs and confirms the next
