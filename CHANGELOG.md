@@ -26,6 +26,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- **`docs/principles-from-the-field.md`** — new *Pricing* section (charge one clear
+  rate the buyer can add up in a minute, rather than a stack of separate fees), plus
+  one principle each in *Alignment* (test the company's purpose by asking people to
+  explain it to a newcomer) and *Dependencies* (write the customer's part next to every
+  promised result, with an owner and a date), and an extension to the last-contact list
+  for accounts you only see in person once or twice a year. Four candidate ritual and
+  skill updates added to the landing map; README docs-table row lists the new section.
+
 - **`docs/principles-from-the-field.md`** — new *Live moments* section (the omissions
   pass before doors open — what is missing, forgotten, could go wrong, answered by
   someone outside the planning; the opener owns the handoffs and confirms the next
