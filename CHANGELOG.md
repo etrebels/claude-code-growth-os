@@ -17,8 +17,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   section.
 - **`/morning-briefing`** and **`/weekly-review`** — one-line hooks to *Campaign*: the
   forward-moving item in today's Top 3 is a move you start, not a reply; the weekly
-  summary names ground taken (conversations started, renewals and expansions secured)
-  against ground lost (accounts drifting, deals left to go quiet).
+  summary names won vs. lost (deals and accounts gained and lost): conversations
+  started, renewals and expansions secured, against accounts drifting and deals left
+  to go quiet.
 - **`README.md`** — docs-table row for `docs/principles-from-history.md` now lists
   the *Campaign* section.
 - **`CLAUDE.md`** — refreshed the *Open-PR hygiene* note (7 open PRs as of 2026-07-05,
@@ -38,8 +39,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- **`docs/principles-from-history.md`** — new *Campaign* section, drawn from the
-  military canon and the research on conflict. It opens by fixing the frame: the
+- **`docs/principles-from-history.md`** — new *Campaign* section. This section states
+  the rule first; the military canon and the conflict research appear only where
+  they independently agree. It opens by fixing the frame: the
   market is a contest run within the rules (play offense, train, respect the
   opponent, shake hands after, the score a consequence rather than the object); deal
   fairly with good-faith counterparts and meet the bad-faith actor with
