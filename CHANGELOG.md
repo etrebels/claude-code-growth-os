@@ -9,6 +9,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- **`AGENTS.md`** — new *Key conventions* bullet, *Play the market as a contest;
+  fight only your own weaknesses*: a contest run within the rules (play offense,
+  respect the opponent, the score a consequence of serving better), fair measure for
+  good-faith counterparts, prudence rather than retaliation for the bad-faith one, the situation read before the posture is chosen — and the only war against
+  your own weaknesses and the status quo, never a person. Links the new *Campaign*
+  section.
+- **`/morning-briefing`** and **`/weekly-review`** — one-line hooks to *Campaign*: the
+  forward-moving item in today's Top 3 is a move you start, not a reply; the weekly
+  summary names won vs. lost (deals and accounts gained and lost): conversations
+  started, renewals and expansions secured, against accounts drifting and deals left
+  to go quiet.
+- **`README.md`** — docs-table row for `docs/principles-from-history.md` now lists
+  the *Campaign* section.
 - **`CLAUDE.md`** — refreshed the *Open-PR hygiene* note (7 open PRs as of 2026-07-05,
   #38 since merged, but the count has drifted back up to 6 as of 2026-08-09) and named
   the pattern plainly: `insights-loop`'s own prior deliverable (#53, opened
@@ -25,6 +38,29 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   alongside their existing descriptions in `docs/first-ritual.md` / `.claude/rules/`.
 
 ### Added
+
+- **`docs/principles-from-history.md`** — new *Campaign* section. This section states
+  the rule first; the military canon and the conflict research appear only where
+  they independently agree. It opens by fixing the frame: the
+  market is a contest run within the rules (play offense, train, respect the
+  opponent, shake hands after, the score a consequence rather than the object); deal
+  fairly with good-faith counterparts and meet the bad-faith actor with
+  prudence, not retaliation; read the situation before choosing the posture (five
+  questions, seven postures, a fixed order for moving between them, and six written
+  tests before any public confrontation), with Rapoport (1960) and Axelrod (1984) as
+  corroboration; and the only war is against your own weaknesses and the status quo
+  (the 40–60% no-decision range, graded DIRECTIONAL). Thirteen principles follow,
+  each with a worked go-to-market example — take the initiative, close the distance,
+  a plan acted on, a clear picture, concentrate, lay siege to the recurring weakness,
+  time, name the victory, count the cost, one owner and a written intent, the
+  wholehearted few, morale, the supply line — quoting only wording verified
+  (secondary) against independent copies of the primary: Nelson's Trafalgar
+  Memorandum, Lincoln to McClellan (13 July 1862), Sun Tzu (Giles), Clausewitz
+  (Graham), MacArthur (19 April 1951), Eisenhower (14 November 1957). Adds a *where
+  the metaphor breaks* note (Kilduff et al. 2016, SOLID: rivalry raises unethical
+  behavior), extends the misquote note (MacArthur, not Churchill; Moltke's actual
+  1871 wording; the logistics line unsourced; Villeneuve's remark a legend), and
+  credits every source with its grade.
 
 - **`docs/principles-from-the-field.md`** — new *Live moments* section (the omissions
   pass before doors open — what is missing, forgotten, could go wrong, answered by
