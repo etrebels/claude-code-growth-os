@@ -26,6 +26,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- **`docs/principles-from-the-field.md`** — three more field principles with worked GTM
+  examples: you only know a customer or team has adopted something when it keeps working
+  after you step back, so schedule the step-back before you rely on it (*Change*); review
+  what your filters turn away, not only what they let through (*Attention & inputs*); and
+  a rule is broken after a story about why it was really made, so keep the reason beside
+  the rule and answer the story when you hear it (*Standards*). Three candidate skill and
+  ritual updates added to the landing map.
+
 - **`docs/principles-from-the-field.md`** — new *Live moments* section (the omissions
   pass before doors open — what is missing, forgotten, could go wrong, answered by
   someone outside the planning; the opener owns the handoffs and confirms the next
