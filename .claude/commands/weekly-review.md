@@ -11,7 +11,7 @@ Run an honest weekly review across the whole motion — both sides of the bowtie
 **Left side (demand → close):**
 
 1. Read the last seven entries in `ops/daily-log.md`.
-2. Summarize the week: what shipped, what stalled, any pattern worth naming. Read each channel or effort by the *quality* of relationships it surfaced, not only headline volume — one deep, high-fit relationship can be the whole return on an effort that looks thin by the numbers.
+2. Summarize the week: what shipped, what stalled, any pattern worth naming. Read each channel or effort by the *quality* of relationships it surfaced, not only headline volume — one deep, high-fit relationship can be the whole return on an effort that looks thin by the numbers. Then name what you started and secured against what slipped (ground taken and ground lost): conversations you started rather than only answered, renewals and expansions secured, against accounts drifting toward non-renewal and deals left to go quiet ([Campaign](../../docs/principles-from-history.md#campaign)).
 3. Clear the loop: surface any open `MARKETING-ACTION` lines in `ops/feedback-log.md` that haven't been acted on.
 
 **Right side (post-sale — read `ops/customers.md`):**
