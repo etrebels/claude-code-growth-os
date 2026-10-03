@@ -26,6 +26,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- **`docs/principles-from-the-field.md`** — new *Changing minds* section: scope a pilot
+  so a failure rules out one question rather than the whole approach; plan the first
+  question around what the buyer already believes, because proof alone doesn't move a
+  settled belief; budget a coaching ratio and an adoption window and judge the trend,
+  not a week-two snapshot; and check whether someone can say "I was wrong" before you
+  hire, partner, or bet a deal on them. Four candidate skill updates added to the
+  landing map; README docs-table row refreshed.
+
 - **`docs/principles-from-the-field.md`** — new *Live moments* section (the omissions
   pass before doors open — what is missing, forgotten, could go wrong, answered by
   someone outside the planning; the opener owns the handoffs and confirms the next
