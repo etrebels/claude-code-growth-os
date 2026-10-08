@@ -1,0 +1,45 @@
+{
+  "name": "growth-os",
+  "displayName": "Claude Code Growth OS",
+  "description": "Nineteen go-to-market skills spanning marketing, sales, product and retention — lead qualification, meeting prep, follow-ups, outreach, account health, churn saves, expansion signals, and the two cross-function feedback loops. Install for the skills; clone the repo for the full ritual system.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Edwin Trebels",
+    "email": "edwin.trebels@langoptima.com"
+  },
+  "homepage": "https://github.com/etrebels/claude-code-growth-os",
+  "repository": "https://github.com/etrebels/claude-code-growth-os",
+  "license": "MIT",
+  "keywords": [
+    "sales",
+    "marketing",
+    "go-to-market",
+    "crm",
+    "pipeline",
+    "retention",
+    "customer-success",
+    "revenue",
+    "growth"
+  ],
+  "skills": [
+    "./.claude/skills/account-health",
+    "./.claude/skills/calendar-followup",
+    "./.claude/skills/churn-save",
+    "./.claude/skills/cold-outreach",
+    "./.claude/skills/content-repurpose",
+    "./.claude/skills/event-to-pipeline",
+    "./.claude/skills/expansion-signal",
+    "./.claude/skills/follow-up",
+    "./.claude/skills/inbox-digest",
+    "./.claude/skills/lead-qualify",
+    "./.claude/skills/marketing-feedback",
+    "./.claude/skills/meeting-prep",
+    "./.claude/skills/onboarding-handoff",
+    "./.claude/skills/product-signal",
+    "./.claude/skills/qbr-prep",
+    "./.claude/skills/retention-feedback",
+    "./.claude/skills/status-update",
+    "./.claude/skills/support-signal",
+    "./.claude/skills/triage"
+  ]
+}
