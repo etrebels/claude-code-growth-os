@@ -14,6 +14,8 @@ Most sales & marketing skill packs just generate copy. This runs the operating d
 
 This repo is the scaffolding: opinionated hooks, daily rituals, a set of go-to-market skill templates spanning all four functions, and a worked example you can run in 30 seconds. **Bring your own playbooks — the structure is here.**
 
+**Searching, not scaling?** The sibling kit, [Claude Code Startup OS](https://github.com/etrebels/claude-code-startup-os), runs the founder's stage *before* a repeatable motion exists — assumption board, evidence ledger, experiment log, runway. Same architecture, earlier job.
+
 **Why one repo for the whole motion?** The buyer merged it — they research, buy, adopt, and renew as one relationship, and most of a B2B decision happens before sales is even in the room. Running marketing, sales, product, and retention as four separate systems is what creates the seams the buyer feels — and leaves the most valuable half, what happens *after* the sale, with no owner. This kit keeps all four in one place: one source of truth (the repo), two feedback loops (a `MARKETING-ACTION` line for sales→marketing, a `RETENTION-RISK` line for post-sale→product), shared definitions. The one-page argument, with sources, is in [`docs/why-align.md`](docs/why-align.md).
 
 ## See it run in 30 seconds

@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- README cross-link to the sibling kit, [Claude Code Startup OS](https://github.com/etrebels/claude-code-startup-os) — the founder's stage before a repeatable motion (searching), where this kit runs the motion itself (scaling).
+
 ### Changed
 
 - **`CLAUDE.md`** — refreshed the *Open-PR hygiene* note (7 open PRs as of 2026-07-05,
