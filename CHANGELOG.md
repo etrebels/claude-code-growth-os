@@ -26,6 +26,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- **`docs/principles-from-the-field.md`** — new *Developing people* section: give the
+  strongest seller the same specific critique as everyone else; change a threshold for
+  everyone in writing or not at all (one-off exceptions teach that the rule is an opening
+  offer); size a correction to the mistake, with a misreported number always the top tier;
+  and give a new hire a real account to own early. Four candidate ritual updates added to
+  the landing map; README docs-table row refreshed.
+
 - **`docs/principles-from-the-field.md`** — new *Live moments* section (the omissions
   pass before doors open — what is missing, forgotten, could go wrong, answered by
   someone outside the planning; the opener owns the handoffs and confirms the next
