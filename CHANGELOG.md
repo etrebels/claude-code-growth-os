@@ -26,6 +26,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- **`docs/principles-from-the-field.md`** — new *Liability* section: whoever switches an
+  automation on owns what it does (risk follows control — unattended, reviewed, or sold —
+  and the incident write-up names the decision that let the error out, never the tool);
+  when you cause a customer a loss, pay back more than the loss and put your best people
+  on the fix, sized by how avoidable it was; and in a payment dispute, never withhold the
+  customer's own data or export. Plus two in *Direction & authority* (escalate when a
+  problem stops someone's normal work, with the two-line question as the middle option;
+  one named owner decides and a review is not a vote) and one in *Live moments* (explain
+  to a new customer from where you stood when you were new). Six candidate skill and
+  ritual updates added to the landing map; README docs-table row refreshed.
+
 - **`docs/principles-from-the-field.md`** — new *Live moments* section (the omissions
   pass before doors open — what is missing, forgotten, could go wrong, answered by
   someone outside the planning; the opener owns the handoffs and confirms the next
