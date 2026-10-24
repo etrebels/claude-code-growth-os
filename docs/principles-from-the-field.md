@@ -234,6 +234,22 @@ Where a principle maps onto a specific part of this kit, that's noted at the end
 
 ---
 
+## Developing people
+
+**Give your strongest seller the same specific critique as everyone else — someone never told no handles the first hard rejection badly.** Top performers get exempted from correction because their numbers seem to buy latitude, and general praise fills the gap. The bill comes when a buyer, a partner or a market finally says no: someone with no practice at being told their work fell short protects the reputation instead of fixing the work. At least one specific, written critique a month — what to change on a named deal — keeps the strongest person improving and shows the rest of the team that the standard applies to everyone.
+**Example:** A team's top closer has never had a deal review push back on her. She loses a large late-stage deal on a pricing objection she'd been waving away for weeks, and spends the post-mortem on the buyer's procurement team. The version that works had flagged the same objection pattern two deals earlier, in writing, as a coaching point she was expected to act on.
+
+**Change a threshold for everyone in writing, or not at all — each one-off exception teaches that the rule is an opening offer.** A discount cap, a stage-gate, a qualification rule: each gets small, reasonable exceptions granted in one-to-one conversations, and each exception teaches the team that the written rule is where negotiation starts. The most persistent person ends up setting the real policy. Watch for the polite version: *"I'll take that under consideration"* has turned an instruction into a suggestion.
+**Example:** A 15 percent discount cap picks up three verbal exceptions in a quarter, each for a good reason. By the next quarter, reps open at 15 and expect to negotiate up. The team that recovers lists every exception at month-end and either writes it into the rule for everyone or reverses it.
+
+**Size the correction to the mistake, aim it at the next piece of work, and treat a misreported number as the top tier every time.** Overreact to a late CRM update and people start hiding mistakes; underreact to a missed commitment to a buyer and they learn it wasn't serious. Three tiers keep it honest: a same-day private word for minor slips, a scheduled conversation with a written follow-up for serious ones, and an immediate, top-tier response to any inflated forecast or hidden stall. Every other mistake is fixable as long as the numbers are true. A correction is finished when the person can say what they'll change and the next review shows it.
+**Example:** A seller pushes a stalled deal into commit to avoid a hard forecast call, and the manager lets it pass because the seller is usually reliable. The following quarter three deals are "slightly optimistic." The version that works treated the first one as top-tier, at once, and said why.
+
+**Hand a new hire a real account to own early — confidence comes from carrying something, not from being told they're doing well.** Encouragement without responsibility produces people who sound confident and fold under pressure. Within the first couple of months, give a new seller or associate one live account end to end, with a written definition of done and one check-in, and step in only when something can't be undone.
+**Example:** A new associate spends a quarter shadowing calls and gets consistently good feedback; her first solo renewal unravels on a question she'd never had to answer. A peer hired the same month owned a small account from week six, made two recoverable mistakes on it, and handled the same question in her first quarter.
+
+---
+
 ## Where these land in the kit
 
 Several are now wired into the kit's rituals (below); treat the rest as candidate updates — adopt what fits your motion:
@@ -291,6 +307,10 @@ Several are now wired into the kit's rituals (below); treat the rest as candidat
 - **One named decider per decision** → *candidate* for the pre-decision note and the direction register in [`ops/direction-register.md`](../ops/direction-register.md): add `decides:` and `advises:` lines next to the case-against and change-my-mind lines; a note with no named decider goes back before the meeting.
 - **Explain from where you stood as a newcomer** → *candidate* for [`onboarding-handoff`](../.claude/skills/onboarding-handoff/) and [`meeting-prep`](../.claude/skills/meeting-prep/) for kickoffs: open with *the three things that confused us first*, and have someone outside the account mark every term they'd need explained.
 - **Audit the standard nobody argues with** → *candidate* for whatever periodic re-read you run over your own playbooks and conventions: check one standard against one real piece of the month's work and write the gap, rather than reading for comprehension. Complements the condition-based-trigger rule above — that one stops a capable operator skipping a check; this one finds the checks nobody ever looks at.
+- **Same specific critique for the strongest seller** → *candidate* for [`/weekly-review`](../.claude/commands/weekly-review.md): one line per person the motion depends on — *last specific critique given (date, deal)* — with anything older than a month read as a gap. Pairs with the *ask whether the role is too much* line already there.
+- **Change a threshold for everyone or not at all** → *candidate* for [`/weekly-review`](../.claude/commands/weekly-review.md), monthly: list every one-off exception granted to a written threshold and mark each *written in for everyone* or *reversed*. Complements *enforce a written rule or delete it* — that one catches rules broken with no consequence; this one catches rules quietly bent person by person.
+- **Three correction tiers, with a misreported number at the top** → *candidate* for [`ops/pipeline.md`](../ops/pipeline.md) forecast hygiene: name an inflated forecast or a hidden stall as top-tier, every time, regardless of who made it.
+- **A real account early** → *candidate* for [`onboarding-handoff`](../.claude/skills/onboarding-handoff/) and the account book in `ops/customers.md`: give every new owner one account with a written definition of done and a dated check-in.
 
 ---
 
