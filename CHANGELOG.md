@@ -36,6 +36,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   give a reason. Three candidate ritual updates added to the landing map, and the
   README docs-table row refreshed.
 
+- **`docs/principles-from-the-field.md`** — five additions on what to do after something
+  goes wrong between people: keep wrong calls, with dates, in customer stories and the
+  origin record; go back with an ordinary work request after a sharp disagreement, or split
+  the territory; put the reopening condition in the same message as a refusal; have the new
+  lead talk to the working-level people in the first week of a handover; and after a lost
+  deal, own it in one line and book the next useful call. Five candidate ritual updates
+  added to the landing map.
+
 - **`docs/principles-from-the-field.md`** — new *Developing people* section: give the
   strongest seller the same specific critique as everyone else; change a threshold for
   everyone in writing or not at all (one-off exceptions teach that the rule is an opening
