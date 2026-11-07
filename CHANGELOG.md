@@ -26,6 +26,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- **`docs/principles-from-the-field.md`**: new *Messaging* section (open with the
+  buyer's problem in their words and put the central claim last, without cutting it)
+  and new *Accounts* section (accounts cool slowly, so track three cooling dates and
+  repeat the first-ninety-days work before launching anything new). *Change* gains a
+  principle: write down why a lasting process exists before removing it, change the
+  delivery freely, and change the rules underneath only on evidence. The cold-answer
+  test is sharpened: drill harder than the real call, with hand-written answers that
+  give a reason. Three candidate ritual updates added to the landing map, and the
+  README docs-table row refreshed.
+
 - **`docs/principles-from-the-field.md`** — five additions on what to do after something
   goes wrong between people: keep wrong calls, with dates, in customer stories and the
   origin record; go back with an ordinary work request after a sharp disagreement, or split
