@@ -26,6 +26,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- **`docs/principles-from-the-field.md`** — four additions: plan for each tool the motion runs on being down for three days, then stop preparing; ask for commitments the other side could genuinely refuse; after someone lets you down, add the one missing check and keep extending trust; and keep exact definitions of your core terms, because drift arrives as an edited definition. Four candidate ritual updates added to the landing map.
 - **`docs/principles-from-the-field.md`**: new *Messaging* section (open with the
   buyer's problem in their words and put the central claim last, without cutting it)
   and new *Accounts* section (accounts cool slowly, so track three cooling dates and
