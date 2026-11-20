@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- **`docs/principles-from-the-field.md`** — two more field principles with worked
+  examples: write down only what you'll act on (notes carry actions, the recorder
+  keeps the record), and only teach a method you've used to fix your own problem.
+  Two matching candidate lines added to *Where these land in the kit*.
 - **`CLAUDE.md`** — refreshed the *Open-PR hygiene* note (7 open PRs as of 2026-07-05,
   #38 since merged, but the count has drifted back up to 6 as of 2026-08-09) and named
   the pattern plainly: `insights-loop`'s own prior deliverable (#53, opened
