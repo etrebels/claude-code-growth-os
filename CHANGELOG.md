@@ -26,6 +26,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- **`docs/principles-from-the-field.md`** — new *Reach* section: build the step-by-step
+  route from first contact to customer before paying for more reach (and cut broad
+  distribution with no route behind it); plan an event around who is in the room and what
+  they do next. *Standards* gains three: state a rule once with its consequence attached
+  instead of persuading people to comply; a repeated final warning to a customer, partner
+  or vendor is no longer a warning; and test that a rule holds on purpose, at low stakes.
+  *Developing people* gains one: choose what to coach from your own numbers against the
+  benchmark. Six candidate ritual updates added to the landing map; README docs-table row
+  refreshed.
+
 - **`docs/principles-from-the-field.md`** — new *Developing people* section: give the
   strongest seller the same specific critique as everyone else; change a threshold for
   everyone in writing or not at all (one-off exceptions teach that the rule is an opening
