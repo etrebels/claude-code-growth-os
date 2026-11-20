@@ -28,6 +28,21 @@ Worked out from a follow-up the user actually sent after a conference. Use it as
 
 Leave out: anecdotes from the room, self-deprecating hedges ("just as glad to hear not now"), internal context the reader doesn't need, and a second ask.
 
+## Introducing an investor to a founder
+
+When you are not the person raising money (an advisor, a fractional executive, a partner), an investor you met gets a short introduction to the founder, and nothing more from you. Shape, from an introduction the user actually sent:
+
+1. **Greeting with their name linked**, and one line of thanks that names the day you met.
+2. **"As promised, it's my pleasure to introduce you to [founder], [company]'s co-founder, whom I've copied here."**
+3. **"In one line:"** the product sentence.
+4. **"From our conversation, I heard two reasons it might interest [their fund]:"** numbered, in their own words: their thesis, their sector.
+5. **Hand over what they asked for:** "You asked about a deck. [Founder] is the right person for that, and for anything about the company."
+6. **The product overview as an inline link**, and nothing about the round.
+7. **One line to the founder** on who the investor is and why they're relevant.
+8. **"Warm regards,"** then the signature.
+
+Never mention round size, timing, valuation or terms: those are the founder's. Follow whatever rule the founder has set for which investors to introduce.
+
 ## Depth
 - quick: the follow-up message only.
 - standard: debrief notes + the message + a subject line.
