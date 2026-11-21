@@ -25,7 +25,7 @@ Want the go-to-market skills without adopting the whole repo? This repo is also 
 /plugin install growth-os@growth-os
 ```
 
-That gives you the nineteen skills — lead qualification, meeting prep, follow-ups, outreach, account health, churn saves, expansion signals, the two feedback loops — usable in any project.
+That gives you the go-to-market skills — lead qualification, meeting prep, follow-ups, outreach, account health, churn saves, expansion signals, the two feedback loops — usable in any project.
 
 **The plugin ships skills only, deliberately.** The daily rituals (`/morning-briefing`, `/end-of-day`, `/weekly-review`) read and write the `ops/` state files, so they only make sense inside the repo. Clone it for those; install the plugin if you just want the skills.
 

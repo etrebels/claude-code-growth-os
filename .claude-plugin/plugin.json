@@ -1,8 +1,8 @@
 {
   "name": "growth-os",
   "displayName": "Claude Code Growth OS",
-  "description": "Nineteen go-to-market skills spanning marketing, sales, product and retention — lead qualification, meeting prep, follow-ups, outreach, account health, churn saves, expansion signals, and the two cross-function feedback loops. Install for the skills; clone the repo for the full ritual system.",
-  "version": "1.0.0",
+  "description": "Go-to-market skills spanning marketing, sales, product and retention — lead qualification, meeting prep, follow-ups, outreach, account health, churn saves, expansion signals, and the two cross-function feedback loops. Install for the skills; clone the repo for the full ritual system.",
+  "version": "0.3.0",
   "author": {
     "name": "Edwin Trebels",
     "email": "edwin.trebels@langoptima.com"
