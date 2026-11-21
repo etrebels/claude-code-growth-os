@@ -59,6 +59,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- **`docs/principles-from-the-field.md`** — a new **Tools & capability** section carrying three
+  principles on what a powerful new tool does to an operator's capability when no rule is attached
+  to it: *whatever you let the tool do for you, expect to lose the ability to do yourself*
+  (capability is maintained by use, so keep unassisted reps of the few capabilities your work rests
+  on, and give the tool the step *after* the judgment is formed); *adoption is two decisions, and
+  almost everyone only makes the first* (a two-line use policy — what it's for, what it must not
+  touch — written the same week, or the tool drifts to its easiest use); and *well-written stopped
+  being evidence of care* (polish is now free, so the correlation between how a document reads and
+  how carefully its claims were made is broken — score sourcing before quality, and put your own
+  sourcing on the page rather than behind it). Plus a fourth under **Decisions** — *before you cut a
+  slow step, ask whether the slowness was the work*, with the test that the person bearing the
+  effort of a step is the least reliable judge of whether it's waste. Landing-map and README rows
+  updated.
 - **`docs/principles-from-the-field.md`** — four additions: plan for each tool the motion runs on being down for three days, then stop preparing; ask for commitments the other side could genuinely refuse; after someone lets you down, add the one missing check and keep extending trust; and keep exact definitions of your core terms, because drift arrives as an edited definition. Four candidate ritual updates added to the landing map.
 - **`docs/principles-from-the-field.md`**: new *Messaging* section (open with the
   buyer's problem in their words and put the central claim last, without cutting it)
