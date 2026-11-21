@@ -13,7 +13,7 @@ except Exception:
     print("")' 2>/dev/null || true)"
 
 case "$path" in
-  *.env|*.env.*|*.pem|*.key|*.p12|*.pfx|*id_rsa*|*secret*|*credentials*|*.claude/settings.local.json)
+  *.env|*.env.*|*/.envrc|*.pem|*.key|*.token|*.p12|*.pfx|*id_rsa*|*secret*|*credentials*|*.claude/settings.local.json)
     echo "Blocked: '$path' looks sensitive. Edit it yourself, outside the agent." >&2
     exit 2
     ;;

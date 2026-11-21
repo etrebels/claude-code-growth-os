@@ -2,10 +2,7 @@
 # Routine run state — did the routine actually run, or does it only look like it?
 #
 # A routine that dies half-way and a routine with nothing to say used to produce
-# the same thing: silence. That is how /end-of-day-close could skip in early July
-# and need a manual [DRIFT] catch-up two days later, and how the 2026-08-07
-# morning briefing miss was caught by /autonomy-review rather than by anything
-# watching the chain (docs/loop-topology.md).
+# the same thing: silence. That is how a skipped ritual can go unnoticed for days.
 #
 # So a run only counts as finished when it says so, in writing, on disk:
 #

@@ -23,8 +23,8 @@ AS_HTML=0
 [ "${1:-}" = "--html" ] && AS_HTML=1
 
 TODAY_TS=$(date +%s)
-RULE_CAP=12          # meta/l1-l2-migration.md — the memorability cap
-L1_CHAR_CAP=20000    # _source/l1-l2-cache-budget.md — ~5,000 tokens
+RULE_CAP=12          # the memorability cap
+L1_CHAR_CAP=20000    # ~5,000 tokens
 
 days_since() {
   local d="${1%%T*}" ts
@@ -83,11 +83,10 @@ report() {
         row "ops/$f" "no past-dated entry found$suffix"
       fi
     done
-    [ -f ops/chokepoint-register.md ] &&
-      row "chokepoint register rows" "$(grep -cE '^\|[^-|]' ops/chokepoint-register.md 2>/dev/null)"
+    [ -f ops/chokepoints.md ] &&
+      row "chokepoint register rows" "$(grep -cE '^\| *[0-9]+ *\| *[^| ]' ops/chokepoints.md 2>/dev/null)"
     [ -f ops/direction-register.md ] &&
       row "live direction rows" "$(grep -ciE '^\|.*\blive\b' ops/direction-register.md 2>/dev/null)"
-    row "handoffs on file" "$(count_md ops/handoffs)"
   fi
 
   # -------------------------------------------------------------------------
@@ -126,7 +125,7 @@ report() {
       row "L1 (_source/) characters" "$l1 — $state"
     fi
     # The memorability cap: a rules file past ~12 enumerated rules stops being
-    # consulted and starts being guessed at (meta/l1-l2-migration.md).
+    # consulted and starts being guessed at.
     over=""
     while IFS= read -r f; do
       n=$(grep -cE '^\s*([0-9]+\.|[-*]\s\*\*)' "$f" 2>/dev/null)
@@ -154,12 +153,9 @@ report() {
   head2 "Counted elsewhere — not repeated here"
   printf 'These already have an owner. A second script computing them its own way would\n'
   printf 'produce two numbers that disagree, which is worse than one in the right place:\n\n'
-  printf -- '- open feedback-log loops, competitive-intel staleness, proof-point freshness,\n'
+  printf -- '- required ops/ files, daily-log and feedback-log freshness, routine run state,\n'
   # shellcheck disable=SC2016  # literal backticks — this writes markdown, not a command
-  printf -- '  wiki frontmatter, internal links: `.claude/scripts/checks/growth-os-checks.sh`\n'
-  printf -- '- asserted-edge wiki queries (dangling, asymmetric, orphan, god-node):\n'
-  # shellcheck disable=SC2016  # literal backticks — this writes markdown, not a command
-  printf -- '  `.claude/scripts/vault-ld/query-wiki-graph.py --refresh`\n'
+  printf -- '  internal links, doc paths that resolve: `.claude/scripts/checks/growth-os-checks.sh`\n'
 
   head2 "Not counted here"
   printf 'These need the network, so this script does not guess at them. Ask for them\n'

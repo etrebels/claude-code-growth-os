@@ -19,6 +19,6 @@ ops/feedback-log.md        merge=union
 #    omission reads as a decision rather than an oversight:
 #      ops/priorities.md · ops/pipeline.md · ops/customers.md
 #      ops/roadmap-signals.md · ops/direction-register.md
-#      ops/chokepoint-register.md
+#      ops/chokepoints.md
 #
 # `merge=union` needs no driver — git has it built in.
