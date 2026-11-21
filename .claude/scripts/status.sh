@@ -83,8 +83,8 @@ report() {
         row "ops/$f" "no past-dated entry found$suffix"
       fi
     done
-    [ -f ops/chokepoint-register.md ] &&
-      row "chokepoint register rows" "$(grep -cE '^\|[^-|]' ops/chokepoint-register.md 2>/dev/null)"
+    [ -f ops/chokepoints.md ] &&
+      row "chokepoint register rows" "$(grep -cE '^\| *[0-9]+ *\| *[^| ]' ops/chokepoints.md 2>/dev/null)"
     [ -f ops/direction-register.md ] &&
       row "live direction rows" "$(grep -ciE '^\|.*\blive\b' ops/direction-register.md 2>/dev/null)"
     row "handoffs on file" "$(count_md ops/handoffs)"
