@@ -57,6 +57,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   promised result, with an owner and a date), and an extension to the last-contact list
   for accounts you only see in person once or twice a year. Four candidate ritual and
   skill updates added to the landing map; README docs-table row lists the new section.
+- **`docs/principles-from-the-field.md`** — four more field principles with worked
+  examples: answer *why do you do it that way?* with the practical reason in the
+  asker's terms (*Alignment*); hand over decisions in proportion to how well someone
+  predicts your call, and say which of your opinions are positions (*Direction &
+  authority*); the side that joins carries most of the change (*Change*). Four
+  candidate updates added to the landing map.
 - **`docs/principles-from-the-field.md`** — a new **Tools & capability** section carrying three
   principles on what a powerful new tool does to an operator's capability when no rule is attached
   to it: *whatever you let the tool do for you, expect to lose the ability to do yourself*
