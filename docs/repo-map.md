@@ -88,7 +88,7 @@ claude-code-growth-os/
 │       ├── churn-save/              # Recovery play for a red/amber account
 │       ├── cold-outreach/           # Generate a targeted cold outreach sequence
 │       ├── content-repurpose/       # Repurpose a piece of content across channels
-│       ├── event-to-pipeline/       # Work a conference or event into booked calls
+│       ├── event-to-pipeline/       # Pick events to attend, then work them into booked calls
 │       ├── example-skill/           # Template / reference skill
 │       ├── expansion-signal/        # Work a ready-to-grow account and hand it to sales
 │       ├── follow-up/               # Draft a follow-up for a named deal or contact

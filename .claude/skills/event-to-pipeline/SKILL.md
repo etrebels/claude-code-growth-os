@@ -1,9 +1,32 @@
 ---
 name: event-to-pipeline
-description: Turn a conference, meetup, or event you attend or host into booked calls. Trigger when the user is about to attend or host an event, asks how to "work the room", or names an upcoming conference/meetup.
+description: Turn a conference, meetup, or event you attend or host into booked calls — and pick which events on a list are worth going to. Trigger when the user is about to attend or host an event, asks how to "work the room", names an upcoming conference/meetup, or pastes an event or side-event list and asks which to attend.
 ---
 
 # Event → Pipeline
+
+## Before ranking: check you can get in
+
+When choosing from a list of events, sort out **who is allowed in** before deciding which rooms are best. A room full of the right people is worth nothing if you can't get through the door, and the best rooms are often the ones that are closed.
+
+For every event you are about to recommend, record its access status:
+
+| Status | Meaning | How it ranks |
+|---|---|---|
+| **Open** | Register and go | Ranks on fit alone |
+| **Application** | Apply and wait for approval | Ranks on fit, marked *apply by [date]* |
+| **Invite-only** | Organisers invite people. No route in unless you have a named contact who can get you invited | Only ranks if you can name that person. Otherwise it goes on a separate *closed rooms* line, never in the plan |
+| **Restricted** | Limited by region, role, company size, or which side of the table you're on (for example "Nordic industry leaders only", "investors only", "founders pitching") | Check each restriction against who is actually going, and the party they represent. If any restriction rules you out, it doesn't rank |
+| **Unknown** | The listing doesn't say | Mark it *unverified*. It can sit in the plan, but never as the first pick, until someone checks |
+
+Two rules come with the table:
+
+- **A closed room you can't enter still tells you something.** Its hosts and guest list show who the right people are. Look for an open event run by the same hosts, or a named person who could introduce you. That is useful to know. It is not a slot in the plan.
+- **"Probably invite-only" is not a pass.** If you suspect a restriction, check it before ranking, or put it at *unknown* status. Don't rank first and attach the doubt as a footnote.
+
+Then rank what is left on fit: who will be in the room, what they buy, and whether it's worth the trip.
+
+## Working the room
 
 An event is for **booking calls, not holding them**. In a room of 30–50 people you can't run real conversations on the floor — the win is a short, specific touch that ends in a call booked two or three days out.
 
@@ -20,6 +43,7 @@ An event is for **booking calls, not holding them**. In a room of 30–50 people
 Bring your own proof and your own voice; don't fabricate offers, names, or numbers.
 
 ## Depth
+- shortlist: given a list of events — the access check above, then a ranked plan with the closed rooms listed separately.
 - quick: the call-earning offer + the one-line ask to book.
 - standard: the full play above, tuned to this event (who's likely there, the offer, two slots).
 - deep: + a per-segment sort (prioritise vs be-warm-and-move-on) and a 48–72h follow-up note ready to send.
