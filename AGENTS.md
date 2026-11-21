@@ -77,6 +77,20 @@ This file's repository map, commands table, and hooks table have drifted from th
 | `/reconcile` | Ad-hoc | Catch drift when more than one session writes the same files |
 | `/demo-briefing` | Ad-hoc | The morning ritual run safely on the fictional `demo/` data |
 
+### `babysit-prs` — a real routine with no command file
+
+Not in `.claude/commands/`, and not run by any script in this repo — it's a
+recurring PR-health check (CI status, unresolved review comments, merge
+conflicts) that posts a dated `🤖 Babysit-PRs` status comment on this repo's
+open, blocked-on-external PRs (visible in their comment history, e.g. #44,
+#48, #49, #55, going back to 2026-06-13). It has been proposed as a shipped
+command twice (#53, closed as superseded; a doc-only mention in #58) without
+ever landing a `.claude/commands/babysit-prs.md` — documented here directly so
+the gap stops being rediscovered by every weekly review that reads this file.
+If you formalize it, give it an explicit stop condition: today it reports
+status accurately forever and never escalates a PR that's been "ready, no
+action" for weeks (see `CLAUDE.md` → *Open-PR hygiene*).
+
 ## Hooks
 
 | Hook | Event | Purpose |
