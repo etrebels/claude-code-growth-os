@@ -63,7 +63,7 @@ Deals → CRM (via MCP). Tasks → task tool. Priorities → `ops/priorities.md`
 Every entry point (session start, each ritual, each cloud routine) uses the spec in `.claude/rules/todo-single-source.md`. Don't re-derive the grouping or filtering inside a command.
 
 ### Keep this map in sync
-This file's repository map, commands table, and hooks table have drifted from the actual repo three separate times in about two months (#38, #58, #60 each caught a different gap — a missing command, a wrong file path, a description carried over from a different repo). Any PR that adds, removes, renames, or moves a command, hook, skill, or top-level file updates the matching table here in the same diff — don't leave it for the next audit to notice.
+This file's commands and hooks tables, and [`docs/repo-map.md`](docs/repo-map.md), have drifted from the actual repo three separate times in about two months (#38, #58, #60 each caught a different gap — a missing command, a wrong file path, a description carried over from a different repo). Any PR that adds, removes, renames, or moves a command, hook, skill, or top-level file updates the matching table here, or the layout in `docs/repo-map.md`, in the same diff — don't leave it for the next audit to notice.
 
 ## Available Commands
 
@@ -78,19 +78,16 @@ This file's repository map, commands table, and hooks table have drifted from th
 | `/reconcile` | Ad-hoc | Catch drift when more than one session writes the same files |
 | `/demo-briefing` | Ad-hoc | The morning ritual run safely on the fictional `demo/` data |
 
-### `babysit-prs` — a real routine with no command file
+### `babysit-prs` — a PR-health check with no command file
 
 Not in `.claude/commands/`, and not run by any script in this repo — it's a
-recurring PR-health check (CI status, unresolved review comments, merge
-conflicts) that posts a dated `🤖 Babysit-PRs` status comment on this repo's
-open, blocked-on-external PRs (visible in their comment history, e.g. #44,
-#48, #49, #55, going back to 2026-06-13). It has been proposed as a shipped
-command twice (#53, closed as superseded; a doc-only mention in #58) without
-ever landing a `.claude/commands/babysit-prs.md` — documented here directly so
-the gap stops being rediscovered by every weekly review that reads this file.
-If you formalize it, give it an explicit stop condition: today it reports
-status accurately forever and never escalates a PR that's been "ready, no
-action" for weeks (see `CLAUDE.md` → *Open-PR hygiene*).
+recurring PR-health check the maintainer has run (CI status, unresolved review
+comments, merge conflicts), which posted dated status comments on open PRs.
+It has no command file; it is documented here so the gap stops being
+rediscovered by every weekly review that reads this file. If you formalize it,
+give it an explicit stop condition, so a PR reported "ready, no action" check
+after check is escalated rather than re-reported (see `CLAUDE.md` →
+*Open-PR hygiene*).
 
 ## Hooks
 
@@ -122,8 +119,6 @@ Three layers — run the rituals without your machine awake:
 1. **Local** — cron (Linux) or launchd (macOS). Setup in `.claude/scheduling/README.md`.
 2. **Cloud Routines** — Anthropic-hosted Claude Code sessions triggered on a schedule. Runbook in `.claude/scheduling/cloud-routines.md`.
 3. **GitHub Actions CI backstop** — deterministic checks only (`.claude/scripts/checks/growth-os-checks.sh`).
-
-**Known gap: `babysit-prs`.** A recurring PR-health check (CI status, review threads, merge conflicts, external launch dependencies) has been posting dated status comments on this repo's own open PRs since 2026-06-13 — visible directly in the PR history — but it has no `.claude/commands/babysit-prs.md`, isn't listed in `.claude/scheduling/cloud-routines.md`'s routine table, and isn't in the *Available Commands* table below. A prior attempt to formalize it (#53) was closed as superseded before the command file itself landed. Treat this as an open item, not a shipped feature — if you're adapting this kit and want the same check, write your own `.claude/commands/babysit-prs.md` rather than assuming one exists.
 
 ## Source-of-Truth Hierarchy
 
