@@ -67,6 +67,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   long-range goal one real problem at a time and end with one action today (*Alignment*),
   and put a small fixed amount into each core capability every week instead of a
   quarterly push (*Daily discipline*). Two candidate ritual updates added to the landing map.
+- **`docs/principles-from-the-field.md`** — three more field principles with worked GTM
+  examples: you only know a customer or team has adopted something when it keeps working
+  after you step back, so schedule the step-back before you rely on it (*Change*); review
+  what your filters turn away, not only what they let through (*Attention & inputs*); and
+  a rule is broken after a story about why it was really made, so keep the reason beside
+  the rule and answer the story when you hear it (*Standards*). Three candidate skill and
+  ritual updates added to the landing map.
 - **`docs/principles-from-the-field.md`** — a new **Tools & capability** section carrying three
   principles on what a powerful new tool does to an operator's capability when no rule is attached
   to it: *whatever you let the tool do for you, expect to lose the ability to do yourself*
