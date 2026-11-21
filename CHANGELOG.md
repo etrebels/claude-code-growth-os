@@ -109,6 +109,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   behavior), extends the misquote note (MacArthur, not Churchill; Moltke's actual
   1871 wording; the logistics line unsourced; Villeneuve's remark a legend), and
   credits every source with its grade.
+- **`docs/principles-from-the-field.md`** — new *Changing minds* section: scope a pilot
+  so a failure rules out one question rather than the whole approach; plan the first
+  question around what the buyer already believes, because proof alone doesn't move a
+  settled belief; budget a coaching ratio and an adoption window and judge the trend,
+  not a week-two snapshot; and check whether someone can say "I was wrong" before you
+  hire, partner, or bet a deal on them. Four candidate skill updates added to the
+  landing map; README docs-table row refreshed.
 - **`docs/principles-from-the-field.md`** — a new **Tools & capability** section carrying three
   principles on what a powerful new tool does to an operator's capability when no rule is attached
   to it: *whatever you let the tool do for you, expect to lose the ability to do yourself*
