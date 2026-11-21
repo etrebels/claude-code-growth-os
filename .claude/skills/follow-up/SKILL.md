@@ -14,7 +14,7 @@ Don't invent facts the note doesn't contain. Bring your own voice; this drafts t
 
 ## After an event: the follow-up shape
 
-Worked out from a follow-up the user actually sent after a conference. Use it as the default shape for event follow-ups, in this order:
+Use this as the default shape for event follow-ups, in this order:
 
 1. **Greeting with their name linked** to their profile (LinkedIn), so they can see who wrote.
 2. **One line of thanks that names the day you met.** No recap of the small talk.
@@ -30,7 +30,7 @@ Leave out: anecdotes from the room, self-deprecating hedges ("just as glad to he
 
 ## Introducing an investor to a founder
 
-When you are not the person raising money (an advisor, a fractional executive, a partner), an investor you met gets a short introduction to the founder, and nothing more from you. Shape, from an introduction the user actually sent:
+When you are not the person raising money (an advisor, a fractional executive, a partner), an investor you met gets a short introduction to the founder, and nothing more from you. The shape:
 
 1. **Greeting with their name linked**, and one line of thanks that names the day you met.
 2. **"As promised, it's my pleasure to introduce you to [founder], [company]'s co-founder, whom I've copied here."**
