@@ -44,6 +44,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   examples: write down only what you'll act on (notes carry actions, the recorder
   keeps the record), and only teach a method you've used to fix your own problem.
   Two matching candidate lines added to *Where these land in the kit*.
+- **`docs/principles-from-the-field.md`** — three more field principles: review any
+  conference, workshop or offsite within 24 hours (reread and mark up the notes, list the
+  action items, talk it through with one person), count the people who paid attention
+  rather than the people who showed up, and run a new motion in full while it is small,
+  judging the early cycles on whether it ran in full rather than on volume. Three
+  candidate skill and ritual updates added to the landing map.
 - **`docs/principles-from-the-field.md`** — a new **Tools & capability** section carrying three
   principles on what a powerful new tool does to an operator's capability when no rule is attached
   to it: *whatever you let the tool do for you, expect to lose the ability to do yourself*
