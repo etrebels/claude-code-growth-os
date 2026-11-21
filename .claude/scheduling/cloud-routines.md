@@ -58,7 +58,7 @@ The rituals this chassis ships, on a weekday loop plus a monthly readout:
 | [`/midday-checkin`](../commands/midday-checkin.md) | Weekdays, midday | `0 14 * * 1-5` |
 | [`/end-of-day`](../commands/end-of-day.md) | Weekdays, late afternoon | `30 17 * * 1-5` |
 | [`/weekly-review`](../commands/weekly-review.md) | Friday, late afternoon | `0 16 * * 5` |
-| [`/retention-report`](../commands/retention-report.md) | Monthly, first business day | `0 16 1 * *` |
+| [`/retention-report`](../commands/retention-report.md) | Monthly, on the 1st | `0 16 1 * *` |
 
 > Cron in a routine is evaluated in the **routine's own timezone**, not UTC — set
 > the timezone to `<your timezone, e.g. Europe/London>` and use clock times directly.
