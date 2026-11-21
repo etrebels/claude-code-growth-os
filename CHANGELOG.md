@@ -9,6 +9,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- **`event-to-pipeline`** — checks who can get in (open, by application, invite-only, restricted)
+  before ranking an event, so the shortlist only holds events you can actually attend; the README
+  Sales row is updated to match.
+- **`follow-up`** — two new default shapes: an event follow-up and an investor introduction (for
+  when you are not the one raising).
 - **`CLAUDE.md` and `AGENTS.md`** — reworked the *Open-PR hygiene* note into
   standing rules instead of a dated PR count: check for an already-open PR on the
   same *file*, not just the same topic, and extend it; split the open-PR count into
