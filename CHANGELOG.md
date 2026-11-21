@@ -19,10 +19,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   a running principles list) by keeping both entries, and after five consecutive
   unchanged "ready" check-ins say plainly that the only remaining step is a human
   merge decision. In `AGENTS.md`, documented `babysit-prs` as a routine with no
-  command file (in *Available Commands* and as a known gap in *Scheduling*), and
+  command file (in *Available Commands*), and
   added a *Keep this map in sync* convention under *Key Conventions*: any change that
   adds, removes, renames or moves a command, hook, skill or top-level file updates
-  the matching table in the same diff.
+  the matching table, or the layout in `docs/repo-map.md`, in the same diff.
 - **`AGENTS.md`** — new *Key conventions* bullet, *Play the market as a contest;
   fight only your own weaknesses*: a contest run within the rules (play offense,
   respect the opponent, the score a consequence of serving better), fair measure for
@@ -53,6 +53,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- **Plugin marketplace** (`.claude-plugin/`) — install the go-to-market skills without
+  cloning: `/plugin marketplace add etrebels/claude-code-growth-os`, then
+  `/plugin install growth-os@growth-os`. Ships skills only; the rituals need the repo clone.
 - **`docs/principles-from-the-field.md`** — new *Reach* section: build the step-by-step
   route from first contact to customer before paying for more reach (and cut broad
   distribution with no route behind it); plan an event around who is in the room and what
@@ -274,7 +277,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **`docs/principles-from-the-field.md`** — added three more field principles with worked
   go-to-market examples. Under **Ownership:** *when a team underperforms, check who owns
   what before you check who's good* (most of what reads as a talent problem is ownership
-  geometry — a capable person whose boundary is two millimetres wrong destabilizes the
+  geometry — a capable person whose boundary is slightly wrong destabilizes the
   people around them, and the assembly, not any part, is the unit of strength). Under
   **Daily discipline:** *a rule you keep having to remind people about will get dropped —
   put it in the workflow instead* (distance from the workflow, not size, is what makes a
