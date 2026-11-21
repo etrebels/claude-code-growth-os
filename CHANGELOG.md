@@ -40,6 +40,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- **`docs/principles-from-the-field.md`** — two more field principles with worked
+  examples: write down only what you'll act on (notes carry actions, the recorder
+  keeps the record), and only teach a method you've used to fix your own problem.
+  Two matching candidate lines added to *Where these land in the kit*.
 - **`docs/principles-from-the-field.md`** — a new **Tools & capability** section carrying three
   principles on what a powerful new tool does to an operator's capability when no rule is attached
   to it: *whatever you let the tool do for you, expect to lose the ability to do yourself*
