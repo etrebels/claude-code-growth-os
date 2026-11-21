@@ -6,8 +6,8 @@ list for itself does not need to sit in every session's context.
 
 ```
 claude-code-growth-os/
-├── CLAUDE.md                        # Project config, conventions, session protocol
-├── AGENTS.md                        # This file
+├── CLAUDE.md                        # Claude-only notes; imports AGENTS.md
+├── AGENTS.md                        # Instructions for every coding agent
 ├── README.md                        # Public-facing overview and quick-start
 ├── CHANGELOG.md                     # Version history
 ├── CONTRIBUTING.md                  # Contribution guidelines
@@ -15,6 +15,7 @@ claude-code-growth-os/
 ├── CODE_OF_CONDUCT.md               # Community standards
 ├── LICENSE                          # MIT license
 ├── THIRD-PARTY-NOTICES.md           # Credits for adapted third-party patterns
+├── .gitattributes                   # Merge rules for files two machines both write to
 ├── inbox/
 │   └── notes.md                     # /capture staging buffer — raw notes, triaged later
 ├── ops/                             # LIVE STATE LAYER — mutable, routines read/write
@@ -26,6 +27,7 @@ claude-code-growth-os/
 │   ├── roadmap-signals.md           # Field/retention signals → product
 │   ├── chokepoints.md               # The few narrow dependencies most revenue flows through
 │   ├── direction-register.md        # Live standing direction — outranks a conflicting rule
+│   ├── runs/                        # Run-state markers — did each ritual actually run?
 │   └── icp.md                       # Ideal customer profile definition
 ├── demo/                            # Fictional-data sandbox for testing rituals
 │   ├── pipeline.md
@@ -50,6 +52,8 @@ claude-code-growth-os/
 │   ├── principles-from-the-field.md # Operating principles from running the motion itself
 │   └── assets/                      # Diagrams, images
 ├── .github/
+│   ├── ISSUE_TEMPLATE/              # Bug report and idea forms
+│   ├── PULL_REQUEST_TEMPLATE.md     # What changes, why, and the contribution checklist
 │   └── workflows/                   # CI: scheduled deterministic checks + shellcheck on hooks
 ├── .claude/
 │   ├── settings.json                # Claude Code settings (hooks, permissions)
@@ -66,8 +70,11 @@ claude-code-growth-os/
 │   ├── hooks/                       # Guardrails that fire on events
 │   │   ├── session-start.sh         # Surfaces ops/priorities.md + feedback-log signals
 │   │   ├── pre-compact.sh           # Re-injects priorities + latest log before compaction
+│   │   ├── irreversible-fence.sh    # Blocks connector calls that send, share or delete; drafting passes
 │   │   ├── protect-files.sh         # Blocks writes to secrets and .env files
 │   │   ├── verify-after-change.sh   # Post-change link check + optional project verifier (advisory)
+│   │   ├── run-state-surface.sh     # Names any ritual in ops/runs/ that is failing or overdue
+│   │   ├── instructions-loaded-log.sh # Logs each session's loaded instruction files and their size
 │   │   ├── stop-reminder.sh         # Nudges /end-of-day until today is logged
 │   │   ├── pre-commit-guard.sh      # Git pre-commit hook — blocks likely secrets
 │   │   └── web-bootstrap.sh         # Installs shellcheck on cloud/web sessions only
@@ -79,12 +86,16 @@ claude-code-growth-os/
 │   │   ├── README.md                # Three-layer scheduling overview (local / cloud / CI)
 │   │   └── cloud-routines.md        # Cloud Routines runbook (Anthropic-hosted)
 │   ├── scripts/
+│   │   ├── fence-check.py           # Decides whether a tool call crosses the irreversible fence
+│   │   ├── routine-state.sh         # Records and reads each ritual's run state in ops/runs/
+│   │   ├── routines.tsv             # Routine schedule table read by routine-state.sh
+│   │   ├── status.sh                # What this repo contains, counted off disk
 │   │   ├── verify.sh.example        # Template for your own post-change verifier
 │   │   └── checks/
 │   │       └── growth-os-checks.sh  # Deterministic checks run by CI / scheduled jobs
 │   └── skills/                      # Reusable growth skills (one directory per skill)
 │       ├── account-health/          # Post-sale health review for a named account
-│       ├── calendar-followup/       # Draft follow-up based on today's calendar events
+│       ├── calendar-followup/       # Surface unfinished follow-ups from last week's external meetings
 │       ├── churn-save/              # Recovery play for a red/amber account
 │       ├── cold-outreach/           # Generate a targeted cold outreach sequence
 │       ├── content-repurpose/       # Repurpose a piece of content across channels
@@ -92,7 +103,7 @@ claude-code-growth-os/
 │       ├── example-skill/           # Template / reference skill
 │       ├── expansion-signal/        # Work a ready-to-grow account and hand it to sales
 │       ├── follow-up/               # Draft a follow-up for a named deal or contact
-│       ├── inbox-digest/            # Summarize and triage inbound messages
+│       ├── inbox-digest/            # Scan the last 48 hours of unread newsletters, news emails, and blog digests
 │       ├── lead-qualify/            # Score a lead against the ICP fit check
 │       ├── marketing-feedback/      # Surface MARKETING-ACTION tags from ops/
 │       ├── meeting-prep/            # Prep brief for a named meeting or prospect
