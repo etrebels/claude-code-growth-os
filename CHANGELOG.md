@@ -63,6 +63,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   predicts your call, and say which of your opinions are positions (*Direction &
   authority*); the side that joins carries most of the change (*Change*). Four
   candidate updates added to the landing map.
+- **`docs/principles-from-the-field.md`** — two more field principles: review a
+  long-range goal one real problem at a time and end with one action today (*Alignment*),
+  and put a small fixed amount into each core capability every week instead of a
+  quarterly push (*Daily discipline*). Two candidate ritual updates added to the landing map.
 - **`docs/principles-from-the-field.md`** — a new **Tools & capability** section carrying three
   principles on what a powerful new tool does to an operator's capability when no rule is attached
   to it: *whatever you let the tool do for you, expect to lose the ability to do yourself*
