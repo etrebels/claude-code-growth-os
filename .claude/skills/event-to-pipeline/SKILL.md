@@ -16,7 +16,7 @@ For every event you are about to recommend, record its access status:
 | **Open** | Register and go | Ranks on fit alone |
 | **Application** | Apply and wait for approval | Ranks on fit, marked *apply by [date]* |
 | **Invite-only** | Organisers invite people. No route in unless you have a named contact who can get you invited | Only ranks if you can name that person. Otherwise it goes on a separate *closed rooms* line, never in the plan |
-| **Restricted** | Limited by region, role, company size, or which side of the table you're on (for example "Nordic industry leaders only", "investors only", "founders pitching") | Check each restriction against who is actually going, and the party they represent. If any restriction rules you out, it doesn't rank |
+| **Restricted** | Limited by region, role, company size, or which side of the table you're on (for example "leaders from one region only", "investors only", "founders pitching") | Check each restriction against who is actually going, and the party they represent. If any restriction rules you out, it doesn't rank |
 | **Unknown** | The listing doesn't say | Mark it *unverified*. It can sit in the plan, but never as the first pick, until someone checks |
 
 Two rules come with the table:
