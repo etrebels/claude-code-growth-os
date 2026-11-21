@@ -58,6 +58,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- **`docs/principles-from-the-field.md`** — four additions: before answering someone who disagrees, say why their view is reasonable; compare your numbers with your own plan and last quarter, never a competitor's announcements; when a competitor or teammate wins, congratulate them and write down what they did; and read the buyer's own documents rather than the account summary, answering objections by quoting them. Four candidate ritual updates added to the landing map.
 - **Plugin marketplace** (`.claude-plugin/`) — install the go-to-market skills without
   cloning: `/plugin marketplace add etrebels/claude-code-growth-os`, then
   `/plugin install growth-os@growth-os`. Ships skills only; the rituals need the repo clone.
