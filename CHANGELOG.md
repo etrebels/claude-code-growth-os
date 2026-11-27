@@ -9,6 +9,38 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- **`event-to-pipeline`** — checks who can get in (open, by application, invite-only, restricted)
+  before ranking an event, so the shortlist only holds events you can actually attend; the README
+  Sales row is updated to match.
+- **`follow-up`** — two new default shapes: an event follow-up and an investor introduction (for
+  when you are not the one raising).
+- **`CLAUDE.md` and `AGENTS.md`** — reworked the *Open-PR hygiene* note into
+  standing rules instead of a dated PR count: check for an already-open PR on the
+  same *file*, not just the same topic, and extend it; split the open-PR count into
+  blocked-on-an-external-event vs. ready-for-review; extend or close out a routine's
+  prior branch, and confirm its earlier fix landed, before opening a new one. Added
+  two subsections for the recurring PR-health check (`babysit-prs`): resolve purely
+  additive, non-contradicting conflicts in shared append-only sections (a changelog,
+  a running principles list) by keeping both entries, and after five consecutive
+  unchanged "ready" check-ins say plainly that the only remaining step is a human
+  merge decision. In `AGENTS.md`, documented `babysit-prs` as a routine with no
+  command file (in *Available Commands*), and
+  added a *Keep this map in sync* convention under *Key Conventions*: any change that
+  adds, removes, renames or moves a command, hook, skill or top-level file updates
+  the matching table, or the layout in `docs/repo-map.md`, in the same diff.
+- **`AGENTS.md`** — new *Key conventions* bullet, *Play the market as a contest;
+  fight only your own weaknesses*: a contest run within the rules (play offense,
+  respect the opponent, the score a consequence of serving better), fair measure for
+  good-faith counterparts, prudence rather than retaliation for the bad-faith one, the situation read before the posture is chosen — and the only war against
+  your own weaknesses and the status quo, never a person. Links the new *Campaign*
+  section.
+- **`/morning-briefing`** and **`/weekly-review`** — one-line hooks to *Campaign*: the
+  forward-moving item in today's Top 3 is a move you start, not a reply; the weekly
+  summary names won vs. lost (deals and accounts gained and lost): conversations
+  started, renewals and expansions secured, against accounts drifting and deals left
+  to go quiet.
+- **`README.md`** — docs-table row for `docs/principles-from-history.md` now lists
+  the *Campaign* section.
 - **`CLAUDE.md`** — refreshed the *Open-PR hygiene* note (7 open PRs as of 2026-07-05,
   #38 since merged, but the count has drifted back up to 6 as of 2026-08-09) and named
   the pattern plainly: `insights-loop`'s own prior deliverable (#53, opened
@@ -28,6 +60,94 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - **`cold-outreach` / `lead-qualify` skills** — outbound basics: judge outreach on qualified opportunities and their value, never a send quota; disclose a synthetic voice; use messaging apps only to nudge people who already engaged, on a number they gave you, and mind country consent rules; a three-part bar (12-month project, right person, minimum deal size) plus one strong pain before calling something an opportunity; and a framework-shaped handoff note with every line marked known, guess, or unknown.
 - **`docs/principles-from-the-field.md`** — four additions: before answering someone who disagrees, say why their view is reasonable; compare your numbers with your own plan and last quarter, never a competitor's announcements; when a competitor or teammate wins, congratulate them and write down what they did; and read the buyer's own documents rather than the account summary, answering objections by quoting them. Four candidate ritual updates added to the landing map.
+- **Plugin marketplace** (`.claude-plugin/`) — install the go-to-market skills without
+  cloning: `/plugin marketplace add etrebels/claude-code-growth-os`, then
+  `/plugin install growth-os@growth-os`. Ships skills only; the rituals need the repo clone.
+- **`docs/principles-from-the-field.md`** — new *Reach* section: build the step-by-step
+  route from first contact to customer before paying for more reach (and cut broad
+  distribution with no route behind it); plan an event around who is in the room and what
+  they do next. *Standards* gains three: state a rule once with its consequence attached
+  instead of persuading people to comply; a repeated final warning to a customer, partner
+  or vendor is no longer a warning; and test that a rule holds on purpose, at low stakes.
+  *Developing people* gains one: choose what to coach from your own numbers against the
+  benchmark. Six candidate ritual updates added to the landing map; README docs-table row
+  refreshed.
+- **`docs/principles-from-the-field.md`** — two more field principles with worked
+  examples: write down only what you'll act on (notes carry actions, the recorder
+  keeps the record), and only teach a method you've used to fix your own problem.
+  Two matching candidate lines added to *Where these land in the kit*.
+- **`docs/principles-from-the-field.md`** — three more field principles: review any
+  conference, workshop or offsite within 24 hours (reread and mark up the notes, list the
+  action items, talk it through with one person), count the people who paid attention
+  rather than the people who showed up, and run a new motion in full while it is small,
+  judging the early cycles on whether it ran in full rather than on volume. Three
+  candidate skill and ritual updates added to the landing map.
+- **`docs/principles-from-the-field.md`** — new *Pricing* section (charge one clear
+  rate the buyer can add up in a minute, rather than a stack of separate fees), plus
+  one principle each in *Alignment* (test the company's purpose by asking people to
+  explain it to a newcomer) and *Dependencies* (write the customer's part next to every
+  promised result, with an owner and a date), and an extension to the last-contact list
+  for accounts you only see in person once or twice a year. Four candidate ritual and
+  skill updates added to the landing map; README docs-table row lists the new section.
+- **`docs/principles-from-the-field.md`** — four more field principles with worked
+  examples: answer *why do you do it that way?* with the practical reason in the
+  asker's terms (*Alignment*); hand over decisions in proportion to how well someone
+  predicts your call, and say which of your opinions are positions (*Direction &
+  authority*); the side that joins carries most of the change (*Change*). Four
+  candidate updates added to the landing map.
+- **`docs/principles-from-the-field.md`** — two more field principles: review a
+  long-range goal one real problem at a time and end with one action today (*Alignment*),
+  and put a small fixed amount into each core capability every week instead of a
+  quarterly push (*Daily discipline*). Two candidate ritual updates added to the landing map.
+- **`docs/principles-from-the-field.md`** — three more field principles with worked GTM
+  examples: you only know a customer or team has adopted something when it keeps working
+  after you step back, so schedule the step-back before you rely on it (*Change*); review
+  what your filters turn away, not only what they let through (*Attention & inputs*); and
+  a rule is broken after a story about why it was really made, so keep the reason beside
+  the rule and answer the story when you hear it (*Standards*). Three candidate skill and
+  ritual updates added to the landing map.
+- **`docs/principles-from-history.md`** — new *Campaign* section. This section states
+  the rule first; the military canon and the conflict research appear only where
+  they independently agree. It opens by fixing the frame: the
+  market is a contest run within the rules (play offense, train, respect the
+  opponent, shake hands after, the score a consequence rather than the object); deal
+  fairly with good-faith counterparts and meet the bad-faith actor with
+  prudence, not retaliation; read the situation before choosing the posture (five
+  questions, seven postures, a fixed order for moving between them, and six written
+  tests before any public confrontation), with Rapoport (1960) and Axelrod (1984) as
+  corroboration; and the only war is against your own weaknesses and the status quo
+  (the 40–60% no-decision range, graded DIRECTIONAL). Thirteen principles follow,
+  each with a worked go-to-market example — take the initiative, close the distance,
+  a plan acted on, a clear picture, concentrate, lay siege to the recurring weakness,
+  time, name the victory, count the cost, one owner and a written intent, the
+  wholehearted few, morale, the supply line — quoting only wording verified
+  (secondary) against independent copies of the primary: Nelson's Trafalgar
+  Memorandum, Lincoln to McClellan (13 July 1862), Sun Tzu (Giles), Clausewitz
+  (Graham), MacArthur (19 April 1951), Eisenhower (14 November 1957). Adds a *where
+  the metaphor breaks* note (Kilduff et al. 2016, SOLID: rivalry raises unethical
+  behavior), extends the misquote note (MacArthur, not Churchill; Moltke's actual
+  1871 wording; the logistics line unsourced; Villeneuve's remark a legend), and
+  credits every source with its grade.
+- **`docs/principles-from-the-field.md`** — new *Changing minds* section: scope a pilot
+  so a failure rules out one question rather than the whole approach; plan the first
+  question around what the buyer already believes, because proof alone doesn't move a
+  settled belief; budget a coaching ratio and an adoption window and judge the trend,
+  not a week-two snapshot; and check whether someone can say "I was wrong" before you
+  hire, partner, or bet a deal on them. Four candidate skill updates added to the
+  landing map; README docs-table row refreshed.
+- **`docs/principles-from-the-field.md`** — a new **Tools & capability** section carrying three
+  principles on what a powerful new tool does to an operator's capability when no rule is attached
+  to it: *whatever you let the tool do for you, expect to lose the ability to do yourself*
+  (capability is maintained by use, so keep unassisted reps of the few capabilities your work rests
+  on, and give the tool the step *after* the judgment is formed); *adoption is two decisions, and
+  almost everyone only makes the first* (a two-line use policy — what it's for, what it must not
+  touch — written the same week, or the tool drifts to its easiest use); and *well-written stopped
+  being evidence of care* (polish is now free, so the correlation between how a document reads and
+  how carefully its claims were made is broken — score sourcing before quality, and put your own
+  sourcing on the page rather than behind it). Plus a fourth under **Decisions** — *before you cut a
+  slow step, ask whether the slowness was the work*, with the test that the person bearing the
+  effort of a step is the least reliable judge of whether it's waste. Landing-map and README rows
+  updated.
 - **`docs/principles-from-the-field.md`** — four additions: plan for each tool the motion runs on being down for three days, then stop preparing; ask for commitments the other side could genuinely refuse; after someone lets you down, add the one missing check and keep extending trust; and keep exact definitions of your core terms, because drift arrives as an edited definition. Four candidate ritual updates added to the landing map.
 - **`docs/principles-from-the-field.md`**: new *Messaging* section (open with the
   buyer's problem in their words and put the central claim last, without cutting it)
@@ -113,6 +233,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   technique, briefing the whole traveling group, and the cold-answer test built from
   the last ten calls.
 
+- **`docs/principles-from-the-field.md`** — four more field principles with worked
+  GTM examples: describing the finished state concretely (a plan nobody can picture
+  doesn't move anyone, and the fix is unit conversion rather than eloquence), one
+  name a day said specifically (with the obstacle-removing form that beats praise),
+  conduct as the proof against content as the claim (including who is in the room
+  being a decision rather than a rota), and the ten-minute entry rung in front of a
+  deep asset. Four matching rows added to *Where these land in the kit*.
+- **`docs/principles-from-the-field.md`** — five further field principles with worked
+  GTM examples: run a discipline **fully for a fixed window** before you kill it (a
+  half-run practice tests the penalty, not the value, so below full compliance no
+  verdict is admissible); the **prose write-up test** (if it can't be written as
+  continuous prose under a thousand words it isn't understood yet — bullets hide gaps,
+  paragraphs can't); **ask before you improvise**, plus a sanction line on every new
+  initiative (an initiative that was never approved doesn't become approved by
+  working); **some things outrank what's on your calendar**, so name the short
+  list that beats a scheduled commitment before you're in the moment (slack lowers the
+  cost of acting on it, but it is not the principle — "I had no room" is the most
+  respectable excuse there is); and **containment assumptions
+  written as conditions** — the barriers you rely on *not* to fail, each with the
+  condition that would break it, as the second half of the chokepoint register. Each
+  mapped to its candidate landing spot in *Where these land in the kit*.
+
 - **`docs/principles-from-the-field.md`** — five more field principles with worked
   GTM examples: the wait-state your-side checklist (a deal "waiting on them" still
   has work on your side), the closing-terms pass (concession pressure peaks at
@@ -139,6 +281,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   signal per input, cross-checked against the chokepoint list) and a check that the
   origin record still exists and is being read before playbook training.
 
+- **`docs/principles-from-the-field.md`** — added three more field principles with worked
+  go-to-market examples. Under **Ownership:** *when a team underperforms, check who owns
+  what before you check who's good* (most of what reads as a talent problem is ownership
+  geometry — a capable person whose boundary is slightly wrong destabilizes the
+  people around them, and the assembly, not any part, is the unit of strength). Under
+  **Daily discipline:** *a rule you keep having to remind people about will get dropped —
+  put it in the workflow instead* (distance from the workflow, not size, is what makes a
+  standard heavy; ask who pays the cost each time it's applied, and use the post-change
+  reminder count to check the artifact isn't decorative). Under **Character & judgment:**
+  *score who changed after feedback, not who agreed with it* (names the selective hearer
+  and the compliant non-changer, and why interviews reward the second). Refreshed the
+  "Where these land in the kit" map with all three as candidate updates.
 - **`docs/principles-from-the-field.md`** — added four more field principles with worked
   go-to-market examples, in two new sections. **Dependencies:** *name the few chokepoints
   your revenue flows through, and who controls each one* (a short list of narrow

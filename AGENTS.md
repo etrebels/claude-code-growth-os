@@ -40,6 +40,7 @@ when you need to find something; it is a listing, not a rule.
 - **Two machines, two merge rules.** If you run this locally *and* in the cloud, both append to the same logs on the same day. [`.gitattributes`](.gitattributes) sets `merge=union` on the append-only logs so two entries stack instead of conflicting; snapshot files (`ops/priorities.md`, `ops/pipeline.md`) are left on the default merge and have one writer at a time, because a snapshot merged from two machines describes neither.
 - **Straight answers.** When a session evaluates your work — a plan, a draft, a pipeline read — the assistant's first duty is an accurate assessment, not an agreeable one. Verdict first, then reasons; plain disagreement before you decide; alignment once you have decided. Hedges express real uncertainty, never politeness.
 - **Plain language first.** The plain statement carries the meaning; the specialist term is a label attached after it, never the sentence itself. This applies to internal output too — headings in your playbooks, PR titles, commit messages, the summary a ritual hands back — not just customer-facing copy. Avoid the audience exemption ("they're technical, they'll know it"): that is what you grant yourself at the moment you most want the jargon. The test is mechanical — delete the specialist word and see whether the sentence still stands. If it collapses, the word was doing the sentence's job. A position nobody can restate from memory is not governing anything.
+- **Play the market as a contest; fight only your own weaknesses.** The market is a contest run within the rules: play offense (start the conversation, make the ask, set the terms of the next contact), train, respect the opponent, and treat the score as the consequence of serving the buyer better, never the object. Owe your own team and the partners who carry risk with you the highest duty of care; deal fairly with good-faith counterparts, who should come away with at least as much as they gave; meet a bad-faith actor with prudence (terms in writing, a walk-away line set in advance), never retaliation or deception. Read the situation before choosing the posture. The only war worth the name is against your own weaknesses and the conditions that make you quit: fear, drift, discouragement, the pull of 'everyone in this market does it', and the status quo: the loss may more often be to no decision than to any rival — one vendor-adjacent analysis puts it at 40–60% (directional). Never against a person, and keep the war vocabulary inside the team. The principles and their sources: [`docs/principles-from-history.md#campaign`](docs/principles-from-history.md#campaign).
 
 And the conventions specific to this kit's shape:
 
@@ -61,6 +62,9 @@ Deals → CRM (via MCP). Tasks → task tool. Priorities → `ops/priorities.md`
 ### To-do list has one canonical render spec
 Every entry point (session start, each ritual, each cloud routine) uses the spec in `.claude/rules/todo-single-source.md`. Don't re-derive the grouping or filtering inside a command.
 
+### Keep this map in sync
+This file's commands and hooks tables, and [`docs/repo-map.md`](docs/repo-map.md), have drifted from the actual repo three separate times in about two months (#38, #58, #60 each caught a different gap — a missing command, a wrong file path, a description carried over from a different repo). Any PR that adds, removes, renames, or moves a command, hook, skill, or top-level file updates the matching table here, or the layout in `docs/repo-map.md`, in the same diff — don't leave it for the next audit to notice.
+
 ## Available Commands
 
 | Command | Cadence | Role |
@@ -73,6 +77,17 @@ Every entry point (session start, each ritual, each cloud routine) uses the spec
 | `/capture` | Ad-hoc | Drop a raw note into `inbox/notes.md` now; triage it later |
 | `/reconcile` | Ad-hoc | Catch drift when more than one session writes the same files |
 | `/demo-briefing` | Ad-hoc | The morning ritual run safely on the fictional `demo/` data |
+
+### `babysit-prs` — a PR-health check with no command file
+
+Not in `.claude/commands/`, and not run by any script in this repo — it's a
+recurring PR-health check the maintainer has run (CI status, unresolved review
+comments, merge conflicts), which posted dated status comments on open PRs.
+It has no command file; it is documented here so the gap stops being
+rediscovered by every weekly review that reads this file. If you formalize it,
+give it an explicit stop condition, so a PR reported "ready, no action" check
+after check is escalated rather than re-reported (see `CLAUDE.md` →
+*Open-PR hygiene*).
 
 ## Hooks
 

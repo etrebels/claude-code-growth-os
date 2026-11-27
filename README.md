@@ -16,6 +16,19 @@ This repo is the scaffolding: opinionated hooks, daily rituals, a set of go-to-m
 
 **Why one repo for the whole motion?** The buyer merged it — they research, buy, adopt, and renew as one relationship, and most of a B2B decision happens before sales is even in the room. Running marketing, sales, product, and retention as four separate systems is what creates the seams the buyer feels — and leaves the most valuable half, what happens *after* the sale, with no owner. This kit keeps all four in one place: one source of truth (the repo), two feedback loops (a `MARKETING-ACTION` line for sales→marketing, a `RETENTION-RISK` line for post-sale→product), shared definitions. The one-page argument, with sources, is in [`docs/why-align.md`](docs/why-align.md).
 
+## Install just the skills (no clone)
+
+Want the go-to-market skills without adopting the whole repo? This repo is also a plugin marketplace:
+
+```
+/plugin marketplace add etrebels/claude-code-growth-os
+/plugin install growth-os@growth-os
+```
+
+That gives you the go-to-market skills — lead qualification, meeting prep, follow-ups, outreach, account health, churn saves, expansion signals, the two feedback loops — usable in any project.
+
+**The plugin ships skills only, deliberately.** The daily rituals (`/morning-briefing`, `/end-of-day`, `/weekly-review`) read and write the `ops/` state files, so they only make sense inside the repo. Clone it for those; install the plugin if you just want the skills.
+
 ## See it run in 30 seconds
 
 ![Claude Code Growth OS — the /demo-briefing morning ritual running on fictional demo data](docs/assets/demo.gif)
@@ -66,8 +79,8 @@ Nothing there is real — delete `demo/` whenever you like.
 | `docs/why-align.md` | The one-page argument: why your whole go-to-market (marketing, sales, product, retention) runs as one system (with sources) |
 | `docs/why-brand.md` | The companion argument: where demand comes from — why ~95% of buyers aren't ready yet, and how brands actually grow (with sources) |
 | `docs/principles-from-science.md` | A thinking aid: twenty-one operating principles drawn from seven sciences (leverage, momentum, entropy…) — each with two sourced quotes and a worked go-to-market example |
-| `docs/principles-from-history.md` | A companion thinking aid: operating principles drawn from history and biography (Churchill, via Manchester's *The Last Lion*) — each with a verified, sourced quote, a worked go-to-market example, and an apocrypha-screening note |
-| `docs/principles-from-the-field.md` | A third thinking aid: operating principles drawn from running the motion itself (ownership, alignment, daily discipline, decisions, liability, direction & authority, reading the return, dependencies, institutional memory, character & judgment, attention & inputs, conflict & resolution, change, live moments, messaging, accounts, morale, standards, developing people) — each with a worked go-to-market example, plus a map of where they land in the kit |
+| `docs/principles-from-history.md` | A companion thinking aid: operating principles drawn from history and biography (Churchill, via Manchester's *The Last Lion*), plus a *Campaign* section from the military canon — the market as a contest run within the rules, read situation by situation, with the only war against your own weaknesses — each with a verified, sourced quote, a worked go-to-market example, and an apocrypha-screening note |
+| `docs/principles-from-the-field.md` | A third thinking aid: operating principles drawn from running the motion itself (ownership, alignment, daily discipline, decisions, liability, direction & authority, reading the return, dependencies, pricing, institutional memory, character & judgment, tools & capability, attention & inputs, conflict & resolution, change, live moments, messaging, accounts, morale, standards, developing people, changing minds, reach) — each with a worked go-to-market example, plus a map of where they land in the kit |
 | `docs/connecting-a-crm.md` | Optional: make an existing CRM the source of truth and project it into `ops/pipeline.md` — don't run two pipelines |
 
 **Skills by function** — the motion is balanced across the bowtie, not just acquisition:
@@ -75,7 +88,7 @@ Nothing there is real — delete `demo/` whenever you like.
 | Function | Skills |
 |---|---|
 | **Marketing / Demand** | `content-repurpose`, `marketing-feedback` (sales→marketing loop) |
-| **Sales** | `lead-qualify`, `meeting-prep`, `follow-up`, `cold-outreach`, `event-to-pipeline` (work a conference or event into booked calls) |
+| **Sales** | `lead-qualify`, `meeting-prep`, `follow-up`, `cold-outreach`, `event-to-pipeline` (pick which events to attend, then work them into booked calls) |
 | **Product** | `support-signal` (clusters support tickets into ranked themes), `product-signal` (routes those + field/retention signals to the roadmap; writes the buyer-facing line for anything shipped) |
 | **Retention** | `onboarding-handoff` (Won→onboarding), `account-health` (scores adoption, renewal motion, churn/expansion), `churn-save` (recover an at-risk account), `expansion-signal` (work a ready-to-grow account), `qbr-prep` (the value-realization review), `retention-feedback` (post-sale→product loop) |
 | **Cross-cutting** | `status-update`, `triage`, `calendar-followup` (unfinished follow-ups from last week's meetings), `inbox-digest` (unread newsletter digest) |
