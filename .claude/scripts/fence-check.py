@@ -25,9 +25,24 @@ MAKE IT YOURS. The two lists below are the whole configuration:
 Name-matching is the fallback, not the design: a tool called `send_message` is
 blocked because of what its name says it does. Add the tools your own stack
 exposes rather than trusting the pattern to catch them.
+
+A safe word (draft, read, list, get, search, fetch, preview) lets a call
+through only when it is a whole word of the tool's own name, the part after
+the last `__`. Hidden inside another word, or in the connector's name, it does
+not count:
+
+    mcp__mail__send_draft            allowed  (draft is a whole word)
+    mcp__mail__send_thread_reply     blocked  (thread is not read)
+    mcp__mail__delete_thread         blocked
+    mcp__crm__delete_target_account  blocked  (target is not get)
+    mcp__sheets__delete_spreadsheet  blocked  (spreadsheet is not read)
+    mcp__drive__share_spreadsheet    blocked
+    mcp__getmail__send_email         blocked  (the connector's name does not count)
+    mcp__slack__chat_postMessage     blocked  (camelCase is read as post_message)
 """
 import json
 import os
+import re
 import sys
 
 # Tools that match a blocked pattern but are genuinely safe. Exact tool names.
@@ -64,6 +79,16 @@ SAFE_FRAGMENTS = ("draft", "read", "list", "get", "search", "fetch", "preview")
 BRIEFING = (os.environ.get("LO_BRIEFING_CHANNEL") or "").lower()
 
 
+def _snake(text):
+    """sendMessage -> send_message, so camelCase names read like the rest."""
+    return re.sub(r"([a-z0-9])([A-Z])", r"\1_\2", text).lower()
+
+
+def _own_words(tool):
+    """The words of the tool's own name: the part after the last `__`."""
+    return {w for w in re.split(r"[^a-z0-9]+", _snake(tool.split("__")[-1])) if w}
+
+
 def main() -> int:
     try:
         event = json.load(sys.stdin)
@@ -73,6 +98,7 @@ def main() -> int:
     tool = event.get("tool_name") or ""
     args = event.get("tool_input") or {}
     name = tool.lower()
+    snake = _snake(tool)  # postMessage -> post_message; only ever adds a match
 
     if not tool.startswith("mcp__"):
         return 0  # local tools are covered by the permissions deny list
@@ -84,11 +110,14 @@ def main() -> int:
         return 0
 
     # A draft is the safe half of outbound, so it wins over a "send" in the name.
-    if any(frag in name for frag in SAFE_FRAGMENTS):
+    # A safe word counts only as a whole word of the tool's own name: matching
+    # it anywhere in the name let `delete_thread` through, because `thread`
+    # contains `read`.
+    if _own_words(tool) & set(SAFE_FRAGMENTS):
         return 0
 
     for fragment, what in IRREVERSIBLE_FRAGMENTS:
-        if fragment not in name:
+        if fragment not in name and fragment not in snake:
             continue
         # The agreed briefing destination is the one exception to a send.
         if fragment == "send" and BRIEFING:
