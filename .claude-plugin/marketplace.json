@@ -1,0 +1,20 @@
+{
+  "name": "growth-os",
+  "description": "Go-to-market skills for Claude Code — run marketing, sales, product and retention as one motion instead of four silos.",
+  "owner": {
+    "name": "Edwin Trebels",
+    "email": "edwin.trebels@langoptima.com",
+    "url": "https://github.com/etrebels"
+  },
+  "plugins": [
+    {
+      "name": "growth-os",
+      "source": ".",
+      "description": "Nineteen go-to-market skills spanning marketing, sales, product and retention — lead qualification, meeting prep, follow-ups, outreach, account health, churn saves, expansion signals, and the two cross-function feedback loops. Install for the skills; clone the repo for the full ritual system.",
+      "version": "1.0.0",
+      "license": "MIT",
+      "homepage": "https://github.com/etrebels/claude-code-growth-os",
+      "category": "productivity"
+    }
+  ]
+}
