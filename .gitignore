@@ -7,3 +7,7 @@
 # OS / editor noise
 .DS_Store
 *.log
+__pycache__/
+
+# Session measurement output (InstructionsLoaded hook)
+.claude/logs/

@@ -152,6 +152,51 @@ if [ -f ops/feedback-log.md ]; then
   fi
 fi
 
+# --- 5. Run state: did each ritual actually run? -----------------------------
+# A ritual that died and a ritual with nothing to say used to look identical.
+# routine-state.sh reads the markers in ops/runs/ against the cadences in
+# .claude/scripts/routines.tsv. A FAILING marker is HARD; overdue is advisory.
+echo "Run state"
+if [ -x .claude/scripts/routine-state.sh ]; then
+  state=$(bash .claude/scripts/routine-state.sh status 2>/dev/null)
+  found=0
+  while IFS= read -r line; do
+    case "$line" in
+      *FAILING*) hard "ritual${line#-}"; found=1 ;;
+      *OVERDUE*) soft "ritual${line#-}"; found=1 ;;
+    esac
+  done <<< "$state"
+  [ "$found" -eq 0 ] && pass "no ritual is failing or overdue"
+else
+  pass "routine-state.sh not installed — run-state check skipped"
+fi
+
+# --- 6. Self-description: does the repo describe itself accurately? ----------
+# The cheapest possible check, and nothing was doing it: a doc that names a file
+# which has since moved, or was never written. HARD when the path exists
+# nowhere; gitignored paths are absent by design and are not a finding.
+echo "Self-description"
+desc_bad=0
+for doc in CLAUDE.md README.md; do
+  [ -f "$doc" ] || continue
+  # shellcheck disable=SC2016  # a literal regex, not an expansion
+  while IFS= read -r ref; do
+    case "$ref" in *'<'*|*'*'*|*'{'*|http*) continue ;; esac
+    [ -e "$ref" ] && continue
+    # Prose often writes a path short — `hooks/` for `.claude/hooks/`. That is
+    # an abbreviation, not a broken pointer, so resolve it before flagging.
+    [ -e ".claude/$ref" ] && continue
+    # A file shipped as `<name>.example` is one the reader supplies. The docs
+    # correctly describe it as optional; its absence is the expected state.
+    [ -e "$ref.example" ] && continue
+    git check-ignore -q "$ref" 2>/dev/null && continue
+    hard "$doc names \`$ref\`, which does not exist"
+    desc_bad=$((desc_bad + 1))
+  done < <(grep -oE '`[A-Za-z0-9_./-]+(/|\.(md|sh|py|json|tsv|yaml|yml|example))`' "$doc" 2>/dev/null |
+             tr -d '`' | grep '/' | sort -u)
+done
+[ "$desc_bad" -eq 0 ] && pass "every path the docs name resolves"
+
 # --- summary -----------------------------------------------------------------
 echo
 echo "Summary: ${HARD} hard, ${SOFT} soft."
