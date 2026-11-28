@@ -26,6 +26,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- **`docs/principles-from-the-field.md`** — four more field principles with worked
+  GTM examples: describing the finished state concretely (a plan nobody can picture
+  doesn't move anyone, and the fix is unit conversion rather than eloquence), one
+  name a day said specifically (with the obstacle-removing form that beats praise),
+  conduct as the proof against content as the claim (including who is in the room
+  being a decision rather than a rota), and the ten-minute entry rung in front of a
+  deep asset. Four matching rows added to *Where these land in the kit*.
 - **`cold-outreach` / `lead-qualify` skills** — outbound basics: judge outreach on qualified opportunities and their value, never a send quota; disclose a synthetic voice; use messaging apps only to nudge people who already engaged, on a number they gave you, and mind country consent rules; a three-part bar (12-month project, right person, minimum deal size) plus one strong pain before calling something an opportunity; and a framework-shaped handoff note with every line marked known, guess, or unknown.
 - **`docs/principles-from-the-field.md`** — four additions: before answering someone who disagrees, say why their view is reasonable; compare your numbers with your own plan and last quarter, never a competitor's announcements; when a competitor or teammate wins, congratulate them and write down what they did; and read the buyer's own documents rather than the account summary, answering objections by quoting them. Four candidate ritual updates added to the landing map.
 - **`docs/principles-from-the-field.md`** — four additions: plan for each tool the motion runs on being down for three days, then stop preparing; ask for commitments the other side could genuinely refuse; after someone lets you down, add the one missing check and keep extending trust; and keep exact definitions of your core terms, because drift arrives as an edited definition. Four candidate ritual updates added to the landing map.
