@@ -13,6 +13,10 @@ A first touch earns a reply by being about them, not you:
 
 Keep it under ~80 words. Bring your own proof; don't fabricate case studies or numbers.
 
+Quality over volume: a handful of researched sends beats a sprayed list, so never set a quota on messages sent — judge outreach by the qualified opportunities it creates and what they're worth.
+
+**Follow-up channels.** Say so if a voice note or any audio isn't your own live voice — disclose a synthetic or cloned voice in its first seconds. Use a messaging app (WhatsApp, SMS) only to nudge someone who has already engaged, and only on a number they gave you for business; never a scraped or bought one. Consent rules for business messages differ by country (some require prior consent even business-to-business). If unsure, don't send.
+
 ## Depth
 - quick: the message only.
 - standard: message + subject line + the one observation it hinges on.
