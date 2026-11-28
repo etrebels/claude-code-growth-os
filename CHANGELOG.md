@@ -26,6 +26,93 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- **`cold-outreach` / `lead-qualify` skills** — outbound basics: judge outreach on qualified opportunities and their value, never a send quota; disclose a synthetic voice; use messaging apps only to nudge people who already engaged, on a number they gave you, and mind country consent rules; a three-part bar (12-month project, right person, minimum deal size) plus one strong pain before calling something an opportunity; and a framework-shaped handoff note with every line marked known, guess, or unknown.
+- **`docs/principles-from-the-field.md`** — four additions: before answering someone who disagrees, say why their view is reasonable; compare your numbers with your own plan and last quarter, never a competitor's announcements; when a competitor or teammate wins, congratulate them and write down what they did; and read the buyer's own documents rather than the account summary, answering objections by quoting them. Four candidate ritual updates added to the landing map.
+- **`docs/principles-from-the-field.md`** — four additions: plan for each tool the motion runs on being down for three days, then stop preparing; ask for commitments the other side could genuinely refuse; after someone lets you down, add the one missing check and keep extending trust; and keep exact definitions of your core terms, because drift arrives as an edited definition. Four candidate ritual updates added to the landing map.
+- **`docs/principles-from-the-field.md`**: new *Messaging* section (open with the
+  buyer's problem in their words and put the central claim last, without cutting it)
+  and new *Accounts* section (accounts cool slowly, so track three cooling dates and
+  repeat the first-ninety-days work before launching anything new). *Change* gains a
+  principle: write down why a lasting process exists before removing it, change the
+  delivery freely, and change the rules underneath only on evidence. The cold-answer
+  test is sharpened: drill harder than the real call, with hand-written answers that
+  give a reason. Three candidate ritual updates added to the landing map, and the
+  README docs-table row refreshed.
+
+- **`docs/principles-from-the-field.md`** — five additions on what to do after something
+  goes wrong between people: keep wrong calls, with dates, in customer stories and the
+  origin record; go back with an ordinary work request after a sharp disagreement, or split
+  the territory; put the reopening condition in the same message as a refusal; have the new
+  lead talk to the working-level people in the first week of a handover; and after a lost
+  deal, own it in one line and book the next useful call. Five candidate ritual updates
+  added to the landing map.
+
+- **`docs/principles-from-the-field.md`** — new *Developing people* section: give the
+  strongest seller the same specific critique as everyone else; change a threshold for
+  everyone in writing or not at all (one-off exceptions teach that the rule is an opening
+  offer); size a correction to the mistake, with a misreported number always the top tier;
+  and give a new hire a real account to own early. Four candidate ritual updates added to
+  the landing map; README docs-table row refreshed.
+
+- **`docs/principles-from-the-field.md`** — new *Liability* section: whoever switches an
+  automation on owns what it does (risk follows control — unattended, reviewed, or sold —
+  and the incident write-up names the decision that let the error out, never the tool);
+  when you cause a customer a loss, pay back more than the loss and put your best people
+  on the fix, sized by how avoidable it was; and in a payment dispute, never withhold the
+  customer's own data or export. Plus two in *Direction & authority* (escalate when a
+  problem stops someone's normal work, with the two-line question as the middle option;
+  one named owner decides and a review is not a vote) and one in *Live moments* (explain
+  to a new customer from where you stood when you were new). Six candidate skill and
+  ritual updates added to the landing map; README docs-table row refreshed.
+
+- **`docs/principles-from-the-field.md`** — new *Live moments* section (the omissions
+  pass before doors open — what is missing, forgotten, could go wrong, answered by
+  someone outside the planning; the opener owns the handoffs and confirms the next
+  speaker before their slot; a problem that looks minor to you is not minor to the
+  person raising it), plus one principle each in *Direction & authority* (three lines
+  for everyone acting for you: decide alone, bring up, and who to) and *Morale* (say
+  out loud that a role can be too much — nobody carrying one volunteers it). Five
+  candidate skill and ritual updates added to the landing map; README docs-table row
+  refreshed to list every section.
+
+- **`docs/principles-from-the-field.md`** — new *Standards* section (enforce a written
+  rule promptly or delete it), plus two more field principles: watch for a tactic you
+  need more of each quarter for the same result, and grade a workshop or kickoff by what
+  people do differently on day 30. Three candidate ritual updates added to the landing map.
+
+- **`docs/principles-from-the-field.md`** — new *Morale* section: fund the celebration
+  of wins in advance and spend it in full, and prepare the state you show a room the way
+  you prepare its agenda. Two candidate ritual updates added to the landing map.
+
+- **`docs/principles-from-the-field.md`** — six more field principles with worked
+  GTM examples: bring a decision for review as the facts plus the case against, not
+  the case for what you already decided (a review that can't return a no is a
+  signature, not a check); being able to do something is not a reason to do it, the
+  sibling of *approval is not justification*; filing a finding is not delivering it,
+  so whoever learned it owns landing it with a named recipient; after a cut, report
+  the number you were afraid it would damage, not just the money saved, and say
+  where the freed capacity went; paying for a failure, fixing what broke and
+  removing what caused it are three different jobs that teams reliably collapse into
+  one; and the standard everyone agrees with is the one nobody audits. The *Where
+  these land in the kit* map gains six candidate rows, covering the two-line
+  pre-decision note, outcome-before-capability triage, named delivery on the
+  cross-function loop, the threatened-metric-before-the-cut rule, the
+  paid/repaired/removed close-out, and turning the periodic re-read into a check
+  against real work.
+
+- **`docs/principles-from-the-field.md`** — five more field principles with worked
+  GTM examples: after a bad outing, name the mitigation and keep going, or stop in
+  writing (going quiet is neither, and it's how capabilities die without anyone
+  deciding); the longer a decision stays open the more dangerous the option looks,
+  with no new evidence behind the change; the thing you haven't cleaned up is why
+  you hedge in the room where directness pays; everyone traveling with you is the
+  company, including at dinner; and a rep is enabled when they can answer cold, not
+  when the material shipped. The *Where these land in the kit* map gains five
+  candidate rows — mitigation-or-written-stop on the stop-doing step, the
+  day-one-versus-today risk estimate, checking what's outstanding before coaching a
+  technique, briefing the whole traveling group, and the cold-answer test built from
+  the last ten calls.
+
 - **`docs/principles-from-the-field.md`** — five further field principles with worked
   GTM examples: run a discipline **fully for a fixed window** before you kill it (a
   half-run practice tests the penalty, not the value, so below full compliance no

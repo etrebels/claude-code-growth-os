@@ -1,0 +1,24 @@
+# Merge behaviour for files two machines both write to.
+#
+# This repo is written from two places: a local session and a cloud routine that
+# starts from a fresh clone. Both append to the same logs on the same day, so
+# every sync is a merge — and a plain merge turns two new entries into a
+# conflict over a line neither of them changed.
+#
+# Two kinds of file, two rules.
+#
+# 1. Append-only logs: take both sides. A log's entries do not contend with each
+#    other, so union is the correct result rather than a convenience.
+ops/daily-log.md           merge=union
+ops/feedback-log.md        merge=union
+
+# 2. Snapshot files describe the current state, so they have ONE writer at a
+#    time and are replaced rather than appended to. They are deliberately left
+#    on the default merge: a snapshot merged from two machines describes neither
+#    of them, and a visible conflict is the right outcome. Named here so the
+#    omission reads as a decision rather than an oversight:
+#      ops/priorities.md · ops/pipeline.md · ops/customers.md
+#      ops/roadmap-signals.md · ops/direction-register.md
+#      ops/chokepoint-register.md
+#
+# `merge=union` needs no driver — git has it built in.

@@ -26,3 +26,21 @@ Lead with the two numbers and the one read. Don't pad it, and don't invent a num
 - quick: NRR, GRR, and the one read.
 - standard: the full report above — both numbers, churn by reason, expansion, next month's two bets.
 - deep: + month-over-month trend on each number, the logo-vs-revenue retention split, and the cohort detail behind the move.
+
+## Closing step — record the run (never skip)
+
+A run that died and a run with nothing to say must not look alike. Finish by writing the outcome to disk, from the repo root:
+
+```bash
+bash .claude/scripts/routine-state.sh ok retention-report "<what landed — one short line>"
+```
+
+That writes `ops/runs/retention-report.last`, clears any `FAILED-` marker, and returns an `OK` line. Print that line last, so the run output ends with proof it finished.
+
+If the ritual could not complete — a source unreachable, a write that would not land, a step that needs you — record that instead, and say what blocked it:
+
+```bash
+bash .claude/scripts/routine-state.sh fail retention-report "<what blocked it>"
+```
+
+The `FAILED-` marker stays on disk until the next good run of this ritual, and every session start reads it. **Recording a failure is this ritual finishing correctly; leaving nothing behind is the failure.**
